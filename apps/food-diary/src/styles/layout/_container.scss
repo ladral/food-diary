@@ -1,0 +1,5 @@
+@use "../../../../../../../ladral/ladral-todo/src/Application/Ladral.ToDo.WebApp/Ladral.ToDo.WebApp/wwwroot/styles/abstracts" as *;
+
+.container {
+  @include make-container();
+}

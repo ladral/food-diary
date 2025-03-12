@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite --force",
     "build": "tsc -b && vite build",
+    "build:ci": "bun run tsc -b && bun run vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "test:unit": "vitest"

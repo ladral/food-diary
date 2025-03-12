@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite --force",
     "build": "tsc -b && vite build",
+    "build:ci": "bun run tsc -b && bun run vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "test:unit": "vitest"
@@ -23,8 +24,10 @@
     "@types/testing-library__jest-dom": "^5.14.9",
     "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^9.21.0",
+    "eslint-plugin-react-dom": "^1.32.0",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
+    "eslint-plugin-react-x": "^1.32.0",
     "globals": "^15.15.0",
     "jsdom": "^26.0.0",
     "prettier": "^3.5.3",

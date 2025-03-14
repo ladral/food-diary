@@ -21,18 +21,15 @@ services:
       KC_DB_URL: jdbc:postgresql://postgres/${POSTGRESQL_DB}
       KC_DB_USERNAME: ${POSTGRESQL_USER}
       KC_DB_PASSWORD: ${POSTGRESQL_PASS}
+      KC_HTTP_RELATIVE_PATH: /auth
     volumes:
       - ./mocks/keycloak/realms:/opt/keycloak/data/import
-    command: start-dev --import-realm
+    command: start-dev --import-realm --http-relative-path /auth
 
   food-diary-client:
     build:
       context: ./apps/food-diary
       dockerfile: Dockerfile
-      args:
-        VITE_KEYCLOAK_URL: ${VITE_KEYCLOAK_URL}
-        VITE_KEYCLOAK_REALM: ${VITE_KEYCLOAK_REALM}
-        VITE_KEYCLOAK_CLIENT: ${VITE_KEYCLOAK_CLIENT}
     networks:
       - food-diary-net
     env_file:

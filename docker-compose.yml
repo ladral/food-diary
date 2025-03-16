@@ -21,10 +21,11 @@ services:
       KC_DB_URL: jdbc:postgresql://postgres/${POSTGRESQL_DB}
       KC_DB_USERNAME: ${POSTGRESQL_USER}
       KC_DB_PASSWORD: ${POSTGRESQL_PASS}
+      KC_HOSTNAME: http://localhost:8000/auth
       KC_HTTP_RELATIVE_PATH: /auth
     volumes:
       - ./mocks/keycloak/realms:/opt/keycloak/data/import
-    command: start-dev --import-realm --http-relative-path /auth
+    command: start-dev --import-realm
 
   food-diary-client:
     build:

@@ -23,6 +23,8 @@ services:
       KC_DB_PASSWORD: ${POSTGRESQL_PASS}
       KC_HOSTNAME: http://localhost:8000/auth
       KC_HTTP_RELATIVE_PATH: /auth
+    env_file:
+      - dev.env
     volumes:
       - ./mocks/keycloak/realms:/opt/keycloak/data/import
     command: start-dev --import-realm

@@ -1,0 +1,59 @@
+services:
+  postgres:
+    image: postgres:17
+    networks:
+      - food-diary-net
+    environment:
+      POSTGRES_DB: ${POSTGRESQL_DB}
+      POSTGRES_USER: ${POSTGRESQL_USER}
+      POSTGRES_PASSWORD: ${POSTGRESQL_PASS}
+    volumes:
+      - ./data/postgres_data:/var/lib/postgresql/data
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:${KEYCLOAK_VERSION}
+    networks:
+      - food-diary-net
+    environment:
+      KEYCLOAK_ADMIN: ${KEYCLOAK_ADMIN_USER}
+      KEYCLOAK_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD}
+      KC_DB: postgres
+      KC_DB_URL: jdbc:postgresql://postgres/${POSTGRESQL_DB}
+      KC_DB_USERNAME: ${POSTGRESQL_USER}
+      KC_DB_PASSWORD: ${POSTGRESQL_PASS}
+      KC_HOSTNAME: ${KEYCLOAK_HOSTNAME}
+      KC_HTTP_RELATIVE_PATH: /auth
+    env_file:
+      - dev.env
+    volumes:
+      - ./mocks/keycloak/realms:/opt/keycloak/data/import
+      - ./apps/keycloak/theme/dist_keycloak:/opt/keycloak/providers/
+    command: start-dev --import-realm
+
+  food-diary-client:
+    build:
+      context: ./apps/food-diary
+      dockerfile: Dockerfile
+    networks:
+      - food-diary-net
+    env_file:
+      - .env
+
+  nginx:
+    image: nginx:stable-alpine
+    networks:
+      - food-diary-net
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - food-diary-client
+      - keycloak
+
+volumes:
+  postgres_data:
+
+networks:
+  food-diary-net:
+    driver: bridge

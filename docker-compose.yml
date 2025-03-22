@@ -27,6 +27,7 @@ services:
       - dev.env
     volumes:
       - ./mocks/keycloak/realms:/opt/keycloak/data/import
+      - ./apps/keycloak/theme/dist_keycloak:/opt/keycloak/providers/
     command: start-dev --import-realm
 
   food-diary-client:

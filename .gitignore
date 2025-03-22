@@ -25,3 +25,6 @@ dist-ssr
 
 # docker-compose environment file
 /.env
+
+# data files for docker-compose deployment
+/data/

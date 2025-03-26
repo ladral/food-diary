@@ -9,22 +9,22 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
-
+import os
 from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
+SECRET_KEY = os.environ.get("FOOD_DIARY_API_SECRET_KEY", default="django-insecure-dh6m2jk@c1*9463ims57w1gxb#!rqoxj_0s-x5hemi0(7fy)hq")
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-dh6m2jk@c1*9463ims57w1gxb#!rqoxj_0s-x5hemi0(7fy)hq'
+DEBUG = bool(os.environ.get("FOOD_DIARY_API_DEBUG", default=1))
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
+# 'DJANGO_ALLOWED_HOSTS' should be a single string of hosts with a space between each.
+# For example: 'DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]'
+ALLOWED_HOSTS = os.environ.get("FOOD_DIARY_API_DJANGO_ALLOWED_HOSTS", default="").split(" ")
 
 # Application definition
 

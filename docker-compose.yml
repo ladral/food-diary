@@ -4,11 +4,12 @@ services:
     networks:
       - food-diary-net
     environment:
-      POSTGRES_DB: ${POSTGRESQL_DB}
       POSTGRES_USER: ${POSTGRESQL_USER}
       POSTGRES_PASSWORD: ${POSTGRESQL_PASS}
     volumes:
       - ./data/postgres_data:/var/lib/postgresql/data
+      - ./init/init-db.sh:/docker-entrypoint-initdb.d/init-db.sh
+      - ./.env:/docker-entrypoint-initdb.d/.env
 
   keycloak:
     image: quay.io/keycloak/keycloak:${KEYCLOAK_VERSION}
@@ -18,13 +19,11 @@ services:
       KEYCLOAK_ADMIN: ${KEYCLOAK_ADMIN_USER}
       KEYCLOAK_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD}
       KC_DB: postgres
-      KC_DB_URL: jdbc:postgresql://postgres/${POSTGRESQL_DB}
-      KC_DB_USERNAME: ${POSTGRESQL_USER}
-      KC_DB_PASSWORD: ${POSTGRESQL_PASS}
+      KC_DB_URL: jdbc:postgresql://postgres/${KEYCLOAK_DB}
+      KC_DB_USERNAME: ${KEYCLOAK_DB_USER}
+      KC_DB_PASSWORD: ${KEYCLOAK_DB_PASS}
       KC_HOSTNAME: ${KEYCLOAK_HOSTNAME}
       KC_HTTP_RELATIVE_PATH: /auth
-    env_file:
-      - dev.env
     volumes:
       - ./mocks/keycloak/realms:/opt/keycloak/data/import
       - ./apps/keycloak/theme/dist_keycloak:/opt/keycloak/providers/
@@ -34,10 +33,27 @@ services:
     build:
       context: ./apps/food-diary
       dockerfile: Dockerfile
+    environment:
+      APP_ENV_PREFIX: ${APP_ENV_PREFIX}
+      FOOD_DIARY_CLIENT_KEYCLOAK_URL: ${FOOD_DIARY_CLIENT_KEYCLOAK_URL}
+      FOOD_DIARY_CLIENT_KEYCLOAK_REALM: ${FOOD_DIARY_CLIENT_KEYCLOAK_REALM}
+      FOOD_DIARY_CLIENT_KEYCLOAK_CLIENT: ${FOOD_DIARY_CLIENT_KEYCLOAK_CLIENT}
     networks:
       - food-diary-net
-    env_file:
-      - .env
+
+  food-diary-api:
+    build:
+      context: ./apps/food-diary-api
+      dockerfile: Dockerfile
+    environment:
+      FOOD_DIARY_API_DEBUG: ${FOOD_DIARY_API_DEBUG}
+      FOOD_DIARY_API_SECRET_KEY: ${FOOD_DIARY_API_SECRET_KEY}
+      FOOD_DIARY_API_DJANGO_ALLOWED_HOSTS: ${FOOD_DIARY_API_DJANGO_ALLOWED_HOSTS}
+      FOOD_DIARY_API_DB_USER: ${FOOD_DIARY_API_DB_USER}
+      FOOD_DIARY_API_DB_PASS: ${FOOD_DIARY_API_DB_PASS}
+      FOOD_DIARY_API_DB: ${FOOD_DIARY_API_DB}
+    networks:
+      - food-diary-net
 
   nginx:
     image: nginx:stable-alpine

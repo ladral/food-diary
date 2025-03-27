@@ -28,6 +28,8 @@ services:
       - ./mocks/keycloak/realms:/opt/keycloak/data/import
       - ./apps/keycloak/theme/dist_keycloak:/opt/keycloak/providers/
     command: start-dev --import-realm
+    depends_on:
+      - postgres
 
   food-diary-client:
     build:
@@ -52,8 +54,16 @@ services:
       FOOD_DIARY_API_DB_USER: ${FOOD_DIARY_API_DB_USER}
       FOOD_DIARY_API_DB_PASS: ${FOOD_DIARY_API_DB_PASS}
       FOOD_DIARY_API_DB: ${FOOD_DIARY_API_DB}
+
+      FOOD_DIARY_API_DB_HOST: ${FOOD_DIARY_API_DB_HOST}
+      FOOD_DIARY_API_DB_PORT: ${FOOD_DIARY_API_DB_PORT}
+      FOOD_DIARY_API_SQL_ENGINE: ${FOOD_DIARY_API_SQL_ENGINE}
     networks:
       - food-diary-net
+    volumes:
+      - static_volume:/home/app/api/staticfiles
+    depends_on:
+      - postgres
 
   nginx:
     image: nginx:stable-alpine
@@ -63,12 +73,15 @@ services:
       - "8000:8000"
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
+      - static_volume:/home/app/web/staticfiles
     depends_on:
       - food-diary-client
+      - food-diary-api
       - keycloak
 
 volumes:
   postgres_data:
+  static_volume:
 
 networks:
   food-diary-net:

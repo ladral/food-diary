@@ -74,9 +74,13 @@ WSGI_APPLICATION = 'food_diary_api.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": os.environ.get("FOOD_DIARY_API_SQL_ENGINE", "django.db.backends.sqlite3"),
+        "NAME": os.environ.get("FOOD_DIARY_API_DB", BASE_DIR / "db.sqlite3"),
+        "USER": os.environ.get("FOOD_DIARY_API_DB_USER", "user"),
+        "PASSWORD": os.environ.get("FOOD_DIARY_API_DB_PASS", "password"),
+        "HOST": os.environ.get("FOOD_DIARY_API_DB_HOST", "localhost"),
+        "PORT": os.environ.get("FOOD_DIARY_API_DB_PORT", "5432"),
     }
 }
 
@@ -113,8 +117,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:8000',
+    'https://localhost:8000',
+]

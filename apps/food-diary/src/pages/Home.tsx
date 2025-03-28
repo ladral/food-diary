@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import useKeycloak from "../hooks/useKeycloak";
 import viteLogo from "/vite.svg";
 import reactLogo from "../assets/react.svg";
+import createAxiosInstance from "../services/axiosInstance";
 
 const HomePage: React.FC = () => {
     const [count, setCount] = useState(0);
     const { keycloak, authenticated } = useKeycloak();
+    const axiosInstance = createAxiosInstance();
 
     const handleLogin = () => {
         keycloak?.login();
@@ -13,6 +15,15 @@ const HomePage: React.FC = () => {
 
     const handleLogout = () => {
         keycloak?.logout();
+    };
+
+    const handleApiCall = async () => {
+        try {
+            const response = await axiosInstance.get('/api/diary/');
+            console.log(response.data);
+        } catch (error) {
+            console.error('Error making API call:', error);
+        }
     };
 
     return (
@@ -40,10 +51,12 @@ const HomePage: React.FC = () => {
             {authenticated ? (
                 <div>
                     <p>Hello, {keycloak?.idTokenParsed?.preferred_username}!</p>
+                    <button onClick={handleApiCall}>Call API</button>
                 </div>
             ) : (
                 <div>
                     <p>Please log in to access your personalized content.</p>
+                    <button onClick={handleApiCall}>Call API</button>
                 </div>
             )}
 

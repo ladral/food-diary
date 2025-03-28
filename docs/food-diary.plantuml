@@ -1,0 +1,71 @@
+@startuml
+!define RECTANGLE class
+
+RECTANGLE Postgres {
+    + Image: postgres:17
+    + Environment:
+        - POSTGRES_USER
+        - POSTGRES_PASSWORD
+    + Volumes:
+        - ./data/postgres_data:/var/lib/postgresql/data
+        - ./init/init-db.sh:/docker-entrypoint-initdb.d/init-db.sh
+        - ./.env:/docker-entrypoint-initdb.d/.env
+}
+
+RECTANGLE Keycloak {
+    + Image: quay.io/keycloak/keycloak:${KEYCLOAK_VERSION}
+    + Environment:
+        - KEYCLOAK_ADMIN
+        - KEYCLOAK_ADMIN_PASSWORD
+        - KC_DB
+        - KC_DB_URL
+        - KC_DB_USERNAME
+        - KC_DB_PASSWORD
+        - KC_HOSTNAME
+        - KC_HTTP_RELATIVE_PATH
+    + Command: start-dev --import-realm
+}
+
+RECTANGLE FoodDiaryClient {
+    + Build:
+        - Context: ./apps/food-diary
+        - Dockerfile: Dockerfile
+    + Environment:
+        - APP_ENV_PREFIX
+        - FOOD_DIARY_CLIENT_KEYCLOAK_URL
+        - FOOD_DIARY_CLIENT_KEYCLOAK_REALM
+        - FOOD_DIARY_CLIENT_KEYCLOAK_CLIENT
+}
+
+RECTANGLE FoodDiaryAPI {
+    + Build:
+        - Context: ./apps/food-diary-api
+        - Dockerfile: Dockerfile
+    + Environment:
+        - FOOD_DIARY_API_DEBUG
+        - FOOD_DIARY_API_SECRET_KEY
+        - FOOD_DIARY_API_DJANGO_ALLOWED_HOSTS
+        - DJANGO_SUPERUSER_USERNAME
+        - DJANGO_SUPERUSER_PASSWORD
+        - DJANGO_SUPERUSER_EMAIL
+        - FOOD_DIARY_API_DB_USER
+        - FOOD_DIARY_API_DB_PASS
+        - FOOD_DIARY_API_DB
+        - FOOD_DIARY_API_DB_HOST
+        - FOOD_DIARY_API_DB_PORT
+        - FOOD_DIARY_API_SQL_ENGINE
+}
+
+RECTANGLE Nginx {
+    + Image: nginx:stable-alpine
+    + Ports: "8000:8000"
+}
+
+Postgres --|> Keycloak : depends_on
+Postgres --|> FoodDiaryAPI : depends_on
+Keycloak --|> FoodDiaryClient : depends_on
+Keycloak --|> Nginx : depends_on
+FoodDiaryClient --|> Nginx : serves
+FoodDiaryAPI --|> Nginx : serves
+
+@enduml

@@ -38,3 +38,6 @@ Each application can also be installed separately. please refer to the dedicated
     - stop containers and removes containers, networks, volumes, and images created by up: `docker-compose down --rmi all`
 12. remove unused images `docker image prune`
 13. remove the folder ./data to remove all the data created by the application
+
+#### Docker compose deployment UML
+![plantuml](./docs/plantuml.png)

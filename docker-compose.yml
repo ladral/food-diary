@@ -25,7 +25,7 @@ services:
       KC_HOSTNAME: ${KEYCLOAK_HOSTNAME}
       KC_HTTP_RELATIVE_PATH: /auth
     volumes:
-      - ./mocks/keycloak/realms:/opt/keycloak/data/import
+      - ./apps/keycloak/realms:/opt/keycloak/data/import
       - ./apps/keycloak/theme/dist_keycloak:/opt/keycloak/providers/
     command: start-dev --import-realm
     depends_on:

@@ -1,0 +1,16 @@
+###########################################################################
+#######             FOR DEMONSTRATION PURPOSES ONLY                 #######
+###########################################################################
+#                                                                         #
+#                                                                         #
+# This set up is only for demonstration purposes.                         #
+# The imported Keycloak realm contains a demo user                        #
+#                                                                         #
+#                                                                         #
+###########################################################################
+services:
+  keycloak:
+    volumes:
+      - ./mocks/keycloak/realms:/opt/keycloak/data/import
+      - ./apps/keycloak/theme/dist_keycloak:/opt/keycloak/providers/
+

@@ -19,4 +19,8 @@ python manage.py migrate
 echo "Collect static files"
 python manage.py collectstatic --no-input --clear
 
+# Create superuser if it doesn't exist
+echo "Create superuser"
+python manage.py createsuperuser --noinput
+
 exec "$@"

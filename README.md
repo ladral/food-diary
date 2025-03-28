@@ -19,15 +19,22 @@ Each application can also be installed separately. please refer to the dedicated
 4. copy the dev.env file and save it as .env: `cp dev.env .env`
 5. update the .env file:
    - Replace the placeholder passwords with secure values
-   - ensure any hostname or port changes in the .env file are also reflected in the main nginx.conf.
-   - any hostname or port changes within the .env file must also be changed in the nginx configuration -> ./nginx.conf
+   - Replace api secret key with a secure value
+   - ensure any hostname or port changes in the .env file are also reflected in the main nginx.conf
    - the value of the APP_ENV_PREFIX variable must match the prefix of all client application environment variables within the project .env file. 
    - all top level client application environment variable keys must match to a value of a application level environment variable. These variables will override the environment variables of the client application. For more information, see ./apps/food-diary/env.sh.
 6. run the following docker command: `docker-compose up -d`
+   - to start the application in demo mode (with demo data seed) run the following command: `docker compose -f docker-compose.yml -f docker-compose-demo-seed.yml up -d`
 7. remove unused build images `docker image prune`
-8. application is now available at the specified port 8000
-9. Stop all containers
-   - stop containers `docker-compose stop` ( restart containers: `docker-compose start`)
-   - stop and removes containers, networks, volumes created by up: `docker-compose down`
-   - stop containers and removes containers, networks, volumes, and images created by up: `docker-compose down --rmi all`
-10. remove unused images `docker image prune`
+8. application is now available at the specified port 8000 -> `localhost:8000`
+   - if started in demo mode then the following demo user already exists:
+      - **user:** alice 
+      - **password:** wonderland 
+9. the keycloak admin site is available at `localhost:8000/auth` (credentials defined in the .env file)
+10. the django admin site is available at `localhost:8000/admin` (credentials defined in the .env file)
+11. Stop all containers
+    - stop containers `docker-compose stop` (restart containers: `docker-compose start`)
+    - stop and removes containers, networks, volumes created by up: `docker-compose down`
+    - stop containers and removes containers, networks, volumes, and images created by up: `docker-compose down --rmi all`
+12. remove unused images `docker image prune`
+13. remove the folder ./data to remove all the data created by the application

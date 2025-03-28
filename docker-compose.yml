@@ -4,11 +4,12 @@ services:
     networks:
       - food-diary-net
     environment:
-      POSTGRES_DB: ${POSTGRESQL_DB}
       POSTGRES_USER: ${POSTGRESQL_USER}
       POSTGRES_PASSWORD: ${POSTGRESQL_PASS}
     volumes:
       - ./data/postgres_data:/var/lib/postgresql/data
+      - ./init/init-db.sh:/docker-entrypoint-initdb.d/init-db.sh
+      - ./.env:/docker-entrypoint-initdb.d/.env
 
   keycloak:
     image: quay.io/keycloak/keycloak:${KEYCLOAK_VERSION}
@@ -18,26 +19,53 @@ services:
       KEYCLOAK_ADMIN: ${KEYCLOAK_ADMIN_USER}
       KEYCLOAK_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD}
       KC_DB: postgres
-      KC_DB_URL: jdbc:postgresql://postgres/${POSTGRESQL_DB}
-      KC_DB_USERNAME: ${POSTGRESQL_USER}
-      KC_DB_PASSWORD: ${POSTGRESQL_PASS}
+      KC_DB_URL: jdbc:postgresql://postgres/${KEYCLOAK_DB}
+      KC_DB_USERNAME: ${KEYCLOAK_DB_USER}
+      KC_DB_PASSWORD: ${KEYCLOAK_DB_PASS}
       KC_HOSTNAME: ${KEYCLOAK_HOSTNAME}
       KC_HTTP_RELATIVE_PATH: /auth
-    env_file:
-      - dev.env
     volumes:
-      - ./mocks/keycloak/realms:/opt/keycloak/data/import
+      - ./apps/keycloak/realms:/opt/keycloak/data/import
       - ./apps/keycloak/theme/dist_keycloak:/opt/keycloak/providers/
     command: start-dev --import-realm
+    depends_on:
+      - postgres
 
   food-diary-client:
     build:
       context: ./apps/food-diary
       dockerfile: Dockerfile
+    environment:
+      APP_ENV_PREFIX: ${APP_ENV_PREFIX}
+      FOOD_DIARY_CLIENT_KEYCLOAK_URL: ${FOOD_DIARY_CLIENT_KEYCLOAK_URL}
+      FOOD_DIARY_CLIENT_KEYCLOAK_REALM: ${FOOD_DIARY_CLIENT_KEYCLOAK_REALM}
+      FOOD_DIARY_CLIENT_KEYCLOAK_CLIENT: ${FOOD_DIARY_CLIENT_KEYCLOAK_CLIENT}
     networks:
       - food-diary-net
-    env_file:
-      - .env
+
+  food-diary-api:
+    build:
+      context: ./apps/food-diary-api
+      dockerfile: Dockerfile
+    environment:
+      FOOD_DIARY_API_DEBUG: ${FOOD_DIARY_API_DEBUG}
+      FOOD_DIARY_API_SECRET_KEY: ${FOOD_DIARY_API_SECRET_KEY}
+      FOOD_DIARY_API_DJANGO_ALLOWED_HOSTS: ${FOOD_DIARY_API_DJANGO_ALLOWED_HOSTS}
+      DJANGO_SUPERUSER_USERNAME: $FOOD_DIARY_API_DJANGO_SUPERUSER_USERNAME
+      DJANGO_SUPERUSER_PASSWORD: $FOOD_DIARY_API_DJANGO_SUPERUSER_PASSWORD
+      DJANGO_SUPERUSER_EMAIL: $FOOD_DIARY_API_DJANGO_SUPERUSER_EMAIL
+      FOOD_DIARY_API_DB_USER: ${FOOD_DIARY_API_DB_USER}
+      FOOD_DIARY_API_DB_PASS: ${FOOD_DIARY_API_DB_PASS}
+      FOOD_DIARY_API_DB: ${FOOD_DIARY_API_DB}
+      FOOD_DIARY_API_DB_HOST: ${FOOD_DIARY_API_DB_HOST}
+      FOOD_DIARY_API_DB_PORT: ${FOOD_DIARY_API_DB_PORT}
+      FOOD_DIARY_API_SQL_ENGINE: ${FOOD_DIARY_API_SQL_ENGINE}
+    networks:
+      - food-diary-net
+    volumes:
+      - static_volume:/home/app/api/staticfiles
+    depends_on:
+      - postgres
 
   nginx:
     image: nginx:stable-alpine
@@ -47,12 +75,15 @@ services:
       - "8000:8000"
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
+      - static_volume:/home/app/web/staticfiles
     depends_on:
       - food-diary-client
+      - food-diary-api
       - keycloak
 
 volumes:
   postgres_data:
+  static_volume:
 
 networks:
   food-diary-net:

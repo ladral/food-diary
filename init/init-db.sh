@@ -11,12 +11,11 @@ if [ -f /docker-entrypoint-initdb.d/.env ]; then
   done < /docker-entrypoint-initdb.d/.env
 fi
 
-# Create user if it doesn't exist
+# Create DB users if they doesn't exist
 if ! psql -U "$POSTGRESQL_USER" -c "\du" | grep -qw "$KEYCLOAK_DB_USER"; then
   psql -U "$POSTGRESQL_USER" -c "CREATE USER $KEYCLOAK_DB_USER WITH PASSWORD '$KEYCLOAK_DB_PASS';"
 fi
 
-# Create a second user if it doesn't exist
 if ! psql -U "$POSTGRESQL_USER" -c "\du" | grep -qw "$FOOD_DIARY_API_DB_USER"; then
   psql -U "$POSTGRESQL_USER" -c "CREATE USER $FOOD_DIARY_API_DB_USER WITH PASSWORD '$FOOD_DIARY_API_DB_PASS';"
 fi

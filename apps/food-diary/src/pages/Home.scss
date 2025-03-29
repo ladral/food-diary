@@ -1,0 +1,57 @@
+.user__login, .user__logout {
+  margin-top: 1rem;
+}
+
+.form {
+  max-width: 30rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.form__diary-title,
+.form__diary-content {
+  background-color: white;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.form__diary-title:focus,
+.form__diary-content:focus {
+  outline: none;
+}
+
+.form__diary-title {
+  color: black;
+  height: 40px;
+}
+
+.form__diary-content {
+  color: black;
+  min-height: 100px;
+  resize: vertical; /* Allows vertical resizing */
+}
+
+.diary {
+  margin: 20px;
+}
+
+.diary__entry {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid white;
+}
+
+.diary__entry-title {
+  flex: 1;
+  font-weight: bold;
+}
+
+.diary__entry-content {
+  flex: 2;
+  margin-left: 1.25rem;
+}

@@ -31,6 +31,7 @@ ALLOWED_HOSTS = os.environ.get("FOOD_DIARY_API_DJANGO_ALLOWED_HOSTS", default=""
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
+    'mozilla_django_oidc',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -132,4 +133,29 @@ CSRF_TRUSTED_ORIGINS = [
     'https://localhost:8000',
 ]
 
-CORS_ALLOWED_ORIGINS = os.environ.get("FOOD_DIARY_API_CORS_ALLOWED_ORIGINS", default="").split(" ")
+CORS_ALLOWED_ORIGINS = os.environ.get("FOOD_DIARY_API_CORS_ALLOWED_ORIGINS").split(" ")
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'mozilla_django_oidc.contrib.drf.OIDCAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ],
+
+    # TODO: evaluate the need of securing all REST endpoints
+    # 'DEFAULT_PERMISSION_CLASSES': (
+    #     'rest_framework.permissions.IsAuthenticated',
+    # )
+}
+
+OIDC_DRF_AUTH_BACKEND = 'mozilla_django_oidc.auth.OIDCAuthenticationBackend'
+
+# Add 'mozilla_django_oidc' authentication backend
+AUTHENTICATION_BACKENDS = (
+    'mozilla_django_oidc.auth.OIDCAuthenticationBackend',
+)
+
+OIDC_RP_CLIENT_ID=os.environ.get("FOOD_DIARY_API_OIDC_CLIENT_ID")
+OIDC_RP_CLIENT_SECRET=os.environ.get("FOOD_DIARY_API_OIDC_CLIENT_SECRET")
+OIDC_OP_AUTHORIZATION_ENDPOINT = os.environ.get("FOOD_DIARY_API_OIDC_AUTHORIZATION_ENDPOINT")
+OIDC_OP_TOKEN_ENDPOINT = os.environ.get("FOOD_DIARY_API_OIDC_TOKEN_ENDPOINT")
+OIDC_OP_USER_ENDPOINT = os.environ.get("FOOD_DIARY_API_OIDC_USER_ENDPOINT")

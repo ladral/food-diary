@@ -120,15 +120,24 @@ const HomePage: React.FC = () => {
 
             <div className="diary">
                 <h2>Diary Entries</h2>
-                <ul>
-                    {diaryEntries.map((entry, index) => (
-                        <li className="diary__entry" key={index}>
-                            <div className="diary__entry-title">{entry.title}</div>
-                            <div className="diary__entry-content">{entry.content}</div>
-                        </li>
+                <table className="diary__table">
+                    <thead>
+                    <tr>
+                        <th className="diary__header">Title</th>
+                        <th className="diary__header">Content</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {diaryEntries.map((entry) => (
+                        <tr key={entry.id} className="diary__entry">
+                            <td className="diary__entry-title">{entry.title}</td>
+                            <td className="diary__entry-content">{entry.content}</td>
+                        </tr>
                     ))}
-                </ul>
+                    </tbody>
+                </table>
             </div>
+
         </div>
     );
 };

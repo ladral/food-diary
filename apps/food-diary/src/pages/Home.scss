@@ -1,3 +1,5 @@
+@use "../styles/abstracts/functions" as fx;
+
 .user__login, .user__logout {
   margin-top: 1rem;
 }
@@ -10,48 +12,55 @@
 
 .form__diary-title,
 .form__diary-content {
-  background-color: white;
-  margin-bottom: 15px;
-  padding: 10px;
-  border: 1px solid #ccc;
+  background-color:  #{fx.getColor(white, 800)};
+  margin-bottom: 2rem;
+  padding: 0.625rem;
+  border: 1px solid #{fx.getColor(white, 800)};;
   border-radius: 4px;
-  font-size: 16px;
   transition: border-color 0.3s;
 }
 
 .form__diary-title:focus,
 .form__diary-content:focus {
-  outline: none;
+  outline: solid 1px #{fx.getPrimaryColor()};;
 }
 
 .form__diary-title {
-  color: black;
+  color: #{fx.getOnColor(white, 800)};
   height: 40px;
 }
 
 .form__diary-content {
-  color: black;
-  min-height: 100px;
-  resize: vertical; /* Allows vertical resizing */
+  color: #{fx.getOnColor(white, 800)};
+  min-height: 2rem;
+  resize: vertical;
 }
 
 .diary {
-  margin: 20px;
+  margin: 1.25rem;
+}
+
+.diary__table {
+  width: 100%;
+  border-collapse: collapse; /* Ensures borders are collapsed */
+  text-align: left;
+}
+
+.diary__header {
+  padding: 0.625rem;
 }
 
 .diary__entry {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  border-bottom: 1px solid white;
+  line-height: 2rem;
+  border-bottom: 1px solid #{fx.getOnBackgroundColor()};
 }
 
 .diary__entry-title {
-  flex: 1;
+  padding-left: 0.625rem;
   font-weight: bold;
 }
 
 .diary__entry-content {
-  flex: 2;
+  padding-left: 0.625rem;
   margin-left: 1.25rem;
 }

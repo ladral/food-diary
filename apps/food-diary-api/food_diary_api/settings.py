@@ -149,10 +149,11 @@ REST_FRAMEWORK = {
 
 OIDC_DRF_AUTH_BACKEND = 'mozilla_django_oidc.auth.OIDCAuthenticationBackend'
 
-# Add 'mozilla_django_oidc' authentication backend
 AUTHENTICATION_BACKENDS = (
     'mozilla_django_oidc.auth.OIDCAuthenticationBackend',
+    'django.contrib.auth.backends.ModelBackend',
 )
+
 
 OIDC_RP_CLIENT_ID=os.environ.get("FOOD_DIARY_API_OIDC_CLIENT_ID")
 OIDC_RP_CLIENT_SECRET=os.environ.get("FOOD_DIARY_API_OIDC_CLIENT_SECRET")

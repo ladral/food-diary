@@ -1,11 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import useKeycloak from "../hooks/useKeycloak";
 import viteLogo from "/vite.svg";
 import reactLogo from "../assets/react.svg";
+import createAxiosInstance from "../services/axiosInstance";
+import DiaryEntry from "../models/DiaryEntry.ts";
+import "./Home.scss";
+import axios from "axios";
 
 const HomePage: React.FC = () => {
-    const [count, setCount] = useState(0);
     const { keycloak, authenticated } = useKeycloak();
+    const axiosInstance = createAxiosInstance();
+
+    const [diaryEntries, setDiaryEntries] = useState<DiaryEntry[]>([]);
+    const [title, setTitle] = useState("");
+    const [content, setContent] = useState("");
+    const [notification, setNotification] = useState<string | null>(null);
 
     const handleLogin = () => {
         keycloak?.login();
@@ -14,6 +23,43 @@ const HomePage: React.FC = () => {
     const handleLogout = () => {
         keycloak?.logout();
     };
+
+    const getDiaryEntries = async () => {
+        try {
+            const response = await axiosInstance.get("/api/diary/");
+            setDiaryEntries(response.data);
+        } catch (error) {
+            console.error("Error making API call:", error);
+            setNotification(`Error getting all diary entries: ${error}`);
+            setTimeout(() => setNotification(null), 3000);
+        }
+    };
+
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        try {
+            const response = await axiosInstance.post("/api/diary/", { title, content });
+            console.log("Diary entry created:", response.data);
+            await getDiaryEntries();
+            setTitle("");
+            setContent("");
+        } catch (error) {
+            if (axios.isAxiosError(error) && error.response) {
+                if (error.response.status === 401) {
+                    setNotification("You must be logged in to create a diary entry.");
+                    setTimeout(() => setNotification(null), 3000);
+                }
+            } else {
+                console.error("Error creating diary entry:", error);
+                setNotification(`Error creating diary entry: ${error}`);
+                setTimeout(() => setNotification(null), 3000);
+            }
+        }
+    };
+
+    useEffect(() => {
+        getDiaryEntries();
+    }, []);
 
     return (
         <div>
@@ -26,38 +72,72 @@ const HomePage: React.FC = () => {
                 </a>
             </div>
             <h1>Vite + React</h1>
-            <div className="card">
-                <button className="button" onClick={() => setCount((count) => count + 1)}>
-                    count is {count}
-                </button>
-                <p>
-                    Edit <code>src/App.tsx</code> and save to test HMR
-                </p>
-            </div>
-            <p className="read-the-docs">
-                Click on the Vite and React logos to learn more
-            </p>
-            {authenticated ? (
-                <div>
-                    <p>Hello, {keycloak?.idTokenParsed?.preferred_username}!</p>
+            <div className="user card is-flex is-flex-direction-column is-align-items-center">
+                <div className="user__info">
+                    {authenticated ? (
+                        <p>Hello, {keycloak?.idTokenParsed?.preferred_username}!</p>
+                    ) : (
+                        <p>Please log in to create new diary entries.</p>
+                    )}
                 </div>
-            ) : (
-                <div>
-                    <p>Please log in to access your personalized content.</p>
+
+                {authenticated ? (
+                    <button className="user__logout button" color="inherit" onClick={handleLogout}>
+                        Logout
+                    </button>
+                ) : (
+                    <button className="user__login button" color="inherit" onClick={handleLogin}>
+                        Login
+                    </button>
+                )}
+            </div>
+
+            <form className="is-flex is-flex-direction-column form" onSubmit={handleSubmit}>
+                <input
+                    className="form__diary-title"
+                    type="text"
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
+                    placeholder="Title (max 200 characters)"
+                    maxLength={200}
+                    required
+                />
+                <textarea
+                    className="form__diary-content"
+                    value={content}
+                    onChange={(e) => setContent(e.target.value)}
+                    placeholder="Content"
+                    required
+                />
+                <button className="form__submit button" type="submit">Submit Diary Entry</button>
+            </form>
+
+            {notification && (
+                <div className="notification">
+                    {notification}
                 </div>
             )}
 
-            {authenticated ? (
-                <>
-                    <button color="inherit" onClick={handleLogout}>
-                        Logout
-                    </button>
-                </>
-            ) : (
-                <button color="inherit" onClick={handleLogin}>
-                    Login
-                </button>
-            )}
+            <div className="diary">
+                <h2>Diary Entries</h2>
+                <table className="diary__table">
+                    <thead>
+                    <tr>
+                        <th className="diary__header">Title</th>
+                        <th className="diary__header">Content</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {diaryEntries.map((entry) => (
+                        <tr key={entry.id} className="diary__entry">
+                            <td className="diary__entry-title">{entry.title}</td>
+                            <td className="diary__entry-content">{entry.content}</td>
+                        </tr>
+                    ))}
+                    </tbody>
+                </table>
+            </div>
+
         </div>
     );
 };

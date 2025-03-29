@@ -11,8 +11,10 @@ The food diary API is a robust backend for the food diary client application.
 
 ## Start the application
 1. copy the dev.env file and save it as .env: `cp dev.env .env`
-2. serve web application in development mode (the env file will be loaded automatically): `python manage.py runserver` 
-3. terminate the application: `ctrl + c`
+2. apply db migrations `python manage.py migrate` 
+3. create superuser `python manage.py createsuperuser` (follow the instructions to create the superuser)
+4. serve web application in development mode (the env file will be loaded automatically): `python manage.py runserver` 
+5. terminate the application: `ctrl + c`
 
 ## Docker
 

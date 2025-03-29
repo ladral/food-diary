@@ -4,6 +4,7 @@
 $color-primary:  rgb(100, 108, 255) !default;
 $color-secondary: rgb(100, 150, 255) !default;
 $color-text-light: rgb(229, 229, 229)!default;
+$color-text-dark: rgb(0 0 0 / 0.8)!default;
 
 $COLOR-MAPS: (
         primary: (
@@ -26,8 +27,8 @@ $COLOR-MAPS: (
         ),
         white: (
                 800: (
-                        light: rgb(230, 236, 245),
-                        on-light: $color-text-light
+                        light: rgb(229, 229, 229),
+                        on-light: $color-text-dark
                 )
         ),
         grey: (

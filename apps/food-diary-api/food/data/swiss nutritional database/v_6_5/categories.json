@@ -1,0 +1,502 @@
+[
+  {
+    "name": "Gerichte",
+    "id": 6084
+  },
+  {
+    "name": "Sandwiches",
+    "id": 5977
+  },
+  {
+    "name": "Orientalische Gerichte",
+    "id": 5978
+  },
+  {
+    "name": "Milch und Milchprodukte",
+    "id": 5979
+  },
+  {
+    "name": "Gemüse",
+    "id": 5980
+  },
+  {
+    "name": "Eier",
+    "id": 5981
+  },
+  {
+    "name": "Früchte",
+    "id": 5982
+  },
+  {
+    "name": "Fisch",
+    "id": 5983
+  },
+  {
+    "name": "Fette und Öle",
+    "id": 5984
+  },
+  {
+    "name": "Süssigkeiten",
+    "id": 5985
+  },
+  {
+    "name": "Verschiedenes",
+    "id": 5986
+  },
+  {
+    "name": "Alkoholfreie Getränke",
+    "id": 6007
+  },
+  {
+    "name": "Trinkwasser",
+    "id": 5987
+  },
+  {
+    "name": "Mineralwasser",
+    "id": 5988
+  },
+  {
+    "name": "Alkoholhaltige Getränke",
+    "id": 6008
+  },
+  {
+    "name": "Bier",
+    "id": 5989
+  },
+  {
+    "name": "Wein",
+    "id": 5990
+  },
+  {
+    "name": "Spirituosen",
+    "id": 5991
+  },
+  {
+    "name": "Gemüsesäfte",
+    "id": 5992
+  },
+  {
+    "name": "Pilze",
+    "id": 5993
+  },
+  {
+    "name": "Sprossen und Keimlinge",
+    "id": 5994
+  },
+  {
+    "name": "Kräuter",
+    "id": 5995
+  },
+  {
+    "name": "Getreideprodukte, Hülsenfrüchte und Kartoffeln",
+    "id": 6019
+  },
+  {
+    "name": "Reis",
+    "id": 5996
+  },
+  {
+    "name": "Teigwaren",
+    "id": 5997
+  },
+  {
+    "name": "Mehle und Stärke",
+    "id": 5998
+  },
+  {
+    "name": "Teige",
+    "id": 5999
+  },
+  {
+    "name": "Kartoffeln",
+    "id": 6000
+  },
+  {
+    "name": "Milch",
+    "id": 6001
+  },
+  {
+    "name": "Joghurt und Sauermilch",
+    "id": 6002
+  },
+  {
+    "name": "Käseerzeugnisse",
+    "id": 6003
+  },
+  {
+    "name": "Rahm und Butter",
+    "id": 6004
+  },
+  {
+    "name": "Frischkäse und Quark",
+    "id": 6005
+  },
+  {
+    "name": "Sonstige Getreideprodukte",
+    "id": 6006
+  },
+  {
+    "name": "Fruchtsäfte",
+    "id": 6009
+  },
+  {
+    "name": "Gemüse gekocht (inkl. Konserven)",
+    "id": 6010
+  },
+  {
+    "name": "Sonstige alkoholische Getränke",
+    "id": 6011
+  },
+  {
+    "name": "Sonstige Getränke",
+    "id": 6012
+  },
+  {
+    "name": "Süssgetränke",
+    "id": 6013
+  },
+  {
+    "name": "Fleisch und Innereien",
+    "id": 6014
+  },
+  {
+    "name": "Früchte frisch",
+    "id": 6015
+  },
+  {
+    "name": "Frucht- und Gemüsesäfte",
+    "id": 6016
+  },
+  {
+    "name": "Früchte gekocht (inkl. Konserven)",
+    "id": 6017
+  },
+  {
+    "name": "Gemüse frisch",
+    "id": 6018
+  },
+  {
+    "name": "Brote, Flocken und Frühstückscerealien",
+    "id": 6079
+  },
+  {
+    "name": "Brote und Brotwaren",
+    "id": 6020
+  },
+  {
+    "name": "Flocken, Kleie und Keime",
+    "id": 6021
+  },
+  {
+    "name": "Hartkäse",
+    "id": 6022
+  },
+  {
+    "name": "Milchersatzprodukte",
+    "id": 6023
+  },
+  {
+    "name": "Kalb",
+    "id": 6024
+  },
+  {
+    "name": "Rind",
+    "id": 6025
+  },
+  {
+    "name": "Schwein",
+    "id": 6026
+  },
+  {
+    "name": "Lamm, Schaf",
+    "id": 6027
+  },
+  {
+    "name": "Geflügel",
+    "id": 6028
+  },
+  {
+    "name": "Wild",
+    "id": 6029
+  },
+  {
+    "name": "Sonstige Tierarten",
+    "id": 6030
+  },
+  {
+    "name": "Süsswasserfische",
+    "id": 6031
+  },
+  {
+    "name": "Fischerzeugnisse",
+    "id": 6032
+  },
+  {
+    "name": "Öle",
+    "id": 6033
+  },
+  {
+    "name": "Fette",
+    "id": 6034
+  },
+  {
+    "name": "Rahm",
+    "id": 6035
+  },
+  {
+    "name": "Cremen und Pudding",
+    "id": 6036
+  },
+  {
+    "name": "Konfitüren und süsse Brotaufstriche",
+    "id": 6037
+  },
+  {
+    "name": "Sonstige Süssigkeiten",
+    "id": 6038
+  },
+  {
+    "name": "Hefe",
+    "id": 6039
+  },
+  {
+    "name": "Saucen",
+    "id": 6040
+  },
+  {
+    "name": "Meeresfische",
+    "id": 6041
+  },
+  {
+    "name": "Kuchen, Torten und Cake",
+    "id": 6042
+  },
+  {
+    "name": "Meeresfrüchte, Krusten- und Schalentiere",
+    "id": 6043
+  },
+  {
+    "name": "Fleisch- und Wurstwaren",
+    "id": 6076
+  },
+  {
+    "name": "Sonstige Fleisch- und Wurstwaren",
+    "id": 6044
+  },
+  {
+    "name": "Kochwurstware",
+    "id": 6045
+  },
+  {
+    "name": "Rohwurstware",
+    "id": 6046
+  },
+  {
+    "name": "Fleischersatzprodukte",
+    "id": 6047
+  },
+  {
+    "name": "Schokolade und Kakaoerzeugnisse",
+    "id": 6048
+  },
+  {
+    "name": "Glacen auf Milchbasis",
+    "id": 6049
+  },
+  {
+    "name": "Guetzli",
+    "id": 6050
+  },
+  {
+    "name": "Salzige Snacks",
+    "id": 6051
+  },
+  {
+    "name": "Bonbons, Frucht- und Kaugummi",
+    "id": 6052
+  },
+  {
+    "name": "Zucker und Süssstoffe",
+    "id": 6053
+  },
+  {
+    "name": "Eintöpfe und Suppen",
+    "id": 6054
+  },
+  {
+    "name": "Sonstige süsse Backwaren",
+    "id": 6055
+  },
+  {
+    "name": "Früchte tiefgekühlt",
+    "id": 6056
+  },
+  {
+    "name": "Aufstriche",
+    "id": 6057
+  },
+  {
+    "name": "Backzutaten",
+    "id": 6058
+  },
+  {
+    "name": "Salz, Gewürze und Aromen",
+    "id": 6059
+  },
+  {
+    "name": "Gemüse tiefgekühlt",
+    "id": 6060
+  },
+  {
+    "name": "Süssgetränke energievermindert",
+    "id": 6061
+  },
+  {
+    "name": "Milch- und Joghurtgetränke",
+    "id": 6062
+  },
+  {
+    "name": "Müeslimischungen und Frühstückscerealien",
+    "id": 6063
+  },
+  {
+    "name": "Hülsenfrüchte",
+    "id": 6064
+  },
+  {
+    "name": "Gelier- und Bindemittel",
+    "id": 6065
+  },
+  {
+    "name": "Sonstige süsse Gerichte",
+    "id": 6066
+  },
+  {
+    "name": "Mais",
+    "id": 6067
+  },
+  {
+    "name": "Kaffee",
+    "id": 6068
+  },
+  {
+    "name": "Tee",
+    "id": 6069
+  },
+  {
+    "name": "Kakaogetränke",
+    "id": 6070
+  },
+  {
+    "name": "Malzextrakthaltige Getränke",
+    "id": 6071
+  },
+  {
+    "name": "Sirup",
+    "id": 6072
+  },
+  {
+    "name": "Mayonnaisen",
+    "id": 6073
+  },
+  {
+    "name": "Salatsaucen",
+    "id": 6074
+  },
+  {
+    "name": "Nüsse, Samen und Ölfrüchte",
+    "id": 6075
+  },
+  {
+    "name": "Früchte getrocknet",
+    "id": 6077
+  },
+  {
+    "name": "Gemüse getrocknet",
+    "id": 6078
+  },
+  {
+    "name": "Gesalzene Nüsse, Samen, Kerne",
+    "id": 6080
+  },
+  {
+    "name": "Weichkäse",
+    "id": 6081
+  },
+  {
+    "name": "Riegel",
+    "id": 6082
+  },
+  {
+    "name": "Glacen auf Wasserbasis",
+    "id": 6083
+  },
+  {
+    "name": "Speziallebensmittel",
+    "id": 6085
+  },
+  {
+    "name": "Supplemente",
+    "id": 6086
+  },
+  {
+    "name": "Sport",
+    "id": 6087
+  },
+  {
+    "name": "Gewichtsreduktion",
+    "id": 6088
+  },
+  {
+    "name": "Salate",
+    "id": 6089
+  },
+  {
+    "name": "Chips",
+    "id": 6090
+  },
+  {
+    "name": "Salzsticks und Bretzel",
+    "id": 6091
+  },
+  {
+    "name": "Blätterteiggebäcke",
+    "id": 6092
+  },
+  {
+    "name": "Sonstige salzige Snacks",
+    "id": 6093
+  },
+  {
+    "name": "Sonstige salzige/rezente Gerichte",
+    "id": 6094
+  },
+  {
+    "name": "Kuchen und Gratins",
+    "id": 6095
+  },
+  {
+    "name": "Asiatische Gerichte",
+    "id": 6096
+  },
+  {
+    "name": "Italienische Gerichte",
+    "id": 6097
+  },
+  {
+    "name": "Fast Food",
+    "id": 6098
+  },
+  {
+    "name": "Müesli und Brei",
+    "id": 6099
+  },
+  {
+    "name": "Knäckebrote, Zwieback, Crackers und Waffeln",
+    "id": 6100
+  },
+  {
+    "name": "Brühwurstware",
+    "id": 6101
+  }
+]

@@ -1,0 +1,6656 @@
+[
+  {
+    "ID": 10533,
+    "Name": "Agar Agar",
+    "Synonyme": "",
+    "Kategorie": "Verschiedenes/Gelier- und Bindemittel"
+  },
+  {
+    "ID": 10536,
+    "Name": "Agavensirup",
+    "Synonyme": "Agavendicksaft",
+    "Kategorie": "Süssigkeiten/Zucker und Süssstoffe"
+  },
+  {
+    "ID": 14093,
+    "Name": "Ahornsirup",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Zucker und Süssstoffe"
+  },
+  {
+    "ID": 13466,
+    "Name": "Alge, Nori, getrocknet",
+    "Synonyme": "Algen, getrocknet",
+    "Kategorie": "Gemüse/Gemüse getrocknet"
+  },
+  {
+    "ID": 1478,
+    "Name": "Älplermagronen, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 13398,
+    "Name": "Amaranth, Samen, gekocht (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Sonstige Getreideprodukte"
+  },
+  {
+    "ID": 13397,
+    "Name": "Amaranth, Samen, roh",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Sonstige Getreideprodukte"
+  },
+  {
+    "ID": 868,
+    "Name": "Amaretti (Mandelgebäck)",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Guetzli"
+  },
+  {
+    "ID": 14094,
+    "Name": "Ananas, in Ananassaft, Konserve, abgetropft",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 14095,
+    "Name": "Ananas, in Ananassaft, Konserve, nicht abgetropft",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 617,
+    "Name": "Ananas, in Sirup, Konserve, abgetropft",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 14096,
+    "Name": "Ananas, mit Süssungsmittel, Konserve, abgetropft",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 377,
+    "Name": "Ananas, roh",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 13880,
+    "Name": "Ananassaft",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Fruchtsäfte"
+  },
+  {
+    "ID": 1049,
+    "Name": "Apfel, gedünstet, abgetropft (ohne Zugabe von Zucker)",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 435,
+    "Name": "Apfel, geschält, getrocknet",
+    "Synonyme": "Dörrapfel",
+    "Kategorie": "Früchte/Früchte getrocknet"
+  },
+  {
+    "ID": 378,
+    "Name": "Apfel, roh",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 1479,
+    "Name": "Apfelkuchen, hausgemacht, gebacken (mit Blätterteig)",
+    "Synonyme": "Apfelwähe",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 1480,
+    "Name": "Apfelkuchen, hausgemacht, gebacken (mit Kuchenteig)",
+    "Synonyme": "Apfelwähe",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 627,
+    "Name": "Apfelmus, gezuckert (Konserve)",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 628,
+    "Name": "Apfelmus, ungezuckert (Konserve)",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 568,
+    "Name": "Apfelsaft",
+    "Synonyme": "Süssmost",
+    "Kategorie": "Früchte/Fruchtsäfte;Alkoholfreie Getränke/Frucht- und Gemüsesäfte"
+  },
+  {
+    "ID": 512,
+    "Name": "Apfelwein, 4 vol%",
+    "Synonyme": "Apfelmost;Saurer Most;Cider",
+    "Kategorie": "Alkoholhaltige Getränke/Wein"
+  },
+  {
+    "ID": 513,
+    "Name": "Apfelwein, 6.2 vol%",
+    "Synonyme": "Apfelmost;Saurer Most;Cider",
+    "Kategorie": "Alkoholhaltige Getränke/Wein"
+  },
+  {
+    "ID": 554,
+    "Name": "Appenzeller, viertelfett",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Hartkäse"
+  },
+  {
+    "ID": 553,
+    "Name": "Appenzeller, vollfett",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Hartkäse"
+  },
+  {
+    "ID": 1051,
+    "Name": "Aprikose, gedünstet, abgetropft (ohne Zugabe von Zucker)",
+    "Synonyme": "Marille",
+    "Kategorie": "Früchte/Früchte gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 469,
+    "Name": "Aprikose, getrocknet",
+    "Synonyme": "Dörraprikose;Marille",
+    "Kategorie": "Früchte/Früchte getrocknet"
+  },
+  {
+    "ID": 621,
+    "Name": "Aprikose, in Sirup, Konserve, abgetropft",
+    "Synonyme": "Marille",
+    "Kategorie": "Früchte/Früchte gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 14097,
+    "Name": "Aprikose, mit Süssungsmittel, Konserve, abgetropft",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 379,
+    "Name": "Aprikose, roh",
+    "Synonyme": "Marille",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 1481,
+    "Name": "Aprikosenkuchen, hausgemacht, gebacken (mit Blätterteig)",
+    "Synonyme": "Marille;Aprikosenwähe",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 1482,
+    "Name": "Aprikosenkuchen, hausgemacht, gebacken (mit Kuchenteig)",
+    "Synonyme": "Aprikosenwähe;Marille",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 13449,
+    "Name": "Artischocken, Herz, abgetropft (Konserve)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 1653,
+    "Name": "Aubergine, gedämpft (ohne Zugabe von Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 1003,
+    "Name": "Aubergine, gedünstet (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "Eierfrucht",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 349,
+    "Name": "Aubergine, roh",
+    "Synonyme": "Eierfrucht",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 1659,
+    "Name": "Auberginen-Piccata, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 1658,
+    "Name": "Auberginenscheiben, paniert, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 10353,
+    "Name": "Aufschnitt (Durchschnitt)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Brühwurstware"
+  },
+  {
+    "ID": 380,
+    "Name": "Avocado, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse frisch;Nüsse, Samen und Ölfrüchte"
+  },
+  {
+    "ID": 763,
+    "Name": "Bäckerhefe, gepresst",
+    "Synonyme": "Bierhefe",
+    "Kategorie": "Verschiedenes/Hefe;Verschiedenes/Backzutaten"
+  },
+  {
+    "ID": 13455,
+    "Name": "Balsamicoessig",
+    "Synonyme": "Balsamessig;Aceto Balsamico",
+    "Kategorie": "Verschiedenes/Salz, Gewürze und Aromen"
+  },
+  {
+    "ID": 1577,
+    "Name": "Bami Goreng, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Asiatische Gerichte"
+  },
+  {
+    "ID": 740,
+    "Name": "Banane, gedörrt",
+    "Synonyme": "Bananenchips",
+    "Kategorie": "Früchte/Früchte getrocknet"
+  },
+  {
+    "ID": 741,
+    "Name": "Banane, getrocknet",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte getrocknet"
+  },
+  {
+    "ID": 381,
+    "Name": "Banane, roh",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 464,
+    "Name": "Basilikum, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Kräuter"
+  },
+  {
+    "ID": 1248,
+    "Name": "Basler Leckerli",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Guetzli"
+  },
+  {
+    "ID": 1268,
+    "Name": "Bauernbrot",
+    "Synonyme": "Burebrot",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Brote und Brotwaren"
+  },
+  {
+    "ID": 787,
+    "Name": "Bauernschüblig",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Rohwurstware"
+  },
+  {
+    "ID": 271,
+    "Name": "Baumnuss",
+    "Synonyme": "Walnuss",
+    "Kategorie": "Nüsse, Samen und Ölfrüchte"
+  },
+  {
+    "ID": 831,
+    "Name": "Baumnussbrot",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Brote und Brotwaren"
+  },
+  {
+    "ID": 13402,
+    "Name": "Baumnussöl",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Öle"
+  },
+  {
+    "ID": 12981,
+    "Name": "Béchamelsauce, hausgemacht",
+    "Synonyme": "",
+    "Kategorie": "Verschiedenes/Saucen"
+  },
+  {
+    "ID": 1122,
+    "Name": "Beeren (Durchschnitt), gekocht (ohne Zugabe von Zucker)",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 1119,
+    "Name": "Beeren (Durchschnitt), roh",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 851,
+    "Name": "Berliner",
+    "Synonyme": "Pfannkuchen",
+    "Kategorie": "Süssigkeiten/Sonstige süsse Backwaren"
+  },
+  {
+    "ID": 1211,
+    "Name": "Berner Alpkäse",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Hartkäse"
+  },
+  {
+    "ID": 1212,
+    "Name": "Berner Hobelkäse",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Hartkäse"
+  },
+  {
+    "ID": 790,
+    "Name": "Berner Zungenwurst",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Brühwurstware"
+  },
+  {
+    "ID": 859,
+    "Name": "Biber",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Sonstige süsse Backwaren"
+  },
+  {
+    "ID": 1183,
+    "Name": "Bier Panache (Durchschnitt)",
+    "Synonyme": "",
+    "Kategorie": "Alkoholhaltige Getränke/Bier"
+  },
+  {
+    "ID": 13420,
+    "Name": "Bier, alkoholfrei",
+    "Synonyme": "",
+    "Kategorie": "Alkoholhaltige Getränke/Bier"
+  },
+  {
+    "ID": 816,
+    "Name": "Bier, Lager",
+    "Synonyme": "",
+    "Kategorie": "Alkoholhaltige Getränke/Bier"
+  },
+  {
+    "ID": 839,
+    "Name": "Bierhefe, getrocknet",
+    "Synonyme": "Bäckerhefe;Trockenhefe;Hefepulver",
+    "Kategorie": "Speziallebensmittel/Supplemente;Verschiedenes/Hefe"
+  },
+  {
+    "ID": 789,
+    "Name": "Bierwurst",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Brühwurstware"
+  },
+  {
+    "ID": 1198,
+    "Name": "Birchermüesli, zubereitet (ungezuckert)",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Müesli und Brei"
+  },
+  {
+    "ID": 1050,
+    "Name": "Birne, gedünstet, abgetropft (ohne Zugabe von Zucker)",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 433,
+    "Name": "Birne, getrocknet",
+    "Synonyme": "Dörrbirne;Trockenbirne",
+    "Kategorie": "Früchte/Früchte getrocknet"
+  },
+  {
+    "ID": 620,
+    "Name": "Birne, in Sirup, Konserve, abgetropft",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 14098,
+    "Name": "Birne, mit Süssungsmittel, Konserve, abgetropft",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 382,
+    "Name": "Birne, roh",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 1483,
+    "Name": "Birnenkuchen, hausgemacht, gebacken (mit Blätterteig)",
+    "Synonyme": "Birnenwähe",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 1484,
+    "Name": "Birnenkuchen, hausgemacht, gebacken (mit Kuchenteig)",
+    "Synonyme": "Birnenwähe",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 562,
+    "Name": "Birnensaft",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Fruchtsäfte;Alkoholfreie Getränke/Frucht- und Gemüsesäfte"
+  },
+  {
+    "ID": 862,
+    "Name": "Birnenweggen",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Sonstige süsse Backwaren"
+  },
+  {
+    "ID": 604,
+    "Name": "Blanc battu mit Früchten, mit Süsstoffen",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Frischkäse und Quark"
+  },
+  {
+    "ID": 13395,
+    "Name": "Blanc battu, nature, mager",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Frischkäse und Quark"
+  },
+  {
+    "ID": 13445,
+    "Name": "Blätterteig (mit pflanzichem Fett), ungebacken",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige"
+  },
+  {
+    "ID": 904,
+    "Name": "Blätterteig, hausgemacht (Butter), ungebacken",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige"
+  },
+  {
+    "ID": 905,
+    "Name": "Blätterteig, hausgemacht (mit pflanzlichem Fett), ungebacken",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige"
+  },
+  {
+    "ID": 928,
+    "Name": "Blätterteigstängel",
+    "Synonyme": "Flûtes",
+    "Kategorie": "Salzige Snacks/Blätterteiggebäcke"
+  },
+  {
+    "ID": 1165,
+    "Name": "Blattgemüse (Durchschnitt exkl. Salate), gedämpft (ohne Zugabe von Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 1166,
+    "Name": "Blattgemüse (Durchschnitt exkl. Salate), gedünstet (ohne Zugabe von Salz und Fett)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 1164,
+    "Name": "Blattgemüse (Durchschnitt exkl. Salate), gekocht (ohne Zugabe von Salz und Fett)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 1127,
+    "Name": "Blattsalat (Durchschnitt), roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 1191,
+    "Name": "Blauschimmelkäse (Durchschnitt)",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Hartkäse"
+  },
+  {
+    "ID": 1004,
+    "Name": "Blumenkohl, gedämpft (ohne Zugabe von Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 350,
+    "Name": "Blumenkohl, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 778,
+    "Name": "Blutwurst",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Kochwurstware"
+  },
+  {
+    "ID": 13388,
+    "Name": "Bohne (alle Arten), gekocht (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Hülsenfrüchte"
+  },
+  {
+    "ID": 13387,
+    "Name": "Bohne (alle Arten), getrocknet",
+    "Synonyme": "Weisse Bohne;Rote Bohne;Borlotti Bohne",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Hülsenfrüchte"
+  },
+  {
+    "ID": 1009,
+    "Name": "Bohne, grün, gedämpft (ohne Zugabe von Salz)",
+    "Synonyme": "Gartenbohne",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 473,
+    "Name": "Bohne, grün, getrocknet",
+    "Synonyme": "Dörrbohne",
+    "Kategorie": "Gemüse/Gemüse getrocknet"
+  },
+  {
+    "ID": 353,
+    "Name": "Bohne, grün, roh",
+    "Synonyme": "Gartenbohne",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 653,
+    "Name": "Bolognaisesauce",
+    "Synonyme": "Tomaten-Hackfleischsauce",
+    "Kategorie": "Verschiedenes/Saucen"
+  },
+  {
+    "ID": 668,
+    "Name": "Bouillon, Fleisch, zubereitet",
+    "Synonyme": "Klare Brühe",
+    "Kategorie": "Gerichte/Eintöpfe und Suppen"
+  },
+  {
+    "ID": 665,
+    "Name": "Bouillon, Geflügel, zubereitet",
+    "Synonyme": "Klare Brühe",
+    "Kategorie": "Gerichte/Eintöpfe und Suppen"
+  },
+  {
+    "ID": 664,
+    "Name": "Bouillon, Gemüse, zubereitet",
+    "Synonyme": "Klare Brühe",
+    "Kategorie": "Gerichte/Eintöpfe und Suppen"
+  },
+  {
+    "ID": 642,
+    "Name": "Branchli (Milchschokolade mit Haselnusscrèmefüllung)",
+    "Synonyme": "Schokoladenstängeli",
+    "Kategorie": "Süssigkeiten/Schokolade und Kakaoerzeugnisse"
+  },
+  {
+    "ID": 518,
+    "Name": "Branntwein aus Getreide, 40 vol% (z.B. Whisky)",
+    "Synonyme": "Getreideschnaps",
+    "Kategorie": "Alkoholhaltige Getränke/Spirituosen"
+  },
+  {
+    "ID": 519,
+    "Name": "Branntwein aus Wein (z.B.Cognac, Brandy)",
+    "Synonyme": "",
+    "Kategorie": "Alkoholhaltige Getränke/Spirituosen"
+  },
+  {
+    "ID": 520,
+    "Name": "Branntwein aus Zuckerrohr (z.B. Rum)",
+    "Synonyme": "Zuckerrohrschnaps",
+    "Kategorie": "Alkoholhaltige Getränke/Spirituosen"
+  },
+  {
+    "ID": 50,
+    "Name": "Bratbutter",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Fette;Milch und Milchprodukte/Rahm und Butter"
+  },
+  {
+    "ID": 650,
+    "Name": "Bratensauce, gebunden",
+    "Synonyme": "",
+    "Kategorie": "Verschiedenes/Saucen"
+  },
+  {
+    "ID": 651,
+    "Name": "Bratensauce, klar",
+    "Synonyme": "",
+    "Kategorie": "Verschiedenes/Saucen"
+  },
+  {
+    "ID": 705,
+    "Name": "Bresaola",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Rohwurstware"
+  },
+  {
+    "ID": 616,
+    "Name": "Brie, Rahm",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Weichkäse"
+  },
+  {
+    "ID": 613,
+    "Name": "Brie, vollfett",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Weichkäse"
+  },
+  {
+    "ID": 1005,
+    "Name": "Broccoli, gedämpft (ohne Zugabe von Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 351,
+    "Name": "Broccoli, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 383,
+    "Name": "Brombeere, roh",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 1485,
+    "Name": "Brombeerkuchen, hausgemacht (mit süssem Mürbeteig)",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 1594,
+    "Name": "Brombeerkuchen, hausgemacht, gebacken (mit Blätterteig)",
+    "Synonyme": "Brombeerwähe",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 1596,
+    "Name": "Brombeerkuchen, hausgemacht, gebacken (mit Kuchenteig)",
+    "Synonyme": "Brombeerwähe",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 10446,
+    "Name": "Brot (Durchschnitt)",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Brote und Brotwaren"
+  },
+  {
+    "ID": 1112,
+    "Name": "Brühwürste geräuchert (Durchschnitt)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Brühwurstware"
+  },
+  {
+    "ID": 1113,
+    "Name": "Brühwürste ungeräuchert (Durchschnitt)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Brühwurstware"
+  },
+  {
+    "ID": 371,
+    "Name": "Brunnenkresse, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 864,
+    "Name": "Brunsli",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Guetzli"
+  },
+  {
+    "ID": 421,
+    "Name": "Buchweizen, Korn geschält",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Sonstige Getreideprodukte"
+  },
+  {
+    "ID": 420,
+    "Name": "Buchweizenmehl",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke"
+  },
+  {
+    "ID": 669,
+    "Name": "Bündner Gerstensuppe",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Eintöpfe und Suppen"
+  },
+  {
+    "ID": 13461,
+    "Name": "Burger mit Fisch",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Fast Food"
+  },
+  {
+    "ID": 13460,
+    "Name": "Burger mit Poulet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Fast Food"
+  },
+  {
+    "ID": 842,
+    "Name": "Bürli (halbweiss)",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Brote und Brotwaren"
+  },
+  {
+    "ID": 836,
+    "Name": "Buttergipfeli, hell",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Brote und Brotwaren"
+  },
+  {
+    "ID": 834,
+    "Name": "Buttergipfeli, Vollkorn",
+    "Synonyme": "Rusticogipfeli",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Brote und Brotwaren"
+  },
+  {
+    "ID": 529,
+    "Name": "Buttermilch",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Milch- und Joghurtgetränke"
+  },
+  {
+    "ID": 822,
+    "Name": "Butterweggli",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Brote und Brotwaren"
+  },
+  {
+    "ID": 820,
+    "Name": "Butterzopf",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Brote und Brotwaren"
+  },
+  {
+    "ID": 1460,
+    "Name": "Butterzopf, Vollkorn",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Brote und Brotwaren"
+  },
+  {
+    "ID": 1188,
+    "Name": "Café crème, ungezuckert",
+    "Synonyme": "",
+    "Kategorie": "Alkoholfreie Getränke/Kaffee"
+  },
+  {
+    "ID": 877,
+    "Name": "Cake Financier",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake"
+  },
+  {
+    "ID": 10486,
+    "Name": "Calimocho (Rotwein mit Cola)",
+    "Synonyme": "",
+    "Kategorie": "Alkoholfreie Getränke/Süssgetränke;Alkoholhaltige Getränke/Sonstige alkoholische Getränke"
+  },
+  {
+    "ID": 622,
+    "Name": "Camembert, halbfett",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Weichkäse"
+  },
+  {
+    "ID": 619,
+    "Name": "Camembert, Rahm",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Weichkäse"
+  },
+  {
+    "ID": 614,
+    "Name": "Camembert, vollfett",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Weichkäse"
+  },
+  {
+    "ID": 1644,
+    "Name": "Cannelloni mit Fleischfüllung, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Italienische Gerichte"
+  },
+  {
+    "ID": 1646,
+    "Name": "Cannelloni mit Spinat-Ricotta-Füllung, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Italienische Gerichte"
+  },
+  {
+    "ID": 1121,
+    "Name": "Cappuccino (ohne Schokoladenpulver), ungezuckert",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Milch- und Joghurtgetränke;Alkoholfreie Getränke/Kaffee"
+  },
+  {
+    "ID": 1692,
+    "Name": "Capuns, zubereitet",
+    "Synonyme": "Mangoldwickel",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 275,
+    "Name": "Cashewnuss",
+    "Synonyme": "Cashewkern",
+    "Kategorie": "Nüsse, Samen und Ölfrüchte"
+  },
+  {
+    "ID": 1081,
+    "Name": "Cervelat",
+    "Synonyme": "Chlöpfer;Stumpen;Bockwurst",
+    "Kategorie": "Fleisch- und Wurstwaren/Brühwurstware"
+  },
+  {
+    "ID": 629,
+    "Name": "Champignon (Konserve)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Pilze"
+  },
+  {
+    "ID": 1037,
+    "Name": "Champignon, gedünstet (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Pilze"
+  },
+  {
+    "ID": 375,
+    "Name": "Champignon, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Pilze"
+  },
+  {
+    "ID": 14024,
+    "Name": "Cheeseburger",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Fast Food"
+  },
+  {
+    "ID": 13457,
+    "Name": "Chia-Samen",
+    "Synonyme": "",
+    "Kategorie": "Nüsse, Samen und Ölfrüchte"
+  },
+  {
+    "ID": 1006,
+    "Name": "Chicorée, gedämpft (ohne Zugabe von Salz)",
+    "Synonyme": "Brüsseler Endivie",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 447,
+    "Name": "Chicorée, roh",
+    "Synonyme": "Brüsseler Endivie",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 1648,
+    "Name": "Chili con carne, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Eintöpfe und Suppen"
+  },
+  {
+    "ID": 1007,
+    "Name": "Chinakohl, gedünstet (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "Pekingkohl;Selleriekohl;Japankohl",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 437,
+    "Name": "Chinakohl, roh",
+    "Synonyme": "Pekingkohl;Selleriekohl;Japankohl",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 867,
+    "Name": "Chräbeli (Anisgebäck)",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Guetzli"
+  },
+  {
+    "ID": 458,
+    "Name": "Cicorino rot, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 1683,
+    "Name": "Cocktailsauce, mit Rapsöl-Mayonnaise, hausgemacht",
+    "Synonyme": "",
+    "Kategorie": "Verschiedenes/Saucen"
+  },
+  {
+    "ID": 498,
+    "Name": "Colagetränk, gezuckert",
+    "Synonyme": "",
+    "Kategorie": "Alkoholfreie Getränke/Süssgetränke"
+  },
+  {
+    "ID": 499,
+    "Name": "Colagetränk, mit Süssstoffen",
+    "Synonyme": "",
+    "Kategorie": "Alkoholfreie Getränke/Süssgetränke energievermindert"
+  },
+  {
+    "ID": 1573,
+    "Name": "Coleslaw Salat, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Salate"
+  },
+  {
+    "ID": 715,
+    "Name": "Coppa",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Rohwurstware"
+  },
+  {
+    "ID": 1649,
+    "Name": "Cordon Bleu aus Kalbsplätzli, gebraten",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Kalb"
+  },
+  {
+    "ID": 1650,
+    "Name": "Cordon Bleu aus Schweinsplätzli, gebraten",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Schwein"
+  },
+  {
+    "ID": 940,
+    "Name": "Cornflakes",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Müeslimischungen und Frühstückscerealien"
+  },
+  {
+    "ID": 758,
+    "Name": "Cotechino",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Rohwurstware"
+  },
+  {
+    "ID": 1093,
+    "Name": "Cotto (Fleischerzeugnis)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Kochwurstware"
+  },
+  {
+    "ID": 950,
+    "Name": "Cracker, Salzgebäck, Apérogebäck",
+    "Synonyme": "",
+    "Kategorie": "Salzige Snacks/Salzsticks und Bretzel"
+  },
+  {
+    "ID": 924,
+    "Name": "Crèmeschnitte",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Sonstige süsse Backwaren"
+  },
+  {
+    "ID": 1489,
+    "Name": "Crêpes mit Camembert, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 1491,
+    "Name": "Crêpes mit Champignonfüllung, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 1493,
+    "Name": "Crêpes mit Gemüsefüllung, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 1494,
+    "Name": "Crêpes mit Nutella, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige süsse Gerichte"
+  },
+  {
+    "ID": 1495,
+    "Name": "Crêpes mit Schinken, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 1496,
+    "Name": "Crêpes mit Speck, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 1488,
+    "Name": "Crêpes mit Zimt und Zucker, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige süsse Gerichte"
+  },
+  {
+    "ID": 1487,
+    "Name": "Crêpes nature, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 1498,
+    "Name": "Crevettencocktail, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Salate"
+  },
+  {
+    "ID": 14056,
+    "Name": "Croque Monsieur",
+    "Synonyme": "Toast mit Schinken und Käse",
+    "Kategorie": "Gerichte/Sandwiches"
+  },
+  {
+    "ID": 384,
+    "Name": "Dattel, getrocknet",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte getrocknet"
+  },
+  {
+    "ID": 1041,
+    "Name": "Dinkelmehl, Ruch, Typ 1100",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke"
+  },
+  {
+    "ID": 1042,
+    "Name": "Dinkelmehl, Vollkorn, Typ 1900",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke"
+  },
+  {
+    "ID": 1043,
+    "Name": "Dinkelmehl, weiss, Typ 550",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke"
+  },
+  {
+    "ID": 589,
+    "Name": "Distelöl",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Öle"
+  },
+  {
+    "ID": 798,
+    "Name": "Doppelrahm, pasteurisiert",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Rahm;Milch und Milchprodukte/Rahm und Butter"
+  },
+  {
+    "ID": 14068,
+    "Name": "Dörrbohne, eingeweicht, gedämpft (ohne Zugabe von Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 13350,
+    "Name": "Dorsch, Filet, gedämpft (ohne Zusatz von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fisch/Meeresfische"
+  },
+  {
+    "ID": 285,
+    "Name": "Dorsch, roh",
+    "Synonyme": "Kabeljau",
+    "Kategorie": "Fisch/Meeresfische"
+  },
+  {
+    "ID": 10535,
+    "Name": "Dulce de Leche",
+    "Synonyme": "Milchkonfitüre",
+    "Kategorie": "Süssigkeiten/Konfitüren und süsse Brotaufstriche"
+  },
+  {
+    "ID": 272,
+    "Name": "Edelkastanie, roh",
+    "Synonyme": "Marroni",
+    "Kategorie": "Nüsse, Samen und Ölfrüchte"
+  },
+  {
+    "ID": 765,
+    "Name": "Egli, roh",
+    "Synonyme": "Flussbarsch",
+    "Kategorie": "Fisch/Süsswasserfische"
+  },
+  {
+    "ID": 517,
+    "Name": "Eierlikör, 16.5 vol%",
+    "Synonyme": "",
+    "Kategorie": "Alkoholhaltige Getränke/Sonstige alkoholische Getränke"
+  },
+  {
+    "ID": 1502,
+    "Name": "Eieromeletten mit Käse, zubereitet",
+    "Synonyme": "Französische Omeletten",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 1501,
+    "Name": "Eieromeletten mit Schinken, zubereitet",
+    "Synonyme": "Französische Omeletten",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 1503,
+    "Name": "Eieromeletten mit Speck, zubereitet",
+    "Synonyme": "Französische Omeletten",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 1500,
+    "Name": "Eieromeletten, zubereitet",
+    "Synonyme": "Französische Omeletten",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 1038,
+    "Name": "Eierschwamm, gedünstet (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "Pfifferling",
+    "Kategorie": "Gemüse/Pilze"
+  },
+  {
+    "ID": 376,
+    "Name": "Eierschwamm, roh",
+    "Synonyme": "Pfifferling",
+    "Kategorie": "Gemüse/Pilze"
+  },
+  {
+    "ID": 459,
+    "Name": "Eisbergsalat, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 804,
+    "Name": "Eistee, gezuckert",
+    "Synonyme": "",
+    "Kategorie": "Alkoholfreie Getränke/Süssgetränke;Alkoholfreie Getränke/Tee"
+  },
+  {
+    "ID": 555,
+    "Name": "Emmentaler, vollfett",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Hartkäse"
+  },
+  {
+    "ID": 467,
+    "Name": "Endivie, roh",
+    "Synonyme": "Frisée Salat",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 13465,
+    "Name": "Energy Drink, gezuckert",
+    "Synonyme": "",
+    "Kategorie": "Alkoholfreie Getränke/Süssgetränke"
+  },
+  {
+    "ID": 902,
+    "Name": "Engadiner Nusstorte",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake"
+  },
+  {
+    "ID": 630,
+    "Name": "Erbse (Konserve)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 1011,
+    "Name": "Erbse (Konserve), aufgewärmt (ohne Zugabe von Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 1010,
+    "Name": "Erbse, grün, gedämpft (ohne Zugabe von Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 369,
+    "Name": "Erbse, grün, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 13389,
+    "Name": "Erbse, reif, getrocknet",
+    "Synonyme": "Erbse, geschält, getrocknet",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Hülsenfrüchte"
+  },
+  {
+    "ID": 13390,
+    "Name": "Erbse, reif, getrocknet, gekocht (ohne Zusatz von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Hülsenfrüchte"
+  },
+  {
+    "ID": 815,
+    "Name": "Erbsen und Karotten (Konserve)",
+    "Synonyme": "Rüebli",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 1034,
+    "Name": "Erbsen und Karotten (Konserve), aufgewärmt (ohne Zugabe von Salz)",
+    "Synonyme": "Rüebli",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 385,
+    "Name": "Erdbeere, roh",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 282,
+    "Name": "Erdnuss",
+    "Synonyme": "",
+    "Kategorie": "Nüsse, Samen und Ölfrüchte"
+  },
+  {
+    "ID": 681,
+    "Name": "Erdnuss-Flips",
+    "Synonyme": "",
+    "Kategorie": "Salzige Snacks/Sonstige salzige Snacks"
+  },
+  {
+    "ID": 14092,
+    "Name": "Erdnuss, geröstet, gesalzen",
+    "Synonyme": "",
+    "Kategorie": "Salzige Snacks/Gesalzene Nüsse, Samen, Kerne"
+  },
+  {
+    "ID": 751,
+    "Name": "Erdnussbutter",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Konfitüren und süsse Brotaufstriche"
+  },
+  {
+    "ID": 596,
+    "Name": "Erdnussöl",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Öle"
+  },
+  {
+    "ID": 1190,
+    "Name": "Espresso crème, ungezuckert",
+    "Synonyme": "",
+    "Kategorie": "Alkoholfreie Getränke/Kaffee"
+  },
+  {
+    "ID": 1693,
+    "Name": "Essig",
+    "Synonyme": "",
+    "Kategorie": "Verschiedenes/Salz, Gewürze und Aromen"
+  },
+  {
+    "ID": 1199,
+    "Name": "Essig-Öl-Salatsauce, hausgemacht (mit Rapsöl)",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Salatsaucen"
+  },
+  {
+    "ID": 14066,
+    "Name": "Falafel, frittiert (in HOLL Rapsöl frittiert)",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Orientalische Gerichte"
+  },
+  {
+    "ID": 14060,
+    "Name": "Fasnachtschüechli",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Sonstige süsse Backwaren"
+  },
+  {
+    "ID": 13401,
+    "Name": "Federkohl, gedünstet (ohne Zugabe von Salz und Fett)",
+    "Synonyme": "Grünkohl",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 13400,
+    "Name": "Federkohl, roh",
+    "Synonyme": "Grünkohl",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 387,
+    "Name": "Feige, getrocknet",
+    "Synonyme": "Dörrfeige",
+    "Kategorie": "Früchte/Früchte getrocknet"
+  },
+  {
+    "ID": 386,
+    "Name": "Feige, roh",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 211,
+    "Name": "Felche, roh",
+    "Synonyme": "",
+    "Kategorie": "Fisch/Süsswasserfische"
+  },
+  {
+    "ID": 1008,
+    "Name": "Fenchel, gedämpft (ohne Zugabe von Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 352,
+    "Name": "Fenchel, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 1269,
+    "Name": "Fermentierter Teig",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige"
+  },
+  {
+    "ID": 13345,
+    "Name": "Fisch (Durchschnitt), Filet, gedämpft (ohne Zusatz von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fisch"
+  },
+  {
+    "ID": 1098,
+    "Name": "Fisch (Durchschnitt), roh",
+    "Synonyme": "",
+    "Kategorie": "Fisch/Süsswasserfische;Fisch/Meeresfische"
+  },
+  {
+    "ID": 1168,
+    "Name": "Fischstäbchen (paniert und vorfritiert), gebraten in HOLL-Rapsöl",
+    "Synonyme": "",
+    "Kategorie": "Fisch/Meeresfische"
+  },
+  {
+    "ID": 1169,
+    "Name": "Fischstäbchen (paniert und vorfritiert), im Ofen gebacken (ohne Zugabe von Fett)",
+    "Synonyme": "",
+    "Kategorie": "Fisch/Meeresfische"
+  },
+  {
+    "ID": 773,
+    "Name": "Fischstäbchen, paniert und vorfritiert",
+    "Synonyme": "",
+    "Kategorie": "Fisch/Meeresfische"
+  },
+  {
+    "ID": 1504,
+    "Name": "Flammenkuchen, gebacken",
+    "Synonyme": "Flammkuchen",
+    "Kategorie": "Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 13419,
+    "Name": "Flammenkuchenteig, ungebacken",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige"
+  },
+  {
+    "ID": 1111,
+    "Name": "Fleisch (Durchschnitt exkl. Innereien), roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Kalb;Fleisch und Innereien/Geflügel;Fleisch und Innereien/Lamm, Schaf;Fleisch und Innereien/Rind;Fleisch und Innereien/Schwein;Fleisch und Innereien/Wild"
+  },
+  {
+    "ID": 1084,
+    "Name": "Fleischkäse",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Brühwurstware"
+  },
+  {
+    "ID": 1664,
+    "Name": "Fleischlasagne, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Italienische Gerichte"
+  },
+  {
+    "ID": 13351,
+    "Name": "Flunder, Filet, gedämpft (ohne Zusatz von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fisch/Meeresfische"
+  },
+  {
+    "ID": 481,
+    "Name": "Flunder, roh",
+    "Synonyme": "",
+    "Kategorie": "Fisch/Meeresfische"
+  },
+  {
+    "ID": 1476,
+    "Name": "Fondue alkoholfrei, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 797,
+    "Name": "Fondue klassisch, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 1475,
+    "Name": "Fondue moitié-moitié, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 13349,
+    "Name": "Forelle, ganz, gekocht (ohne Zusatz von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fisch/Süsswasserfische"
+  },
+  {
+    "ID": 289,
+    "Name": "Forelle, roh",
+    "Synonyme": "Bachforelle",
+    "Kategorie": "Fisch/Süsswasserfische"
+  },
+  {
+    "ID": 1515,
+    "Name": "Fotzelschnitte ungezuckert",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige süsse Gerichte"
+  },
+  {
+    "ID": 536,
+    "Name": "Freiburger Vacherin",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Hartkäse"
+  },
+  {
+    "ID": 567,
+    "Name": "Frischkäse, Doppelrahm",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Frischkäse und Quark"
+  },
+  {
+    "ID": 775,
+    "Name": "Fruchtcocktail, in Sirup, Konserve, abgetropft",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 777,
+    "Name": "Fruchtcocktail, mit Süssungsmittel, Konserve, abgetropft",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 1124,
+    "Name": "Früchte (Durchschnitt), gekocht (ohne Zugabe von Zucker)",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 1120,
+    "Name": "Früchte (Durchschnitt), getrocknet",
+    "Synonyme": "Dörrfrüchte (Durchschnitt);Früchte, gedörrt (Durchschnitt)",
+    "Kategorie": "Früchte/Früchte getrocknet"
+  },
+  {
+    "ID": 1123,
+    "Name": "Früchte (Durchschnitt), roh",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 1131,
+    "Name": "Fruchtsaft-Schorle (Durchschnitt, 60% Saft - 40% Wasser), ungezuckert",
+    "Synonyme": "",
+    "Kategorie": "Alkoholfreie Getränke/Frucht- und Gemüsesäfte"
+  },
+  {
+    "ID": 1130,
+    "Name": "Fruchtsaft (Durchschnitt), ungezuckert",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Fruchtsäfte;Alkoholfreie Getränke/Frucht- und Gemüsesäfte"
+  },
+  {
+    "ID": 10456,
+    "Name": "Fruchtwähe/-kuchen (Durchschnitt)",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 10453,
+    "Name": "Fruchtwähe/-kuchen mit Blätterteig (Durchschnitt)",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 10454,
+    "Name": "Fruchtwähe/-kuchen mit Kuchenteig (Durchschnitt)",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 10455,
+    "Name": "Fruchtwähe/-kuchen mit süssem Mürbeteig (Durchschnitt)",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 14061,
+    "Name": "Frühlingsrolle, frittiert",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Asiatische Gerichte"
+  },
+  {
+    "ID": 817,
+    "Name": "Fünfkornbier",
+    "Synonyme": "",
+    "Kategorie": "Alkoholhaltige Getränke/Bier"
+  },
+  {
+    "ID": 1497,
+    "Name": "Garnele, gekocht",
+    "Synonyme": "Shrimp;Scampi;Crevette",
+    "Kategorie": "Fisch/Meeresfrüchte, Krusten- und Schalentiere"
+  },
+  {
+    "ID": 766,
+    "Name": "Garnele, roh",
+    "Synonyme": "Shrimp;Scampi;Crevette",
+    "Kategorie": "Fisch/Meeresfrüchte, Krusten- und Schalentiere"
+  },
+  {
+    "ID": 1100,
+    "Name": "Geflügelfleisch (Durchschnitt exkl. Innereien), roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Geflügel"
+  },
+  {
+    "ID": 1109,
+    "Name": "Geflügelfleisch mit Haut (Durchschnitt), roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Geflügel"
+  },
+  {
+    "ID": 1108,
+    "Name": "Geflügelfleisch ohne Haut (Durchschnitt exkl. Innereien), roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Geflügel"
+  },
+  {
+    "ID": 1092,
+    "Name": "Geflügellyoner",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Brühwurstware"
+  },
+  {
+    "ID": 13317,
+    "Name": "Gehacktes (Durchschnitt aus Rind, Kalb, Schwein, Poulet), gebraten (ohne Zusatz von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien"
+  },
+  {
+    "ID": 1105,
+    "Name": "Gehacktes (Durchschnitt aus Rind, Kalb, Schwein, Poulet), roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Kalb;Fleisch und Innereien/Rind;Fleisch und Innereien/Schwein;Fleisch und Innereien/Geflügel"
+  },
+  {
+    "ID": 1152,
+    "Name": "Gemüse (Durchschnitt), roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 1580,
+    "Name": "Gemüsegratin, gebacken",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 1666,
+    "Name": "Gemüselasagne, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Italienische Gerichte"
+  },
+  {
+    "ID": 739,
+    "Name": "Gerstenflocken",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Flocken, Kleie und Keime"
+  },
+  {
+    "ID": 1587,
+    "Name": "Gerstotto, gekocht",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Sonstige Getreideprodukte"
+  },
+  {
+    "ID": 13318,
+    "Name": "Geschnetzeltes (Durchschnitt aus Rind, Kalb, Schwein, Geflügel), gebraten (ohne Zusatz von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien"
+  },
+  {
+    "ID": 1104,
+    "Name": "Geschnetzeltes (Durchschnitt aus Rind, Kalb, Schwein, Geflügel), roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Kalb;Fleisch und Innereien/Schwein;Fleisch und Innereien/Rind;Fleisch und Innereien/Geflügel"
+  },
+  {
+    "ID": 1696,
+    "Name": "Getreideflocken (Durchschnitt)",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Flocken, Kleie und Keime"
+  },
+  {
+    "ID": 13448,
+    "Name": "Getreideriegel mit Schokoladeüberzug",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Riegel"
+  },
+  {
+    "ID": 13488,
+    "Name": "Getreideriegel, ohne Ueberzug und Füllung",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Riegel"
+  },
+  {
+    "ID": 10406,
+    "Name": "Gipfeli (Durchschnitt)",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Brote und Brotwaren"
+  },
+  {
+    "ID": 507,
+    "Name": "Glarner Schabziger",
+    "Synonyme": "Glarner Kräuterkäse",
+    "Kategorie": "Milch und Milchprodukte/Frischkäse und Quark"
+  },
+  {
+    "ID": 483,
+    "Name": "Gorgonzola",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Hartkäse"
+  },
+  {
+    "ID": 13882,
+    "Name": "Granatapfel, roh",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 388,
+    "Name": "Grapefruit (weiss oder rot), roh",
+    "Synonyme": "Pampelmuse",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 530,
+    "Name": "Greyerzer, vollfett",
+    "Synonyme": "Gruyère",
+    "Kategorie": "Milch und Milchprodukte/Hartkäse"
+  },
+  {
+    "ID": 1509,
+    "Name": "Griessbrei, zubereitet (mit teilentrahmter Milch, ohne Zugabe von Zucker)",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Cremen und Pudding;Gerichte/Müesli und Brei"
+  },
+  {
+    "ID": 1510,
+    "Name": "Griessbrei, zubereitet (mit Vollmilch, ohne Zugabe von Zucker)",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Cremen und Pudding;Gerichte/Müesli und Brei"
+  },
+  {
+    "ID": 1507,
+    "Name": "Griessschnitte, zubereitet (mit teilentrahmter Milch)",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 1508,
+    "Name": "Griessschnitte, zubereitet (mit Vollmilch)",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 1272,
+    "Name": "Grittibänz",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Sonstige süsse Backwaren"
+  },
+  {
+    "ID": 1465,
+    "Name": "Gugelhopf Grossmutter Art",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake"
+  },
+  {
+    "ID": 684,
+    "Name": "Gulaschsuppe",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Eintöpfe und Suppen"
+  },
+  {
+    "ID": 951,
+    "Name": "Gummibonbon mit Fruchtessenz",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Bonbons, Frucht- und Kaugummi"
+  },
+  {
+    "ID": 491,
+    "Name": "Gurke, in Essig eingelegt",
+    "Synonyme": "Essiggurke;Cornichon",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 354,
+    "Name": "Gurke, roh",
+    "Synonyme": "Salatgurke",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 1582,
+    "Name": "Hackbraten, im Ofen gebacken",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 1583,
+    "Name": "Hackplätzli (Rind), gebraten in Rapsöl HOLL",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Rind"
+  },
+  {
+    "ID": 1512,
+    "Name": "Haferbrei, zubereitet (mit teilentrahmter Milch, ohne Zugabe von Zucker)",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Cremen und Pudding;Gerichte/Müesli und Brei"
+  },
+  {
+    "ID": 1511,
+    "Name": "Haferbrei, zubereitet (mit Vollmilch, ohne Zugabe von Zucker)",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Cremen und Pudding;Gerichte/Müesli und Brei"
+  },
+  {
+    "ID": 198,
+    "Name": "Haferflocken",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Flocken, Kleie und Keime"
+  },
+  {
+    "ID": 14114,
+    "Name": "Hafergetränk, nature",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Milchersatzprodukte"
+  },
+  {
+    "ID": 14130,
+    "Name": "Hafergetränk, nature, mit Calcium und Vitaminen angereichert",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Milchersatzprodukte"
+  },
+  {
+    "ID": 769,
+    "Name": "Haferkleie",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Flocken, Kleie und Keime"
+  },
+  {
+    "ID": 13399,
+    "Name": "Halbentrahmte Milch 1.5% Fett, UHT",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Milch"
+  },
+  {
+    "ID": 191,
+    "Name": "Halbfettbutter",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Fette;Milch und Milchprodukte/Rahm und Butter"
+  },
+  {
+    "ID": 67,
+    "Name": "Halbrahm, pasteurisiert",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Rahm;Milch und Milchprodukte/Rahm und Butter"
+  },
+  {
+    "ID": 68,
+    "Name": "Halbrahm, UHT",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Rahm;Milch und Milchprodukte/Rahm und Butter"
+  },
+  {
+    "ID": 833,
+    "Name": "Halbweissbrot",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Brote und Brotwaren"
+  },
+  {
+    "ID": 14078,
+    "Name": "Halbweissbrot (mit jodiertem Kochsalz)",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Brote und Brotwaren"
+  },
+  {
+    "ID": 14025,
+    "Name": "Hamburger, doppelt",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Fast Food"
+  },
+  {
+    "ID": 14091,
+    "Name": "Hanföl",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Öle"
+  },
+  {
+    "ID": 1193,
+    "Name": "Hart- und Halbhartkäse, vollfett (Durchschnitt)",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Hartkäse"
+  },
+  {
+    "ID": 952,
+    "Name": "Hartkaramellen, Hartbonbons",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Bonbons, Frucht- und Kaugummi"
+  },
+  {
+    "ID": 423,
+    "Name": "Hartweizengriess, trocken",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Sonstige Getreideprodukte"
+  },
+  {
+    "ID": 486,
+    "Name": "Hase (Durchschnitt), roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Sonstige Tierarten"
+  },
+  {
+    "ID": 270,
+    "Name": "Haselnuss",
+    "Synonyme": "",
+    "Kategorie": "Nüsse, Samen und Ölfrüchte"
+  },
+  {
+    "ID": 703,
+    "Name": "Haselnuss-Schokolade-Brotaufstrich",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Konfitüren und süsse Brotaufstriche"
+  },
+  {
+    "ID": 903,
+    "Name": "Haselnusskekse",
+    "Synonyme": "Haselnussguetzli",
+    "Kategorie": "Süssigkeiten/Guetzli"
+  },
+  {
+    "ID": 869,
+    "Name": "Haselnussmakrone",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Guetzli"
+  },
+  {
+    "ID": 14108,
+    "Name": "Haselnussöl",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Öle"
+  },
+  {
+    "ID": 871,
+    "Name": "Haselnussstängeli",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Guetzli"
+  },
+  {
+    "ID": 416,
+    "Name": "Hecht, roh",
+    "Synonyme": "",
+    "Kategorie": "Fisch/Süsswasserfische"
+  },
+  {
+    "ID": 910,
+    "Name": "Hefeteig (mit Butter), süss, ungebacken",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige"
+  },
+  {
+    "ID": 1177,
+    "Name": "Hefeteig (mit pflanzlichem Fett), süss, ungebacken",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige"
+  },
+  {
+    "ID": 14101,
+    "Name": "Heidelbeere, gefriergetrocknet",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte getrocknet"
+  },
+  {
+    "ID": 389,
+    "Name": "Heidelbeere, roh",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 753,
+    "Name": "Heilbutt, roh",
+    "Synonyme": "",
+    "Kategorie": "Fisch/Meeresfische"
+  },
+  {
+    "ID": 390,
+    "Name": "Himbeere, roh",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 691,
+    "Name": "Hinterschinken",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Kochwurstware"
+  },
+  {
+    "ID": 487,
+    "Name": "Hirsch (Durchschnitt), roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Wild"
+  },
+  {
+    "ID": 12,
+    "Name": "Hirsch, Entrecôte, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Wild"
+  },
+  {
+    "ID": 422,
+    "Name": "Hirse, Korn geschält",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Sonstige Getreideprodukte"
+  },
+  {
+    "ID": 938,
+    "Name": "Hirseflocken, Vollkorn",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Flocken, Kleie und Keime"
+  },
+  {
+    "ID": 1586,
+    "Name": "Hirsotto, gekocht",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Sonstige Getreideprodukte"
+  },
+  {
+    "ID": 666,
+    "Name": "Hollandaisesauce",
+    "Synonyme": "",
+    "Kategorie": "Verschiedenes/Saucen"
+  },
+  {
+    "ID": 436,
+    "Name": "Holunderbeere, schwarz, roh",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 472,
+    "Name": "Honig (Blütenhonig)",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Konfitüren und süsse Brotaufstriche"
+  },
+  {
+    "ID": 1590,
+    "Name": "Hot Dog in Weissbrot mit Ketchup und Senf",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 1070,
+    "Name": "Hühnerei, ganz, festgekocht",
+    "Synonyme": "",
+    "Kategorie": "Eier"
+  },
+  {
+    "ID": 290,
+    "Name": "Hühnerei, ganz, roh",
+    "Synonyme": "",
+    "Kategorie": "Eier"
+  },
+  {
+    "ID": 410,
+    "Name": "Hühnereigelb, roh (Eidotter)",
+    "Synonyme": "",
+    "Kategorie": "Eier"
+  },
+  {
+    "ID": 411,
+    "Name": "Hühnereiweiss, roh (Eiklar)",
+    "Synonyme": "",
+    "Kategorie": "Eier"
+  },
+  {
+    "ID": 1134,
+    "Name": "Hülsenfrüchte (Durchschnitt), gekocht (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Hülsenfrüchte"
+  },
+  {
+    "ID": 1133,
+    "Name": "Hülsenfrüchte (Durchschnitt), getrocknet",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Hülsenfrüchte"
+  },
+  {
+    "ID": 14055,
+    "Name": "Hummus",
+    "Synonyme": "",
+    "Kategorie": "Verschiedenes/Saucen"
+  },
+  {
+    "ID": 505,
+    "Name": "Hüttenkäse, nature",
+    "Synonyme": "Cottage cheese",
+    "Kategorie": "Milch und Milchprodukte/Frischkäse und Quark"
+  },
+  {
+    "ID": 866,
+    "Name": "Instant-Kartoffelstock, zubereitet (mit Wasser und Butter)",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Kartoffeln"
+  },
+  {
+    "ID": 652,
+    "Name": "Jägersauce",
+    "Synonyme": "",
+    "Kategorie": "Verschiedenes/Saucen"
+  },
+  {
+    "ID": 1612,
+    "Name": "Joghurt-Salatsauce (ohne Öl)",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Salatsaucen"
+  },
+  {
+    "ID": 58,
+    "Name": "Joghurt Bifidus, nature",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Joghurt und Sauermilch"
+  },
+  {
+    "ID": 1192,
+    "Name": "Joghurt gezuckert (Durchschnitt)",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Joghurt und Sauermilch"
+  },
+  {
+    "ID": 590,
+    "Name": "Joghurt mit Aroma, mager, mit Süssstoffen",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Joghurt und Sauermilch"
+  },
+  {
+    "ID": 588,
+    "Name": "Joghurt mit Früchten, mager, mit Süssstoffen",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Joghurt und Sauermilch"
+  },
+  {
+    "ID": 53,
+    "Name": "Joghurt, Erdbeer",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Joghurt und Sauermilch"
+  },
+  {
+    "ID": 55,
+    "Name": "Joghurt, Haselnuss",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Joghurt und Sauermilch"
+  },
+  {
+    "ID": 57,
+    "Name": "Joghurt, Mokka",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Joghurt und Sauermilch"
+  },
+  {
+    "ID": 99,
+    "Name": "Joghurt, Mokka, Bio",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Joghurt und Sauermilch"
+  },
+  {
+    "ID": 52,
+    "Name": "Joghurt, nature",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Joghurt und Sauermilch"
+  },
+  {
+    "ID": 587,
+    "Name": "Joghurt, nature, mager",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Joghurt und Sauermilch"
+  },
+  {
+    "ID": 54,
+    "Name": "Joghurt, Schokolade",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Joghurt und Sauermilch"
+  },
+  {
+    "ID": 56,
+    "Name": "Joghurt, Vanille",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Joghurt und Sauermilch"
+  },
+  {
+    "ID": 13453,
+    "Name": "Joghurtalternative aus Soja, mit Früchten oder Aroma",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Milchersatzprodukte"
+  },
+  {
+    "ID": 13454,
+    "Name": "Joghurtalternative aus Soja, mit Früchten oder Aroma, mit Calcium angereichert",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Milchersatzprodukte"
+  },
+  {
+    "ID": 13451,
+    "Name": "Joghurtalternative aus Soja, nature",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Milchersatzprodukte"
+  },
+  {
+    "ID": 13452,
+    "Name": "Joghurtalternative aus Soja, nature, mit Calcium angereichert",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Milchersatzprodukte"
+  },
+  {
+    "ID": 391,
+    "Name": "Johannisbeere, rot, roh",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 392,
+    "Name": "Johannisbeere, schwarz, roh",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 1592,
+    "Name": "Johannisbeerkuchen, hausgemacht (mit süssem Mürbeteig)",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 1595,
+    "Name": "Johannisbeerkuchen, hausgemacht, gebacken (mit Kuchenteig)",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 1593,
+    "Name": "Johannisbeerkuchen, hausgmacht, gebacken (mit Blätterteig)",
+    "Synonyme": "Johannisbeerwähe",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 983,
+    "Name": "Kaffee löslich, Pulver",
+    "Synonyme": "Instant-Kaffee",
+    "Kategorie": "Alkoholfreie Getränke/Kaffee"
+  },
+  {
+    "ID": 994,
+    "Name": "Kaffee, schwarz, ungezuckert",
+    "Synonyme": "",
+    "Kategorie": "Alkoholfreie Getränke/Kaffee"
+  },
+  {
+    "ID": 69,
+    "Name": "Kaffeerahm",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Rahm;Milch und Milchprodukte/Rahm und Butter"
+  },
+  {
+    "ID": 583,
+    "Name": "Kakaobutter",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Fette"
+  },
+  {
+    "ID": 581,
+    "Name": "Kakaopulver",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Schokolade und Kakaoerzeugnisse;Alkoholfreie Getränke/Kakaogetränke"
+  },
+  {
+    "ID": 393,
+    "Name": "Kaki, roh",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 1071,
+    "Name": "Kalb, Brust, gekocht (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Kalb"
+  },
+  {
+    "ID": 1,
+    "Name": "Kalb, Brust, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Kalb"
+  },
+  {
+    "ID": 662,
+    "Name": "Kalb, Eckstück, roh",
+    "Synonyme": "Plätzli",
+    "Kategorie": "Fleisch und Innereien/Kalb"
+  },
+  {
+    "ID": 660,
+    "Name": "Kalb, Filet, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Kalb"
+  },
+  {
+    "ID": 11,
+    "Name": "Kalb, Gehacktes, roh",
+    "Synonyme": "Hackfleisch",
+    "Kategorie": "Fleisch und Innereien/Kalb"
+  },
+  {
+    "ID": 13325,
+    "Name": "Kalb, Geschnetzeltes, gebraten (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Kalb"
+  },
+  {
+    "ID": 13,
+    "Name": "Kalb, Geschnetzeltes, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Kalb"
+  },
+  {
+    "ID": 13377,
+    "Name": "Kalb, Haxe, geschmort (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Kalb"
+  },
+  {
+    "ID": 661,
+    "Name": "Kalb, Haxe, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Kalb"
+  },
+  {
+    "ID": 2,
+    "Name": "Kalb, Kotelett, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Kalb"
+  },
+  {
+    "ID": 10,
+    "Name": "Kalb, Leber, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Kalb"
+  },
+  {
+    "ID": 672,
+    "Name": "Kalb, Milken, roh",
+    "Synonyme": "Bries",
+    "Kategorie": "Fleisch und Innereien/Kalb"
+  },
+  {
+    "ID": 673,
+    "Name": "Kalb, Niere, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Kalb"
+  },
+  {
+    "ID": 13324,
+    "Name": "Kalb, Nierstück, Steak, gebraten (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Kalb"
+  },
+  {
+    "ID": 3,
+    "Name": "Kalb, Nierstück, Steak, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Kalb"
+  },
+  {
+    "ID": 14,
+    "Name": "Kalb, Runder Mocken, roh",
+    "Synonyme": "Saftplätzli",
+    "Kategorie": "Fleisch und Innereien/Kalb"
+  },
+  {
+    "ID": 1073,
+    "Name": "Kalb, Schulter, Braten, im Ofen gebraten (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Kalb"
+  },
+  {
+    "ID": 658,
+    "Name": "Kalb, Schulter, Braten, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Kalb"
+  },
+  {
+    "ID": 15,
+    "Name": "Kalb, Voressen, roh",
+    "Synonyme": "Ragout",
+    "Kategorie": "Fleisch und Innereien/Kalb"
+  },
+  {
+    "ID": 674,
+    "Name": "Kalb, Zunge, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Kalb"
+  },
+  {
+    "ID": 1106,
+    "Name": "Kalbfleisch (Durchschnitt exkl. Innereien, Kotelett), roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Kalb"
+  },
+  {
+    "ID": 1080,
+    "Name": "Kalbsbratwurst",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Brühwurstware"
+  },
+  {
+    "ID": 1667,
+    "Name": "Kalbspiccata, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 13316,
+    "Name": "Kalbsplätzli, gebraten (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Kalb"
+  },
+  {
+    "ID": 1681,
+    "Name": "Kalbsplätzli, gebraten in HOLL-Rapsöl",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Kalb"
+  },
+  {
+    "ID": 1669,
+    "Name": "Kalbsragout mit Sauce, zubereitet",
+    "Synonyme": "Voressen",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 764,
+    "Name": "Kalmar, roh",
+    "Synonyme": "Seppia;Polpo;Calamare;Tintenfisch",
+    "Kategorie": "Fisch/Meeresfrüchte, Krusten- und Schalentiere"
+  },
+  {
+    "ID": 13329,
+    "Name": "Kaninchen (Durchschnitt), gekocht (ohne Zusatz von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Sonstige Tierarten"
+  },
+  {
+    "ID": 686,
+    "Name": "Kaninchen (Durchschnitt), roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Sonstige Tierarten"
+  },
+  {
+    "ID": 16,
+    "Name": "Kaninchen, Filet, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Sonstige Tierarten"
+  },
+  {
+    "ID": 1002,
+    "Name": "Karotte, gedämpft (ohne Zugabe von Salz)",
+    "Synonyme": "Rüebli",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 355,
+    "Name": "Karotte, roh",
+    "Synonyme": "Rüebli;Möhre",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 566,
+    "Name": "Karottensaft",
+    "Synonyme": "Rüeblisaft",
+    "Kategorie": "Alkoholfreie Getränke/Frucht- und Gemüsesäfte;Gemüse/Gemüsesäfte"
+  },
+  {
+    "ID": 1057,
+    "Name": "Kartoffel, geschält, gedämpft (ohne Zugabe von Salz)",
+    "Synonyme": "Gschwellti",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Kartoffeln"
+  },
+  {
+    "ID": 813,
+    "Name": "Kartoffel, geschält, roh",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Kartoffeln"
+  },
+  {
+    "ID": 860,
+    "Name": "Kartoffelflocken, mit Milchpulver und Salz (Instant-Kartoffelstock)",
+    "Synonyme": "Instant-Kartoffelstock",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Kartoffeln"
+  },
+  {
+    "ID": 1599,
+    "Name": "Kartoffelgratin dauphinois, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 1600,
+    "Name": "Kartoffelgratin Savoyer Art, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 1517,
+    "Name": "Kartoffelsalat mit Essig-Öl-Sauce",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Salate"
+  },
+  {
+    "ID": 1516,
+    "Name": "Kartoffelsalat mit Mayonnaise-Joghurt-Sauce",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Salate"
+  },
+  {
+    "ID": 497,
+    "Name": "Kartoffelstärke",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke;Verschiedenes/Gelier- und Bindemittel"
+  },
+  {
+    "ID": 1519,
+    "Name": "Kartoffelstock, zubereitet (mit Rahm und Butter)",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Kartoffeln"
+  },
+  {
+    "ID": 1518,
+    "Name": "Kartoffelstock, zubereitet (mit teilentrahmter Milch und Butter)",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Kartoffeln"
+  },
+  {
+    "ID": 863,
+    "Name": "Kartoffelstock, zubereitet (mit Vollmilch und Butter)",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Kartoffeln"
+  },
+  {
+    "ID": 539,
+    "Name": "Käse in Salzlake (Kuhmilch)",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Frischkäse und Quark;Milch und Milchprodukte/Weichkäse"
+  },
+  {
+    "ID": 549,
+    "Name": "Käse in Salzlake (Schaf- und Ziegenmilch)",
+    "Synonyme": "Feta",
+    "Kategorie": "Milch und Milchprodukte/Frischkäse und Quark;Milch und Milchprodukte/Weichkäse"
+  },
+  {
+    "ID": 1544,
+    "Name": "Käsekuchen, gebacken (mit Blätterteig)",
+    "Synonyme": "Käsewähe",
+    "Kategorie": "Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 1543,
+    "Name": "Käsekuchen, gebacken (mit Kuchenteig)",
+    "Synonyme": "Käsewähe",
+    "Kategorie": "Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 60,
+    "Name": "Käsereibutter",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Fette;Milch und Milchprodukte/Rahm und Butter"
+  },
+  {
+    "ID": 1601,
+    "Name": "Käseschnitte, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 1572,
+    "Name": "Kebab im Fladenbrot",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sandwiches"
+  },
+  {
+    "ID": 1012,
+    "Name": "Kefe, gedämpft (ohne Zugabe von Salz)",
+    "Synonyme": "Kiefelerbse;Zuckerschote",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 438,
+    "Name": "Kefe, roh",
+    "Synonyme": "Kiefelerbse;Zuckerschote",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 635,
+    "Name": "Ketchup",
+    "Synonyme": "",
+    "Kategorie": "Verschiedenes/Saucen"
+  },
+  {
+    "ID": 1059,
+    "Name": "Kichererbse, gekocht (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Hülsenfrüchte"
+  },
+  {
+    "ID": 439,
+    "Name": "Kichererbse, getrocknet",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Hülsenfrüchte"
+  },
+  {
+    "ID": 644,
+    "Name": "Kirsch",
+    "Synonyme": "Kirschbranntwein;Kirschwasser;Kirschschnaps;Kirschenbrand",
+    "Kategorie": "Alkoholhaltige Getränke/Spirituosen"
+  },
+  {
+    "ID": 1052,
+    "Name": "Kirsche, gedünstet, abgetropft (ohne Zugabe von Zucker)",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 394,
+    "Name": "Kirsche, roh",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 1545,
+    "Name": "Kirschenkuchen, hausgemacht, gebacken (mit Blätterteig)",
+    "Synonyme": "Kirschenwähe",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 1546,
+    "Name": "Kirschenkuchen, hausgemacht, gebacken (mit Kuchenteig)",
+    "Synonyme": "Kirschenwähe",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 395,
+    "Name": "Kiwi, roh",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 918,
+    "Name": "Knäckebrot, Vollkorn",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Knäckebrote, Zwieback, Crackers und Waffeln"
+  },
+  {
+    "ID": 920,
+    "Name": "Knäckebrot, Vollkorn mit Leinsamen",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Knäckebrote, Zwieback, Crackers und Waffeln"
+  },
+  {
+    "ID": 919,
+    "Name": "Knäckebrot, Vollkorn mit Sesam",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Knäckebrote, Zwieback, Crackers und Waffeln"
+  },
+  {
+    "ID": 356,
+    "Name": "Knoblauch, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 1013,
+    "Name": "Knollensellerie, gedämpft (ohne Zugabe von Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 357,
+    "Name": "Knollensellerie, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 1399,
+    "Name": "Knöpflimehl",
+    "Synonyme": "Spätzlimehl",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke"
+  },
+  {
+    "ID": 945,
+    "Name": "Knuspermüeslimischung,  mit Früchten, gezuckert",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Müeslimischungen und Frühstückscerealien"
+  },
+  {
+    "ID": 14123,
+    "Name": "Knuspermüeslimischung, angereichert mit Vitaminen und Mineralien",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Müeslimischungen und Frühstückscerealien"
+  },
+  {
+    "ID": 14104,
+    "Name": "Knuspermüeslimischung, gezuckert (Durchschnitt)",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Müeslimischungen und Frühstückscerealien"
+  },
+  {
+    "ID": 944,
+    "Name": "Knuspermüeslimischung, mit Nüssen and Samen, gezuckert",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Müeslimischungen und Frühstückscerealien"
+  },
+  {
+    "ID": 948,
+    "Name": "Knuspermüeslimischung, mit Schokolade",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Müeslimischungen und Frühstückscerealien"
+  },
+  {
+    "ID": 51,
+    "Name": "Kochbutter",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Fette;Milch und Milchprodukte/Rahm und Butter"
+  },
+  {
+    "ID": 1118,
+    "Name": "Kochpökelware (Durchschnitt)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Kochwurstware"
+  },
+  {
+    "ID": 762,
+    "Name": "Kochsalz mit Jod",
+    "Synonyme": "",
+    "Kategorie": "Verschiedenes/Salz, Gewürze und Aromen"
+  },
+  {
+    "ID": 10457,
+    "Name": "Kochsalz mit Jod und Fluor",
+    "Synonyme": "Speisesalz",
+    "Kategorie": "Verschiedenes/Salz, Gewürze und Aromen"
+  },
+  {
+    "ID": 634,
+    "Name": "Kochsalz ohne Jod und Fluor",
+    "Synonyme": "Speisesalz",
+    "Kategorie": "Verschiedenes/Salz, Gewürze und Aromen"
+  },
+  {
+    "ID": 704,
+    "Name": "Kochspeck",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Rohwurstware"
+  },
+  {
+    "ID": 1116,
+    "Name": "Kochwürste (Durchschnitt)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Kochwurstware"
+  },
+  {
+    "ID": 10582,
+    "Name": "Kohlgemüse (Durchschnitt), gekocht (ohne Zugabe von Salz und Fett)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 1167,
+    "Name": "Kohlgemüse (Durchschnitt), roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 1014,
+    "Name": "Kohlrabi, gedämpft (ohne Zugabe von Salz)",
+    "Synonyme": "Rübkohl",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 449,
+    "Name": "Kohlrabi, roh",
+    "Synonyme": "Rübkohl",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 601,
+    "Name": "Kokosfett",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Fette"
+  },
+  {
+    "ID": 888,
+    "Name": "Kokosmakronen",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Guetzli"
+  },
+  {
+    "ID": 284,
+    "Name": "Kokosnuss",
+    "Synonyme": "",
+    "Kategorie": "Nüsse, Samen und Ölfrüchte"
+  },
+  {
+    "ID": 742,
+    "Name": "Kokosnuss, getrocknet (Kokosrapseln, Kokosflocken)",
+    "Synonyme": "",
+    "Kategorie": "Nüsse, Samen und Ölfrüchte"
+  },
+  {
+    "ID": 14124,
+    "Name": "Kokosnussgetränk, nature",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Milchersatzprodukte"
+  },
+  {
+    "ID": 14132,
+    "Name": "Kokosnussgetränk, nature, mit Calcium und Vitaminen angereichert",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Milchersatzprodukte"
+  },
+  {
+    "ID": 13458,
+    "Name": "Kokosnussmilch",
+    "Synonyme": "Kokosmilch",
+    "Kategorie": "Nüsse, Samen und Ölfrüchte"
+  },
+  {
+    "ID": 526,
+    "Name": "Kondensmilch, gezuckert",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Milch"
+  },
+  {
+    "ID": 527,
+    "Name": "Kondensmilch, ungezuckert",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Milch"
+  },
+  {
+    "ID": 696,
+    "Name": "Konfitüre",
+    "Synonyme": "Marmelade",
+    "Kategorie": "Süssigkeiten/Konfitüren und süsse Brotaufstriche"
+  },
+  {
+    "ID": 697,
+    "Name": "Konfitüre, energievermindert, mit Süssstoffen",
+    "Synonyme": "Marmelade",
+    "Kategorie": "Süssigkeiten/Konfitüren und süsse Brotaufstriche"
+  },
+  {
+    "ID": 448,
+    "Name": "Kopfsalat, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 13322,
+    "Name": "Kotelett (Durchschnitt aus Kalb, Schwein, Lamm), gebraten (ohne Zusatz von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien"
+  },
+  {
+    "ID": 1107,
+    "Name": "Kotelett (Durchschnitt aus Kalb, Schwein, Lamm), roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Schwein;Fleisch und Innereien/Kalb;Fleisch und Innereien/Lamm, Schaf"
+  },
+  {
+    "ID": 1099,
+    "Name": "Krustentiere (Durchschnitt), roh",
+    "Synonyme": "",
+    "Kategorie": "Fisch/Meeresfrüchte, Krusten- und Schalentiere"
+  },
+  {
+    "ID": 1176,
+    "Name": "Kuchenteig (mit Butter), ungebacken",
+    "Synonyme": "Wähenteig",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige"
+  },
+  {
+    "ID": 906,
+    "Name": "Kuchenteig (mit pflanzlichem Fett), ungebacken",
+    "Synonyme": "Wähenteig",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige"
+  },
+  {
+    "ID": 13417,
+    "Name": "Kuchenteig, Vollkorn (mit Butter), ungebacken",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige"
+  },
+  {
+    "ID": 13416,
+    "Name": "Kuchenteig, Vollkorn (mit pflanzichem Fett), ungebacken",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige"
+  },
+  {
+    "ID": 1662,
+    "Name": "Kürbis-Piccata, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 1020,
+    "Name": "Kürbis, gedämpft (ohne Zugabe von Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 480,
+    "Name": "Kürbis, roh",
+    "Synonyme": "Riesenkürbis",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 276,
+    "Name": "Kürbiskerne",
+    "Synonyme": "",
+    "Kategorie": "Nüsse, Samen und Ölfrüchte"
+  },
+  {
+    "ID": 13404,
+    "Name": "Kürbiskernöl",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Öle"
+  },
+  {
+    "ID": 1656,
+    "Name": "Kürbisscheiben, paniert, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 193,
+    "Name": "Lachs, geräuchert",
+    "Synonyme": "",
+    "Kategorie": "Fisch/Meeresfische"
+  },
+  {
+    "ID": 210,
+    "Name": "Lachs, Wildfang, roh",
+    "Synonyme": "",
+    "Kategorie": "Fisch/Meeresfische"
+  },
+  {
+    "ID": 13354,
+    "Name": "Lachs, Zucht, Filet, gedämpft (ohne Zusatz von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fisch/Meeresfische"
+  },
+  {
+    "ID": 194,
+    "Name": "Lachs, Zucht, roh",
+    "Synonyme": "",
+    "Kategorie": "Fisch/Meeresfische"
+  },
+  {
+    "ID": 13273,
+    "Name": "Lamm, Filet, \"medium\" gebraten (ohne Zusatz von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Lamm, Schaf"
+  },
+  {
+    "ID": 675,
+    "Name": "Lamm, Filet, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Lamm, Schaf"
+  },
+  {
+    "ID": 13304,
+    "Name": "Lamm, Gigot, gebraten (ohne Zusatz von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Lamm, Schaf"
+  },
+  {
+    "ID": 4,
+    "Name": "Lamm, Gigot, roh (Schweiz, Neuseeland)",
+    "Synonyme": "Keule",
+    "Kategorie": "Fleisch und Innereien/Lamm, Schaf"
+  },
+  {
+    "ID": 5,
+    "Name": "Lamm, Kotelett, roh (Schweiz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Lamm, Schaf"
+  },
+  {
+    "ID": 17,
+    "Name": "Lamm, Nierstück, roh (Australien, Neuseeland)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Lamm, Schaf"
+  },
+  {
+    "ID": 18,
+    "Name": "Lamm, Racks, roh (Australien, Neuseeland)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Lamm, Schaf"
+  },
+  {
+    "ID": 19,
+    "Name": "Lamm, Voressen, roh (Schweiz)",
+    "Synonyme": "Ragout",
+    "Kategorie": "Fleisch und Innereien/Lamm, Schaf"
+  },
+  {
+    "ID": 1110,
+    "Name": "Lamm/Schaf (Durchschnitt exkl. Innereien, Kotelett), roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Lamm, Schaf"
+  },
+  {
+    "ID": 1673,
+    "Name": "Lammragout mit Sauce, zubereitet",
+    "Synonyme": "Voressen",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 1090,
+    "Name": "Landjäger",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Rohwurstware"
+  },
+  {
+    "ID": 1184,
+    "Name": "Latte macchiato, ungezuckert",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Milch- und Joghurtgetränke;Alkoholfreie Getränke/Kaffee"
+  },
+  {
+    "ID": 441,
+    "Name": "Lattich, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 1015,
+    "Name": "Lauch, gedünstet (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 358,
+    "Name": "Lauch, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 832,
+    "Name": "Laugenbrötli (mit jodiertem Kochsalz)",
+    "Synonyme": "Silserli",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Brote und Brotwaren"
+  },
+  {
+    "ID": 947,
+    "Name": "Laugengebäck trocken (Bretzel, Sticks)",
+    "Synonyme": "",
+    "Kategorie": "Salzige Snacks/Salzsticks und Bretzel"
+  },
+  {
+    "ID": 835,
+    "Name": "Laugengipfeli (mit jodiertem Kochsalz)",
+    "Synonyme": "Silsergipfeli",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Brote und Brotwaren"
+  },
+  {
+    "ID": 13320,
+    "Name": "Leber (Durchschnitt aus Rind, Kalb, Schwein), gebraten (ohne Zusatz von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien"
+  },
+  {
+    "ID": 10377,
+    "Name": "Leber (Durchschnitt aus Rind, Kalb, Schwein), roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Geflügel;Fleisch und Innereien/Kalb;Fleisch und Innereien/Rind;Fleisch und Innereien/Schwein"
+  },
+  {
+    "ID": 776,
+    "Name": "Leberwurst",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Kochwurstware"
+  },
+  {
+    "ID": 880,
+    "Name": "Lebkuchen",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Sonstige süsse Backwaren"
+  },
+  {
+    "ID": 993,
+    "Name": "Lebkuchen mit Schokoladeüberzug",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Sonstige süsse Backwaren"
+  },
+  {
+    "ID": 13405,
+    "Name": "Leinöl, kaltgepresst",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Öle"
+  },
+  {
+    "ID": 277,
+    "Name": "Leinsamen",
+    "Synonyme": "",
+    "Kategorie": "Nüsse, Samen und Ölfrüchte"
+  },
+  {
+    "ID": 10534,
+    "Name": "Lemon Curd",
+    "Synonyme": "Zitronencrème",
+    "Kategorie": "Süssigkeiten/Cremen und Pudding"
+  },
+  {
+    "ID": 531,
+    "Name": "Limburger (Münster)",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Hartkäse"
+  },
+  {
+    "ID": 595,
+    "Name": "Limonade, mit Aroma, gezuckert",
+    "Synonyme": "",
+    "Kategorie": "Alkoholfreie Getränke/Süssgetränke"
+  },
+  {
+    "ID": 1060,
+    "Name": "Linse, ganz, gekocht (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Hülsenfrüchte"
+  },
+  {
+    "ID": 370,
+    "Name": "Linse, ganz, getrocknet",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Hülsenfrüchte"
+  },
+  {
+    "ID": 13386,
+    "Name": "Linse, geschält, gekocht (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Hülsenfrüchte"
+  },
+  {
+    "ID": 13385,
+    "Name": "Linse, geschält, getrocknet",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Hülsenfrüchte"
+  },
+  {
+    "ID": 900,
+    "Name": "Linzertorte",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake"
+  },
+  {
+    "ID": 852,
+    "Name": "Löffelbiscuit",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Guetzli"
+  },
+  {
+    "ID": 786,
+    "Name": "Luganighe",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Rohwurstware"
+  },
+  {
+    "ID": 1083,
+    "Name": "Lyoner",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Brühwurstware"
+  },
+  {
+    "ID": 878,
+    "Name": "Madeleine (mit Butter)",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Sonstige süsse Backwaren"
+  },
+  {
+    "ID": 14117,
+    "Name": "Madeleine (mit Pflanzenöl)",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Sonstige süsse Backwaren"
+  },
+  {
+    "ID": 64,
+    "Name": "Magermilch, UHT",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Milch"
+  },
+  {
+    "ID": 578,
+    "Name": "Magermilchpulver",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Milch"
+  },
+  {
+    "ID": 879,
+    "Name": "Mailänderli",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Guetzli"
+  },
+  {
+    "ID": 932,
+    "Name": "Mais-Chips (Apérogebäck)",
+    "Synonyme": "",
+    "Kategorie": "Salzige Snacks/Chips"
+  },
+  {
+    "ID": 1032,
+    "Name": "Mais, gedämpft (ohne Zugabe von Salz)",
+    "Synonyme": "Zuckermais;Gemüsemais",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 432,
+    "Name": "Mais, roh",
+    "Synonyme": "Zuckermais;Gemüsemais",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 1619,
+    "Name": "Maisgriess, gekocht",
+    "Synonyme": "Polenta",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mais"
+  },
+  {
+    "ID": 425,
+    "Name": "Maisgriess, trocken",
+    "Synonyme": "Polenta",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mais"
+  },
+  {
+    "ID": 412,
+    "Name": "Maiskeimöl",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Öle"
+  },
+  {
+    "ID": 633,
+    "Name": "Maiskölbchen, in Essig eingelegt",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 426,
+    "Name": "Maisstärke",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke;Verschiedenes/Gelier- und Bindemittel"
+  },
+  {
+    "ID": 13434,
+    "Name": "Malzgetränk mit Kakao, mit Vitaminen und Mineralien angereichert, Pulver",
+    "Synonyme": "",
+    "Kategorie": "Alkoholfreie Getränke/Malzextrakthaltige Getränke"
+  },
+  {
+    "ID": 14050,
+    "Name": "Malzgetränk mit Kakao, mit Vitaminen und Mineralien angereichert, zubereitet (mit Milch)",
+    "Synonyme": "",
+    "Kategorie": "Alkoholfreie Getränke/Malzextrakthaltige Getränke;Milch und Milchprodukte/Milch- und Joghurtgetränke"
+  },
+  {
+    "ID": 397,
+    "Name": "Mandarine, roh",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 273,
+    "Name": "Mandel",
+    "Synonyme": "",
+    "Kategorie": "Nüsse, Samen und Ölfrüchte"
+  },
+  {
+    "ID": 269,
+    "Name": "Mandel, geröstet, gesalzen",
+    "Synonyme": "",
+    "Kategorie": "Salzige Snacks/Gesalzene Nüsse, Samen, Kerne"
+  },
+  {
+    "ID": 278,
+    "Name": "Mandel, ohne Fett geröstet, gesalzen",
+    "Synonyme": "",
+    "Kategorie": "Salzige Snacks/Gesalzene Nüsse, Samen, Kerne"
+  },
+  {
+    "ID": 14113,
+    "Name": "Mandelgetränk, nature",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Milchersatzprodukte"
+  },
+  {
+    "ID": 14131,
+    "Name": "Mandelgetränk, nature, mit Calcium und Vitaminen angereichert",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Milchersatzprodukte"
+  },
+  {
+    "ID": 13884,
+    "Name": "Mango, getrocknet",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte getrocknet"
+  },
+  {
+    "ID": 396,
+    "Name": "Mango, roh",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 1016,
+    "Name": "Mangold, gedämpft (ohne Zugabe von Salz)",
+    "Synonyme": "Krautstiel",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 450,
+    "Name": "Mangold, roh",
+    "Synonyme": "Krautstiel",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 14054,
+    "Name": "Maniok, Wurzelknolle, gekocht (ohne Zugabe von Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 13918,
+    "Name": "Maniok, Wurzelknolle, roh",
+    "Synonyme": "Cassava;Kassave;Yuca",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 209,
+    "Name": "Margarine, 35 - 40 % Fett",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Fette;Fette und Öle/Fette"
+  },
+  {
+    "ID": 208,
+    "Name": "Margarine, ohne Butter, 70 - 80 % Fett",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Fette"
+  },
+  {
+    "ID": 898,
+    "Name": "Marmorkuchen",
+    "Synonyme": "Marmorcake",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake"
+  },
+  {
+    "ID": 496,
+    "Name": "Marzipan",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Sonstige Süssigkeiten"
+  },
+  {
+    "ID": 485,
+    "Name": "Mascarpone",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Frischkäse und Quark"
+  },
+  {
+    "ID": 771,
+    "Name": "Mayonnaise",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Mayonnaisen"
+  },
+  {
+    "ID": 772,
+    "Name": "Mayonnaise, kalorienvermindert",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Mayonnaisen"
+  },
+  {
+    "ID": 1682,
+    "Name": "Mayonnaise, mit Rapsöl, hausgemacht",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Mayonnaisen"
+  },
+  {
+    "ID": 1135,
+    "Name": "Mehl (Durchschnitt)",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke"
+  },
+  {
+    "ID": 1136,
+    "Name": "Mehl, hell (Durchschnitt)",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke"
+  },
+  {
+    "ID": 1524,
+    "Name": "Mehlomeletten mit Champignonfüllung, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 1525,
+    "Name": "Mehlomeletten mit Gemüsefüllung, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 1523,
+    "Name": "Mehlomeletten mit Käse, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 1695,
+    "Name": "Mehlomeletten mit Nutella, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige süsse Gerichte"
+  },
+  {
+    "ID": 1526,
+    "Name": "Mehlomeletten mit Schinken, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 1527,
+    "Name": "Mehlomeletten mit Speck, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 1694,
+    "Name": "Mehlomeletten mit Zimt und Zucker, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige süsse Gerichte"
+  },
+  {
+    "ID": 1522,
+    "Name": "Mehlomeletten, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 732,
+    "Name": "Melasse, Melassesirup",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Konfitüren und süsse Brotaufstriche"
+  },
+  {
+    "ID": 854,
+    "Name": "Meringue",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Sonstige Süssigkeiten"
+  },
+  {
+    "ID": 761,
+    "Name": "Miesmuschel, roh",
+    "Synonyme": "",
+    "Kategorie": "Fisch/Meeresfrüchte, Krusten- und Schalentiere"
+  },
+  {
+    "ID": 1194,
+    "Name": "Milch (Durchschnitt)",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Milch"
+  },
+  {
+    "ID": 1185,
+    "Name": "Milchkaffee dunkel, ungezuckert",
+    "Synonyme": "Schale",
+    "Kategorie": "Milch und Milchprodukte/Milch- und Joghurtgetränke;Alkoholfreie Getränke/Kaffee"
+  },
+  {
+    "ID": 1186,
+    "Name": "Milchkaffee hell, ungezuckert",
+    "Synonyme": "Schale",
+    "Kategorie": "Milch und Milchprodukte/Milch- und Joghurtgetränke;Alkoholfreie Getränke/Kaffee"
+  },
+  {
+    "ID": 1187,
+    "Name": "Milchkaffee, ungezuckert",
+    "Synonyme": "Schale",
+    "Kategorie": "Milch und Milchprodukte/Milch- und Joghurtgetränke;Alkoholfreie Getränke/Kaffee"
+  },
+  {
+    "ID": 1513,
+    "Name": "Milchreis, zubereitet (mit teilentrahmter Milch, ohne Zugabe von Zucker)",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Cremen und Pudding;Gerichte/Müesli und Brei"
+  },
+  {
+    "ID": 1514,
+    "Name": "Milchreis, zubereitet (mit Vollmilch, ohne Zugabe von Zucker)",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Cremen und Pudding;Gerichte/Müesli und Brei"
+  },
+  {
+    "ID": 195,
+    "Name": "Milchschokolade",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Schokolade und Kakaoerzeugnisse"
+  },
+  {
+    "ID": 654,
+    "Name": "Milchschokolade mit Alkoholfüllung",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Schokolade und Kakaoerzeugnisse"
+  },
+  {
+    "ID": 655,
+    "Name": "Milchschokolade mit Crèmefüllung (Gianduja, Nougat)",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Schokolade und Kakaoerzeugnisse"
+  },
+  {
+    "ID": 643,
+    "Name": "Milchschokolade mit Mandel-Honig-Nougat",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Schokolade und Kakaoerzeugnisse"
+  },
+  {
+    "ID": 612,
+    "Name": "Milchschokolade mit Nüssen",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Schokolade und Kakaoerzeugnisse"
+  },
+  {
+    "ID": 641,
+    "Name": "Milchschokolade mit Weinbeeren, Nüssen und Mandeln",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Schokolade und Kakaoerzeugnisse"
+  },
+  {
+    "ID": 671,
+    "Name": "Minestrone",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Eintöpfe und Suppen"
+  },
+  {
+    "ID": 1087,
+    "Name": "Minipic Würstchen",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Rohwurstware"
+  },
+  {
+    "ID": 1053,
+    "Name": "Mirabelle, gedünstet, abgetropft (ohne Zugabe von Zucker)",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 403,
+    "Name": "Mirabelle, roh",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 602,
+    "Name": "Molke, süss",
+    "Synonyme": "Süssmolke",
+    "Kategorie": "Milch und Milchprodukte/Milch- und Joghurtgetränke"
+  },
+  {
+    "ID": 1039,
+    "Name": "Morchel, gedünstet (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Pilze"
+  },
+  {
+    "ID": 457,
+    "Name": "Morchel, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Pilze"
+  },
+  {
+    "ID": 819,
+    "Name": "Mortadella",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Brühwurstware"
+  },
+  {
+    "ID": 717,
+    "Name": "Mostbröckli",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Rohwurstware"
+  },
+  {
+    "ID": 82,
+    "Name": "Mozzarella",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Weichkäse;Milch und Milchprodukte/Frischkäse und Quark"
+  },
+  {
+    "ID": 942,
+    "Name": "Müeslimischung, Getreideflocken mit Früchten und Nüssen, gezuckert",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Müeslimischungen und Frühstückscerealien"
+  },
+  {
+    "ID": 943,
+    "Name": "Müeslimischung, Getreideflocken mit Früchten und Nüssen, ungesüsst",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Müeslimischungen und Frühstückscerealien"
+  },
+  {
+    "ID": 14044,
+    "Name": "Mürbeteig (mit Butter), süss, gebacken",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige"
+  },
+  {
+    "ID": 14043,
+    "Name": "Mürbeteig (mit Butter), süss, ungebacken",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige"
+  },
+  {
+    "ID": 14045,
+    "Name": "Mürbeteig (mit pflanzlichem Fett), süss, gebacken",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige"
+  },
+  {
+    "ID": 909,
+    "Name": "Mürbeteig (mit pflanzlichem Fett), süss, ungebacken",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige"
+  },
+  {
+    "ID": 844,
+    "Name": "Mütschli",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Brote und Brotwaren"
+  },
+  {
+    "ID": 1579,
+    "Name": "Nasi Goreng, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Asiatische Gerichte"
+  },
+  {
+    "ID": 404,
+    "Name": "Nektarine, roh",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 913,
+    "Name": "Nussgipfel aus Blätterteig",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Sonstige süsse Backwaren"
+  },
+  {
+    "ID": 914,
+    "Name": "Nussgipfel aus Hefeteig",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Sonstige süsse Backwaren"
+  },
+  {
+    "ID": 372,
+    "Name": "Nüsslisalat, roh",
+    "Synonyme": "Feldsalat;Rapunzelsalat",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 915,
+    "Name": "Nussschnecke aus Hefeteig",
+    "Synonyme": "Hefeschnecke",
+    "Kategorie": "Süssigkeiten/Sonstige süsse Backwaren"
+  },
+  {
+    "ID": 818,
+    "Name": "Ofen-Frites, tiefgekühlt",
+    "Synonyme": "Ofen-Pommes",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Kartoffeln"
+  },
+  {
+    "ID": 10545,
+    "Name": "Olive, gefüllt mit Hackfleisch, frittiert",
+    "Synonyme": "",
+    "Kategorie": "Salzige Snacks/Sonstige salzige Snacks"
+  },
+  {
+    "ID": 492,
+    "Name": "Olive, grün, in Salzlake, abgetropft",
+    "Synonyme": "",
+    "Kategorie": "Nüsse, Samen und Ölfrüchte"
+  },
+  {
+    "ID": 493,
+    "Name": "Olive, schwarz",
+    "Synonyme": "",
+    "Kategorie": "Nüsse, Samen und Ölfrüchte"
+  },
+  {
+    "ID": 591,
+    "Name": "Olivenöl",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Öle"
+  },
+  {
+    "ID": 405,
+    "Name": "Orange, roh",
+    "Synonyme": "Apfelsine",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 855,
+    "Name": "Orangeat",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Sonstige Süssigkeiten"
+  },
+  {
+    "ID": 572,
+    "Name": "Orangennektar",
+    "Synonyme": "",
+    "Kategorie": "Alkoholfreie Getränke/Süssgetränke;Alkoholfreie Getränke/Frucht- und Gemüsesäfte"
+  },
+  {
+    "ID": 576,
+    "Name": "Orangensaft",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Fruchtsäfte;Alkoholfreie Getränke/Frucht- und Gemüsesäfte"
+  },
+  {
+    "ID": 708,
+    "Name": "Palmöl - Palmfett",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Öle;Fette und Öle/Fette"
+  },
+  {
+    "ID": 716,
+    "Name": "Pancetta",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Rohwurstware"
+  },
+  {
+    "ID": 202,
+    "Name": "Panettone",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Sonstige süsse Backwaren"
+  },
+  {
+    "ID": 750,
+    "Name": "Paniermehl",
+    "Synonyme": "Semmelmehl",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke"
+  },
+  {
+    "ID": 779,
+    "Name": "Pantli",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Rohwurstware"
+  },
+  {
+    "ID": 13440,
+    "Name": "Papaya, reif, roh",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 663,
+    "Name": "Paprika (Gewürz)",
+    "Synonyme": "",
+    "Kategorie": "Verschiedenes/Salz, Gewürze und Aromen"
+  },
+  {
+    "ID": 279,
+    "Name": "Paranuss",
+    "Synonyme": "",
+    "Kategorie": "Nüsse, Samen und Ölfrüchte"
+  },
+  {
+    "ID": 845,
+    "Name": "Pariserbrot",
+    "Synonyme": "Baguette;Parisette",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Brote und Brotwaren"
+  },
+  {
+    "ID": 482,
+    "Name": "Parmesan",
+    "Synonyme": "Parmiggiano",
+    "Kategorie": "Milch und Milchprodukte/Hartkäse"
+  },
+  {
+    "ID": 986,
+    "Name": "Passionsfrucht, roh",
+    "Synonyme": "Maracuja",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 13443,
+    "Name": "Pastinake, gekocht (ohne Zugabe von Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 13439,
+    "Name": "Pastinake, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 1017,
+    "Name": "Peperoni, grün, gedünstet (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 359,
+    "Name": "Peperoni, grün, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 1018,
+    "Name": "Peperoni, rot, gedünstet (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 360,
+    "Name": "Peperoni, rot, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 13459,
+    "Name": "Pestosauce, grün",
+    "Synonyme": "",
+    "Kategorie": "Verschiedenes/Saucen"
+  },
+  {
+    "ID": 13447,
+    "Name": "Pestosauce, rot",
+    "Synonyme": "",
+    "Kategorie": "Verschiedenes/Saucen"
+  },
+  {
+    "ID": 373,
+    "Name": "Petersilie, roh",
+    "Synonyme": "Peterli",
+    "Kategorie": "Gemüse/Kräuter"
+  },
+  {
+    "ID": 14074,
+    "Name": "Petit Beurre",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Guetzli"
+  },
+  {
+    "ID": 884,
+    "Name": "Petit Beurre mit Schokolade",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Guetzli"
+  },
+  {
+    "ID": 14067,
+    "Name": "Petit Beurre, Vollkorn",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Guetzli"
+  },
+  {
+    "ID": 463,
+    "Name": "Pfefferminze, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Kräuter"
+  },
+  {
+    "ID": 13328,
+    "Name": "Pferd, Filet, gebraten (ohne Zusatz von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Sonstige Tierarten"
+  },
+  {
+    "ID": 685,
+    "Name": "Pferd, Filet, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Sonstige Tierarten"
+  },
+  {
+    "ID": 1670,
+    "Name": "Pferderagout mit Sauce, zubereitet",
+    "Synonyme": "Voressen",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 401,
+    "Name": "Pfirsich, gelb, roh",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 624,
+    "Name": "Pfirsich, in Sirup, Konserve, abgetropft",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 625,
+    "Name": "Pfirsich, mit Süssungsmittel, Konserve, abgetropft",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 1054,
+    "Name": "Pflaume, gedünstet, abgetropft (ohne Zugabe von Zucker)",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 475,
+    "Name": "Pflaume, getrocknet",
+    "Synonyme": "Dörrpflaume;Backpflaume",
+    "Kategorie": "Früchte/Früchte getrocknet"
+  },
+  {
+    "ID": 474,
+    "Name": "Pflaume, roh",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 1528,
+    "Name": "Pflaumenkuchen, hausgemacht, gebacken (mit Blätterteig)",
+    "Synonyme": "Pflaumenwähe",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 1530,
+    "Name": "Pflaumenkuchen, hausgemacht, gebacken (mit Kuchenteig)",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 1129,
+    "Name": "Pilz (Durchschnitt), gedünstet (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Pilze"
+  },
+  {
+    "ID": 1128,
+    "Name": "Pilz (Durchschnitt), roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Pilze"
+  },
+  {
+    "ID": 1585,
+    "Name": "Pilzrisotto, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 683,
+    "Name": "Pilzsauce, gebunden",
+    "Synonyme": "",
+    "Kategorie": "Verschiedenes/Saucen"
+  },
+  {
+    "ID": 688,
+    "Name": "Pilzsuppe",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Eintöpfe und Suppen"
+  },
+  {
+    "ID": 283,
+    "Name": "Pinienkerne",
+    "Synonyme": "",
+    "Kategorie": "Nüsse, Samen und Ölfrüchte"
+  },
+  {
+    "ID": 274,
+    "Name": "Pistazie",
+    "Synonyme": "",
+    "Kategorie": "Nüsse, Samen und Ölfrüchte"
+  },
+  {
+    "ID": 1532,
+    "Name": "Pizza al tonno, gebacken",
+    "Synonyme": "Pizza mit Thon",
+    "Kategorie": "Gerichte/Italienische Gerichte"
+  },
+  {
+    "ID": 1533,
+    "Name": "Pizza Calzone, gebacken",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Italienische Gerichte"
+  },
+  {
+    "ID": 1534,
+    "Name": "Pizza Hawaii, gebacken",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Italienische Gerichte"
+  },
+  {
+    "ID": 1535,
+    "Name": "Pizza Margherita, gebacken",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Italienische Gerichte"
+  },
+  {
+    "ID": 1540,
+    "Name": "Pizza mit Gemüse, gebacken",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Italienische Gerichte"
+  },
+  {
+    "ID": 1536,
+    "Name": "Pizza mit Mascarpone und Rucola, gebacken",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Italienische Gerichte"
+  },
+  {
+    "ID": 1537,
+    "Name": "Pizza Prosciutto e Funghi, gebacken",
+    "Synonyme": "Pizza mit Schinken und Pilzen",
+    "Kategorie": "Gerichte/Italienische Gerichte"
+  },
+  {
+    "ID": 1538,
+    "Name": "Pizza Prosciutto, gebacken",
+    "Synonyme": "Pizza mit Schinken",
+    "Kategorie": "Gerichte/Italienische Gerichte"
+  },
+  {
+    "ID": 1539,
+    "Name": "Pizza Quattro Formaggi, gebacken",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Italienische Gerichte"
+  },
+  {
+    "ID": 907,
+    "Name": "Pizzateig (mit Olivenöl), ungebacken",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige"
+  },
+  {
+    "ID": 13319,
+    "Name": "Plätzli (Durchschnitt aus Geflügel, Kalb, Rind, Schwein), gebraten (ohne Zusatz von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien"
+  },
+  {
+    "ID": 14052,
+    "Name": "Plätzli (Durchschnitt aus Rind, Kalb, Schwein, Geflügel), paniert, gebraten",
+    "Synonyme": "Fleisch paniert;Schnitzel, paniert",
+    "Kategorie": "Fleisch und Innereien/Geflügel;Fleisch und Innereien/Kalb;Fleisch und Innereien/Rind;Fleisch und Innereien/Schwein"
+  },
+  {
+    "ID": 1101,
+    "Name": "Plätzli (Durchschnitt aus Rind, Kalb, Schwein, Geflügel), roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Kalb;Fleisch und Innereien/Rind;Fleisch und Innereien/Schwein;Fleisch und Innereien/Geflügel"
+  },
+  {
+    "ID": 10546,
+    "Name": "Polenta nera (aus Maisgriess und Buchweizenmehl), gekocht",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mais"
+  },
+  {
+    "ID": 12982,
+    "Name": "Pommes Chips",
+    "Synonyme": "",
+    "Kategorie": "Salzige Snacks/Chips"
+  },
+  {
+    "ID": 12983,
+    "Name": "Pommes Chips fettreduziert",
+    "Synonyme": "",
+    "Kategorie": "Salzige Snacks/Chips"
+  },
+  {
+    "ID": 10450,
+    "Name": "Pommes Frites (im Ofen gebacken), ungesalzen",
+    "Synonyme": "Ofen-Pommes",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Kartoffeln"
+  },
+  {
+    "ID": 10449,
+    "Name": "Pommes Frites (in HO Sonnenblumenöl frittiert), ungesalzen",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Kartoffeln"
+  },
+  {
+    "ID": 424,
+    "Name": "Popcorn",
+    "Synonyme": "Puffmais",
+    "Kategorie": "Salzige Snacks/Sonstige salzige Snacks"
+  },
+  {
+    "ID": 516,
+    "Name": "Portwein, 18.5 vol%",
+    "Synonyme": "Porto",
+    "Kategorie": "Alkoholhaltige Getränke/Wein"
+  },
+  {
+    "ID": 20,
+    "Name": "Poulet, Brust, mit Haut, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Geflügel"
+  },
+  {
+    "ID": 22,
+    "Name": "Poulet, Brust, ohne Haut, roh",
+    "Synonyme": "Pouletschnitzel",
+    "Kategorie": "Fleisch und Innereien/Geflügel"
+  },
+  {
+    "ID": 13276,
+    "Name": "Poulet, Brust, Schnitzel oder Geschnetzeltes, gebraten (ohne Zusatz von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Geflügel"
+  },
+  {
+    "ID": 13309,
+    "Name": "Poulet, ganz, mit Haut, gebraten (ohne Zusatz von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Geflügel"
+  },
+  {
+    "ID": 711,
+    "Name": "Poulet, ganz, mit Haut, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Geflügel"
+  },
+  {
+    "ID": 13310,
+    "Name": "Poulet, Schenkel, mit Haut, gebraten (ohne Zusatz von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Geflügel"
+  },
+  {
+    "ID": 24,
+    "Name": "Poulet, Schenkel, mit Haut, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Geflügel"
+  },
+  {
+    "ID": 26,
+    "Name": "Poulet, Schenkel, ohne Haut, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Geflügel"
+  },
+  {
+    "ID": 987,
+    "Name": "Preiselbeere, roh",
+    "Synonyme": "Moosbeere",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 874,
+    "Name": "Prussien",
+    "Synonyme": "Palmiers",
+    "Kategorie": "Süssigkeiten/Guetzli"
+  },
+  {
+    "ID": 806,
+    "Name": "Pudding, Caramel",
+    "Synonyme": "Flan",
+    "Kategorie": "Süssigkeiten/Cremen und Pudding"
+  },
+  {
+    "ID": 810,
+    "Name": "Pudding, Schokolade",
+    "Synonyme": "Flan",
+    "Kategorie": "Süssigkeiten/Cremen und Pudding"
+  },
+  {
+    "ID": 809,
+    "Name": "Pudding, Vanille",
+    "Synonyme": "Flan",
+    "Kategorie": "Süssigkeiten/Cremen und Pudding"
+  },
+  {
+    "ID": 13501,
+    "Name": "Quark, mit Früchten, gezuckert",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Frischkäse und Quark"
+  },
+  {
+    "ID": 571,
+    "Name": "Quark, nature, halbfett",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Frischkäse und Quark"
+  },
+  {
+    "ID": 71,
+    "Name": "Quark, nature, mager",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Frischkäse und Quark"
+  },
+  {
+    "ID": 70,
+    "Name": "Quark, nature, Rahm",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Frischkäse und Quark"
+  },
+  {
+    "ID": 1182,
+    "Name": "Quarkblätterteig (mit Butter), ungebacken",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige"
+  },
+  {
+    "ID": 1181,
+    "Name": "Quarkblätterteig (mit pflanzlichem Fett), ungebacken",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige"
+  },
+  {
+    "ID": 1542,
+    "Name": "Quiche Lorraine, gebacken (mit Blätterteig)",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 1541,
+    "Name": "Quiche Lorraine, gebacken (mit Kuchenteig)",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 13396,
+    "Name": "Quinoa, gekocht (ohne Zugabe von Salz und Fett)",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Sonstige Getreideprodukte"
+  },
+  {
+    "ID": 13394,
+    "Name": "Quinoa, roh",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Sonstige Getreideprodukte"
+  },
+  {
+    "ID": 1055,
+    "Name": "Quitte, gekocht, abgetropft (ohne Zugabe von Zucker)",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 476,
+    "Name": "Quitte, roh",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 532,
+    "Name": "Raclettekäse",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Hartkäse"
+  },
+  {
+    "ID": 456,
+    "Name": "Radieschen, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 1195,
+    "Name": "Rahm (Durchschnitt)",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Rahm;Milch und Milchprodukte/Rahm und Butter"
+  },
+  {
+    "ID": 694,
+    "Name": "Rahmglace, Frucht",
+    "Synonyme": "Rahmeis",
+    "Kategorie": "Süssigkeiten/Glacen auf Milchbasis"
+  },
+  {
+    "ID": 953,
+    "Name": "Rahmkaramellen",
+    "Synonyme": "Rahmbonbons",
+    "Kategorie": "Süssigkeiten/Bonbons, Frucht- und Kaugummi"
+  },
+  {
+    "ID": 1019,
+    "Name": "Rande, gedämpft (ohne Zugabe von Salz)",
+    "Synonyme": "Rote Beete",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 451,
+    "Name": "Rande, roh",
+    "Synonyme": "Rote Beete",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 600,
+    "Name": "Rapsöl",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Öle"
+  },
+  {
+    "ID": 1069,
+    "Name": "Rapsöl HOLL (high oleic, low linolenic)",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Öle"
+  },
+  {
+    "ID": 1665,
+    "Name": "Ratatouille, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 533,
+    "Name": "Reblochon",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Weichkäse"
+  },
+  {
+    "ID": 488,
+    "Name": "Reh (Durchschnitt), roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Wild"
+  },
+  {
+    "ID": 28,
+    "Name": "Reh, Ragout, roh",
+    "Synonyme": "Rehpfeffer",
+    "Kategorie": "Fleisch und Innereien/Wild"
+  },
+  {
+    "ID": 29,
+    "Name": "Reh, Schnitzel, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Wild"
+  },
+  {
+    "ID": 1196,
+    "Name": "Reibkäse",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Hartkäse"
+  },
+  {
+    "ID": 1065,
+    "Name": "Reis parboiled, gekocht in Salzwasser (unjodiert)",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Reis"
+  },
+  {
+    "ID": 419,
+    "Name": "Reis parboiled, trocken",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Reis"
+  },
+  {
+    "ID": 1066,
+    "Name": "Reis poliert, gekocht in Salzwasser (unjodiert)",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Reis"
+  },
+  {
+    "ID": 427,
+    "Name": "Reis poliert, trocken",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Reis"
+  },
+  {
+    "ID": 1067,
+    "Name": "Reis unpoliert, gekocht in Salzwasser (unjodiert)",
+    "Synonyme": "Vollkornreis",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Reis"
+  },
+  {
+    "ID": 428,
+    "Name": "Reis unpoliert, trocken",
+    "Synonyme": "Vollkornreis",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Reis"
+  },
+  {
+    "ID": 13450,
+    "Name": "Reisgetränk, nature",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Milchersatzprodukte"
+  },
+  {
+    "ID": 14133,
+    "Name": "Reisgetränk, nature, mit Calcium angereichert",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Milchersatzprodukte"
+  },
+  {
+    "ID": 361,
+    "Name": "Rettich, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 362,
+    "Name": "Rhabarber, roh",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 13477,
+    "Name": "Rhabarberkompott, gezuckert",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 1547,
+    "Name": "Rhabarberkuchen, gebacken (mit Blätterteig)",
+    "Synonyme": "Rhabarberwähe",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 1548,
+    "Name": "Rhabarberkuchen, hausgemacht, gebacken (mit Kuchenteig)",
+    "Synonyme": "Rhabarberwähe",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 1072,
+    "Name": "Rind, Brust, gekocht (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Rind"
+  },
+  {
+    "ID": 719,
+    "Name": "Rind, Brust, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Rind"
+  },
+  {
+    "ID": 640,
+    "Name": "Rind, Eckstück, roh",
+    "Synonyme": "Plätzli",
+    "Kategorie": "Fleisch und Innereien/Rind"
+  },
+  {
+    "ID": 13258,
+    "Name": "Rind, Entrecôte, \"medium\" gebraten (ohne Zusatz von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Rind"
+  },
+  {
+    "ID": 30,
+    "Name": "Rind, Entrecôte, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Rind"
+  },
+  {
+    "ID": 13262,
+    "Name": "Rind, Filet, \"medium\" gebraten (ohne Zustatz von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Rind"
+  },
+  {
+    "ID": 639,
+    "Name": "Rind, Filet, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Rind"
+  },
+  {
+    "ID": 13297,
+    "Name": "Rind, Gehacktes, gebraten (ohne Zusatz von Fett und Salz)",
+    "Synonyme": "Hackfleisch",
+    "Kategorie": "Fleisch und Innereien/Rind"
+  },
+  {
+    "ID": 6,
+    "Name": "Rind, Gehacktes, roh",
+    "Synonyme": "Hackfleisch",
+    "Kategorie": "Fleisch und Innereien/Rind"
+  },
+  {
+    "ID": 37,
+    "Name": "Rind, Geschnetzeltes, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Rind"
+  },
+  {
+    "ID": 648,
+    "Name": "Rind, Hals, roh",
+    "Synonyme": "Voressen;Gulasch",
+    "Kategorie": "Fleisch und Innereien/Rind"
+  },
+  {
+    "ID": 32,
+    "Name": "Rind, Hohrücken, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Rind"
+  },
+  {
+    "ID": 657,
+    "Name": "Rind, Leber, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Rind"
+  },
+  {
+    "ID": 34,
+    "Name": "Rind, Runder Mocken, roh",
+    "Synonyme": "Saftplätzli",
+    "Kategorie": "Fleisch und Innereien/Rind"
+  },
+  {
+    "ID": 1075,
+    "Name": "Rind, Schulter, Braten \"medium\", im Ofen gebraten (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Rind"
+  },
+  {
+    "ID": 1074,
+    "Name": "Rind, Schulter, Braten \"rare\", im Ofen gebraten (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Rind"
+  },
+  {
+    "ID": 1076,
+    "Name": "Rind, Schulter, Braten \"well done\", im Ofen gebraten (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Rind"
+  },
+  {
+    "ID": 638,
+    "Name": "Rind, Schulter, Braten, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Rind"
+  },
+  {
+    "ID": 35,
+    "Name": "Rind, Siedfleisch, durchzogen,  roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Rind"
+  },
+  {
+    "ID": 13291,
+    "Name": "Rind, Siedfleisch, durchzogen, gekocht (ohne Zusatz von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Rind"
+  },
+  {
+    "ID": 13292,
+    "Name": "Rind, Siedfleisch, mager, gekocht (ohne Zusatz von Fett and Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Rind"
+  },
+  {
+    "ID": 36,
+    "Name": "Rind, Siedfleisch, mager, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Rind"
+  },
+  {
+    "ID": 38,
+    "Name": "Rind, Voressen, roh",
+    "Synonyme": "Ragout",
+    "Kategorie": "Fleisch und Innereien/Rind"
+  },
+  {
+    "ID": 656,
+    "Name": "Rind, Zunge, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Rind"
+  },
+  {
+    "ID": 1103,
+    "Name": "Rindfleisch (Durchschnitt exkl. Innereien, Rippensteak), roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Rind"
+  },
+  {
+    "ID": 1672,
+    "Name": "Rindsragout mit Sauce, zubereitet",
+    "Synonyme": "Voressen",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 701,
+    "Name": "Rippli (Nierstück), roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Kochwurstware"
+  },
+  {
+    "ID": 1584,
+    "Name": "Risotto ohne Käse, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Reis"
+  },
+  {
+    "ID": 1189,
+    "Name": "Ristretto crème, ungezuckert",
+    "Synonyme": "",
+    "Kategorie": "Alkoholfreie Getränke/Kaffee"
+  },
+  {
+    "ID": 1677,
+    "Name": "Riz Casimir mit Kalbfleisch, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 1675,
+    "Name": "Riz Casimir mit Poulet, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 830,
+    "Name": "Roggenbrot mit Sauerteig",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Brote und Brotwaren"
+  },
+  {
+    "ID": 748,
+    "Name": "Roggenmehl, halbweiss, Typ 815",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke"
+  },
+  {
+    "ID": 752,
+    "Name": "Roggenmehl, Ruch, Typ 1050",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke"
+  },
+  {
+    "ID": 749,
+    "Name": "Roggenmehl, Vollkorn, Schrot, Typ 1800",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke"
+  },
+  {
+    "ID": 846,
+    "Name": "Roggenschrotbrot",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Brote und Brotwaren"
+  },
+  {
+    "ID": 707,
+    "Name": "Rohessspeck",
+    "Synonyme": "Bauernspeck;Bauernspeck, roh, geräuchert",
+    "Kategorie": "Fleisch- und Wurstwaren/Rohwurstware"
+  },
+  {
+    "ID": 1117,
+    "Name": "Rohpökelwaren (Durchschnitt)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Rohwurstware"
+  },
+  {
+    "ID": 693,
+    "Name": "Rohschinken",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Rohwurstware"
+  },
+  {
+    "ID": 1115,
+    "Name": "Rohwürste mit abgebrochener Reifung (Durchschnitt)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Rohwurstware"
+  },
+  {
+    "ID": 1114,
+    "Name": "Rohwürste/Dauerwürste (Durchschnitt)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Rohwurstware"
+  },
+  {
+    "ID": 429,
+    "Name": "Rollgerste",
+    "Synonyme": "Gerstengraupen",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Sonstige Getreideprodukte"
+  },
+  {
+    "ID": 805,
+    "Name": "Rollmops",
+    "Synonyme": "Hering, sauer",
+    "Kategorie": "Fisch/Fischerzeugnisse"
+  },
+  {
+    "ID": 718,
+    "Name": "Rollschinken",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Kochwurstware"
+  },
+  {
+    "ID": 13333,
+    "Name": "Rollschinken, gekocht (ohne Zusatz von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Sonstige Fleisch- und Wurstwaren"
+  },
+  {
+    "ID": 484,
+    "Name": "Roquefort",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Hartkäse"
+  },
+  {
+    "ID": 1021,
+    "Name": "Rosenkohl, gedämpft (ohne Zugabe von Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 363,
+    "Name": "Rosenkohl, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 477,
+    "Name": "Rosine, getrocknet",
+    "Synonyme": "Weinbeere;Sultanine",
+    "Kategorie": "Früchte/Früchte getrocknet"
+  },
+  {
+    "ID": 462,
+    "Name": "Rosmarin, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Kräuter"
+  },
+  {
+    "ID": 858,
+    "Name": "Rösti (Fertig-Rösti), ungebraten",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Kartoffeln"
+  },
+  {
+    "ID": 1022,
+    "Name": "Rotkohl, gedünstet (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "Rotkraut;Blaukraut",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 364,
+    "Name": "Rotkohl, roh",
+    "Synonyme": "Rotkraut;Blaukraut",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 829,
+    "Name": "Ruchbrot",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Brote und Brotwaren"
+  },
+  {
+    "ID": 14077,
+    "Name": "Ruchbrot (mit jodiertem Kochsalz)",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Brote und Brotwaren"
+  },
+  {
+    "ID": 468,
+    "Name": "Rucola, roh",
+    "Synonyme": "Rauke",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 916,
+    "Name": "Rüeblitorte",
+    "Synonyme": "Rüeblicake;Rüeblikuchen",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake"
+  },
+  {
+    "ID": 1604,
+    "Name": "Rührei mit Champignons, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 1605,
+    "Name": "Rührei mit Käse, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 1603,
+    "Name": "Rührei mit Kräutern, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 1606,
+    "Name": "Rührei mit Schinken, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 1602,
+    "Name": "Rührei, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 901,
+    "Name": "Rührteigcake \"Gleichschwer",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake"
+  },
+  {
+    "ID": 1607,
+    "Name": "Russischer Salat, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Salate"
+  },
+  {
+    "ID": 875,
+    "Name": "Sablé, Butter",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Guetzli"
+  },
+  {
+    "ID": 783,
+    "Name": "Salametti",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Rohwurstware"
+  },
+  {
+    "ID": 1091,
+    "Name": "Salami",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Rohwurstware"
+  },
+  {
+    "ID": 1094,
+    "Name": "Salami (Billiglinie)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Rohwurstware"
+  },
+  {
+    "ID": 1201,
+    "Name": "Salatsauce französisch, hausgemacht (mit Rapsöl)",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Salatsaucen"
+  },
+  {
+    "ID": 1200,
+    "Name": "Salatsauce italienisch, hausgemacht (mit Olivenöl)",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Salatsaucen"
+  },
+  {
+    "ID": 13503,
+    "Name": "Salatsauce, französisch",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Salatsaucen"
+  },
+  {
+    "ID": 13502,
+    "Name": "Salatsauce, italienisch",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Salatsaucen"
+  },
+  {
+    "ID": 461,
+    "Name": "Salbei, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Kräuter"
+  },
+  {
+    "ID": 1089,
+    "Name": "Salsiz",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Rohwurstware"
+  },
+  {
+    "ID": 1687,
+    "Name": "Saltimbocca, gebraten in HOLL-Rapsöl",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Kalb"
+  },
+  {
+    "ID": 14088,
+    "Name": "Salz, Himalayasalz",
+    "Synonyme": "",
+    "Kategorie": "Verschiedenes/Salz, Gewürze und Aromen"
+  },
+  {
+    "ID": 14087,
+    "Name": "Salz, Meersalz, Fleur de sel",
+    "Synonyme": "",
+    "Kategorie": "Verschiedenes/Salz, Gewürze und Aromen"
+  },
+  {
+    "ID": 14086,
+    "Name": "Salz, Meersalz, Standard, weiss, ohne zugesetztes Jod und Fluor",
+    "Synonyme": "",
+    "Kategorie": "Verschiedenes/Salz, Gewürze und Aromen"
+  },
+  {
+    "ID": 1170,
+    "Name": "Samen, Kerne, Nüsse (Durchschnitt), ungesalzen",
+    "Synonyme": "",
+    "Kategorie": "Nüsse, Samen und Ölfrüchte"
+  },
+  {
+    "ID": 10562,
+    "Name": "Samosa, frittiert",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Asiatische Gerichte"
+  },
+  {
+    "ID": 10561,
+    "Name": "Samosa, gebacken",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Asiatische Gerichte"
+  },
+  {
+    "ID": 1551,
+    "Name": "Sandwich (Baguette) mit Aufschnitt",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sandwiches"
+  },
+  {
+    "ID": 1505,
+    "Name": "Sandwich (Baguette) mit Fleischkäse",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sandwiches"
+  },
+  {
+    "ID": 1559,
+    "Name": "Sandwich (Baguette) mit Halbhartkäse",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sandwiches"
+  },
+  {
+    "ID": 1561,
+    "Name": "Sandwich (Baguette) mit Mozzarella",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sandwiches"
+  },
+  {
+    "ID": 1549,
+    "Name": "Sandwich (Baguette) mit Rohschinken",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sandwiches"
+  },
+  {
+    "ID": 1555,
+    "Name": "Sandwich (Baguette) mit Salami",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sandwiches"
+  },
+  {
+    "ID": 1557,
+    "Name": "Sandwich (Baguette) mit Schinken",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sandwiches"
+  },
+  {
+    "ID": 1553,
+    "Name": "Sandwich (Baguette) mit Trockenfleisch",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sandwiches"
+  },
+  {
+    "ID": 1521,
+    "Name": "Sandwich (Baguette) mit Weichkäse",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sandwiches"
+  },
+  {
+    "ID": 1552,
+    "Name": "Sandwich (Ruchbrot) mit Aufschnitt",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sandwiches"
+  },
+  {
+    "ID": 1506,
+    "Name": "Sandwich (Ruchbrot) mit Fleischkäse",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sandwiches"
+  },
+  {
+    "ID": 1560,
+    "Name": "Sandwich (Ruchbrot) mit Halbhartkäse",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sandwiches"
+  },
+  {
+    "ID": 1562,
+    "Name": "Sandwich (Ruchbrot) mit Mozzarella",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sandwiches"
+  },
+  {
+    "ID": 1550,
+    "Name": "Sandwich (Ruchbrot) mit Rohschinken",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sandwiches"
+  },
+  {
+    "ID": 1556,
+    "Name": "Sandwich (Ruchbrot) mit Salami",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sandwiches"
+  },
+  {
+    "ID": 1558,
+    "Name": "Sandwich (Ruchbrot) mit Schinken",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sandwiches"
+  },
+  {
+    "ID": 1554,
+    "Name": "Sandwich (Ruchbrot) mit Trockenfleisch",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sandwiches"
+  },
+  {
+    "ID": 1520,
+    "Name": "Sandwich (Ruchbrot) mit Weichkäse",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sandwiches"
+  },
+  {
+    "ID": 414,
+    "Name": "Sardelle im Öl, abgetropft",
+    "Synonyme": "",
+    "Kategorie": "Fisch/Meeresfische"
+  },
+  {
+    "ID": 10532,
+    "Name": "Sardellenpaste",
+    "Synonyme": "",
+    "Kategorie": "Verschiedenes/Aufstriche"
+  },
+  {
+    "ID": 413,
+    "Name": "Sardine im Öl, abgetropft",
+    "Synonyme": "",
+    "Kategorie": "Fisch/Meeresfische"
+  },
+  {
+    "ID": 757,
+    "Name": "Sardine, roh",
+    "Synonyme": "",
+    "Kategorie": "Fisch/Meeresfische"
+  },
+  {
+    "ID": 781,
+    "Name": "Saucisse aux choux",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Rohwurstware"
+  },
+  {
+    "ID": 780,
+    "Name": "Saucisson",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Rohwurstware"
+  },
+  {
+    "ID": 1088,
+    "Name": "Saucisson vaudois",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Rohwurstware"
+  },
+  {
+    "ID": 13341,
+    "Name": "Saucisson, gekocht (ohne Zusatz von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Rohwurstware"
+  },
+  {
+    "ID": 647,
+    "Name": "Sauerkraut, in Essig eingelegt",
+    "Synonyme": "Sauerkohl",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 574,
+    "Name": "Sauerrahm",
+    "Synonyme": "Crème fraîche",
+    "Kategorie": "Fette und Öle/Rahm;Milch und Milchprodukte/Rahm und Butter"
+  },
+  {
+    "ID": 575,
+    "Name": "Saurer Halbrahm",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Rahm;Milch und Milchprodukte/Rahm und Butter"
+  },
+  {
+    "ID": 552,
+    "Name": "Sbrinz",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Hartkäse"
+  },
+  {
+    "ID": 767,
+    "Name": "Scampi (Kaisergranat), roh",
+    "Synonyme": "",
+    "Kategorie": "Fisch/Meeresfrüchte, Krusten- und Schalentiere"
+  },
+  {
+    "ID": 13384,
+    "Name": "Schafmilch",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Milch"
+  },
+  {
+    "ID": 551,
+    "Name": "Schaumwein",
+    "Synonyme": "Sekt;Prosecco;Champagner",
+    "Kategorie": "Alkoholhaltige Getränke/Wein"
+  },
+  {
+    "ID": 13446,
+    "Name": "Schinkengipfeli",
+    "Synonyme": "",
+    "Kategorie": "Salzige Snacks/Blätterteiggebäcke;Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 563,
+    "Name": "Schmelzkäse, Scheibe, Rahm",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Käseerzeugnisse"
+  },
+  {
+    "ID": 558,
+    "Name": "Schmelzkäse, Scheibe, viertelfett",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Käseerzeugnisse"
+  },
+  {
+    "ID": 559,
+    "Name": "Schmelzkäse, Scheibe, vollfett",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Käseerzeugnisse"
+  },
+  {
+    "ID": 565,
+    "Name": "Schmelzkäse, streichfähig, Rahm",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Käseerzeugnisse"
+  },
+  {
+    "ID": 560,
+    "Name": "Schmelzkäse, streichfähig, viertelfett",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Käseerzeugnisse"
+  },
+  {
+    "ID": 561,
+    "Name": "Schmelzkäse, streichfähig, vollfett",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Käseerzeugnisse"
+  },
+  {
+    "ID": 374,
+    "Name": "Schnittlauch, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Kräuter"
+  },
+  {
+    "ID": 1685,
+    "Name": "Schnitzelbrot mit Cocktailsauce",
+    "Synonyme": "Plätzlibrot",
+    "Kategorie": "Gerichte/Sandwiches"
+  },
+  {
+    "ID": 1686,
+    "Name": "Schnitzelbrot mit Tartarsauce",
+    "Synonyme": "Plätzlibrot",
+    "Kategorie": "Gerichte/Sandwiches"
+  },
+  {
+    "ID": 14038,
+    "Name": "Schoggibrötli",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Sonstige süsse Backwaren"
+  },
+  {
+    "ID": 196,
+    "Name": "Schokolade, dunkel (bitter)",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Schokolade und Kakaoerzeugnisse"
+  },
+  {
+    "ID": 197,
+    "Name": "Schokolade, weiss",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Schokolade und Kakaoerzeugnisse"
+  },
+  {
+    "ID": 807,
+    "Name": "Schokoladencrème",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Cremen und Pudding"
+  },
+  {
+    "ID": 889,
+    "Name": "Schokoladengugelhopf",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake"
+  },
+  {
+    "ID": 960,
+    "Name": "Schokoladenpulver",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Schokolade und Kakaoerzeugnisse;Alkoholfreie Getränke/Kakaogetränke"
+  },
+  {
+    "ID": 415,
+    "Name": "Scholle, roh",
+    "Synonyme": "Goldbutt",
+    "Kategorie": "Fisch/Meeresfische"
+  },
+  {
+    "ID": 14035,
+    "Name": "Schümliguetzli",
+    "Synonyme": "Schümli; Schaumgebäck; Schaumkeks",
+    "Kategorie": "Süssigkeiten/Guetzli"
+  },
+  {
+    "ID": 14039,
+    "Name": "Schümliguetzli mit Schokolade",
+    "Synonyme": "Choco-Schümli",
+    "Kategorie": "Süssigkeiten/Guetzli"
+  },
+  {
+    "ID": 791,
+    "Name": "Schützenwurst",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Brühwurstware"
+  },
+  {
+    "ID": 883,
+    "Name": "Schwarzwälder Kirschtorte",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake"
+  },
+  {
+    "ID": 1023,
+    "Name": "Schwarzwurzel, gedämpft (ohne Zugabe von Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 452,
+    "Name": "Schwarzwurzel, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 39,
+    "Name": "Schwein, Brustspitz, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Schwein"
+  },
+  {
+    "ID": 13270,
+    "Name": "Schwein, Eckstück, Plätzli, gebraten (ohne Zusatz von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Schwein"
+  },
+  {
+    "ID": 679,
+    "Name": "Schwein, Eckstück, roh",
+    "Synonyme": "Plätzli",
+    "Kategorie": "Fleisch und Innereien/Schwein"
+  },
+  {
+    "ID": 13269,
+    "Name": "Schwein, Filet, gebraten (ohne Zusatz von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Schwein"
+  },
+  {
+    "ID": 677,
+    "Name": "Schwein, Filet, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Schwein"
+  },
+  {
+    "ID": 7,
+    "Name": "Schwein, Gehacktes, roh",
+    "Synonyme": "Hackfleisch",
+    "Kategorie": "Fleisch und Innereien/Schwein"
+  },
+  {
+    "ID": 13285,
+    "Name": "Schwein, Geschnetzeltes, gebraten (ohne Zusatz von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Schwein"
+  },
+  {
+    "ID": 40,
+    "Name": "Schwein, Geschnetzeltes, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Schwein"
+  },
+  {
+    "ID": 13284,
+    "Name": "Schwein, Hals, Steak, gebraten (ohne Zusatz von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Schwein"
+  },
+  {
+    "ID": 41,
+    "Name": "Schwein, Hals, Steak, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Schwein"
+  },
+  {
+    "ID": 13289,
+    "Name": "Schwein, Haxe, geschmort (ohne zusatz von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Schwein"
+  },
+  {
+    "ID": 678,
+    "Name": "Schwein, Haxe, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Schwein"
+  },
+  {
+    "ID": 13283,
+    "Name": "Schwein, Kotelett, gebraten (ohne Zusatz von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Schwein"
+  },
+  {
+    "ID": 8,
+    "Name": "Schwein, Kotelett, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Schwein"
+  },
+  {
+    "ID": 689,
+    "Name": "Schwein, Leber, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Schwein"
+  },
+  {
+    "ID": 42,
+    "Name": "Schwein, Nierstück, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Schwein"
+  },
+  {
+    "ID": 43,
+    "Name": "Schwein, Runder Mocken, roh",
+    "Synonyme": "Plätzli",
+    "Kategorie": "Fleisch und Innereien/Schwein"
+  },
+  {
+    "ID": 1077,
+    "Name": "Schwein, Schulter, Braten \"medium\", im Ofen gebraten (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Schwein"
+  },
+  {
+    "ID": 1079,
+    "Name": "Schwein, Schulter, Braten \"well done\", im Ofen gebraten (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Schwein"
+  },
+  {
+    "ID": 676,
+    "Name": "Schwein, Schulter, Braten, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Schwein"
+  },
+  {
+    "ID": 9,
+    "Name": "Schwein, Voressen, roh",
+    "Synonyme": "Ragout",
+    "Kategorie": "Fleisch und Innereien/Schwein"
+  },
+  {
+    "ID": 1102,
+    "Name": "Schweinefleisch (Durchschnitt exkl. Innereien, Kotelett, Haxe), roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Schwein"
+  },
+  {
+    "ID": 594,
+    "Name": "Schweineschmalz",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Fette"
+  },
+  {
+    "ID": 1085,
+    "Name": "Schweinsbratwurst",
+    "Synonyme": "Bauernbratwurst",
+    "Kategorie": "Fleisch- und Wurstwaren/Rohwurstware"
+  },
+  {
+    "ID": 14089,
+    "Name": "Schweinsbratwurst, gebraten (ohne Zusatz von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Rohwurstware"
+  },
+  {
+    "ID": 1668,
+    "Name": "Schweinspiccata, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 1671,
+    "Name": "Schweinsragout mit Sauce, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 1086,
+    "Name": "Schweinswurst",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Brühwurstware"
+  },
+  {
+    "ID": 760,
+    "Name": "Seehecht, roh",
+    "Synonyme": "",
+    "Kategorie": "Fisch/Meeresfische"
+  },
+  {
+    "ID": 754,
+    "Name": "Seelachs, roh",
+    "Synonyme": "Kohlfisch;Köhler;Pollack",
+    "Kategorie": "Fisch/Meeresfische"
+  },
+  {
+    "ID": 755,
+    "Name": "Seezunge, roh",
+    "Synonyme": "",
+    "Kategorie": "Fisch/Meeresfische"
+  },
+  {
+    "ID": 14118,
+    "Name": "Seitan",
+    "Synonyme": "",
+    "Kategorie": "Fleischersatzprodukte"
+  },
+  {
+    "ID": 1660,
+    "Name": "Sellerie-Piccata, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 1655,
+    "Name": "Selleriescheiben, paniert, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 1463,
+    "Name": "Semmeli",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Brote und Brotwaren"
+  },
+  {
+    "ID": 13464,
+    "Name": "Senf",
+    "Synonyme": "",
+    "Kategorie": "Verschiedenes/Saucen"
+  },
+  {
+    "ID": 14107,
+    "Name": "Sesamöl",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Öle"
+  },
+  {
+    "ID": 280,
+    "Name": "Sesamsamen ungeschält",
+    "Synonyme": "",
+    "Kategorie": "Nüsse, Samen und Ölfrüchte"
+  },
+  {
+    "ID": 408,
+    "Name": "Sesamsamen, geschält",
+    "Synonyme": "",
+    "Kategorie": "Nüsse, Samen und Ölfrüchte"
+  },
+  {
+    "ID": 515,
+    "Name": "Sherry, 18.5 vol%",
+    "Synonyme": "Jerez",
+    "Kategorie": "Alkoholhaltige Getränke/Wein"
+  },
+  {
+    "ID": 1697,
+    "Name": "Siedfleischsalat, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Salate"
+  },
+  {
+    "ID": 494,
+    "Name": "Silberzwiebel, in Essig eingelegt",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 569,
+    "Name": "Sirup unverdünnt",
+    "Synonyme": "",
+    "Kategorie": "Alkoholfreie Getränke/Sirup"
+  },
+  {
+    "ID": 1132,
+    "Name": "Sirup zubereitet (verdünnt im Verhältnis 1:5.5)",
+    "Synonyme": "",
+    "Kategorie": "Alkoholfreie Getränke/Sirup;Alkoholfreie Getränke/Süssgetränke"
+  },
+  {
+    "ID": 1061,
+    "Name": "Sojabohne, gekocht (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Hülsenfrüchte"
+  },
+  {
+    "ID": 442,
+    "Name": "Sojabohne, getrocknet",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Hülsenfrüchte"
+  },
+  {
+    "ID": 72,
+    "Name": "Sojagetränk, nature",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Milchersatzprodukte"
+  },
+  {
+    "ID": 14129,
+    "Name": "Sojagetränk, nature, mit Calicum and Vitaminen angereichert",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Milchersatzprodukte"
+  },
+  {
+    "ID": 996,
+    "Name": "Sojamehl, entfettet",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke"
+  },
+  {
+    "ID": 995,
+    "Name": "Sojamehl, vollfett",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke"
+  },
+  {
+    "ID": 603,
+    "Name": "Sojaöl",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Öle"
+  },
+  {
+    "ID": 13456,
+    "Name": "Sojasauce",
+    "Synonyme": "",
+    "Kategorie": "Verschiedenes/Saucen"
+  },
+  {
+    "ID": 466,
+    "Name": "Sojasprossen, roh",
+    "Synonyme": "Sojakeime",
+    "Kategorie": "Gemüse/Sprossen und Keimlinge"
+  },
+  {
+    "ID": 281,
+    "Name": "Sonnenblumenkerne",
+    "Synonyme": "",
+    "Kategorie": "Nüsse, Samen und Ölfrüchte"
+  },
+  {
+    "ID": 598,
+    "Name": "Sonnenblumenöl",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Öle"
+  },
+  {
+    "ID": 1068,
+    "Name": "Sonnenblumenöl HO (high oleic), raffiniert",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Öle"
+  },
+  {
+    "ID": 892,
+    "Name": "Sorbet, Frucht",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Glacen auf Wasserbasis"
+  },
+  {
+    "ID": 1024,
+    "Name": "Spargel, gedämpft (ohne Zugabe von Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 443,
+    "Name": "Spargel, roh (weiss und grün)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 1025,
+    "Name": "Spinat, gedämpft (ohne Zugabe von Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 365,
+    "Name": "Spinat, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 1567,
+    "Name": "Spinatkuchen, gebacken (mit Blätterteig)",
+    "Synonyme": "Spinatwähe",
+    "Kategorie": "Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 1566,
+    "Name": "Spinatkuchen, gebacken (mit Kuchenteig)",
+    "Synonyme": "Spinatwähe",
+    "Kategorie": "Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 646,
+    "Name": "Spirituosen 40 vol% (z.B. Vodka, Gin)",
+    "Synonyme": "",
+    "Kategorie": "Alkoholhaltige Getränke/Spirituosen"
+  },
+  {
+    "ID": 917,
+    "Name": "Spitzbube (Mürbeteiggebäck mit Konfitüre)",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Sonstige süsse Backwaren"
+  },
+  {
+    "ID": 843,
+    "Name": "St. Galler Bürli (halbweiss)",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Brote und Brotwaren"
+  },
+  {
+    "ID": 792,
+    "Name": "St. Galler Schüblig",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Brühwurstware"
+  },
+  {
+    "ID": 570,
+    "Name": "St. Paulin",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Hartkäse"
+  },
+  {
+    "ID": 400,
+    "Name": "Stachelbeere, roh",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 1026,
+    "Name": "Stangensellerie, gedämpft (ohne Zugabe von Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 366,
+    "Name": "Stangensellerie, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 1040,
+    "Name": "Steinpilz, gedünstet (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Pilze"
+  },
+  {
+    "ID": 455,
+    "Name": "Steinpilz, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Pilze"
+  },
+  {
+    "ID": 13418,
+    "Name": "Strudelteig, ungebacken",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teige"
+  },
+  {
+    "ID": 770,
+    "Name": "Surimi",
+    "Synonyme": "",
+    "Kategorie": "Fisch/Fischerzeugnisse"
+  },
+  {
+    "ID": 13407,
+    "Name": "Süsskartoffel, gedämpft (ohne Zugabe von Salz)",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Kartoffeln"
+  },
+  {
+    "ID": 13406,
+    "Name": "Süsskartoffel, roh",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Kartoffeln"
+  },
+  {
+    "ID": 1609,
+    "Name": "Taboulé, zubereitet (mit Bulgur)",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Salate"
+  },
+  {
+    "ID": 1610,
+    "Name": "Taboulé, zubereitet (mit Couscous)",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Salate"
+  },
+  {
+    "ID": 1684,
+    "Name": "Tartarsauce, mit Rapsöl-Mayonnaise, hausgemacht",
+    "Synonyme": "",
+    "Kategorie": "Verschiedenes/Saucen"
+  },
+  {
+    "ID": 803,
+    "Name": "Tee, ungezuckert",
+    "Synonyme": "",
+    "Kategorie": "Alkoholfreie Getränke/Tee"
+  },
+  {
+    "ID": 1062,
+    "Name": "Teigwaren mit Ei, gekocht im Salzwasser (unjodiert)",
+    "Synonyme": "Eierteigwaren",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teigwaren"
+  },
+  {
+    "ID": 799,
+    "Name": "Teigwaren mit Ei, trocken",
+    "Synonyme": "Eierteigwaren",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teigwaren"
+  },
+  {
+    "ID": 1063,
+    "Name": "Teigwaren ohne Ei, gekocht im Salzwasser (unjodiert)",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teigwaren"
+  },
+  {
+    "ID": 800,
+    "Name": "Teigwaren ohne Ei, trocken",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teigwaren"
+  },
+  {
+    "ID": 1064,
+    "Name": "Teigwaren ohne Ei, Vollkorn, gekocht im Salzwasser (unjodiert)",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teigwaren"
+  },
+  {
+    "ID": 801,
+    "Name": "Teigwaren ohne Ei, Vollkorn, trocken",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teigwaren"
+  },
+  {
+    "ID": 13462,
+    "Name": "Teigwaren, frisch, gefüllt mit Fleisch, gekocht (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teigwaren"
+  },
+  {
+    "ID": 13498,
+    "Name": "Teigwaren, frisch, gefüllt mit Spinat und Ricotta, gekocht (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teigwaren"
+  },
+  {
+    "ID": 13489,
+    "Name": "Teigwaren, frisch, gefüllt mit Spinat und Ricotta, roh",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Teigwaren"
+  },
+  {
+    "ID": 1611,
+    "Name": "Teigwarenauflauf mit Schinken, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 1598,
+    "Name": "Teigwarensalat mit französischer Sauce",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Salate"
+  },
+  {
+    "ID": 1597,
+    "Name": "Teigwarensalat mit italienischer Sauce",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Salate"
+  },
+  {
+    "ID": 59,
+    "Name": "Teilentrahmte Milch, pasteurisiert",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Milch"
+  },
+  {
+    "ID": 61,
+    "Name": "Teilentrahmte Milch, UHT",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Milch"
+  },
+  {
+    "ID": 774,
+    "Name": "Terrine de Campagne",
+    "Synonyme": "Pâté de campagne",
+    "Kategorie": "Fleisch- und Wurstwaren/Kochwurstware"
+  },
+  {
+    "ID": 828,
+    "Name": "Tessinerbrot",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Brote und Brotwaren"
+  },
+  {
+    "ID": 495,
+    "Name": "Tête de Moine",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Hartkäse"
+  },
+  {
+    "ID": 418,
+    "Name": "Thon im Öl, abgetropft",
+    "Synonyme": "",
+    "Kategorie": "Fisch/Meeresfische"
+  },
+  {
+    "ID": 417,
+    "Name": "Thon im Wasser, abgetropft",
+    "Synonyme": "",
+    "Kategorie": "Fisch/Meeresfische"
+  },
+  {
+    "ID": 1613,
+    "Name": "Thonsalat an Essig-Öl-Sauce (aus Thon im Wasser)",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Salate"
+  },
+  {
+    "ID": 756,
+    "Name": "Thunfisch, roh",
+    "Synonyme": "",
+    "Kategorie": "Fisch/Meeresfische"
+  },
+  {
+    "ID": 460,
+    "Name": "Thymian, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Kräuter"
+  },
+  {
+    "ID": 556,
+    "Name": "Tilsiter, pasteurisiert, vollfett",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Hartkäse"
+  },
+  {
+    "ID": 557,
+    "Name": "Tilsiter, Rohmilch, vollfett",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Hartkäse"
+  },
+  {
+    "ID": 887,
+    "Name": "Tirolercake",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake"
+  },
+  {
+    "ID": 827,
+    "Name": "Toastbrot mit Butter",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Brote und Brotwaren"
+  },
+  {
+    "ID": 826,
+    "Name": "Toastbrot mit Pflanzenölen",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Brote und Brotwaren"
+  },
+  {
+    "ID": 825,
+    "Name": "Toastbrot, Vollkorn",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Brote und Brotwaren"
+  },
+  {
+    "ID": 14109,
+    "Name": "Toastbrot,dunkel oder Mehrkorn",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Brote und Brotwaren"
+  },
+  {
+    "ID": 13437,
+    "Name": "Tofu, fest, nature (Durchschnitt)",
+    "Synonyme": "",
+    "Kategorie": "Fleischersatzprodukte"
+  },
+  {
+    "ID": 14120,
+    "Name": "Tofu, fest, nature (hergestellt mit Calciumsalz)",
+    "Synonyme": "",
+    "Kategorie": "Fleischersatzprodukte"
+  },
+  {
+    "ID": 14119,
+    "Name": "Tofu, fest, nature (hergestellt mit Nigari)",
+    "Synonyme": "",
+    "Kategorie": "Fleischersatzprodukte"
+  },
+  {
+    "ID": 14090,
+    "Name": "Tofu, geräuchert (Durchschnitt)",
+    "Synonyme": "",
+    "Kategorie": "Fleischersatzprodukte"
+  },
+  {
+    "ID": 14122,
+    "Name": "Tofu, geräuchert (hergestellt mit Calciumsalz)",
+    "Synonyme": "",
+    "Kategorie": "Fleischersatzprodukte"
+  },
+  {
+    "ID": 14121,
+    "Name": "Tofu, geräuchert (hergestellt mit Nigari)",
+    "Synonyme": "",
+    "Kategorie": "Fleischersatzprodukte"
+  },
+  {
+    "ID": 13438,
+    "Name": "Tofu, seidig (weich), nature",
+    "Synonyme": "Seidentofu, nature",
+    "Kategorie": "Fleischersatzprodukte"
+  },
+  {
+    "ID": 1027,
+    "Name": "Tomate, gedünstet (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 637,
+    "Name": "Tomate, geschält (Konserve)",
+    "Synonyme": "Pelati",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 13463,
+    "Name": "Tomate, getrocknet",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse getrocknet"
+  },
+  {
+    "ID": 348,
+    "Name": "Tomate, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 1617,
+    "Name": "Tomatenkuchen, gebacken (mit Blätterteig)",
+    "Synonyme": "Tomatenwähe",
+    "Kategorie": "Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 1618,
+    "Name": "Tomatenkuchen, gebacken (mit Kuchenteig)",
+    "Synonyme": "Tomatenwähe",
+    "Kategorie": "Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 636,
+    "Name": "Tomatenpüree",
+    "Synonyme": "Tomatenmark",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 564,
+    "Name": "Tomatensaft",
+    "Synonyme": "",
+    "Kategorie": "Alkoholfreie Getränke/Frucht- und Gemüsesäfte;Gemüse/Gemüsesäfte"
+  },
+  {
+    "ID": 667,
+    "Name": "Tomatensauce",
+    "Synonyme": "",
+    "Kategorie": "Verschiedenes/Saucen"
+  },
+  {
+    "ID": 670,
+    "Name": "Tomatensuppe",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Eintöpfe und Suppen"
+  },
+  {
+    "ID": 615,
+    "Name": "Tomme",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Weichkäse"
+  },
+  {
+    "ID": 13442,
+    "Name": "Topinambur, gekocht (ohne Zugabe von Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 13441,
+    "Name": "Topinambur, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 478,
+    "Name": "Traube, weiss, roh",
+    "Synonyme": "Weintraube",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 592,
+    "Name": "Traubenkernöl",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Öle"
+  },
+  {
+    "ID": 573,
+    "Name": "Traubensaft",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Fruchtsäfte;Alkoholfreie Getränke/Frucht- und Gemüsesäfte"
+  },
+  {
+    "ID": 768,
+    "Name": "Traubenzucker",
+    "Synonyme": "Glukose;Dextrose",
+    "Kategorie": "Süssigkeiten/Zucker und Süssstoffe"
+  },
+  {
+    "ID": 47,
+    "Name": "Trinkwasser (Mittelwert Schweiz)",
+    "Synonyme": "",
+    "Kategorie": "Alkoholfreie Getränke/Trinkwasser"
+  },
+  {
+    "ID": 709,
+    "Name": "Trockenfleisch",
+    "Synonyme": "Hobelfleisch;Bündnerfleisch",
+    "Kategorie": "Fleisch- und Wurstwaren/Rohwurstware"
+  },
+  {
+    "ID": 13275,
+    "Name": "Truthahn, Brust, Schnitzel oder Geschnetzeltes, grebraten (ohne Zusatz von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Geflügel"
+  },
+  {
+    "ID": 713,
+    "Name": "Truthahn, Brust, Schnitzel oder Geschnetzeltes, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Geflügel"
+  },
+  {
+    "ID": 534,
+    "Name": "Vacherin Mont d'Or",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Weichkäse"
+  },
+  {
+    "ID": 13413,
+    "Name": "Vanillecrème, hausgemacht, gekocht",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Cremen und Pudding"
+  },
+  {
+    "ID": 14112,
+    "Name": "Vegetarisches Gehacktes/Geschnetzeltes, aus Mykoprotein, roh",
+    "Synonyme": "",
+    "Kategorie": "Fleischersatzprodukte"
+  },
+  {
+    "ID": 1202,
+    "Name": "Vinaigrette (mit Rapsöl)",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Salatsaucen"
+  },
+  {
+    "ID": 1680,
+    "Name": "Vitello tonnato mit Garnitur",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Kalb"
+  },
+  {
+    "ID": 1679,
+    "Name": "Vitello tonnato ohne Garnitur",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Kalb"
+  },
+  {
+    "ID": 802,
+    "Name": "Vollkornreiswaffel",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Knäckebrote, Zwieback, Crackers und Waffeln"
+  },
+  {
+    "ID": 62,
+    "Name": "Vollmilch, pasteurisiert",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Milch"
+  },
+  {
+    "ID": 14126,
+    "Name": "Vollmilch, standardisiert, 3.5% Fett, UHT",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Milch"
+  },
+  {
+    "ID": 63,
+    "Name": "Vollmilch, UHT",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Milch"
+  },
+  {
+    "ID": 585,
+    "Name": "Vollmilchpulver",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Milch"
+  },
+  {
+    "ID": 65,
+    "Name": "Vollrahm, pasteurisiert",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Rahm;Milch und Milchprodukte/Rahm und Butter"
+  },
+  {
+    "ID": 66,
+    "Name": "Vollrahm, UHT",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Rahm;Milch und Milchprodukte/Rahm und Butter"
+  },
+  {
+    "ID": 692,
+    "Name": "Vorderschinken",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Kochwurstware"
+  },
+  {
+    "ID": 49,
+    "Name": "Vorzugsbutter",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Fette;Milch und Milchprodukte/Rahm und Butter"
+  },
+  {
+    "ID": 824,
+    "Name": "Walliser Roggenbrot",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Brote und Brotwaren"
+  },
+  {
+    "ID": 10542,
+    "Name": "Wasabi Paste",
+    "Synonyme": "",
+    "Kategorie": "Verschiedenes/Saucen"
+  },
+  {
+    "ID": 893,
+    "Name": "Wassereis",
+    "Synonyme": "Wasserglacé",
+    "Kategorie": "Süssigkeiten/Glacen auf Wasserbasis"
+  },
+  {
+    "ID": 402,
+    "Name": "Wassermelone, roh",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 954,
+    "Name": "Weichkaramellen, Bonbons",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Bonbons, Frucht- und Kaugummi"
+  },
+  {
+    "ID": 1197,
+    "Name": "Weichkäse (Durchschnitt ohne fettreduzierte Varianten)",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Weichkäse"
+  },
+  {
+    "ID": 631,
+    "Name": "Weichkäse, Doppelrahm",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Weichkäse"
+  },
+  {
+    "ID": 13392,
+    "Name": "Weichkäse, Rahm",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Weichkäse"
+  },
+  {
+    "ID": 13391,
+    "Name": "Weichkäse, vollfett",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Weichkäse"
+  },
+  {
+    "ID": 509,
+    "Name": "Wein rot, 12 vol%",
+    "Synonyme": "Rotwein",
+    "Kategorie": "Alkoholhaltige Getränke/Wein"
+  },
+  {
+    "ID": 10477,
+    "Name": "Wein rot, 13.5 vol%",
+    "Synonyme": "Rotwein",
+    "Kategorie": "Alkoholhaltige Getränke/Wein"
+  },
+  {
+    "ID": 508,
+    "Name": "Wein rot, 9 vol%",
+    "Synonyme": "Rotwein",
+    "Kategorie": "Alkoholhaltige Getränke/Wein"
+  },
+  {
+    "ID": 510,
+    "Name": "Wein weiss, 11 vol%",
+    "Synonyme": "Weisswein",
+    "Kategorie": "Alkoholhaltige Getränke/Wein"
+  },
+  {
+    "ID": 511,
+    "Name": "Wein weiss, 12.5 vol%",
+    "Synonyme": "Weisswein",
+    "Kategorie": "Alkoholhaltige Getränke/Wein"
+  },
+  {
+    "ID": 10478,
+    "Name": "Wein weiss, gespritzt, sauer",
+    "Synonyme": "",
+    "Kategorie": "Alkoholhaltige Getränke/Wein"
+  },
+  {
+    "ID": 10479,
+    "Name": "Wein weiss, gespritzt, süss",
+    "Synonyme": "",
+    "Kategorie": "Alkoholhaltige Getränke/Wein"
+  },
+  {
+    "ID": 823,
+    "Name": "Weissbrot",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Brote und Brotwaren"
+  },
+  {
+    "ID": 1028,
+    "Name": "Weisskohl, gedämpft (ohne Zugabe von Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 1029,
+    "Name": "Weisskohl, gedünstet (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 453,
+    "Name": "Weisskohl, roh",
+    "Synonyme": "Weisskabis",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 1273,
+    "Name": "Weisswurst",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Brühwurstware"
+  },
+  {
+    "ID": 734,
+    "Name": "Weizen (Weichweizen), ganzes Korn",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Sonstige Getreideprodukte"
+  },
+  {
+    "ID": 939,
+    "Name": "Weizenflocken, Vollkorn",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Flocken, Kleie und Keime"
+  },
+  {
+    "ID": 430,
+    "Name": "Weizenkeime",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Flocken, Kleie und Keime;Speziallebensmittel/Supplemente"
+  },
+  {
+    "ID": 593,
+    "Name": "Weizenkeimöl",
+    "Synonyme": "",
+    "Kategorie": "Fette und Öle/Öle"
+  },
+  {
+    "ID": 431,
+    "Name": "Weizenkleie",
+    "Synonyme": "Speisekleie",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Flocken, Kleie und Keime"
+  },
+  {
+    "ID": 204,
+    "Name": "Weizenmehl (Backmehl), Typ 550",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke"
+  },
+  {
+    "ID": 207,
+    "Name": "Weizenmehl, halbweiss, Typ 720",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke"
+  },
+  {
+    "ID": 203,
+    "Name": "Weizenmehl, Ruch, Typ 1100",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke"
+  },
+  {
+    "ID": 206,
+    "Name": "Weizenmehl, Vollkorn, Typ 1700",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke"
+  },
+  {
+    "ID": 205,
+    "Name": "Weizenmehl, weiss, Typ 400",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke"
+  },
+  {
+    "ID": 1588,
+    "Name": "Weizenotto, gekocht",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 897,
+    "Name": "Weizenstärke",
+    "Synonyme": "",
+    "Kategorie": "Getreideprodukte, Hülsenfrüchte und Kartoffeln/Mehle und Stärke;Verschiedenes/Gelier- und Bindemittel"
+  },
+  {
+    "ID": 821,
+    "Name": "Weizenvollkornbrot",
+    "Synonyme": "Grahambrot",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Brote und Brotwaren"
+  },
+  {
+    "ID": 514,
+    "Name": "Wermut, 15 vol%",
+    "Synonyme": "Wermutwein;Wermuth;Vermouth",
+    "Kategorie": "Alkoholhaltige Getränke/Wein"
+  },
+  {
+    "ID": 1082,
+    "Name": "Wienerli",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Brühwurstware"
+  },
+  {
+    "ID": 1589,
+    "Name": "Wienerli, gekocht",
+    "Synonyme": "",
+    "Kategorie": "Fleisch- und Wurstwaren/Brühwurstware"
+  },
+  {
+    "ID": 13281,
+    "Name": "Wildfleisch (Durchschnitt), gekocht (ohne Zusatz von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Wild"
+  },
+  {
+    "ID": 1125,
+    "Name": "Wildfleisch (Durchschnitt), roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Wild"
+  },
+  {
+    "ID": 796,
+    "Name": "Wildfleischterrine",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Wild"
+  },
+  {
+    "ID": 489,
+    "Name": "Wildschwein (Durchschnitt), roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Wild"
+  },
+  {
+    "ID": 1030,
+    "Name": "Wirz, gedämpft (ohne Zugabe von Salz)",
+    "Synonyme": "Wirsingkohl",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 454,
+    "Name": "Wirz, roh",
+    "Synonyme": "Wirsingkohl",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 1569,
+    "Name": "Wurst-Käse-Salat, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Salate"
+  },
+  {
+    "ID": 1568,
+    "Name": "Wurstsalat, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Salate"
+  },
+  {
+    "ID": 1162,
+    "Name": "Wurzel- und Knollengemüse (Durchschnitt), gedämpft (ohne Zugabe von Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 1163,
+    "Name": "Wurzel- und Knollengemüse (Durchschnitt), gedünstet (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 1161,
+    "Name": "Wurzel- und Knollengemüse (Durchschnitt), gekocht (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 1267,
+    "Name": "Wurzel- und Knollengemüse (Durchschnitt), roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 759,
+    "Name": "Zampone",
+    "Synonyme": "Gefüllter Schweinsfuss",
+    "Kategorie": "Fleisch und Innereien/Schwein"
+  },
+  {
+    "ID": 687,
+    "Name": "Ziege (Durchschnitt), roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Sonstige Tierarten"
+  },
+  {
+    "ID": 528,
+    "Name": "Ziegenmilch",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Milch"
+  },
+  {
+    "ID": 506,
+    "Name": "Ziger weiss",
+    "Synonyme": "",
+    "Kategorie": "Milch und Milchprodukte/Frischkäse und Quark"
+  },
+  {
+    "ID": 911,
+    "Name": "Zimt",
+    "Synonyme": "",
+    "Kategorie": "Verschiedenes/Salz, Gewürze und Aromen"
+  },
+  {
+    "ID": 876,
+    "Name": "Zimtstern",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Guetzli"
+  },
+  {
+    "ID": 856,
+    "Name": "Zitronat",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Sonstige Süssigkeiten"
+  },
+  {
+    "ID": 398,
+    "Name": "Zitrone, roh",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 605,
+    "Name": "Zitronensaft",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Fruchtsäfte;Alkoholfreie Getränke/Frucht- und Gemüsesäfte"
+  },
+  {
+    "ID": 1126,
+    "Name": "Zitrusfrüchte (Durchschnitt), roh",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 1661,
+    "Name": "Zucchetti-Piccata, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 1654,
+    "Name": "Zucchetti, gedämpft (ohne Zugabe von Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 1031,
+    "Name": "Zucchetti, gedünstet (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "Zucchini",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 367,
+    "Name": "Zucchetti, roh",
+    "Synonyme": "Zucchini",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 1657,
+    "Name": "Zucchettischeiben, paniert, zubereitet",
+    "Synonyme": "",
+    "Kategorie": "Gerichte/Sonstige salzige/rezente Gerichte"
+  },
+  {
+    "ID": 471,
+    "Name": "Zucker, braun",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Zucker und Süssstoffe"
+  },
+  {
+    "ID": 470,
+    "Name": "Zucker, weiss",
+    "Synonyme": "Saccharose;Kristallzucker",
+    "Kategorie": "Süssigkeiten/Zucker und Süssstoffe"
+  },
+  {
+    "ID": 465,
+    "Name": "Zuckerhutsalat, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 632,
+    "Name": "Zuckermais (Konserve)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 1033,
+    "Name": "Zuckermais (Konserve), aufgewärmt (ohne Zugabe von Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 399,
+    "Name": "Zuckermelone, roh",
+    "Synonyme": "Honigmelone",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 882,
+    "Name": "Zuger Kirschtorte",
+    "Synonyme": "",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake"
+  },
+  {
+    "ID": 10378,
+    "Name": "Zunge (Durchschnitt aus Kalb und Rind), roh",
+    "Synonyme": "",
+    "Kategorie": "Fleisch und Innereien/Kalb;Fleisch und Innereien/Rind"
+  },
+  {
+    "ID": 1056,
+    "Name": "Zwetschge, gedünstet, abgetropft (ohne Zugabe von Zucker)",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 479,
+    "Name": "Zwetschge, roh",
+    "Synonyme": "",
+    "Kategorie": "Früchte/Früchte frisch"
+  },
+  {
+    "ID": 1529,
+    "Name": "Zwetschgenkuchen, hausgemacht, gebacken (mit Blätterteig)",
+    "Synonyme": "Zwetschgenwähe",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 1531,
+    "Name": "Zwetschgenkuchen, hausgemacht, gebacken (mit Kuchenteig)",
+    "Synonyme": "Zwetschgenwähe",
+    "Kategorie": "Süssigkeiten/Kuchen, Torten und Cake;Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 930,
+    "Name": "Zwieback",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Knäckebrote, Zwieback, Crackers und Waffeln"
+  },
+  {
+    "ID": 929,
+    "Name": "Zwieback, Vollkorn",
+    "Synonyme": "",
+    "Kategorie": "Brote, Flocken und Frühstückscerealien/Knäckebrote, Zwieback, Crackers und Waffeln"
+  },
+  {
+    "ID": 1035,
+    "Name": "Zwiebel, gedünstet (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 1036,
+    "Name": "Zwiebel, geröstet (ohne Zugabe von Fett und Salz)",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse gekocht (inkl. Konserven)"
+  },
+  {
+    "ID": 368,
+    "Name": "Zwiebel, roh",
+    "Synonyme": "",
+    "Kategorie": "Gemüse/Gemüse frisch"
+  },
+  {
+    "ID": 1615,
+    "Name": "Zwiebelkuchen, gebacken (mit Blätterteig)",
+    "Synonyme": "Zwiebelwähe",
+    "Kategorie": "Gerichte/Kuchen und Gratins"
+  },
+  {
+    "ID": 1616,
+    "Name": "Zwiebelkuchen, gebacken (mit Kuchenteig)",
+    "Synonyme": "Zwiebelwähe",
+    "Kategorie": "Gerichte/Kuchen und Gratins"
+  }
+]

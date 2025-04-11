@@ -15,6 +15,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+SWISS_NUTRITIONAL_DATABASE_VERSION = os.getenv('FOOD_DIARY_API_SWISS_NUTRITIONAL_DATABASE_VERSION')
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -39,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'diary',
+    'food',
 ]
 
 MIDDLEWARE = [
@@ -120,7 +124,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = './staticfiles'
 
 
 # Default primary key field type

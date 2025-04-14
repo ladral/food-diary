@@ -6,7 +6,18 @@ The food diary API is a robust backend for the food diary client application.
 1. fire up your terminal and go to the root directory of the client application
 2. create the virtual environment `python -m venv env`
 3. enable the virtual environment `source env/bin/activate`
-   - on Windows: `source env/Source/activate`
+   - activation of environment may vary depending on you operating system:
+   
+| Platform | Shell          | Command to Activate Virtual Environment               |
+|----------|----------------|------------------------------------------------------|
+| POSIX    | bash/zsh       | `$ source <venv>/bin/activate`                       |
+|          | fish           | `$ source <venv>/bin/activate.fish`                 |
+|          | csh/tcsh      | `$ source <venv>/bin/activate.csh`                  |
+|          | pwsh           | `$ <venv>/bin/Activate.ps1`                         |
+| Windows  | cmd.exe       | `C:\> <venv>\Scripts\activate.bat`                  |
+|          | PowerShell     | `PS C:\> <venv>\Scripts\Activate.ps1`               |
+
+
 4. install all packages `pip install -r requirements.txt`
 
 

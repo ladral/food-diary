@@ -1,9 +1,18 @@
 from rest_framework import viewsets
-
+from drf_spectacular.utils import extend_schema, extend_schema_view
 from food_diary_api.IsAuthenticatedOIDC import IsAuthenticatedOIDC
 from .models import DiaryEntry
 from .serializers import DiaryEntrySerializer
 
+
+@extend_schema_view(
+    list=extend_schema(responses={200: DiaryEntrySerializer(many=True)}, tags=['Diary']),
+    retrieve=extend_schema(responses={200: DiaryEntrySerializer}, tags=['Diary']),
+    create=extend_schema(request=DiaryEntrySerializer, responses={201: DiaryEntrySerializer}, tags=['Diary']),
+    update=extend_schema(request=DiaryEntrySerializer, responses={200: DiaryEntrySerializer}, tags=['Diary']),
+    partial_update=extend_schema(request=DiaryEntrySerializer, responses={200: DiaryEntrySerializer}, tags=['Diary']),
+    destroy=extend_schema(responses={204: None}, tags=['Diary']),
+)
 class DiaryEntryViewSet(viewsets.ModelViewSet):
     queryset = DiaryEntry.objects.all()
     serializer_class = DiaryEntrySerializer

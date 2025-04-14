@@ -1,9 +1,17 @@
 from rest_framework import viewsets
 from rest_framework.exceptions import MethodNotAllowed
-
+from drf_spectacular.utils import extend_schema, extend_schema_view
 from food.models import Food
 from food.serializer import FoodSerializer
 
+@extend_schema_view(
+    list=extend_schema(responses={200: FoodSerializer(many=True)}, tags=['Food']),
+    retrieve=extend_schema(responses={200: FoodSerializer}, tags=['Food']),
+    create=extend_schema(exclude=True),
+    update=extend_schema(exclude=True),
+    partial_update=extend_schema(exclude=True),
+    destroy=extend_schema(exclude=True),
+)
 class FoodsViewSet(viewsets.ModelViewSet):
     queryset = Food.objects.all()
     serializer_class = FoodSerializer

@@ -22,10 +22,13 @@ from diary.views import DiaryEntryViewSet
 from django.conf import settings
 from django.conf.urls.static import static
 
+from food.views import FoodsView
+
 router = DefaultRouter()
 router.register(r'diary', DiaryEntryViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
+    path('api/food/', FoodsView.as_view(), name='foods'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

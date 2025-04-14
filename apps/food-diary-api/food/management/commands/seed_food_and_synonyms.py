@@ -10,7 +10,7 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         json_file_path = os.path.join(os.path.dirname(__file__), '../../..', 'data_seed', 'swiss_nutritional_database', settings.SWISS_NUTRITIONAL_DATABASE_VERSION + '/food_old.json')
 
-        with open(json_file_path) as f:
+        with open(json_file_path, encoding='utf-8') as f:
             foods = json.load(f)
 
         for food in foods:

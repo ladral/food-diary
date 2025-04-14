@@ -6,14 +6,15 @@ The food diary API is a robust backend for the food diary client application.
 1. fire up your terminal and go to the root directory of the client application
 2. create the virtual environment `python -m venv env`
 3. enable the virtual environment `source env/bin/activate`
+   - on Windows: `source env/Source/activate`
 4. install all packages `pip install -r requirements.txt`
 
 
 ## Start the application
 1. copy the dev.env file and save it as .env: `cp dev.env .env`
 2. apply db migrations `python manage.py migrate` 
-3. seed food categories to database `python manage.py seed_food_category`
-4. seed food and their synonymes to database `python manage.py seed_food_and_synonymes`
+3. seed food categories to database `python manage.py seed_food_categories`
+4. seed food and their synonymes to database `python manage.py seed_food_and_synonyms`
 5. create superuser `python manage.py createsuperuser` (follow the instructions to create the superuser)
 6. serve web application in development mode (the env file will be loaded automatically): `python manage.py runserver` 
 7. terminate the application: `ctrl + c`

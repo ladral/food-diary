@@ -13,6 +13,8 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 
+DEFAULT_CHARSET = 'utf-8'
+
 load_dotenv()
 
 SWISS_NUTRITIONAL_DATABASE_VERSION = os.getenv('FOOD_DIARY_API_SWISS_NUTRITIONAL_DATABASE_VERSION')

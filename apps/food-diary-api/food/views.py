@@ -52,6 +52,10 @@ class IntakeViewSet(viewsets.ModelViewSet):
     queryset = Intake.objects.all()
     serializer_class = IntakeSerializer
 
+    def get_queryset(self):
+        user = self.request.user
+        return Intake.objects.filter(user_id=user)
+
     def create(self, request, *args, **kwargs):
         serializer = IntakeCreateSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
@@ -74,6 +78,3 @@ def partial_update(self, request, *args, **kwargs):
 def destroy(self, request, *args, **kwargs):
     return super().destroy(request, *args, **kwargs)
 
-
-def get_queryset(self):
-    return super().get_queryset()

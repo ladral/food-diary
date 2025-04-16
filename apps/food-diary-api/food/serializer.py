@@ -30,15 +30,14 @@ class FoodSerializer(serializers.ModelSerializer):
         return representation
 
 
+class FoodIntakeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Food
+        fields = ['id', 'name']
+
 class IntakeSerializer(serializers.ModelSerializer):
-    food = serializers.SerializerMethodField()
+    food = FoodIntakeSerializer()
 
     class Meta:
         model = Intake
         fields = ['id', 'food', 'user_id', 'date']
-
-    def get_food(self, obj):
-        return {
-            'id': obj.food_id.id,
-            'name': obj.food_id.name
-        }

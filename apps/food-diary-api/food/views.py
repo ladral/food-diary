@@ -1,9 +1,10 @@
 from drf_spectacular.utils import extend_schema, extend_schema_view
-from rest_framework import viewsets
-from rest_framework.exceptions import MethodNotAllowed
+from rest_framework import viewsets, status
+from rest_framework.exceptions import MethodNotAllowed, ValidationError
+from rest_framework.response import Response
 
 from food.models import Food, Intake
-from food.serializer import FoodSerializer, IntakeSerializer
+from food.serializer import FoodSerializer, IntakeSerializer, IntakeCreateSerializer
 
 
 @extend_schema_view(
@@ -39,12 +40,10 @@ class FoodsViewSet(viewsets.ModelViewSet):
         raise MethodNotAllowed("DELETE method is not allowed.")
 
 
-
-
 @extend_schema_view(
     list=extend_schema(responses={200: IntakeSerializer(many=True)}, tags=['Intake']),
     retrieve=extend_schema(responses={200: IntakeSerializer}, tags=['Intake']),
-    create=extend_schema(request=IntakeSerializer, responses={201: IntakeSerializer}, tags=['Intake']),
+    create=extend_schema(request=IntakeCreateSerializer, responses={201: IntakeSerializer}, tags=['Intake']),
     update=extend_schema(request=IntakeSerializer, responses={200: IntakeSerializer}, tags=['Intake']),
     partial_update=extend_schema(request=IntakeSerializer, responses={200: IntakeSerializer}, tags=['Intake']),
     destroy=extend_schema(responses={204: None}, tags=['Intake']),
@@ -54,16 +53,27 @@ class IntakeViewSet(viewsets.ModelViewSet):
     serializer_class = IntakeSerializer
 
     def create(self, request, *args, **kwargs):
-        return super().create(request, *args, **kwargs)
+        serializer = IntakeCreateSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
 
-    def update(self, request, *args, **kwargs):
-        return super().update(request, *args, **kwargs)
+        user = request.user
 
-    def partial_update(self, request, *args, **kwargs):
-        return super().partial_update(request, *args, **kwargs)
+        intake = serializer.save(user_id=user)
+        response_serializer = self.get_serializer(intake)
+        return Response(response_serializer.data, status=status.HTTP_201_CREATED)
 
-    def destroy(self, request, *args, **kwargs):
-        return super().destroy(request, *args, **kwargs)
 
-    def get_queryset(self):
-        return super().get_queryset()
+def update(self, request, *args, **kwargs):
+    return super().update(request, *args, **kwargs)
+
+
+def partial_update(self, request, *args, **kwargs):
+    return super().partial_update(request, *args, **kwargs)
+
+
+def destroy(self, request, *args, **kwargs):
+    return super().destroy(request, *args, **kwargs)
+
+
+def get_queryset(self):
+    return super().get_queryset()

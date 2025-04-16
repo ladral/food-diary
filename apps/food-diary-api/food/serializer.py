@@ -7,6 +7,7 @@ class FoodCategorySerializer(serializers.ModelSerializer):
         model = FoodCategory
         fields = ['id', 'name']
 
+
 class SynonymSerializer(serializers.ModelSerializer):
     class Meta:
         model = Synonym
@@ -35,9 +36,21 @@ class FoodIntakeSerializer(serializers.ModelSerializer):
         model = Food
         fields = ['id', 'name']
 
+
 class IntakeSerializer(serializers.ModelSerializer):
     food = FoodIntakeSerializer(source='food_id')
 
     class Meta:
         model = Intake
         fields = ['id', 'food', 'user_id', 'date']
+
+
+class IntakeCreateSerializer(serializers.ModelSerializer):
+    food_id = serializers.PrimaryKeyRelatedField(queryset=Food.objects.all())
+
+    class Meta:
+        model = Intake
+        fields = ['food_id', 'date']
+
+    def create(self, validated_data):
+        return Intake.objects.create(**validated_data)

@@ -23,11 +23,12 @@ from django.conf import settings
 from django.conf.urls.static import static
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
-from food.views import FoodsViewSet
+from food.views import FoodsViewSet, IntakeViewSet
 
 router = DefaultRouter()
 router.register(r'diary', DiaryEntryViewSet)
 router.register(r'food', FoodsViewSet)
+router.register(r'intakes', IntakeViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

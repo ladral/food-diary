@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 from django.contrib import admin
 
@@ -35,4 +36,17 @@ class Food(models.Model):
         return f"Food ID: {self.id}"
 
 class FoodAdmin(admin.ModelAdmin):
+    readonly_fields = ('id',)
+
+
+class Intake(models.Model):
+    id = models.AutoField(primary_key=True)
+    food_id = models.ForeignKey(Food, related_name='intakes', on_delete=models.CASCADE)
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
+    date = models.DateField()
+
+    def __str__(self):
+        return f"Intake ID: {self.id}"
+
+class IntakeAdmin(admin.ModelAdmin):
     readonly_fields = ('id',)

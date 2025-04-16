@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from .models import Food, FoodCategory, Synonym
+from .models import Food, FoodCategory, Synonym, Intake
+
 
 class FoodCategorySerializer(serializers.ModelSerializer):
     class Meta:
@@ -27,3 +28,17 @@ class FoodSerializer(serializers.ModelSerializer):
             representation.pop('synonyms')
 
         return representation
+
+
+class IntakeSerializer(serializers.ModelSerializer):
+    food = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Intake
+        fields = ['id', 'food', 'user_id', 'date']
+
+    def get_food(self, obj):
+        return {
+            'id': obj.food_id.id,
+            'name': obj.food_id.name
+        }

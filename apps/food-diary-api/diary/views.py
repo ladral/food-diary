@@ -1,6 +1,7 @@
 from rest_framework import viewsets
 from drf_spectacular.utils import extend_schema, extend_schema_view
-from food_diary_api.IsAuthenticatedOIDC import IsAuthenticatedOIDC
+from rest_framework.permissions import IsAuthenticated
+
 from .models import DiaryEntry
 from .serializers import DiaryEntrySerializer
 
@@ -23,7 +24,7 @@ class DiaryEntryViewSet(viewsets.ModelViewSet):
             return []
         elif self.action in ['create', 'update', 'partial_update', 'destroy']:
             # Authentication required for create, update, and delete
-            return [IsAuthenticatedOIDC()]
+            return [IsAuthenticated()]
         return super().get_permissions()
 
     def list(self, request, *args, **kwargs):

@@ -1,6 +1,7 @@
+from drf_spectacular.utils import extend_schema, extend_schema_view
 from rest_framework import viewsets
 from rest_framework.exceptions import MethodNotAllowed
-from drf_spectacular.utils import extend_schema, extend_schema_view
+
 from food.models import Food
 from food.serializer import FoodSerializer
 

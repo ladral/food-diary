@@ -36,7 +36,7 @@ class FoodIntakeSerializer(serializers.ModelSerializer):
         fields = ['id', 'name']
 
 class IntakeSerializer(serializers.ModelSerializer):
-    food = FoodIntakeSerializer()
+    food = FoodIntakeSerializer(source='food_id')
 
     class Meta:
         model = Intake

@@ -19,7 +19,6 @@ load_dotenv()
 
 SWISS_NUTRITIONAL_DATABASE_VERSION = os.getenv('FOOD_DIARY_API_SWISS_NUTRITIONAL_DATABASE_VERSION')
 
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -43,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
+    'drf_spectacular',
+    'drf_spectacular_sidecar',
     'diary',
     'food',
 ]
@@ -128,7 +129,6 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = './staticfiles'
 
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
@@ -142,15 +142,14 @@ CSRF_TRUSTED_ORIGINS = [
 CORS_ALLOWED_ORIGINS = os.environ.get("FOOD_DIARY_API_CORS_ALLOWED_ORIGINS").split(" ")
 
 REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'mozilla_django_oidc.contrib.drf.OIDCAuthentication',
         'rest_framework.authentication.SessionAuthentication',
     ],
-
-    # TODO: evaluate the need of securing all REST endpoints
-    # 'DEFAULT_PERMISSION_CLASSES': (
-    #     'rest_framework.permissions.IsAuthenticated',
-    # )
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    )
 }
 
 OIDC_DRF_AUTH_BACKEND = 'mozilla_django_oidc.auth.OIDCAuthenticationBackend'
@@ -160,9 +159,16 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 
-
-OIDC_RP_CLIENT_ID=os.environ.get("FOOD_DIARY_API_OIDC_CLIENT_ID")
-OIDC_RP_CLIENT_SECRET=os.environ.get("FOOD_DIARY_API_OIDC_CLIENT_SECRET")
+OIDC_RP_CLIENT_ID = os.environ.get("FOOD_DIARY_API_OIDC_CLIENT_ID")
+OIDC_RP_CLIENT_SECRET = os.environ.get("FOOD_DIARY_API_OIDC_CLIENT_SECRET")
 OIDC_OP_AUTHORIZATION_ENDPOINT = os.environ.get("FOOD_DIARY_API_OIDC_AUTHORIZATION_ENDPOINT")
 OIDC_OP_TOKEN_ENDPOINT = os.environ.get("FOOD_DIARY_API_OIDC_TOKEN_ENDPOINT")
 OIDC_OP_USER_ENDPOINT = os.environ.get("FOOD_DIARY_API_OIDC_USER_ENDPOINT")
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Food Diary API',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': True,
+    'SWAGGER_UI_DIST': 'SIDECAR',
+    'SWAGGER_UI_FAVICON_HREF': 'SIDECAR',
+}

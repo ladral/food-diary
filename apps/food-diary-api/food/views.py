@@ -4,7 +4,7 @@ from rest_framework.exceptions import MethodNotAllowed, ValidationError
 from rest_framework.response import Response
 
 from food.models import Food, Intake
-from food.serializer import FoodSerializer, IntakeSerializer, IntakeCreateSerializer
+from food.serializer import FoodSerializer, IntakeSerializer, IntakeCreateOrUpdateSerializer
 
 
 @extend_schema_view(
@@ -43,8 +43,8 @@ class FoodsViewSet(viewsets.ModelViewSet):
 @extend_schema_view(
     list=extend_schema(responses={200: IntakeSerializer(many=True)}, tags=['Intake']),
     retrieve=extend_schema(responses={200: IntakeSerializer}, tags=['Intake']),
-    create=extend_schema(request=IntakeCreateSerializer, responses={201: IntakeSerializer}, tags=['Intake']),
-    update=extend_schema(request=IntakeSerializer, responses={200: IntakeSerializer}, tags=['Intake']),
+    create=extend_schema(request=IntakeCreateOrUpdateSerializer, responses={201: IntakeSerializer}, tags=['Intake']),
+    update=extend_schema(request=IntakeCreateOrUpdateSerializer, responses={200: IntakeSerializer}, tags=['Intake']),
     partial_update=extend_schema(exclude=True),
     destroy=extend_schema(responses={204: None}, tags=['Intake']),
 )
@@ -57,7 +57,7 @@ class IntakeViewSet(viewsets.ModelViewSet):
         return Intake.objects.filter(user_id=user)
 
     def create(self, request, *args, **kwargs):
-        serializer = IntakeCreateSerializer(data=request.data)
+        serializer = IntakeCreateOrUpdateSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
 
         user = request.user
@@ -67,14 +67,23 @@ class IntakeViewSet(viewsets.ModelViewSet):
         return Response(response_serializer.data, status=status.HTTP_201_CREATED)
 
 
-def update(self, request, *args, **kwargs):
-    return super().update(request, *args, **kwargs)
+    def update(self, request, *args, **kwargs):
+        intake = self.get_queryset().filter(id=kwargs['pk']).first()
+
+        if not intake:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+
+        serializer = IntakeCreateOrUpdateSerializer(intake, data=request.data)
+        serializer.is_valid(raise_exception=True)
+
+        updated_intake = serializer.save(user_id=intake.user_id)
+        response_serializer = self.get_serializer(updated_intake)
+        return Response(response_serializer.data, status=status.HTTP_200_OK)
 
 
-def partial_update(self, request, *args, **kwargs):
-    raise MethodNotAllowed("PATCH method is not allowed.")
+    def partial_update(self, request, *args, **kwargs):
+        raise MethodNotAllowed("PATCH method is not allowed.")
 
 
-def destroy(self, request, *args, **kwargs):
-    return super().destroy(request, *args, **kwargs)
-
+    def destroy(self, request, *args, **kwargs):
+        return super().destroy(request, *args, **kwargs)

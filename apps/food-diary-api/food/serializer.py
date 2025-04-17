@@ -45,7 +45,7 @@ class IntakeSerializer(serializers.ModelSerializer):
         fields = ['id', 'food', 'user_id', 'date']
 
 
-class IntakeCreateSerializer(serializers.ModelSerializer):
+class IntakeCreateOrUpdateSerializer(serializers.ModelSerializer):
     food_id = serializers.PrimaryKeyRelatedField(queryset=Food.objects.all())
 
     class Meta:

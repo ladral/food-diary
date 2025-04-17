@@ -33,7 +33,7 @@ class Food(models.Model):
     synonyms = models.ManyToManyField('Synonym', related_name='foods')
 
     def __str__(self):
-        return f"Food ID: {self.id}"
+        return self.name
 
 class FoodAdmin(admin.ModelAdmin):
     readonly_fields = ('id',)

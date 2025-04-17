@@ -1,10 +1,12 @@
 from rest_framework import serializers
-from .models import Food, FoodCategory, Synonym
+from .models import Food, FoodCategory, Synonym, Intake
+
 
 class FoodCategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = FoodCategory
         fields = ['id', 'name']
+
 
 class SynonymSerializer(serializers.ModelSerializer):
     class Meta:
@@ -27,3 +29,28 @@ class FoodSerializer(serializers.ModelSerializer):
             representation.pop('synonyms')
 
         return representation
+
+
+class FoodIntakeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Food
+        fields = ['id', 'name']
+
+
+class IntakeSerializer(serializers.ModelSerializer):
+    food = FoodIntakeSerializer(source='food_id')
+
+    class Meta:
+        model = Intake
+        fields = ['id', 'food', 'user_id', 'date']
+
+
+class IntakeCreateOrUpdateSerializer(serializers.ModelSerializer):
+    food_id = serializers.PrimaryKeyRelatedField(queryset=Food.objects.all())
+
+    class Meta:
+        model = Intake
+        fields = ['food_id', 'date']
+
+    def create(self, validated_data):
+        return Intake.objects.create(**validated_data)

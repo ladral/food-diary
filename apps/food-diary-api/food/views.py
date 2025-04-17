@@ -45,7 +45,7 @@ class FoodsViewSet(viewsets.ModelViewSet):
     retrieve=extend_schema(responses={200: IntakeSerializer}, tags=['Intake']),
     create=extend_schema(request=IntakeCreateSerializer, responses={201: IntakeSerializer}, tags=['Intake']),
     update=extend_schema(request=IntakeSerializer, responses={200: IntakeSerializer}, tags=['Intake']),
-    partial_update=extend_schema(request=IntakeSerializer, responses={200: IntakeSerializer}, tags=['Intake']),
+    partial_update=extend_schema(exclude=True),
     destroy=extend_schema(responses={204: None}, tags=['Intake']),
 )
 class IntakeViewSet(viewsets.ModelViewSet):
@@ -72,7 +72,7 @@ def update(self, request, *args, **kwargs):
 
 
 def partial_update(self, request, *args, **kwargs):
-    return super().partial_update(request, *args, **kwargs)
+    raise MethodNotAllowed("PATCH method is not allowed.")
 
 
 def destroy(self, request, *args, **kwargs):

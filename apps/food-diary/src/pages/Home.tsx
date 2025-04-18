@@ -58,8 +58,10 @@ const HomePage: React.FC = () => {
     };
 
     useEffect(() => {
-        getDiaryEntries();
-    }, []);
+        if (authenticated) {
+            getDiaryEntries();
+        }
+    }, [authenticated]);
 
     return (
         <div>
@@ -123,15 +125,17 @@ const HomePage: React.FC = () => {
                 <table className="diary__table">
                     <thead>
                     <tr>
-                        <th className="diary__header">Title</th>
-                        <th className="diary__header">Content</th>
+                        <th className="diary__header">Date</th>
+                        <th className="diary__header">Name</th>
+                        <th className="diary__header">Type</th>
                     </tr>
                     </thead>
                     <tbody>
                     {diaryEntries.map((entry) => (
                         <tr key={entry.id} className="diary__entry">
-                            <td className="diary__entry-title">{entry.title}</td>
-                            <td className="diary__entry-content">{entry.content}</td>
+                            <td className="diary__entry-date">{entry.date}</td>
+                            <td className="diary__entry-name">{entry.name}</td>
+                            <td className="diary__entry-type">{entry.type}</td>
                         </tr>
                     ))}
                     </tbody>

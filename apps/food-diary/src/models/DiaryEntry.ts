@@ -1,14 +1,14 @@
 class DiaryEntry {
     id: number;
-    title: string;
-    content: string;
-    createdAt: Date;
+    name: string;
+    type: string;
+    date: string;
 
-    constructor(id: number, title: string, content: string) {
+    constructor(id: number, title: string, content: string, date: string) {
         this.id = id;
-        this.title = title;
-        this.content = content;
-        this.createdAt = new Date();
+        this.name = title;
+        this.type = content;
+        this.date = date
     }
 }
 

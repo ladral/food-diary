@@ -1,6 +1,6 @@
 from drf_spectacular.utils import extend_schema, extend_schema_view
 from rest_framework import viewsets, status
-from rest_framework.exceptions import MethodNotAllowed, ValidationError
+from rest_framework.exceptions import MethodNotAllowed
 from rest_framework.response import Response
 
 from food.models import Food, Intake

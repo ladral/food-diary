@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'drf_spectacular_sidecar',
     'diary',
     'food',
+    'symptoms',
 ]
 
 MIDDLEWARE = [

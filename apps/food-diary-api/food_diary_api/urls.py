@@ -24,13 +24,14 @@ from django.conf.urls.static import static
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
 from food.views import FoodsViewSet, IntakeViewSet
-from symptoms.views import SymptomsViewSet
+from symptoms.views import SymptomsViewSet, OccurrenceViewSet
 
 router = DefaultRouter()
 router.register(r'diary', DiaryEntryViewSet)
 router.register(r'food', FoodsViewSet)
 router.register(r'intakes', IntakeViewSet)
 router.register(r'symptoms', SymptomsViewSet)
+router.register(r'occurrence', OccurrenceViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

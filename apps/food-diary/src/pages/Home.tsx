@@ -27,7 +27,7 @@ const HomePage: React.FC = () => {
     const getDiaryEntries = async () => {
         try {
             const response = await axiosInstance.get("/api/diary/");
-            setDiaryEntries(response.data);
+            setDiaryEntries(response.data.results);
         } catch (error) {
             console.error("Error making API call:", error);
             setNotification(`Error getting all diary entries: ${error}`);

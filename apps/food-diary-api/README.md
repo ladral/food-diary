@@ -41,10 +41,14 @@ The food diary API is a robust backend for the food diary client application.
     - ubuntu server installation using snap: `sudo snap install docker`
 2. start docker
 3. fire up your terminal and go to the root directory of the client application
-4. build the docker image: `docker build -t food-diary-api .`
-5. start the docker container (.env file must be passed): `docker run -p 4000:8000 --env-file .env food-diary-api`
-6. to access the application open the browser and navigate to: http://localhost:4000/admin
-7. terminate the docker container: `ctrl + c`
-8. remove docker container `docker rm $(docker ps -a --filter "ancestor=food-diary-api" -q)`
-9. remove docker image: `docker rmi food-diary-api`
+4. copy the dev.env file and save it as .env: `cp dev.env .env`
+5. build the docker image: `docker build -t food-diary-api .`
+6. start the docker container (.env file must be passed): `docker run -p 4000:8000 --env-file .env food-diary-api`
+7. to access the application open the browser and navigate to: http://localhost:4000/admin
+8. terminate the docker container: `ctrl + c`
+9. remove docker container `docker rm $(docker ps -a --filter "ancestor=food-diary-api" -q)`
+10. remove docker image: `docker rmi food-diary-api`
 
+This deployment includes only the Food Diary API. To integrate Keycloak with this setup, you will need to create a Docker network and connect both the Keycloak instance and the Food Diary API to that network. For detailed instructions on setting up Docker networks, please refer to the [official Docker documentation](https://docs.docker.com/engine/network/). 
+
+If your Keycloak instance is not running in a Docker container, ensure that the Food Diary API can establish a connection to it.

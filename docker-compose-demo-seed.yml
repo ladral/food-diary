@@ -1,16 +1,21 @@
-###########################################################################
-#######             FOR DEMONSTRATION PURPOSES ONLY                 #######
-###########################################################################
-#                                                                         #
-#                                                                         #
-# This set up is only for demonstration purposes.                         #
-# The imported Keycloak realm contains a demo user                        #
-#                                                                         #
-#                                                                         #
-###########################################################################
+#############################################################################
+#######             FOR DEMONSTRATION PURPOSES ONLY                   #######
+#############################################################################
+#                                                                           #
+#                                                                           #
+# This set up is only for demonstration purposes.                           #
+# This deployment has the following additions to the normal prod deployment #
+# - The imported Keycloak realm contains a demo user                        #
+# - Demo data for the demo user is inserted in the food-diary-api           #
+#                                                                           #
+#                                                                           #
+#############################################################################
 services:
   keycloak:
     volumes:
       - ./mocks/keycloak/realms:/opt/keycloak/data/import
       - ./apps/keycloak/theme/dist_keycloak:/opt/keycloak/providers/
 
+  food-diary-api:
+    environment:
+      FOOD_DIARY_API_SETUP_DEMO_USER_DATA: true

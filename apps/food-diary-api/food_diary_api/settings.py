@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get("FOOD_DIARY_API_SECRET_KEY", default="django-insecure-dh6m2jk@c1*9463ims57w1gxb#!rqoxj_0s-x5hemi0(7fy)hq")
 
-DEBUG = bool(os.environ.get("FOOD_DIARY_API_DEBUG", default=1))
+DEBUG = os.environ.get("FOOD_DIARY_API_DEBUG", "1").lower() in ("true", "1")
 
 # 'DJANGO_ALLOWED_HOSTS' should be a single string of hosts with a space between each.
 # For example: 'DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]'
@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'drf_spectacular_sidecar',
     'diary',
     'food',
+    'symptoms',
 ]
 
 MIDDLEWARE = [
@@ -141,7 +142,19 @@ CSRF_TRUSTED_ORIGINS = [
 
 CORS_ALLOWED_ORIGINS = os.environ.get("FOOD_DIARY_API_CORS_ALLOWED_ORIGINS").split(" ")
 
+
+DEFAULT_RENDERER_CLASSES = (
+    'rest_framework.renderers.JSONRenderer',
+)
+
+# enable Django Rest Framework UI only if application is started in DEBUG mode
+if  DEBUG:
+    DEFAULT_RENDERER_CLASSES = DEFAULT_RENDERER_CLASSES + (
+        'rest_framework.renderers.BrowsableAPIRenderer',
+    )
+
 REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': DEFAULT_RENDERER_CLASSES,
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'mozilla_django_oidc.contrib.drf.OIDCAuthentication',
@@ -149,7 +162,9 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
-    )
+    ),
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 20,
 }
 
 OIDC_DRF_AUTH_BACKEND = 'mozilla_django_oidc.auth.OIDCAuthenticationBackend'

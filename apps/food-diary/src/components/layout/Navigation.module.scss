@@ -1,0 +1,68 @@
+@use "../../styles/abstracts/functions" as fx;
+@use "../../styles/abstracts/size" as *;
+
+
+.navItem {
+  font-size: 0.9rem;
+  padding-bottom: 0.5rem;
+}
+
+.navItem:first-of-type {
+  padding-top: 1rem;
+}
+
+.navItem:last-of-type {
+  padding-bottom: 1rem;
+  text-decoration: none;
+}
+
+.navLinkIcon {
+  --_navLinkIcon-Fill: var(--navLinkIcon-Fill, currentColor);
+  --_navLinkIcon-LineHeight: var(--navLinkIcon-LineHeight, 1em);
+  --_navLinkIcon-FontSize: var(--navLinkIcon-FontSize, 2rem);
+  --_navLinkIcon-MarginRight: var(--navLinkIcon-MarginRight, 0.75rem);
+
+  fill: var(--_navLinkIcon-Fill);
+  line-height: var(--_navLinkIcon-LineHeight);
+  font-size: var(--_navLinkIcon-FontSize);
+  height: var(--_navLinkIcon-FontSize);
+  width: var(--_navLinkIcon-FontSize);
+  margin-right: var(--_navLinkIcon-MarginRight);
+}
+
+.navLink {
+  color: #{fx.getOnColor(primary, 800)};
+  text-decoration: none;
+  padding: .5rem 1rem;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  line-height: 3rem;
+  width: 100%;
+}
+
+.navItem .navLink:hover {
+  background-color: #{fx.getColor(gray, 700)};
+}
+
+.navLink.active {
+  color: #{fx.getPrimaryColor()};
+}
+
+.navbar {
+  display: none;
+}
+
+@media (min-width: $breakpoint-xs) {
+  .navbar {
+    /* Never collapse the sidebar for wide screens */
+    display: block;
+
+    /* Allow sidebar to scroll for tall menus */
+    height: calc(100vh - 3.5rem);
+    overflow-y: auto;
+  }
+}

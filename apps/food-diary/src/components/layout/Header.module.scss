@@ -1,0 +1,123 @@
+@use "../../styles/abstracts/functions" as fx;
+@use "../../styles/abstracts/size" as *;
+
+$navbarToggler-height: 35px;
+
+.header {
+  --_header-ZIndex: var(--header-ZIndex, 20);
+  --_header-Padding: var(--header-Padding, 1rem 0);
+
+  z-index: var(--_header-ZIndex);
+  padding: var(--_header-Padding);
+  box-shadow: fx.getToken(shadow);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  color: fx.getOnColor(grey, 800);
+  background-color: var(--dral-bg-color, rgba(55, 65, 81, 0.6));
+}
+
+.header__logo {
+  display: none;
+}
+
+.navbarToggler {
+  height: $navbarToggler-height;
+  margin-right: 1rem;
+  margin-left: auto;
+}
+
+
+label.navbarToggler__icon {
+  --_navbarToggler__icon-ZIndex: var(--navbarToggler__icon-ZIndex, 30);
+
+  z-index: var(--_navbarToggler__icon-ZIndex);
+  display: block;
+  position: relative;
+  background: #{fx.getColor(grey, 600)};
+  width: 45px;
+  height: $navbarToggler-height;
+  border-radius: 4px;
+}
+
+input.navbarToggler__checkbox {
+  display:none
+}
+
+.navbarToggler__iconLine {
+  position: absolute;
+  left:10px;
+  height: 2px; width: 25px;
+  background: #fff; border-radius: 1px;
+  display: block;
+  transition: 0.4s;
+  transform-origin: center;
+}
+
+.navbarToggler__iconLine:nth-child(1) {
+  top: 8px;
+}
+
+.navbarToggler__iconLine:nth-child(2) {
+  top: 16px;
+}
+
+.navbarToggler__iconLine:nth-child(3) {
+  top: 24px;
+}
+
+.navbarToggler__checkbox:checked + .navbarToggler__icon .navbarToggler__iconLine:nth-child(1) {
+  transform: translateY(8px) rotate(-45deg);
+}
+
+.navbarToggler__checkbox:checked + .navbarToggler__icon .navbarToggler__iconLine:nth-child(2) {
+  opacity:0;
+}
+
+.navbarToggler__checkbox:checked + .navbarToggler__icon .navbarToggler__iconLine:nth-child(3) {
+  transform: translateY(-8px) rotate(45deg);
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+}
+
+.navbarToggler__navbar .navbar {
+  --_navbarToggler__navbar-Transform: var(--navbarToggler__navbar-Transform, translatey(-125%));
+
+  background-color: var(--dral-bg-color, rgba(55, 65, 81, 0.6));
+  box-shadow: #{fx.getToken(shadow)};;
+  display: block;
+  position: fixed;
+  top: 0;
+  transform: var(--_navbarToggler__navbar-Transform);
+  transition: #{fx.getToken(transition)};
+  transition-property: transform;
+  width: 100vw;
+
+}
+
+.navbarToggler__checkbox:checked ~ .navbarToggler__navbar .navbar {
+  transform: translatey(0);
+}
+
+
+@media (min-width: $breakpoint-xs) {
+  .header {
+    --header-Padding: 1rem 1rem;
+  }
+
+  .navbarToggler {
+    display: none;
+  }
+
+  .navbarToggler__navbar .navbar {
+    display: none;
+  }
+
+  .header__logo {
+    display: block;
+  }
+}
+

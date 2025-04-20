@@ -6,6 +6,7 @@ import createAxiosInstance from "../services/axiosInstance";
 import DiaryEntry from "../models/DiaryEntry.ts";
 import "./Home.scss";
 import axios from "axios";
+import logger from "../services/logging/logger.ts";
 
 const HomePage: React.FC = () => {
     const { keycloak, authenticated } = useKeycloak();
@@ -29,7 +30,7 @@ const HomePage: React.FC = () => {
             const response = await axiosInstance.get("/api/diary/");
             setDiaryEntries(response.data.results);
         } catch (error) {
-            console.error("Error making API call:", error);
+            logger.error("Error making API call:", error);
             setNotification(`Error getting all diary entries: ${error}`);
             setTimeout(() => setNotification(null), 3000);
         }
@@ -39,18 +40,16 @@ const HomePage: React.FC = () => {
         event.preventDefault();
         try {
             const response = await axiosInstance.post("/api/diary/", { title, content });
-            console.log("Diary entry created:", response.data);
+            logger.debug("Diary entry created:", response.data);
             await getDiaryEntries();
             setTitle("");
             setContent("");
         } catch (error) {
-            if (axios.isAxiosError(error) && error.response) {
-                if (error.response.status === 401) {
+            if (axios.isAxiosError(error) && error.response && error.response.status === 401) {
                     setNotification("You must be logged in to create a diary entry.");
                     setTimeout(() => setNotification(null), 3000);
-                }
             } else {
-                console.error("Error creating diary entry:", error);
+                logger.error("Error creating diary entry:", error);
                 setNotification(`Error creating diary entry: ${error}`);
                 setTimeout(() => setNotification(null), 3000);
             }

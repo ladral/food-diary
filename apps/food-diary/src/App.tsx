@@ -12,7 +12,7 @@ function App() {
     return (
         <KeycloakProvider>
             <BrowserRouter>
-                <div className="page u-h-100 is-flex is-flex-direction-column">
+                <div className="page u-h-100-vh is-flex is-flex-direction-column">
                     <Header></Header>
                     <div className="is-flex-grow-1 is-flex is-flex-direction-row u-overflow-auto">
                         <aside className="sidebar">

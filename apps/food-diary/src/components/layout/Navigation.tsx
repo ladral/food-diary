@@ -25,7 +25,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                         }
                         to="/"
                     >
-                        <span className={`${styles.navLinkIcon} dral-icon-home-fill`} aria-hidden="true"></span> Logbuch
+                        <span className={`${styles.navLinkIcon} fd-icon-book-line`} aria-hidden="true"></span> Logbuch
                     </NavLink>
                 </div>
 
@@ -36,7 +36,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                         }
                         to="/analysis"
                     >
-                        <span className={`${styles.navLinkIcon} dral-icon-task-fill`} aria-hidden="true"></span> Analyse
+                        <span className={`${styles.navLinkIcon} fd-icon-chart-line`} aria-hidden="true"></span> Analyse
                     </NavLink>
                 </div>
             </nav>

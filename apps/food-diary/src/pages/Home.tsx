@@ -82,6 +82,11 @@ const HomePage: React.FC = () => {
                 )}
             </div>
 
+
+            <button className="user__login fd-icon-add-circle-fill fd-button fd-button--icon" color="inherit" onClick={handleLogin}>
+            </button>
+
+
             <form className="is-flex is-flex-direction-column form" onSubmit={handleSubmit}>
                 <input
                     className="form__diary-title"

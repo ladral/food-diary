@@ -41,29 +41,17 @@
   font-variant: normal;
   text-transform: none;
 
-  /* fix remix icon v3 breaking change */
-  line-height: 0.725em;
-
   /* Font smoothing. That was taken from TWBS */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-[class^="fd-icon-"]:before,
-[class*="fd-icon-"]:before {
-
-  /* fix remix icon v3 breaking change */
-  display: inline-flex;
-  vertical-align: 0.275em;
-}
 
 /*
     ICON MAPPING
     If you need to update icons, this is your section.
     The comment above the icon style is a reference to the original naming, for easier mapping.
  */
-
-
 
 /*.ri-home-2-line:before { content: "\ee19"; }*/
 .fd-icon-home-line:before {

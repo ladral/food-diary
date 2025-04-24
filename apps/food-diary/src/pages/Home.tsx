@@ -72,11 +72,11 @@ const HomePage: React.FC = () => {
                 </div>
 
                 {authenticated ? (
-                    <button className="user__logout button" color="inherit" onClick={handleLogout}>
+                    <button className="user__logout fd-button fd-button--secondary" color="inherit" onClick={handleLogout}>
                         Logout
                     </button>
                 ) : (
-                    <button className="user__login button" color="inherit" onClick={handleLogin}>
+                    <button className="user__login fd-button fd-button--secondary" color="inherit" onClick={handleLogin}>
                         Login
                     </button>
                 )}
@@ -99,7 +99,7 @@ const HomePage: React.FC = () => {
                     placeholder="Content"
                     required
                 />
-                <button className="form__submit button" type="submit">Submit Diary Entry</button>
+                <button className="form__submit fd-button fd-button--primary" type="submit">Submit Diary Entry</button>
             </form>
 
             {notification && (

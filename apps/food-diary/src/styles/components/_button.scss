@@ -1,21 +1,92 @@
 @use "../abstracts/functions" as fx;
 
-.button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+
+// ================================================================
+// food diary button
+// ================================================================
+
+
+//
+// basic button component
+//
+
+.fd-button {
+  --_fd-button-Background: var(--fd-button-Background, transparent);
+  --_fd-button-Color: var(--fd-button-Color, inherit);
+  --_fd-button-Width: var(-fdc-button-Width, auto);
+  --_fd-button-MinWidth: var(--fd-button-MinWidth, 0);
+  --_fd-button-MaxWidth: var(--fd-button-MaxWidth, none);
+  --_fd-button-Height: var(--fd-button-Height, 3rem);
+  --_fd-button-MinHeight: var(--fd-button-MinHeight, 0);
+  --_fd-button-MaxHeight: var(--fd-button-MaxHeight, none);
+  --_fd-button-Padding: var(--fd-button-Padding, 0.75rem 1.5rem);
+  --_fd-button-FontSize: var(--fd-button-FontSize, 1rem);
+  --_fd-button-LineHeight: var(--fd-button-LineHeight, 1.5rem);
+  --_fd-button-FontWeight: var(--fd-button-FontWeight, 700);
+  --_fd-button-JustifyContent: var(--fd-button-JustifyContent, center);
+  --_fd-button-Transition: var(--fd-button-Transition, none);
+  --_fd-button-BorderRadius: var(--fd-button-BorderRadius, 8px);
+  --_fd-button-Border: var(--fd-button-Border, 1px solid transparent);
+  --_fd-button-BorderColor: var(--fd-button-BorderColor, transparent);
+
+  display: flex;
+  align-items: center;
+  justify-content: var(--_fd-button-JustifyContent);
+  width: var(--_fd-button-Width);
+  min-width: var(--_fd-button-MinWidth);
+  max-width: var(--_fd-button-MaxWidth);
+  height: var(--_fd-button-Height);
+  min-height: var(--_fd-button-MinHeight);
+  max-height: var(--_fd-button-MaxHeight);
+  padding: var(--_fd-button-Padding);
+  background: var(--_fd-button-Background);
+  color: var(--_fd-button-Color);
+  font-size: var(--_fd-button-FontSize);
+  font-weight: var(--_fd-button-FontWeight);
+  transition: var(--_fd-button-Transition);
+  border: var(--_fd-button-Border);
+  border-radius: var(--_fd-button-BorderRadius);
+  border-color: var(--_fd-button-BorderColor);
 
   &:hover {
-    border-color: fx.getPrimaryColor();
+    --_fd-button-Background: var(--fd-button-Background--hover, transparent);
+    --_fd-button-Color: var(--fd-button-Color--hover, inherit);
+    --_fd-button-BorderColor: var(--fd-button-BorderColor--hover, inherit);
+    cursor: pointer;
   }
 
-  &:focus, &:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
+  &:active {
+    --_fd-button-Background: var(--fd-button-Background--active, transparent);
+    --_fd-button-Color: var(--fd-button-Color--active, inherit);
   }
+
+  &:disabled,
+  &.disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
+
+
+//
+// button variations
+//
+
+.fd-button--primary {
+  --fd-button-Background: #{fx.getColor(black, 700)};
+  --fd-button-Background--hover: #{fx.getColor(black, 700)};
+  --fd-button-Background--active: #{fx.getColor(black, 600)};
+  --fd-button-BorderColor: #{fx.getColor(black, 700)};
+  --fd-button-BorderColor--hover: #{fx.getPrimaryColor()};
+  --fd-button-Transition: border-color 0.25s;
+}
+
+.fd-button--secondary {
+  --fd-button-Background: #{fx.getColor(black, 700)};
+  --fd-button-Background--hover: #{fx.getColor(black, 700)};
+  --fd-button-Background--active: #{fx.getColor(black, 600)};
+  --fd-button-BorderColor: #{fx.getColor(black, 700)};
+  --fd-button-BorderColor--hover: #{fx.getSecondaryColor()};
+  --fd-button-Transition: border-color 0.25s;
 }

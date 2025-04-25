@@ -1,21 +1,9 @@
-import React, { useState, useEffect } from "react";
 import useKeycloak from "../hooks/useKeycloak";
-import createAxiosInstance from "../services/axiosInstance";
-import DiaryEntry from "../models/DiaryEntry.ts";
 import "./Home.scss";
-import axios from "axios";
-import logger from "../services/logging/logger.ts";
-import ExpandableButton from "../components/buttons/ExpandableButton.tsx";
 import FoodDiaryTable from "../components/list/FoodDiaryTable.tsx";
 
 const HomePage: React.FC = () => {
     const { keycloak, authenticated } = useKeycloak();
-    const axiosInstance = createAxiosInstance();
-
-    const [diaryEntries, setDiaryEntries] = useState<DiaryEntry[]>([]);
-    const [title, setTitle] = useState("");
-    const [content, setContent] = useState("");
-    const [notification, setNotification] = useState<string | null>(null);
 
     const handleLogin = () => {
         keycloak?.login();
@@ -24,57 +12,6 @@ const HomePage: React.FC = () => {
     const handleLogout = () => {
         keycloak?.logout();
     };
-
-    const getDiaryEntries = async () => {
-        try {
-            const response = await axiosInstance.get("/api/diary/");
-            setDiaryEntries(response.data.results);
-        } catch (error) {
-            logger.error("Error making API call:", error);
-            setNotification(`Error getting all diary entries: ${error}`);
-            setTimeout(() => setNotification(null), 3000);
-        }
-    };
-
-    const onAddFoodOptionSelected = () => {
-        logger.debug('add food');
-    };
-
-    const onAddSymptomOptionSelected = () => {
-        logger.debug('add symptom');
-    };
-
-
-    const options = [
-        { name: 'Food', action: onAddFoodOptionSelected },
-        { name: 'Symptom', action: onAddSymptomOptionSelected },
-    ];
-
-    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-        try {
-            const response = await axiosInstance.post("/api/diary/", { title, content });
-            logger.debug("Diary entry created:", response.data);
-            await getDiaryEntries();
-            setTitle("");
-            setContent("");
-        } catch (error) {
-            if (axios.isAxiosError(error) && error.response && error.response.status === 401) {
-                    setNotification("You must be logged in to create a diary entry.");
-                    setTimeout(() => setNotification(null), 3000);
-            } else {
-                logger.error("Error creating diary entry:", error);
-                setNotification(`Error creating diary entry: ${error}`);
-                setTimeout(() => setNotification(null), 3000);
-            }
-        }
-    };
-
-    useEffect(() => {
-        if (authenticated) {
-            getDiaryEntries();
-        }
-    }, [authenticated]);
 
     return (
         <div>
@@ -98,35 +35,7 @@ const HomePage: React.FC = () => {
                 )}
             </div>
 
-            <ExpandableButton className="diary__add" expandOptions={options}/>
-
-            <form className="is-flex is-flex-direction-column form" onSubmit={handleSubmit}>
-                <input
-                    className="form__diary-title"
-                    type="text"
-                    value={title}
-                    onChange={(e) => setTitle(e.target.value)}
-                    placeholder="Title (max 200 characters)"
-                    maxLength={200}
-                    required
-                />
-                <textarea
-                    className="form__diary-content"
-                    value={content}
-                    onChange={(e) => setContent(e.target.value)}
-                    placeholder="Content"
-                    required
-                />
-                <button className="form__submit fd-button fd-button--primary" type="submit">Submit Diary Entry</button>
-            </form>
-
-            {notification && (
-                <div className="notification">
-                    {notification}
-                </div>
-            )}
-
-            <FoodDiaryTable diaryEntries={diaryEntries}/>
+            <FoodDiaryTable/>
         </div>
     );
 };

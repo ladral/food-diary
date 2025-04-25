@@ -9,7 +9,6 @@ const Navigation: React.FC<NavigationProps> = ({ className = styles.navbar}) => 
 
     const handleToggle = () => {
         const checkbox = document.querySelector<HTMLInputElement>("#navbarToggler__checkbox");
-        console.log(checkbox)
         if (checkbox) {
             checkbox.click();
         }

@@ -22,4 +22,13 @@
     .row:hover {
         background-color: #{fx.getColor(gray, 600)};;
     }
+
+    .rowAction {
+        gap: 0.375rem;
+    }
+
+    .actionButton {
+        font-size: 1.3em;
+        --_fd-button-Height: 100%;
+    }
 }

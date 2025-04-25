@@ -55,8 +55,14 @@ const SortableTable: React.FC<SortableTableProps> = ({ className = styles.sortab
                         return <td className={styles.field} key={column.accessor}>{value}</td>;
                     })}
                     <td className={styles.field}>
-                        <button onClick={() => onDelete(item[idProperty])}>Delete</button>
-                        <button onClick={() => onUpdate(item[idProperty])}>Update</button>
+                        <div className={`${styles.rowAction} is-flex`}>
+                        <button className={`${styles.actionButton} fd-icon-delete-bin-fill fd-button fd-button--icon`}
+                                onClick={() => onDelete(item[idProperty])}>
+                        </button>
+                            <button className={`${styles.actionButton} fd-icon-pencil-fill fd-button fd-button--icon`}
+                                    onClick={() => onUpdate(item[idProperty])}>
+                            </button>
+                        </div>
                     </td>
                 </tr>
             ))}

@@ -5,6 +5,7 @@ import DiaryEntry from "../models/DiaryEntry.ts";
 import "./Home.scss";
 import axios from "axios";
 import logger from "../services/logging/logger.ts";
+import ExpandableButton from "../components/buttons/ExpandableButton.tsx";
 
 const HomePage: React.FC = () => {
     const { keycloak, authenticated } = useKeycloak();
@@ -83,8 +84,7 @@ const HomePage: React.FC = () => {
             </div>
 
 
-            <button className="user__login fd-icon-add-circle-fill fd-button fd-button--icon" color="inherit" onClick={handleLogin}>
-            </button>
+            <ExpandableButton className="diary__add"/>
 
 
             <form className="is-flex is-flex-direction-column form" onSubmit={handleSubmit}>

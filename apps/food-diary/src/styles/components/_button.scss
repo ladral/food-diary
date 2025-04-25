@@ -91,10 +91,22 @@
   --fd-button-Transition: border-color 0.25s;
 }
 
+.fd-button--primary-light {
+  --fd-button-Background: #{fx.getColor(white, 800)};
+  --fd-button-Color: #{fx.getColor(black, 700)};
+  --fd-button-Color--hover: #{fx.getColor(black, 700)};
+  --fd-button-Background--hover: #{fx.getColor(white, 800)};
+  --fd-button-Background--active: #{fx.getColor(white, 800)};
+  --fd-button-BorderColor: #{fx.getColor(white, 800)};
+  --fd-button-BorderColor--hover: #{fx.getPrimaryColor()};
+  --fd-button-Transition: border-color 0.25s;
+}
+
 .fd-button--icon {
   --fd-button-Color--hover: #{fx.getPrimaryColor()};
   --fd-button-FontSize: 3em;
   --fd-button-BorderRadius: 1.5rem;
   --fd-button-Padding: none;
   --fd-button-LineHeight: 0.95em;
+  --fd-button-Transition: color 0.25s;
 }

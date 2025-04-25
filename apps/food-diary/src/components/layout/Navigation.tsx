@@ -5,7 +5,7 @@ interface NavigationProps {
     className?: string;
 }
 
-const Navigation: React.FC<NavigationProps> = ({ className }) => {
+const Navigation: React.FC<NavigationProps> = ({ className = styles.navbar}) => {
 
     const handleToggle = () => {
         const checkbox = document.querySelector<HTMLInputElement>("#navbarToggler__checkbox");

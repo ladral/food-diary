@@ -5,7 +5,9 @@
   width: fit-content;
 }
 
-.expandableButton__toggle {}
+.expandableButton__toggle {
+  position: relative;
+}
 
 .options {
   --_expandableButton__options-Background: var(--expandableButton__options-Background, #{fx.getColor(white, 800)});

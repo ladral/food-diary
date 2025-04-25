@@ -12,7 +12,7 @@ interface ExpandableButtonProps {
 }
 
 
-const ExpandableButton: React.FC<ExpandableButtonProps> = ({ className, expandOptions }) => {
+const ExpandableButton: React.FC<ExpandableButtonProps> = ({ className = styles.expandableButton, expandOptions }) => {
     const [isOpen, setIsOpen] = useState(false);
     const buttonRef = useRef<HTMLDivElement | null>(null);
 

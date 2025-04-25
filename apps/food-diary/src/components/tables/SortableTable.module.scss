@@ -1,0 +1,25 @@
+@use "../../styles/abstracts/functions" as fx;
+
+.sortableTable {
+    --_sortableTable-MarginTop: var(--sortableTable-MarginTop, 1.25rem);
+    --_sortableTable__field-Padding: var(--sortableTable__field-Padding, 0.625rem);
+
+    margin-top: var(--_sortableTable-MarginTop);
+    width: 100%;
+    border-collapse: collapse;
+
+    .field {
+        padding: var(--_sortableTable__field-Padding);
+        border-bottom: 1px solid #{fx.getOnBackgroundColor()};
+        text-align: left;
+    }
+
+    .headerField {
+        background-color: #{fx.getColor(gray, 900)};;
+        cursor: pointer;
+    }
+
+    .row:hover {
+        background-color: #{fx.getColor(gray, 600)};;
+    }
+}

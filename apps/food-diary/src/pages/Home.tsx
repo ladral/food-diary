@@ -6,6 +6,7 @@ import "./Home.scss";
 import axios from "axios";
 import logger from "../services/logging/logger.ts";
 import ExpandableButton from "../components/buttons/ExpandableButton.tsx";
+import FoodDiaryTable from "../components/list/FoodDiaryTable.tsx";
 
 const HomePage: React.FC = () => {
     const { keycloak, authenticated } = useKeycloak();
@@ -34,7 +35,6 @@ const HomePage: React.FC = () => {
             setTimeout(() => setNotification(null), 3000);
         }
     };
-
 
     const onAddFoodOptionSelected = () => {
         logger.debug('add food');
@@ -126,28 +126,7 @@ const HomePage: React.FC = () => {
                 </div>
             )}
 
-            <div className="diary">
-                <h2>Diary Entries</h2>
-                <table className="diary__table">
-                    <thead>
-                    <tr>
-                        <th className="diary__header">Date</th>
-                        <th className="diary__header">Name</th>
-                        <th className="diary__header">Type</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    {diaryEntries.map((entry) => (
-                        <tr key={entry.id} className="diary__entry">
-                            <td className="diary__entry-date">{entry.date}</td>
-                            <td className="diary__entry-name">{entry.name}</td>
-                            <td className="diary__entry-type">{entry.type}</td>
-                        </tr>
-                    ))}
-                    </tbody>
-                </table>
-            </div>
-
+            <FoodDiaryTable diaryEntries={diaryEntries}/>
         </div>
     );
 };

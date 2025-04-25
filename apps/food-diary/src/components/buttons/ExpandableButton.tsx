@@ -42,7 +42,7 @@ const ExpandableButton: React.FC<ExpandableButtonProps> = ({ className, expandOp
     return (
         <div className={`${styles.expandableButton} ${className}`} ref={buttonRef}>
             <button
-                className="fd-icon-add-circle-fill fd-button fd-button--icon"
+                className={`${styles.expandableButton__toggle} fd-icon-add-circle-fill fd-button fd-button--icon`}
                 onClick={toggleExpand}
                 aria-expanded={isOpen}
             >

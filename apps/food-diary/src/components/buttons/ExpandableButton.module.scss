@@ -5,6 +5,8 @@
   width: fit-content;
 }
 
+.expandableButton__toggle {}
+
 .options {
   --_expandableButton__options-Background: var(--expandableButton__options-Background, #{fx.getColor(white, 800)});
   --_expandableButton__options-Border: var(--expandableButton__options-Border,  1px solid #{fx.getColor(white, 800)});

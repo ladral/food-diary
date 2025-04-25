@@ -35,6 +35,21 @@ const HomePage: React.FC = () => {
         }
     };
 
+
+    const onAddFoodOptionSelected = () => {
+        logger.debug('add food');
+    };
+
+    const onAddSymptomOptionSelected = () => {
+        logger.debug('add symptom');
+    };
+
+
+    const options = [
+        { name: 'Food', action: onAddFoodOptionSelected },
+        { name: 'Symptom', action: onAddSymptomOptionSelected },
+    ];
+
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         try {
@@ -83,9 +98,7 @@ const HomePage: React.FC = () => {
                 )}
             </div>
 
-
-            <ExpandableButton className="diary__add"/>
-
+            <ExpandableButton className="diary__add" expandOptions={options}/>
 
             <form className="is-flex is-flex-direction-column form" onSubmit={handleSubmit}>
                 <input

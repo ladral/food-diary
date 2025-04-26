@@ -7,9 +7,9 @@
 }
 
 :root {
-  --dral-bg-color: #{fx.getColor(grey, 800)};
-  --dral-on-bg-color: #{fx.getOnColor(grey, 800)};
-  --dral-transparent: rgba(55, 65, 81, 0.6);
+  --fd-bg-color: #{fx.getColor(grey, 800)};
+  --fd-on-bg-color: #{fx.getOnColor(grey, 800)};
+  --fd-transparent: rgba(55, 65, 81, 0.6);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -31,6 +31,6 @@ textarea{
   font-size: 100%;
   font-family: 'Figtree', sans-serif;
   font-weight: 400;
-  background-color: var(--dral-bg-color);
-  color: var(--dral-on-bg-color);
+  background-color: var(--fd-bg-color);
+  color: var(--fd-on-bg-color);
 }

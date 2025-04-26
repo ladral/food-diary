@@ -1,7 +1,8 @@
 ﻿@use "../abstracts/size" as *;
+@use "../abstracts/functions" as fx;
 
 .sidebar {
-  background-color: var(--dral-bg-color, rgba(55, 65, 81, 0.6));
+  background-color: #{fx.getBackgroundColor()};
 }
 
 @media (min-width: $breakpoint-xs) {

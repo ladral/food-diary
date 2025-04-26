@@ -14,12 +14,12 @@
 }
 
 @function getBackgroundColor() {
-  $color: var(--dral-bg-color, #{map-get-color-strict(grey, 800, 'light')});
+  $color: var(--fd-bg-color, #{map-get-color-strict(grey, 800, 'light')});
   @return $color;
 }
 
 @function getOnBackgroundColor() {
-  $color: var(--dral-on-bg-color, #{map-get-color-strict(grey, 800, 'on-light')});
+  $color: var(--fd-on-bg-color, #{map-get-color-strict(grey, 800, 'on-light')});
   @return $color;
 }
 

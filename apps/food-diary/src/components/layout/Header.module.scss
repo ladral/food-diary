@@ -14,7 +14,7 @@ $navbarToggler-height: 35px;
   top: 0;
   width: 100%;
   color: fx.getOnColor(grey, 800);
-  background-color: var(--dral-bg-color, rgba(55, 65, 81, 0.6));
+  background-color: #{fx.getBackgroundColor()};
 }
 
 .header__logo {
@@ -86,7 +86,7 @@ input.navbarToggler__checkbox {
 .navbarToggler__navbar .navbar {
   --_navbarToggler__navbar-Transform: var(--navbarToggler__navbar-Transform, translatey(-125%));
 
-  background-color: var(--dral-bg-color, rgba(55, 65, 81, 0.6));
+  background-color: #{fx.getBackgroundColor()};
   box-shadow: #{fx.getToken(shadow)};;
   display: block;
   position: fixed;

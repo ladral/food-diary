@@ -90,6 +90,8 @@ class UserEntriesAPIView(APIView):
         ]
         all_entries.extend(occurrence_data)
 
+        all_entries.sort(key=lambda x: x['date'], reverse=True)
+
         if request.query_params.get('all', 'false').lower() == 'true':
             return Response(all_entries, status=status.HTTP_200_OK)
 

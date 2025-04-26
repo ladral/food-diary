@@ -20,13 +20,11 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPage
     };
 
     return (
-        <div>
-            <button onClick={handlePrevious} disabled={currentPage === 1}>
-                Vorherige
+        <div className="is-flex is-justify-content-space-between">
+            <button className="fd-button fd-button--icon fd-icon-arrow-left-line" onClick={handlePrevious} disabled={currentPage === 1}>
             </button>
-            <span> Seite {currentPage} von {totalPages} </span>
-            <button onClick={handleNext} disabled={currentPage === totalPages}>
-                Nächste
+            <div className="is-align-content-center"> Seite {currentPage} von {totalPages} </div>
+            <button className="fd-button fd-button--icon fd-icon-arrow-right-line" onClick={handleNext} disabled={currentPage === totalPages}>
             </button>
         </div>
     );

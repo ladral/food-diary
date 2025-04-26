@@ -15,12 +15,12 @@
     }
 
     .headerField {
-        background-color: #{fx.getColor(gray, 900)};;
+        background-color: #{fx.getColor(grey, 900)};;
         cursor: pointer;
     }
 
     .row:hover {
-        background-color: #{fx.getColor(gray, 600)};;
+        background-color: #{fx.getColor(grey, 600)};;
     }
 
     .rowAction {

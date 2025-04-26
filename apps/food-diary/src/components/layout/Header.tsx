@@ -3,7 +3,7 @@ import styles from './Header.module.scss';
 
 const Header = () => {
     return (
-        <header className={`${styles.header} is-flex is-flex-direction-column`}>
+        <header className={`${styles.header} is-flex is-flex-direction-column is-justify-content-center is-flex-shrink-0`}>
 
             <div className={styles.header__logo}>
                 Food Diary

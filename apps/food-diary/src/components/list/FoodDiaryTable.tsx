@@ -67,7 +67,7 @@ const FoodDiaryTable = () => {
     return (
         <div className={styles.foodDiaryTable}>
             <SortableTable
-                className={styles.foodDiaryTable}
+                className={styles.foodDiaryTable__list}
                 columns={columns}
                 data={diaryEntries}
                 onDelete={onDeleteEntry}
@@ -80,7 +80,7 @@ const FoodDiaryTable = () => {
                 onPageChange={setCurrentPage}
             />
 
-            <ExpandableButton className="diary__add" expandOptions={options} />
+            <ExpandableButton className={styles.foodDiaryTable__diaryAdd} expandOptions={options} />
         </div>
     );
 };

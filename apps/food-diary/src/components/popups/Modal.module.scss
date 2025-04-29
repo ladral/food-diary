@@ -1,0 +1,57 @@
+@use "../../styles/abstracts/functions" as fx;
+@use "../../styles/abstracts/size" as *;
+
+.modal {
+  --_modal-ZIndex: var(--modal-ZIndex, 100);
+  --_modal-BackgroundColor: var(--modal-BackgroundColor, #{rgba(fx.map-get-color-strict(grey, 800, 'light'), 0.9)});
+
+  z-index: var(--_modal-ZIndex);
+  background-color: var(--_modal-BackgroundColor);
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  transition: #{fx.getToken(transition)};
+  transition-property: opacity;
+}
+
+.close {
+  --_close-Color: var(--close-color, #{fx.getColor(grey, 800)});
+  --_close-FontSize: var(--close-FontSize, 2rem);
+
+  position: relative;
+  cursor: pointer;
+
+  &Icon {
+    font-size: var(--_close-FontSize);
+    color: var(--_close-Color);
+  }
+}
+
+.modalContent {
+  --_modal-content-BackgroundColor: var(--modal-content-BackgroundColor, #{fx.getColor(white, 800)});
+  --_modal-content-Color: var(--modal-content-Color, #{fx.getOnBackgroundColor()});
+  --_modal-content-Padding: var(--modal-content-Padding, 0.75rem);
+  --_modal-content-Border: var(--modal-content-Border, 1px solid #{fx.getColor(gray, 900)});
+  --_modal-content-Width: var(--modal-content-Width, var(--__modal-content-Width, auto));
+
+  background-color: var(--_modal-content-BackgroundColor);
+  color: var(--_modal-content-Color);
+  border: var(--_modal-content-Border);
+  width: var(--_modal-content-Width);
+  padding: var(--_modal-content-Padding);
+  margin: auto;
+
+  @media (max-width: $breakpoint-xs) {
+    --__modal-content-Width: 95%;
+  }
+}
+
+.modalChildContent {
+  display: flex;
+  justify-content: center;
+
+}

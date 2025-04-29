@@ -7,6 +7,10 @@ import DiaryService from "../../services/api/diary/DiaryService";
 import { useEffect, useState } from "react";
 import useKeycloak from "../../hooks/useKeycloak.ts";
 import ExpandableButton from "../buttons/ExpandableButton.tsx";
+import Modal from "../popups/Modal.tsx";
+import CreateIntakeForm from "../froms/CreateIntakeForm.tsx";
+import FormType from "../froms/FormType.ts";
+import CreateSymptomOccurrence from "../froms/CreateSymptomOccurrence.tsx";
 
 
 const FoodDiaryTable = () => {
@@ -14,6 +18,8 @@ const FoodDiaryTable = () => {
     const [diaryEntries, setDiaryEntries] = useState<DiaryEntry[]>([]);
     const [currentPage, setCurrentPage] = useState<number>(1);
     const [totalPages, setTotalPages] = useState<number>(0);
+    const [isModalOpen, setModalOpen] = useState(false)
+    const [formType, setFormType] = useState<FormType | null>(null);
     const diaryService = new DiaryService();
 
     const columns = [
@@ -51,11 +57,23 @@ const FoodDiaryTable = () => {
     };
 
     const onAddFoodOptionSelected = () => {
-        logger.debug("add food");
+        logger.debug("add food intake");
+        openModal(FormType.CreateFoodIntake)
     };
 
     const onAddSymptomOptionSelected = () => {
-        logger.debug("add symptom");
+        logger.debug("add symptom occurrence");
+        openModal(FormType.CreateSymptomOccurrence)
+    };
+
+    const openModal = (type: FormType) => {
+        setFormType(type);
+        setModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setModalOpen(false);
+        setFormType(null); // Reset form type when closing
     };
 
 
@@ -63,6 +81,17 @@ const FoodDiaryTable = () => {
         { name: "Food", action: onAddFoodOptionSelected },
         { name: "Symptom", action: onAddSymptomOptionSelected }
     ];
+
+    const renderForm = () => {
+        switch (formType) {
+            case FormType.CreateFoodIntake:
+                return <CreateIntakeForm onClose={closeModal} />;
+            case FormType.CreateSymptomOccurrence:
+                return <CreateSymptomOccurrence onClose={closeModal} />
+            default:
+                return null;
+        }
+    };
 
     return (
         <div className={styles.foodDiaryTable}>
@@ -81,6 +110,9 @@ const FoodDiaryTable = () => {
             />
 
             <ExpandableButton className={styles.foodDiaryTable__diaryAdd} expandOptions={options} />
+            <Modal isOpen={isModalOpen} onClose={closeModal}>
+                {renderForm()}
+            </Modal>
         </div>
     );
 };

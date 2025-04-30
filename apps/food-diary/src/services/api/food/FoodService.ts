@@ -2,13 +2,16 @@ import FoodDiaryApiClient from "../FoodDiaryApiClient.ts";
 import CreateFoodIntakeResponse from "./models/CreateFoodIntakeResponse.ts";
 import CreateFoodIntakeRequest from "./models/CreateFoodIntakeRequest.ts";
 import logger from "../../logging/logger.ts";
+import { Severity } from "../../../models/alerts/Severity.ts";
 
 
 class FoodService {
     private apiClient: FoodDiaryApiClient;
+    private addAlert: (message: string, severity: Severity) => void;
 
-    constructor() {
+    constructor(addAlert: (message: string, severity: Severity) => void) {
         this.apiClient = new FoodDiaryApiClient();
+        this.addAlert = addAlert;
     }
 
 
@@ -17,6 +20,7 @@ class FoodService {
             const result = await this.apiClient.createIntake(body);
 
             if (result.success) {
+                this.addAlert('Eintrag erfolgreich hinzugefügt', Severity.Success);
                 return result.data;
             } else {
                 logger.error("could not create food intake")
@@ -25,12 +29,12 @@ class FoodService {
                     `API Error: ${error.message} ` +
                     `(Status Code: ${error.statusCode}, Error Code: ${error.errorCode})`
                 );
-                // TODO: add global exception handling
+                this.addAlert(`Error: ${error.message}`, Severity.Error);
                 return null;
             }
         } catch (e) {
             logger.error('Unexpected error in createFoodIntake:', e);
-            // TODO: add global exception handling
+            this.addAlert('An unexpected error occurred.', Severity.Error);
             return null;
         }
     }

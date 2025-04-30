@@ -11,6 +11,7 @@ import Modal from "../popups/Modal.tsx";
 import CreateIntakeForm from "../froms/CreateIntakeForm.tsx";
 import FormType from "../froms/FormType.ts";
 import CreateSymptomOccurrence from "../froms/CreateSymptomOccurrence.tsx";
+import { useAlert } from "../../context/AlertContext.tsx";
 
 
 const FoodDiaryTable = () => {
@@ -20,7 +21,8 @@ const FoodDiaryTable = () => {
     const [totalPages, setTotalPages] = useState<number>(0);
     const [isModalOpen, setModalOpen] = useState(false)
     const [formType, setFormType] = useState<FormType | null>(null);
-    const diaryService = new DiaryService();
+    const { addAlert } = useAlert();
+    const diaryService = new DiaryService(addAlert);
 
     const columns = [
         { label: "Datum", accessor: "date" },

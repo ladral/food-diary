@@ -1,14 +1,17 @@
 import FoodDiaryApiClient from "../FoodDiaryApiClient.ts";
 import logger from "../../logging/logger.ts";
 import GetDiaryListResponse from "./models/GetDiaryListResponse.ts";
+import { Severity } from "../../../models/alerts/Severity.ts";
 
 class DiaryService {
     private apiClient: FoodDiaryApiClient;
     private pageSize: number;
+    private addAlert: (message: string, severity: Severity) => void;
 
-    constructor() {
+    constructor(addAlert: (message: string, severity: Severity) => void) {
         this.apiClient = new FoodDiaryApiClient();
         this.pageSize = 10;
+        this.addAlert = addAlert;
     }
 
     async getDiaryList(page: number): Promise<GetDiaryListResponse | null> {
@@ -24,12 +27,12 @@ class DiaryService {
                     `API Error: ${error.message} ` +
                     `(Status Code: ${error.statusCode}, Error Code: ${error.errorCode})`
                 );
-                // TODO: add global exception handling
+                this.addAlert(`Error: ${error.message}`, Severity.Error);
                 return null;
             }
         } catch (e) {
             logger.error('Unexpected error in getDiaryList:', e);
-            // TODO: add global exception handling
+            this.addAlert('An unexpected error occurred.', Severity.Error);
             return null;
         }
     }

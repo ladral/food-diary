@@ -1,7 +1,7 @@
 import { render, screen, cleanup, fireEvent } from "@testing-library/react";
 import { describe, it, expect, afterEach } from "vitest";
 import SortableTable from "./SortableTable.tsx";
-import DiaryEntry from "../../models/diary/DiaryEntry";
+import DiaryEntry from "../../services/api/diary/models/DiaryEntry.ts";
 
 
 afterEach(() => {

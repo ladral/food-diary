@@ -1,7 +1,7 @@
 import DiaryEntry from "./DiaryEntry.ts";
 
 
-interface DiaryApiResponse {
+interface GetDiaryListResponse {
     count: number;
     totalPages: number;
     next: string | null;
@@ -9,4 +9,4 @@ interface DiaryApiResponse {
     results: DiaryEntry[];
 }
 
-export default DiaryApiResponse;
+export default GetDiaryListResponse;

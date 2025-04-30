@@ -36,7 +36,7 @@ const CreateSymptomOccurrence: React.FC<CreateSymptomOccurrenceProps> = ({ onClo
                     required
                 />
             </div>
-            <button className={`${styles.form__submitButton} is-align-self-flex-end fd-button fd-button--primary`} type="submit">Submit</button>
+            <button className={`${styles.form__submitButton} is-align-self-flex-end fd-button fd-button--primary`} type="submit">Hinzufügen</button>
         </form>
     );
 };

@@ -1,4 +1,4 @@
-import { ExternalApiException } from "../exceptions/ExternalApiException.ts";
+import { ApiException } from "../exceptions/ApiException.ts";
 
 export interface Success<T> {
     success: true;
@@ -7,7 +7,7 @@ export interface Success<T> {
 
 export interface Failure {
     success: false;
-    error: ExternalApiException;
+    error: ApiException;
 }
 
 export type Result<T> = Success<T> | Failure;

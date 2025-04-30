@@ -1,24 +1,25 @@
 import FoodDiaryApiClient from "../FoodDiaryApiClient.ts";
+import CreateFoodIntakeResponse from "./models/CreateFoodIntakeResponse.ts";
+import CreateFoodIntakeRequest from "./models/CreateFoodIntakeRequest.ts";
 import logger from "../../logging/logger.ts";
-import GetDiaryListResponse from "./models/GetDiaryListResponse.ts";
 
-class DiaryService {
+
+class FoodService {
     private apiClient: FoodDiaryApiClient;
-    private pageSize: number;
 
     constructor() {
         this.apiClient = new FoodDiaryApiClient();
-        this.pageSize = 10;
     }
 
-    async getDiaryList(page: number): Promise<GetDiaryListResponse | null> {
+
+    async createFoodIntake(body: CreateFoodIntakeRequest): Promise<CreateFoodIntakeResponse | null> {
         try {
-            const result = await this.apiClient.getDiary(page, this.pageSize);
+            const result = await this.apiClient.createIntake(body);
 
             if (result.success) {
-                result.data.totalPages = Math.ceil(result.data.count / this.pageSize)
                 return result.data;
             } else {
+                logger.error("could not create food intake")
                 const error = result.error;
                 logger.error(
                     `API Error: ${error.message} ` +
@@ -28,11 +29,11 @@ class DiaryService {
                 return null;
             }
         } catch (e) {
-            logger.error('Unexpected error in getDiaryList:', e);
+            logger.error('Unexpected error in createFoodIntake:', e);
             // TODO: add global exception handling
             return null;
         }
     }
 }
 
-export default DiaryService;
+export default FoodService;

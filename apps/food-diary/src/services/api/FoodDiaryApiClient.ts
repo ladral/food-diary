@@ -1,9 +1,11 @@
 import { Result } from "../../models/api/Result";
-import { ExternalApiException } from "../../models/exceptions/ExternalApiException";
+import { ApiException } from "../../models/exceptions/ApiException.ts";
 import useKeycloak from "../../hooks/useKeycloak.ts";
 import axios, { AxiosError, AxiosInstance } from "axios";
 import logger from "../logging/logger.ts";
-import DiaryApiResponse from "../../models/diary/DiaryApiResponse.ts";
+import GetDiaryListResponse from "./diary/models/GetDiaryListResponse.ts";
+import CreateFoodIntakeRequest from "./food/models/CreateFoodIntakeRequest.ts";
+import CreateFoodIntakeResponse from "./food/models/CreateFoodIntakeResponse.ts";
 
 class FoodDiaryApiClient {
     private client: AxiosInstance;
@@ -25,7 +27,7 @@ class FoodDiaryApiClient {
         this.client = instance;
     }
 
-    private createExternalApiException(error: unknown): ExternalApiException {
+    private createExternalApiException(error: unknown): ApiException {
         if (axios.isAxiosError(error)) {
             const axiosError = error as AxiosError;
             return {
@@ -46,7 +48,8 @@ class FoodDiaryApiClient {
         };
     }
 
-    async getResource<T>(path: string, params = {}): Promise<Result<T>> {
+    private async getResource<T>(path: string, params = {}): Promise<Result<T>> {
+        logger.debug(`GET ${path}`, params);
         try {
             const response = await this.client.get<T>(path, { params });
             return {
@@ -62,10 +65,31 @@ class FoodDiaryApiClient {
         }
     }
 
-    async getDiary(page: number, pageSize: number = 10): Promise<Result<DiaryApiResponse>> {
+    private async createResource<T>(path: string, body = {}): Promise<Result<T>> {
+        try {
+            logger.debug(`POST ${path}`, body);
+            const response = await this.client.post<T>(path, body);
+            logger.debug("resource created: ", response.data);
+            return {
+                success: true,
+                data: response.data
+            };
+        } catch (error) {
+            logger.error("Error creating resource:", error);
+            return {
+                success: false,
+                error: this.createExternalApiException(error)
+            };
+        }
+    }
+
+    async getDiary(page: number, pageSize: number = 10): Promise<Result<GetDiaryListResponse>> {
         return this.getResource("/api/diary/", { page_size: pageSize, page });
     }
 
+    async createIntake(body: CreateFoodIntakeRequest): Promise<Result<CreateFoodIntakeResponse>> {
+        return this.createResource("/api/intakes/", body);
+    }
 }
 
 export default FoodDiaryApiClient;

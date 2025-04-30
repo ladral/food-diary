@@ -1,4 +1,4 @@
-import DiaryEntry from "../../models/diary/DiaryEntry";
+import DiaryEntry from "../../services/api/diary/models/DiaryEntry.ts";
 import SortableTable from "../tables/SortableTable";
 import logger from "../../services/logging/logger";
 import styles from "./FoodDiaryTable.module.scss";
@@ -56,16 +56,6 @@ const FoodDiaryTable = () => {
         logger.debug("update entry " + id);
     };
 
-    const onAddFoodOptionSelected = () => {
-        logger.debug("add food intake");
-        openModal(FormType.CreateFoodIntake)
-    };
-
-    const onAddSymptomOptionSelected = () => {
-        logger.debug("add symptom occurrence");
-        openModal(FormType.CreateSymptomOccurrence)
-    };
-
     const openModal = (type: FormType) => {
         setFormType(type);
         setModalOpen(true);
@@ -77,8 +67,18 @@ const FoodDiaryTable = () => {
     };
 
 
+    const onAddFoodOptionSelected = () => {
+        logger.debug("add food option selected");
+        openModal(FormType.CreateFoodIntake)
+    };
+
+    const onAddSymptomOptionSelected = () => {
+        logger.debug("add symptom option selected");
+        openModal(FormType.CreateSymptomOccurrence)
+    };
+
     const options = [
-        { name: "Food", action: onAddFoodOptionSelected },
+        { name: "Lebensmittel", action: onAddFoodOptionSelected },
         { name: "Symptom", action: onAddSymptomOptionSelected }
     ];
 

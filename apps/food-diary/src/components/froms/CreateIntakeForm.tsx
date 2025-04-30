@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import logger from "../../services/logging/logger.ts";
 import styles from "./CreateIntakeForm.module.scss";
+import FoodService from "../../services/api/food/FoodService.ts";
 
 interface CreateIntakeFormProps {
     onClose: () => void;
@@ -8,12 +8,13 @@ interface CreateIntakeFormProps {
 
 const CreateIntakeForm: React.FC<CreateIntakeFormProps> = ({ onClose }) => {
     const [foodName, setFoodName] = useState("");
+    const [foodId, setFoodId] = useState(13); // TODO: set default value to 0
     const [date, setDate] = useState("");
+    const foodService = new FoodService();
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        logger.debug("create food intake");
-        // TODO: call food service to create new intake
+        await foodService.createFoodIntake({food_id: foodId, date})
         onClose();
     };
 
@@ -36,7 +37,7 @@ const CreateIntakeForm: React.FC<CreateIntakeFormProps> = ({ onClose }) => {
                     required
                 />
             </div>
-            <button className={`${styles.form__submitButton} is-align-self-flex-end fd-button fd-button--primary`} type="submit">Submit</button>
+            <button className={`${styles.form__submitButton} is-align-self-flex-end fd-button fd-button--primary`} type="submit">Hinzufügen</button>
         </form>
     );
 };

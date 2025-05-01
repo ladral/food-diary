@@ -9,12 +9,13 @@ interface CreateIntakeFormProps {
 
 const CreateIntakeForm: React.FC<CreateIntakeFormProps> = ({ onClose }) => {
     const [foodName, setFoodName] = useState("");
-    const [foodId, setFoodId] = useState(13); // TODO: set default value to 0
+    const [foodId, setFoodId] = useState(0); // TODO: set default value to 0
     const [date, setDate] = useState("");
     const { addAlert } = useAlert();
     const foodService = new FoodService(addAlert);
 
     const handleSubmit = async (e: React.FormEvent) => {
+        setFoodId(13)
         e.preventDefault();
         await foodService.createFoodIntake({ food_id: foodId, date });
         onClose();

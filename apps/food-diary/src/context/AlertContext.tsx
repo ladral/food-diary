@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState } from "react";
 import { Alert, Snackbar, Stack } from "@mui/material";
 import { Severity } from "../models/alerts/Severity.ts";
+import styles from "./AlertContext.module.scss";
 
 interface AlertContextType {
     addAlert: (message: string, severity: Severity) => void;
@@ -20,6 +21,10 @@ export const AlertProvider: React.FC<AlertProviderProps> = ({ children }) => {
         const id = new Date().getTime();
         setAlerts((alerts) => [...alerts, { id, message, severity }]);
         setOpen(true);
+
+        setTimeout(() => {
+            handleClose(id);
+        }, 30000);
     };
 
     const handleClose = (id: number) => {
@@ -32,10 +37,14 @@ export const AlertProvider: React.FC<AlertProviderProps> = ({ children }) => {
     return (
         <AlertContext.Provider value={{ addAlert }}>
             {children}
-            <Snackbar open={open} autoHideDuration={4000} onClose={() => setOpen(false)}>
-                <Stack spacing={2}>
+            <Snackbar
+                open={open}
+                onClose={() => {}}
+                anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+            >
+                <Stack className={`${styles.stack} is-flex is-flex-direction-column`} spacing={9}>
                     {alerts.map((alert) => (
-                        <Alert key={alert.id} onClose={() => handleClose(alert.id)} severity={alert.severity}>
+                        <Alert key={alert.id} severity={alert.severity}>
                             {alert.message}
                         </Alert>
                     ))}

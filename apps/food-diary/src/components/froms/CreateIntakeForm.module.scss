@@ -1,9 +1,28 @@
+@use "../../styles/abstracts/functions" as fx;
+
 .form {
   padding: 2rem;
 }
 
 .form__input {
   gap: 1rem;
+}
+
+.form__inputDate {
+  height: auto;
+}
+
+.autocomplete {
+  width: 15rem;
+}
+
+.autocomplete__input {
+    & :global .MuiInputBase-root .MuiOutlinedInput-notchedOutline {
+      border-color: #{fx.getColor(black, 500)};
+    }
+    & :global .MuiInputBase-root:hover .MuiOutlinedInput-notchedOutline {
+      border-color: #{fx.getPrimaryColor()};
+    }
 }
 
 .form__submitButton {

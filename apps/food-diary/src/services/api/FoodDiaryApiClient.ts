@@ -6,6 +6,7 @@ import logger from "../logging/logger.ts";
 import GetDiaryListResponse from "./diary/models/GetDiaryListResponse.ts";
 import CreateFoodIntakeRequest from "./food/models/CreateFoodIntakeRequest.ts";
 import CreateFoodIntakeResponse from "./food/models/CreateFoodIntakeResponse.ts";
+import GetFoodsResponse from "./food/models/GetFoodsResponse.ts";
 
 class FoodDiaryApiClient {
     private client: AxiosInstance;
@@ -89,6 +90,10 @@ class FoodDiaryApiClient {
 
     async createIntake(body: CreateFoodIntakeRequest): Promise<Result<CreateFoodIntakeResponse>> {
         return this.createResource("/api/intakes/", body);
+    }
+
+    async getFoods(foodName: string): Promise<Result<GetFoodsResponse>> {
+        return this.getResource("/api/food", { search: foodName });
     }
 }
 

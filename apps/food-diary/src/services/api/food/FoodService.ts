@@ -3,6 +3,7 @@ import CreateFoodIntakeResponse from "./models/CreateFoodIntakeResponse.ts";
 import CreateFoodIntakeRequest from "./models/CreateFoodIntakeRequest.ts";
 import logger from "../../logging/logger.ts";
 import { Severity } from "../../../models/alerts/Severity.ts";
+import GetFoodsResponse from "./models/GetFoodsResponse.ts";
 
 
 class FoodService {
@@ -12,6 +13,29 @@ class FoodService {
     constructor(addAlert: (message: string, severity: Severity) => void) {
         this.apiClient = new FoodDiaryApiClient();
         this.addAlert = addAlert;
+    }
+
+    async searchFood(foodName: string): Promise<GetFoodsResponse | null> {
+        try {
+            const result = await this.apiClient.getFoods(foodName);
+
+            if (result.success) {
+                return result.data;
+            } else {
+                logger.error("could not search food")
+                const error = result.error;
+                logger.error(
+                    `API Error: ${error.message} ` +
+                    `(Status Code: ${error.statusCode}, Error Code: ${error.errorCode})`
+                );
+                this.addAlert(`Error: ${error.message}`, Severity.Error);
+                return null;
+            }
+        } catch (e) {
+            logger.error('Unexpected error in searchFood:', e);
+            this.addAlert('An unexpected error occurred.', Severity.Error);
+            return null;
+        }
     }
 
 

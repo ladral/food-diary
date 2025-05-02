@@ -11,7 +11,14 @@ const Modal: React.FC<ModalProps> = ({ children, isOpen, onClose }) => {
     const modalContentRef = useRef<HTMLDivElement | null>(null);
 
     const handleClickOutside = (event: MouseEvent) => {
-        if (modalContentRef.current && !modalContentRef.current.contains(event.target as Node)) {
+        const isInsideModal = modalContentRef.current && modalContentRef.current.contains(event.target as Node);
+
+        // hack of the day - prevent children of type MuiAutocomplente to close the modal
+        const isAutocomplete = Array.from((event.target as HTMLElement).classList).some(className =>
+            className.startsWith('MuiAutocomplete')
+        );
+
+        if (!isInsideModal && !isAutocomplete) {
             onClose();
         }
     };

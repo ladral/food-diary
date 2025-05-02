@@ -7,9 +7,10 @@ import GetFoodResponse from "../../services/api/food/models/GetFoodResponse.ts";
 
 interface CreateIntakeFormProps {
     onClose: () => void;
+    onInsert: () => void;
 }
 
-const CreateIntakeForm: React.FC<CreateIntakeFormProps> = ({ onClose }) => {
+const CreateIntakeForm: React.FC<CreateIntakeFormProps> = ({ onClose, onInsert }) => {
     const [foodName, setFoodName] = useState("");
     const [foodId, setFoodId] = useState(0);
     const [date, setDate] = useState("");
@@ -21,6 +22,7 @@ const CreateIntakeForm: React.FC<CreateIntakeFormProps> = ({ onClose }) => {
         e.preventDefault();
         setFoodName("");
         await foodService.createFoodIntake({ food_id: foodId, date });
+        onInsert();
         onClose();
     };
 

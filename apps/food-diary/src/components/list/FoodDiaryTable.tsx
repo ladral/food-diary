@@ -50,6 +50,10 @@ const FoodDiaryTable = () => {
         }
     }, [currentPage, authenticated]);
 
+    const onInsertEntry = () => {
+        fetchDiaryEntries(currentPage)
+    }
+
     const onDeleteEntry = (id: number) => {
         logger.debug("delete entry " + id);
     };
@@ -65,7 +69,8 @@ const FoodDiaryTable = () => {
 
     const closeModal = () => {
         setModalOpen(false);
-        setFormType(null); // Reset form type when closing
+        // Reset form type when closing
+        setFormType(null);
     };
 
 
@@ -87,7 +92,7 @@ const FoodDiaryTable = () => {
     const renderForm = () => {
         switch (formType) {
             case FormType.CreateFoodIntake:
-                return <CreateIntakeForm onClose={closeModal} />;
+                return <CreateIntakeForm onClose={closeModal} onInsert={onInsertEntry} />;
             case FormType.CreateSymptomOccurrence:
                 return <CreateSymptomOccurrence onClose={closeModal} />
             default:

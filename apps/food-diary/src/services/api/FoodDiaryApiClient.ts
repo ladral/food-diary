@@ -7,6 +7,9 @@ import GetDiaryListResponse from "./diary/models/GetDiaryListResponse.ts";
 import CreateFoodIntakeRequest from "./food/models/CreateFoodIntakeRequest.ts";
 import CreateFoodIntakeResponse from "./food/models/CreateFoodIntakeResponse.ts";
 import GetFoodsResponse from "./food/models/GetFoodsResponse.ts";
+import GetSymptomsResponse from "./symptom/models/GetSymptomsResponse.ts";
+import CreateSymptomOccurrenceRequest from "./symptom/models/CreateSymptomOccurrenceRequest.ts";
+import CreateSymptomOccurrenceResponse from "./symptom/models/CreateSymptomOccurrenceResponse.ts";
 
 class FoodDiaryApiClient {
     private client: AxiosInstance;
@@ -94,6 +97,14 @@ class FoodDiaryApiClient {
 
     async getFoods(foodName: string): Promise<Result<GetFoodsResponse>> {
         return this.getResource("/api/food", { search: foodName });
+    }
+
+    async getSymptoms(symptomName: string): Promise<Result<GetSymptomsResponse>> {
+        return this.getResource("/api/symptoms", { search: symptomName });
+    }
+
+    async createOccurrence(body: CreateSymptomOccurrenceRequest): Promise<Result<CreateSymptomOccurrenceResponse>> {
+        return this.createResource("/api/occurrence/", body);
     }
 }
 

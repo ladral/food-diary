@@ -94,7 +94,7 @@ const FoodDiaryTable = () => {
             case FormType.CreateFoodIntake:
                 return <CreateIntakeForm onClose={closeModal} onInsert={onInsertEntry} />;
             case FormType.CreateSymptomOccurrence:
-                return <CreateSymptomOccurrence onClose={closeModal} />
+                return <CreateSymptomOccurrence onClose={closeModal} onInsert={onInsertEntry} />
             default:
                 return null;
         }

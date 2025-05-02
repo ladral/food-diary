@@ -1,0 +1,66 @@
+import FoodDiaryApiClient from "../FoodDiaryApiClient.ts";
+import { Severity } from "../../../models/alerts/Severity.ts";
+import logger from "../../logging/logger.ts";
+import GetSymptomsResponse from "./models/GetSymptomsResponse.ts";
+import CreateSymptomOccurrenceRequest from "./models/CreateSymptomOccurrenceRequest.ts";
+import CreateSymptomOccurrenceResponse from "./models/CreateSymptomOccurrenceResponse.ts";
+
+class SymptomService {
+    private apiClient: FoodDiaryApiClient;
+    private addAlert: (message: string, severity: Severity) => void;
+
+
+    constructor(addAlert: (messgae: string, severity: Severity) => void) {
+        this.apiClient = new FoodDiaryApiClient();
+        this.addAlert = addAlert;
+    }
+
+    async searchSymptom(symptomName: string): Promise<GetSymptomsResponse | null> {
+        try {
+            const result = await this.apiClient.getSymptoms(symptomName);
+
+            if (result.success) {
+                return result.data;
+            } else {
+                logger.error("could not search symptoms")
+                const error = result.error;
+                logger.error(
+                    `API Error: ${error.message} ` +
+                    `(Status Code: ${error.statusCode}, Error Code: ${error.errorCode})`
+                );
+                this.addAlert(`Error: ${error.message}`, Severity.Error);
+                return null;
+            }
+        } catch (e) {
+            logger.error('Unexpected error in searchSymptom:', e);
+            this.addAlert('An unexpected error occurred.', Severity.Error);
+            return null;
+        }
+    }
+
+    async createSymptomOccurence(body: CreateSymptomOccurrenceRequest): Promise<CreateSymptomOccurrenceResponse | null> {
+        try {
+            const result = await this.apiClient.createOccurrence(body);
+
+            if (result.success) {
+                this.addAlert('Eintrag erfolgreich hinzugefügt', Severity.Success);
+                return result.data;
+            } else {
+                logger.error("could not create food intake")
+                const error = result.error;
+                logger.error(
+                    `API Error: ${error.message} ` +
+                    `(Status Code: ${error.statusCode}, Error Code: ${error.errorCode})`
+                );
+                this.addAlert(`Error: ${error.message}`, Severity.Error);
+                return null;
+            }
+        } catch (e) {
+            logger.error('Unexpected error in createFoodIntake:', e);
+            this.addAlert('An unexpected error occurred.', Severity.Error);
+            return null;
+        }
+    }
+}
+
+export default SymptomService;

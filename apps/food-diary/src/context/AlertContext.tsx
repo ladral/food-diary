@@ -16,6 +16,7 @@ interface AlertProviderProps {
 export const AlertProvider: React.FC<AlertProviderProps> = ({ children }) => {
     const [alerts, setAlerts] = useState<{ id: number; message: string; severity: Severity }[]>([]);
     const [open, setOpen] = useState(false);
+    const alertNotificationDurationMs = import.meta.env.VITE_ALERT_NOTIFICATION_DURATION_MS as number
 
     const addAlert = (message: string, severity: Severity) => {
         const id = new Date().getTime();
@@ -24,7 +25,7 @@ export const AlertProvider: React.FC<AlertProviderProps> = ({ children }) => {
 
         setTimeout(() => {
             handleClose(id);
-        }, 30000);
+        }, alertNotificationDurationMs);
     };
 
     const handleClose = (id: number) => {

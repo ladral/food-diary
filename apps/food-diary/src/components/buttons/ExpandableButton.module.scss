@@ -1,0 +1,35 @@
+@use "../../styles/abstracts/functions" as fx;
+
+.expandableButton {
+  --_expandableButton-Position: var(--expandableButton-Postion,  relative);
+
+  position: var(--_expandableButton-Position);
+  width: fit-content;
+}
+
+.expandableButton__toggle {
+  position: relative;
+}
+
+.options {
+  --_expandableButton__options-Background: var(--expandableButton__options-Background, #{fx.getColor(white, 800)});
+  --_expandableButton__options-Border: var(--expandableButton__options-Border,  1px solid #{fx.getColor(white, 800)});
+  --_expandableButton__options-BorderRadius: var(--expandableButton__options-BorderRadius,  8px);
+  --_expandableButton__options-Top: var(--expandableButton__options-Top, -5rem);
+  --_expandableButton__options-Left: var(--expandableButton__options-Left,  -5rem);
+
+  background: var(--_expandableButton__options-Background);
+  border: var(--_expandableButton__options-Border);
+  border-radius: var(--_expandableButton__options-BorderRadius);
+  box-shadow: #{fx.getToken(shadow)};
+  position: absolute;
+  top: var(--_expandableButton__options-Top);
+  left: var(--_expandableButton__options-Left);
+  z-index: 1000;
+  pointer-events: auto;
+}
+
+.optionItem {
+  margin: 0.5rem 0;
+  width: 100%;
+}

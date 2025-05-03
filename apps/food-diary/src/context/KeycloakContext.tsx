@@ -5,6 +5,7 @@ import React, {
     useRef
 } from "react";
 import Keycloak from "keycloak-js";
+import logger from "../services/logging/logger.ts";
 
 interface KeycloakContextProps {
     keycloak: Keycloak | null;
@@ -46,12 +47,12 @@ const KeycloakProvider: React.FC<KeycloakProviderProps> = ({ children }) => {
                     setAuthenticated(authenticated);
                 })
                 .catch((error) => {
-                    console.error("Keycloak initialization failed:", error);
+                    logger.error("Keycloak initialization failed:", error);
                     setAuthenticated(false);
                 })
                 .finally(() => {
                     setKeycloak(keycloakInstance);
-                    console.log("keycloak", keycloakInstance); // TODO: use log wrapper
+                    logger.debug("successfully set keycloak instance")
                 });
         };
 

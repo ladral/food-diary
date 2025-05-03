@@ -1,0 +1,84 @@
+@use "../abstracts/functions" as fx;
+
+
+// ================================================================
+// food diary input field
+// ================================================================
+
+//
+// basic input field component
+//
+
+.fd-input {
+  --_fd-input-Background: var(--fd-input-Background, transparent);
+  --_fd-input-Color: var(--fd-input-Color, inherit);
+  --_fd-input-Width: var(-fdc-button-Width, auto);
+  --_fd-input-MinWidth: var(--fd-input-MinWidth, 0);
+  --_fd-input-MaxWidth: var(--fd-input-MaxWidth, none);
+  --_fd-input-Height: var(--fd-input-Height, 3rem);
+  --_fd-input-MinHeight: var(--fd-input-MinHeight, 0);
+  --_fd-input-MaxHeight: var(--fd-input-MaxHeight, none);
+  --_fd-input-Padding: var(--fd-input-Padding, 0.75rem 1.5rem);
+  --_fd-input-FontSize: var(--fd-input-FontSize, 1rem);
+  --_fd-input-LineHeight: var(--fd-input-LineHeight, 1.5rem);
+  --_fd-input-FontWeight: var(--fd-input-FontWeight, 700);
+  --_fd-input-JustifyContent: var(--fd-input-JustifyContent, center);
+  --_fd-input-Transition: var(--fd-input-Transition, none);
+  --_fd-input-BorderRadius: var(--fd-input-BorderRadius, 4px);
+  --_fd-input-Border: var(--fd-input-Border, 1px solid transparent);
+  --_fd-input-BorderColor: var(--fd-input-BorderColor, transparent);
+
+  display: flex;
+  align-items: center;
+  justify-content: var(--_fd-input-JustifyContent);
+  width: var(--_fd-input-Width);
+  min-width: var(--_fd-input-MinWidth);
+  max-width: var(--_fd-input-MaxWidth);
+  height: var(--_fd-input-Height);
+  min-height: var(--_fd-input-MinHeight);
+  max-height: var(--_fd-input-MaxHeight);
+  padding: var(--_fd-input-Padding);
+  background: var(--_fd-input-Background);
+  color: var(--_fd-input-Color);
+  font-size: var(--_fd-input-FontSize);
+  line-height: var(--_fd-input-LineHeight);
+  font-weight: var(--_fd-input-FontWeight);
+  transition: var(--_fd-input-Transition);
+  border: var(--_fd-input-Border);
+  border-radius: var(--_fd-input-BorderRadius);
+  border-color: var(--_fd-input-BorderColor);
+
+  &:hover {
+    --_fd-input-Background: var(--fd-input-Background--hover, transparent);
+    --_fd-input-Color: var(--fd-input-Color--hover, inherit);
+    --_fd-input-BorderColor: var(--fd-input-BorderColor--hover, transparent);
+    cursor: pointer;
+  }
+
+  &:active {
+    --_fd-input-Background: var(--fd-input-Background--active, transparent);
+    --_fd-input-Color: var(--fd-input-Color--active, inherit);
+  }
+
+  &:disabled,
+  &.disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
+
+//
+// input field variations
+//
+
+.fd-input--light {
+  --fd-input-Color: #{fx.getOnColor(white, 800)};
+  --fd-input-Color--hover: #{fx.getOnColor(white, 800)};
+  --fd-input-Background: #{fx.getColor(white, 800)};
+  --fd-input-Background--hover: #{fx.getColor(white, 800)};
+  --fd-input-Background--active: #{fx.getColor(white, 800)};
+  --fd-input-BorderColor: #{fx.getColor(black, 500)};
+  --fd-input-BorderColor--hover: #{fx.getPrimaryColor()};
+  --fd-input-Transition: border-color 0.25s;
+}

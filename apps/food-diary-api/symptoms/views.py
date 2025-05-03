@@ -21,7 +21,13 @@ class SymptomsViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         user = self.request.user
-        return Symptom.objects.filter(user_id=user)
+        queryset = Symptom.objects.filter(user_id=user)
+        search_term = self.request.query_params.get('search', None)
+
+        if search_term:
+            queryset = queryset.filter(name__icontains=search_term)
+
+        return queryset
 
     def create(self, request, *args, **kwargs):
         serializer = SymptomSerializer(data=request.data)

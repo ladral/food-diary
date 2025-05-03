@@ -23,7 +23,20 @@ $COLOR-MAPS: (
                 800: (
                         light: black,
                         on-light: $color-text-light
-                )
+                ),
+                700: (
+                        light: rgb(26, 26, 26),
+                        on-light: $color-text-light
+                ),
+                600: (
+                        light: rgb(32, 32, 32),
+                        on-light: $color-text-light
+                ),
+                500: (
+                        light: rgb(45, 45, 45),
+                        on-light: $color-text-light
+                ),
+
         ),
         white: (
                 800: (
@@ -37,7 +50,7 @@ $COLOR-MAPS: (
                         on-light: $color-text-light
                 ),
                 800: (
-                        light: white,
+                        light: rgb(29, 39, 59),
                         on-light: $color-text-light
                 ),
                 700: (

@@ -1,0 +1,18 @@
+@use "../../styles/abstracts/functions" as fx;
+
+.foodDiaryTable {
+  color: inherit;
+  margin-bottom: 3rem;
+}
+
+.foodDiaryTable__list {
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.foodDiaryTable__diaryAdd {
+  --expandableButton-Postion: fixed;
+  right: 5rem;
+  bottom: 5rem;
+}

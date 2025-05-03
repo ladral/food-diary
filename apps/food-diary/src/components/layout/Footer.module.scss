@@ -1,0 +1,12 @@
+@use "../../styles/abstracts/functions" as fx;
+@use "../../styles/abstracts/size" as *;
+
+.footer {
+  --_footer-Padding: var(--footer-Padding, 1rem 1rem);
+  --_footer-Height: var(--footer-Height, 3rem);
+
+  padding: var(--_footer-Padding);
+  height: var(--_footer-Height);
+  color: fx.getOnColor(grey, 900);
+  background-color: fx.getColor(grey, 900);
+}

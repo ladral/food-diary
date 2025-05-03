@@ -49,7 +49,7 @@ class UserEntriesPagination(PageNumberPagination):
                 'items': intake_occurrence_response_schema
             }
         },
-        tags=['User Entries'],
+        tags=['Diary'],
         summary='Retrieve all intakes and occurrences for the user',
         description='This endpoint returns a list of all food intakes and symptom occurrences for the authenticated user, including the ID, date, name, and type of each entry. Use the `all` query parameter to retrieve all entries without pagination.',
         parameters=[

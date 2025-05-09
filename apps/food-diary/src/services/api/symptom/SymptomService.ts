@@ -24,6 +24,12 @@ class SymptomService implements ISymptomService{
         return null;
     }
 
+    private handleUnknownExceptions(e: any, source: string): null {
+        logger.error(`Unexpected error in ${source}:`, e);
+        this.addAlert('An unexpected error occurred.', Severity.Error);
+        return null;
+    }
+
     async searchSymptom(symptomName: string): Promise<GetSymptomsResponse | null> {
         try {
             const result = await this.apiClient.getSymptoms(symptomName);
@@ -35,9 +41,7 @@ class SymptomService implements ISymptomService{
                 return this.handleApiException(result.error)
             }
         } catch (e) {
-            logger.error('Unexpected error in searchSymptom:', e);
-            this.addAlert('An unexpected error occurred.', Severity.Error);
-            return null;
+            return this.handleUnknownExceptions(e, "searchSymptom")
         }
     }
 
@@ -53,9 +57,7 @@ class SymptomService implements ISymptomService{
                 return this.handleApiException(result.error)
             }
         } catch (e) {
-            logger.error('Unexpected error in createSymptomOccurrence:', e);
-            this.addAlert('An unexpected error occurred.', Severity.Error);
-            return null;
+            return this.handleUnknownExceptions(e, "createSymptomOccurrence")
         }
     }
 
@@ -71,9 +73,7 @@ class SymptomService implements ISymptomService{
                 return this.handleApiException(result.error)
             }
         } catch (e) {
-            logger.error('Unexpected error in createFoodIntake:', e);
-            this.addAlert('An unexpected error occurred.', Severity.Error);
-            return null;
+            return this.handleUnknownExceptions(e, "updateSymptomOccurrence")
         }
     }
 
@@ -88,8 +88,7 @@ class SymptomService implements ISymptomService{
                 this.handleApiException(result.error)
             }
         } catch (e) {
-            logger.error('Unexpected error in createFoodIntake:', e);
-            this.addAlert('An unexpected error occurred.', Severity.Error);
+            this.handleUnknownExceptions(e, "deleteSymptomOccurrence")
         }
     }
 
@@ -106,9 +105,7 @@ class SymptomService implements ISymptomService{
                 return this.handleApiException(result.error)
             }
         } catch (e) {
-            logger.error('Unexpected error in createSymptom:', e);
-            this.addAlert('An unexpected error occurred.', Severity.Error);
-            return null;
+            return this.handleUnknownExceptions(e, "createSymptom")
         }
     }
 }

@@ -107,6 +107,24 @@ class FoodDiaryApiClient {
         }
     }
 
+    private async deleteResource<T>(path: string): Promise<Result<null>> {
+        try {
+            logger.debug(`DELETE ${path}`);
+            await this.client.delete<T>(path);
+            logger.debug("resource deleted");
+            return {
+                success: true,
+                data: null
+            };
+        } catch (error) {
+            logger.error("error deleting resource:", error);
+            return {
+                success: false,
+                error: this.createExternalApiException(error)
+            };
+        }
+    }
+
     async getDiary(page: number, pageSize: number = 10): Promise<Result<GetDiaryListResponse>> {
         return this.getResource("/api/diary/", { page_size: pageSize, page });
     }
@@ -133,6 +151,10 @@ class FoodDiaryApiClient {
 
     async updateOccurrence(id: number, body: CreateSymptomOccurrenceRequest): Promise<Result<CreateSymptomOccurrenceResponse>> {
         return this.updateResource(`/api/occurrence/${id}/`, body);
+    }
+
+    async deleteOccurrence(id: number): Promise<Result<null>> {
+        return this.deleteResource(`/api/occurrence/${id}/`);
     }
 }
 

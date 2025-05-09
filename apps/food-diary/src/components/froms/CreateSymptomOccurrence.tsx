@@ -7,17 +7,18 @@ import DiaryEntry from "../../services/api/diary/models/DiaryEntry.ts";
 
 interface CreateSymptomOccurrenceProps {
     onClose: () => void;
-    onInsert: () => void;
+    onAction: () => void;
     symptomService: ISymptomService;
     diaryEntry?: DiaryEntry;
 }
 
 const CreateSymptomOccurrence: React.FC<CreateSymptomOccurrenceProps> = ({
                                                                              onClose,
-                                                                             onInsert,
+                                                                             onAction,
                                                                              symptomService,
                                                                              diaryEntry
                                                                          }) => {
+
         const [symptomName, setSymptomName] = useState("");
         const [symptomId, setSymptomId] = useState(0);
         const [date, setDate] = useState("");
@@ -58,7 +59,19 @@ const CreateSymptomOccurrence: React.FC<CreateSymptomOccurrenceProps> = ({
                 await symptomService.createSymptomOccurrence({ symptom_id: id, date });
             }
 
-            onInsert();
+            onAction();
+            onClose();
+        };
+
+        const deleteEntry = async (event: React.FormEvent) => {
+            event.preventDefault();
+            setSymptomName("");
+
+            if (diaryEntry) {
+                await symptomService.deleteSymptomOccurrence(diaryEntry.id);
+            }
+
+            onAction();
             onClose();
         };
 
@@ -121,10 +134,19 @@ const CreateSymptomOccurrence: React.FC<CreateSymptomOccurrenceProps> = ({
                         required
                     />
                 </div>
-                <button className={`${styles.form__submitButton} is-align-self-flex-end fd-button fd-button--primary`}
+                <div className="is-flex is-justify-content-space-between">
+                {diaryEntry && (
+                    <button className={`${styles.form__deleteButton} fd-button fd-button--primary`}
+                            type="button"
+                            onClick={deleteEntry}>
+                        Löschen
+                    </button>
+                )}
+                <button className={`${styles.form__submitButton} fd-button fd-button--primary`}
                         type="submit">
                     {diaryEntry ? "Aktualisieren" : "Hinzufügen"}
                 </button>
+                </div>
             </form>
         );
     }

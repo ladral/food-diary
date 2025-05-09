@@ -9,6 +9,7 @@ interface ISymptomService {
     searchSymptom(symptomName: string): Promise<GetSymptomsResponse | null>;
     createSymptomOccurrence(body: CreateSymptomOccurrenceRequest): Promise<CreateSymptomOccurrenceResponse | null>;
     createSymptom(body: CreateSymptomRequest): Promise<CreateSymptomResponse | null>;
+    deleteSymptomOccurrence(id: number): any;
 }
 
 export default ISymptomService;

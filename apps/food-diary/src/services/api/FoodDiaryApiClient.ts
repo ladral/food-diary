@@ -63,7 +63,7 @@ class FoodDiaryApiClient {
                 data: response.data
             };
         } catch (error) {
-            logger.error("Error fetching data:", error);
+            logger.error("error fetching data:", error);
             return {
                 success: false,
                 error: this.createExternalApiException(error)
@@ -81,7 +81,25 @@ class FoodDiaryApiClient {
                 data: response.data
             };
         } catch (error) {
-            logger.error("Error creating resource:", error);
+            logger.error("error creating resource:", error);
+            return {
+                success: false,
+                error: this.createExternalApiException(error)
+            };
+        }
+    }
+
+    private async updateResource<T>(path: string, body = {}): Promise<Result<T>> {
+        try {
+            logger.debug(`PUT ${path}`, body);
+            const response = await this.client.put<T>(path, body);
+            logger.debug("resource updated: ", response.data);
+            return {
+                success: true,
+                data: response.data
+            };
+        } catch (error) {
+            logger.error("error updating resource:", error);
             return {
                 success: false,
                 error: this.createExternalApiException(error)
@@ -98,11 +116,11 @@ class FoodDiaryApiClient {
     }
 
     async getFoods(foodName: string): Promise<Result<GetFoodsResponse>> {
-        return this.getResource("/api/food", { search: foodName });
+        return this.getResource("/api/food/", { search: foodName });
     }
 
     async getSymptoms(symptomName: string): Promise<Result<GetSymptomsResponse>> {
-        return this.getResource("/api/symptoms", { search: symptomName });
+        return this.getResource("/api/symptoms/", { search: symptomName });
     }
 
     async createOccurrence(body: CreateSymptomOccurrenceRequest): Promise<Result<CreateSymptomOccurrenceResponse>> {
@@ -111,6 +129,10 @@ class FoodDiaryApiClient {
 
     async createSymptom(body: CreateSymptomRequest): Promise<Result<CreateSymptomResponse>> {
         return this.createResource("/api/symptoms/", body);
+    }
+
+    async updateOccurrence(id: number, body: CreateSymptomOccurrenceRequest): Promise<Result<CreateSymptomOccurrenceResponse>> {
+        return this.updateResource(`/api/occurrence/${id}/`, body);
     }
 }
 

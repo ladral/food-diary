@@ -69,6 +69,7 @@ describe('CreateSymptomOccurrence Component', () => {
     });
 
     it('calls onClose and onInsert after form submission', async () => {
+        // arrange
         const onClose = vi.fn();
         const onInsert = vi.fn();
         mockSearchSymptom.mockResolvedValueOnce({ count: 1, results: [{ id: 1, name: 'Kopfschmerzen' }] });
@@ -78,13 +79,14 @@ describe('CreateSymptomOccurrence Component', () => {
 
         const input = document.querySelector(`.${styles.autocomplete__input} input:first-of-type`) as HTMLInputElement;
         fireEvent.change(input, { target: { value: 'Kopfschmerzen' } });
-
         const inputDate = document.querySelector(`.${styles.form__inputDate}`) as HTMLInputElement;
         fireEvent.change(inputDate, { target: { value: '2025-05-09' } });
 
+        // act
         const submitButton = document.querySelector(`.${styles.form__submitButton}`) as HTMLButtonElement;
         fireEvent.click(submitButton);
 
+        // assert
         await waitFor(() => {
             expect(onInsert).toHaveBeenCalled();
             expect(onClose).toHaveBeenCalled();

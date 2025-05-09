@@ -33,10 +33,10 @@ class FoodDiaryApiClient {
         this.client = instance;
     }
 
-    private createExternalApiException(error: unknown): ApiException {
+    private createApiException(error: unknown): ApiException {
         if (axios.isAxiosError(error)) {
             const axiosError = error as AxiosError;
-            return {
+            const apiException = {
                 statusCode: axiosError.response?.status || 500,
                 message: axiosError.message,
                 path: axiosError.config?.url,
@@ -44,6 +44,13 @@ class FoodDiaryApiClient {
                 details: JSON.stringify(axiosError.response?.data),
                 errorCode: axiosError.code
             };
+
+            logger.error(
+                `API Error: ${apiException.message} ` +
+                `(Status Code: ${apiException.statusCode}, Error Code: ${apiException.errorCode})`
+            );
+
+            return apiException;
         }
 
         return {
@@ -66,7 +73,7 @@ class FoodDiaryApiClient {
             logger.error("error fetching data:", error);
             return {
                 success: false,
-                error: this.createExternalApiException(error)
+                error: this.createApiException(error)
             };
         }
     }
@@ -84,7 +91,7 @@ class FoodDiaryApiClient {
             logger.error("error creating resource:", error);
             return {
                 success: false,
-                error: this.createExternalApiException(error)
+                error: this.createApiException(error)
             };
         }
     }
@@ -102,7 +109,7 @@ class FoodDiaryApiClient {
             logger.error("error updating resource:", error);
             return {
                 success: false,
-                error: this.createExternalApiException(error)
+                error: this.createApiException(error)
             };
         }
     }
@@ -120,7 +127,7 @@ class FoodDiaryApiClient {
             logger.error("error deleting resource:", error);
             return {
                 success: false,
-                error: this.createExternalApiException(error)
+                error: this.createApiException(error)
             };
         }
     }

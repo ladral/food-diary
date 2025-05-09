@@ -25,10 +25,6 @@ class FoodService implements IFoodService {
             } else {
                 logger.error("could not search food")
                 const error = result.error;
-                logger.error(
-                    `API Error: ${error.message} ` +
-                    `(Status Code: ${error.statusCode}, Error Code: ${error.errorCode})`
-                );
                 this.addAlert(`Error: ${error.message}`, Severity.Error);
                 return null;
             }
@@ -50,10 +46,6 @@ class FoodService implements IFoodService {
             } else {
                 logger.error("could not create food intake")
                 const error = result.error;
-                logger.error(
-                    `API Error: ${error.message} ` +
-                    `(Status Code: ${error.statusCode}, Error Code: ${error.errorCode})`
-                );
                 this.addAlert(`Error: ${error.message}`, Severity.Error);
                 return null;
             }

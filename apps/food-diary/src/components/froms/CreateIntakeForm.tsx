@@ -1,21 +1,19 @@
 import React, { useState } from "react";
 import styles from "./CreateIntakeForm.module.scss";
-import FoodService from "../../services/api/food/FoodService.ts";
-import { useAlert } from "../../context/AlertContext.tsx";
 import { Autocomplete, TextField } from "@mui/material";
 import GetFoodResponse from "../../services/api/food/models/GetFoodResponse.ts";
+import IFoodService from "../../services/api/food/IFoodService.ts";
 
 interface CreateIntakeFormProps {
     onClose: () => void;
     onInsert: () => void;
+    foodService: IFoodService;
 }
 
-const CreateIntakeForm: React.FC<CreateIntakeFormProps> = ({ onClose, onInsert }) => {
+const CreateIntakeForm: React.FC<CreateIntakeFormProps> = ({ onClose, onInsert, foodService }) => {
     const [foodName, setFoodName] = useState("");
     const [foodId, setFoodId] = useState(0);
     const [date, setDate] = useState("");
-    const { addAlert } = useAlert();
-    const foodService = new FoodService(addAlert);
     const [foods, setFoods] = useState<GetFoodResponse[]>([]);
 
     const handleSubmit = async (e: React.FormEvent) => {

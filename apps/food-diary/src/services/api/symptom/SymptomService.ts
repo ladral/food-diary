@@ -6,8 +6,9 @@ import CreateSymptomOccurrenceRequest from "./models/CreateSymptomOccurrenceRequ
 import CreateSymptomOccurrenceResponse from "./models/CreateSymptomOccurrenceResponse.ts";
 import CreateSymptomRequest from "./models/CreateSymptomRequest.ts";
 import CreateSymptomResponse from "./models/CreateSymptomResponse.ts";
+import ISymptomService from "./ISymptomService.ts";
 
-class SymptomService {
+class SymptomService implements ISymptomService{
     private apiClient: FoodDiaryApiClient;
     private addAlert: (message: string, severity: Severity) => void;
 
@@ -40,7 +41,7 @@ class SymptomService {
         }
     }
 
-    async createSymptomOccurence(body: CreateSymptomOccurrenceRequest): Promise<CreateSymptomOccurrenceResponse | null> {
+    async createSymptomOccurrence(body: CreateSymptomOccurrenceRequest): Promise<CreateSymptomOccurrenceResponse | null> {
         try {
             const result = await this.apiClient.createOccurrence(body);
 

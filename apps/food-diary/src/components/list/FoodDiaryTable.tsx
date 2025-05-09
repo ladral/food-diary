@@ -12,6 +12,8 @@ import CreateIntakeForm from "../froms/CreateIntakeForm.tsx";
 import FormType from "../froms/FormType.ts";
 import CreateSymptomOccurrence from "../froms/CreateSymptomOccurrence.tsx";
 import { useAlert } from "../../context/AlertContext.tsx";
+import SymptomService from "../../services/api/symptom/SymptomService.ts";
+import FoodService from "../../services/api/food/FoodService.ts";
 
 
 const FoodDiaryTable = () => {
@@ -23,6 +25,8 @@ const FoodDiaryTable = () => {
     const [formType, setFormType] = useState<FormType | null>(null);
     const { addAlert } = useAlert();
     const diaryService = new DiaryService(addAlert);
+    const symptomService = new SymptomService(addAlert);
+    const foodService = new FoodService(addAlert);
 
     const columns = [
         { label: "Datum", accessor: "date" },
@@ -92,9 +96,9 @@ const FoodDiaryTable = () => {
     const renderForm = () => {
         switch (formType) {
             case FormType.CreateFoodIntake:
-                return <CreateIntakeForm onClose={closeModal} onInsert={onInsertEntry} />;
+                return <CreateIntakeForm onClose={closeModal} onInsert={onInsertEntry} foodService={foodService}/>;
             case FormType.CreateSymptomOccurrence:
-                return <CreateSymptomOccurrence onClose={closeModal} onInsert={onInsertEntry} />
+                return <CreateSymptomOccurrence onClose={closeModal} onInsert={onInsertEntry} symptomService={symptomService} />
             default:
                 return null;
         }

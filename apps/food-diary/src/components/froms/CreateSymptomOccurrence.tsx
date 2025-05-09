@@ -1,21 +1,19 @@
 import React, { useState } from "react";
 import styles from "./CreateSymptomOccurrence.module.scss";
-import { useAlert } from "../../context/AlertContext.tsx";
-import SymptomService from "../../services/api/symptom/SymptomService.ts";
 import GetSymptomResponse from "../../services/api/symptom/models/GetSymptomResponse.ts";
 import { Autocomplete, TextField } from "@mui/material";
+import ISymptomService from "../../services/api/symptom/ISymptomService.ts";
 
 interface CreateSymptomOccurrenceProps {
     onClose: () => void;
     onInsert: () => void;
+    symptomService: ISymptomService;
 }
 
-const CreateSymptomOccurrence: React.FC<CreateSymptomOccurrenceProps> = ({ onClose, onInsert }) => {
+const CreateSymptomOccurrence: React.FC<CreateSymptomOccurrenceProps> = ({ onClose, onInsert, symptomService }) => {
     const [symptomName, setSymptomName] = useState("");
     const [symptomId, setSymptomId] = useState(0);
     const [date, setDate] = useState("");
-    const { addAlert } = useAlert();
-    const symptomService = new SymptomService(addAlert);
     const [symptoms, setSymptoms] = useState<GetSymptomResponse[]>([]);
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -26,7 +24,7 @@ const CreateSymptomOccurrence: React.FC<CreateSymptomOccurrenceProps> = ({ onClo
             id = await addSymptom(symptomName);
         }
 
-        await symptomService.createSymptomOccurence({ symptom_id: id, date });
+        await symptomService.createSymptomOccurrence({ symptom_id: id, date });
         onInsert();
         onClose();
     };

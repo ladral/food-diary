@@ -5,6 +5,7 @@ import logger from "../../logging/logger.ts";
 import { Severity } from "../../../models/alerts/Severity.ts";
 import GetFoodsResponse from "./models/GetFoodsResponse.ts";
 import IFoodService from "./IFoodService.ts";
+import { ApiException } from "../../../models/exceptions/ApiException.ts";
 
 
 class FoodService implements IFoodService {
@@ -16,6 +17,11 @@ class FoodService implements IFoodService {
         this.addAlert = addAlert;
     }
 
+    private handleApiException(error: ApiException): null {
+        this.addAlert(`Error: ${error.message}`, Severity.Error);
+        return null;
+    }
+
     async searchFood(foodName: string): Promise<GetFoodsResponse | null> {
         try {
             const result = await this.apiClient.getFoods(foodName);
@@ -24,9 +30,7 @@ class FoodService implements IFoodService {
                 return result.data;
             } else {
                 logger.error("could not search food")
-                const error = result.error;
-                this.addAlert(`Error: ${error.message}`, Severity.Error);
-                return null;
+                return this.handleApiException(result.error)
             }
         } catch (e) {
             logger.error('Unexpected error in searchFood:', e);
@@ -45,9 +49,7 @@ class FoodService implements IFoodService {
                 return result.data;
             } else {
                 logger.error("could not create food intake")
-                const error = result.error;
-                this.addAlert(`Error: ${error.message}`, Severity.Error);
-                return null;
+                return this.handleApiException(result.error)
             }
         } catch (e) {
             logger.error('Unexpected error in createFoodIntake:', e);

@@ -2,6 +2,7 @@ import FoodDiaryApiClient from "../FoodDiaryApiClient.ts";
 import logger from "../../logging/logger.ts";
 import GetDiaryListResponse from "./models/GetDiaryListResponse.ts";
 import { Severity } from "../../../models/alerts/Severity.ts";
+import { ApiException } from "../../../models/exceptions/ApiException.ts";
 
 class DiaryService {
     private apiClient: FoodDiaryApiClient;
@@ -14,6 +15,11 @@ class DiaryService {
         this.addAlert = addAlert;
     }
 
+    private handleApiException(error: ApiException): null {
+        this.addAlert(`Error: ${error.message}`, Severity.Error);
+        return null;
+    }
+
     async getDiaryList(page: number): Promise<GetDiaryListResponse | null> {
         try {
             const result = await this.apiClient.getDiary(page, this.pageSize);
@@ -22,9 +28,8 @@ class DiaryService {
                 result.data.totalPages = Math.ceil(result.data.count / this.pageSize)
                 return result.data;
             } else {
-                const error = result.error;
-                this.addAlert(`Error: ${error.message}`, Severity.Error);
-                return null;
+                logger.error("could not get diary list")
+                return this.handleApiException(result.error)
             }
         } catch (e) {
             logger.error('Unexpected error in getDiaryList:', e);

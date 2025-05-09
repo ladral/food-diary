@@ -13,7 +13,7 @@ class SymptomService implements ISymptomService{
     private addAlert: (message: string, severity: Severity) => void;
 
 
-    constructor(addAlert: (messgae: string, severity: Severity) => void) {
+    constructor(addAlert: (message: string, severity: Severity) => void) {
         this.apiClient = new FoodDiaryApiClient();
         this.addAlert = addAlert;
     }
@@ -49,7 +49,31 @@ class SymptomService implements ISymptomService{
                 this.addAlert('Eintrag erfolgreich hinzugefügt', Severity.Success);
                 return result.data;
             } else {
-                logger.error("could not create food intake")
+                logger.error("could not create symptomOccurrence")
+                const error = result.error;
+                logger.error(
+                    `API Error: ${error.message} ` +
+                    `(Status Code: ${error.statusCode}, Error Code: ${error.errorCode})`
+                );
+                this.addAlert(`Error: ${error.message}`, Severity.Error);
+                return null;
+            }
+        } catch (e) {
+            logger.error('Unexpected error in createSymptomOccurrence:', e);
+            this.addAlert('An unexpected error occurred.', Severity.Error);
+            return null;
+        }
+    }
+
+    async updateSymptomOccurrence(id: number, body: CreateSymptomOccurrenceRequest): Promise<CreateSymptomOccurrenceResponse | null> {
+        try {
+            const result = await this.apiClient.updateOccurrence(id, body);
+
+            if (result.success) {
+                this.addAlert('Eintrag erfolgreich aktualisiert', Severity.Success);
+                return result.data;
+            } else {
+                logger.error("could not update symptom occurrence")
                 const error = result.error;
                 logger.error(
                     `API Error: ${error.message} ` +
@@ -64,6 +88,7 @@ class SymptomService implements ISymptomService{
             return null;
         }
     }
+
 
     async createSymptom(body: CreateSymptomRequest): Promise<CreateSymptomResponse | null> {
         try {

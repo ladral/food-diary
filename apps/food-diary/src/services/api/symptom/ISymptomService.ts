@@ -5,6 +5,7 @@ import CreateSymptomRequest from "./models/CreateSymptomRequest";
 import CreateSymptomResponse from "./models/CreateSymptomResponse";
 
 interface ISymptomService {
+    updateSymptomOccurrence(id: number, body: CreateSymptomOccurrenceRequest): Promise<CreateSymptomOccurrenceResponse | null>;
     searchSymptom(symptomName: string): Promise<GetSymptomsResponse | null>;
     createSymptomOccurrence(body: CreateSymptomOccurrenceRequest): Promise<CreateSymptomOccurrenceResponse | null>;
     createSymptom(body: CreateSymptomRequest): Promise<CreateSymptomResponse | null>;

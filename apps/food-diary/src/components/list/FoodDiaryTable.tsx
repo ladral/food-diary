@@ -19,9 +19,10 @@ import FoodService from "../../services/api/food/FoodService.ts";
 const FoodDiaryTable = () => {
     const { authenticated } = useKeycloak();
     const [diaryEntries, setDiaryEntries] = useState<DiaryEntry[]>([]);
+    const [selectedDiaryEntry, setSelectedDiaryEntry] = useState<DiaryEntry>();
     const [currentPage, setCurrentPage] = useState<number>(1);
     const [totalPages, setTotalPages] = useState<number>(0);
-    const [isModalOpen, setModalOpen] = useState(false)
+    const [isModalOpen, setModalOpen] = useState(false);
     const [formType, setFormType] = useState<FormType | null>(null);
     const { addAlert } = useAlert();
     const diaryService = new DiaryService(addAlert);
@@ -55,15 +56,7 @@ const FoodDiaryTable = () => {
     }, [currentPage, authenticated]);
 
     const onInsertEntry = () => {
-        fetchDiaryEntries(currentPage)
-    }
-
-    const onDeleteEntry = (id: number) => {
-        logger.debug("delete entry " + id);
-    };
-
-    const onUpdateEntry = (id: number) => {
-        logger.debug("update entry " + id);
+        fetchDiaryEntries(currentPage);
     };
 
     const openModal = (type: FormType) => {
@@ -80,12 +73,24 @@ const FoodDiaryTable = () => {
 
     const onAddFoodOptionSelected = () => {
         logger.debug("add food option selected");
-        openModal(FormType.CreateFoodIntake)
+        openModal(FormType.CreateFoodIntake);
     };
 
     const onAddSymptomOptionSelected = () => {
         logger.debug("add symptom option selected");
-        openModal(FormType.CreateSymptomOccurrence)
+        openModal(FormType.CreateSymptomOccurrence);
+    };
+
+    const onEditFoodDiaryEntry = (entry: DiaryEntry) => {
+        logger.debug(`edit food diary entry with id ${entry.id}`);
+        setSelectedDiaryEntry(entry);
+
+        if (entry.type === "food") {
+            openModal(FormType.EditFoodIntake);
+
+        } else {
+            openModal(FormType.EditSymptomOccurrence);
+        }
     };
 
     const options = [
@@ -96,9 +101,13 @@ const FoodDiaryTable = () => {
     const renderForm = () => {
         switch (formType) {
             case FormType.CreateFoodIntake:
-                return <CreateIntakeForm onClose={closeModal} onInsert={onInsertEntry} foodService={foodService}/>;
+                return <CreateIntakeForm onClose={closeModal} onInsert={onInsertEntry} foodService={foodService} />;
             case FormType.CreateSymptomOccurrence:
-                return <CreateSymptomOccurrence onClose={closeModal} onInsert={onInsertEntry} symptomService={symptomService} />
+                return <CreateSymptomOccurrence onClose={closeModal} onInsert={onInsertEntry} symptomService={symptomService} />;
+            case FormType.EditFoodIntake:
+                return;
+            case FormType.EditSymptomOccurrence:
+                return <CreateSymptomOccurrence onClose={closeModal} onInsert={onInsertEntry} symptomService={symptomService} diaryEntry={selectedDiaryEntry}/>;
             default:
                 return null;
         }
@@ -110,9 +119,7 @@ const FoodDiaryTable = () => {
                 className={styles.foodDiaryTable__list}
                 columns={columns}
                 data={diaryEntries}
-                onDelete={onDeleteEntry}
-                onUpdate={onUpdateEntry}
-                idProperty="id"
+                onEdit={onEditFoodDiaryEntry}
             />
             <Pagination
                 currentPage={currentPage}

@@ -27,10 +27,6 @@ class SymptomService implements ISymptomService{
             } else {
                 logger.error("could not search symptoms")
                 const error = result.error;
-                logger.error(
-                    `API Error: ${error.message} ` +
-                    `(Status Code: ${error.statusCode}, Error Code: ${error.errorCode})`
-                );
                 this.addAlert(`Error: ${error.message}`, Severity.Error);
                 return null;
             }
@@ -51,10 +47,6 @@ class SymptomService implements ISymptomService{
             } else {
                 logger.error("could not create symptomOccurrence")
                 const error = result.error;
-                logger.error(
-                    `API Error: ${error.message} ` +
-                    `(Status Code: ${error.statusCode}, Error Code: ${error.errorCode})`
-                );
                 this.addAlert(`Error: ${error.message}`, Severity.Error);
                 return null;
             }
@@ -75,10 +67,6 @@ class SymptomService implements ISymptomService{
             } else {
                 logger.error("could not update symptom occurrence")
                 const error = result.error;
-                logger.error(
-                    `API Error: ${error.message} ` +
-                    `(Status Code: ${error.statusCode}, Error Code: ${error.errorCode})`
-                );
                 this.addAlert(`Error: ${error.message}`, Severity.Error);
                 return null;
             }
@@ -98,10 +86,6 @@ class SymptomService implements ISymptomService{
             } else {
                 logger.error("could not delete symptom occurrence")
                 const error = result.error;
-                logger.error(
-                    `API Error: ${error.message} ` +
-                    `(Status Code: ${error.statusCode}, Error Code: ${error.errorCode})`
-                );
                 this.addAlert(`Error: ${error.message}`, Severity.Error);
             }
         } catch (e) {
@@ -121,10 +105,6 @@ class SymptomService implements ISymptomService{
             } else {
                 logger.error("could not create Symptom")
                 const error = result.error;
-                logger.error(
-                    `API Error: ${error.message} ` +
-                    `(Status Code: ${error.statusCode}, Error Code: ${error.errorCode})`
-                );
                 this.addAlert(`Error: ${error.message}`, Severity.Error);
                 return null;
             }

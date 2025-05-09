@@ -23,10 +23,6 @@ class DiaryService {
                 return result.data;
             } else {
                 const error = result.error;
-                logger.error(
-                    `API Error: ${error.message} ` +
-                    `(Status Code: ${error.statusCode}, Error Code: ${error.errorCode})`
-                );
                 this.addAlert(`Error: ${error.message}`, Severity.Error);
                 return null;
             }

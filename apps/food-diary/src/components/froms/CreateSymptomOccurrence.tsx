@@ -1,29 +1,44 @@
 import React, { useState } from "react";
 import styles from "./CreateSymptomOccurrence.module.scss";
-import { useAlert } from "../../context/AlertContext.tsx";
-import SymptomService from "../../services/api/symptom/SymptomService.ts";
 import GetSymptomResponse from "../../services/api/symptom/models/GetSymptomResponse.ts";
 import { Autocomplete, TextField } from "@mui/material";
+import ISymptomService from "../../services/api/symptom/ISymptomService.ts";
 
 interface CreateSymptomOccurrenceProps {
     onClose: () => void;
     onInsert: () => void;
+    symptomService: ISymptomService;
 }
 
-const CreateSymptomOccurrence: React.FC<CreateSymptomOccurrenceProps> = ({ onClose, onInsert }) => {
+const CreateSymptomOccurrence: React.FC<CreateSymptomOccurrenceProps> = ({ onClose, onInsert, symptomService }) => {
     const [symptomName, setSymptomName] = useState("");
     const [symptomId, setSymptomId] = useState(0);
     const [date, setDate] = useState("");
-    const { addAlert } = useAlert();
-    const symptomService = new SymptomService(addAlert);
-    const [symptoms, setSymptoms] = useState<GetSymptomResponse[]>([])
+    const [symptoms, setSymptoms] = useState<GetSymptomResponse[]>([]);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        setSymptomName("")
-        await symptomService.createSymptomOccurence({symptom_id: symptomId, date})
+        setSymptomName("");
+        let id = symptomId;
+        if (id === 0) {
+            id = await addSymptom(symptomName);
+        }
+
+        await symptomService.createSymptomOccurrence({ symptom_id: id, date });
         onInsert();
         onClose();
+    };
+
+    const addSymptom = async (name: string): Promise<number> => {
+        const symptom = await symptomService.createSymptom({ name: name });
+
+        if (symptom && symptom.id) {
+            setSymptomId(symptom.id);
+            setSymptomName(symptom.name);
+            return symptom.id;
+        }
+
+        return 0;
     };
 
     const handleSearch = async (symptomSearchString: string) => {
@@ -71,7 +86,8 @@ const CreateSymptomOccurrence: React.FC<CreateSymptomOccurrenceProps> = ({ onClo
                     required
                 />
             </div>
-            <button className={`${styles.form__submitButton} is-align-self-flex-end fd-button fd-button--primary`} type="submit">
+            <button className={`${styles.form__submitButton} is-align-self-flex-end fd-button fd-button--primary`}
+                    type="submit">
                 Hinzufügen
             </button>
         </form>

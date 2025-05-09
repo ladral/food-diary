@@ -4,9 +4,10 @@ import CreateFoodIntakeRequest from "./models/CreateFoodIntakeRequest.ts";
 import logger from "../../logging/logger.ts";
 import { Severity } from "../../../models/alerts/Severity.ts";
 import GetFoodsResponse from "./models/GetFoodsResponse.ts";
+import IFoodService from "./IFoodService.ts";
 
 
-class FoodService {
+class FoodService implements IFoodService {
     private apiClient: FoodDiaryApiClient;
     private addAlert: (message: string, severity: Severity) => void;
 

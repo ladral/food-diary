@@ -7,7 +7,7 @@ interface AlertContextType {
     addAlert: (message: string, severity: Severity) => void;
 }
 
-const AlertContext = createContext<AlertContextType | undefined>(undefined);
+export const AlertContext = createContext<AlertContextType | undefined>(undefined);
 
 interface AlertProviderProps {
     children: React.ReactNode;

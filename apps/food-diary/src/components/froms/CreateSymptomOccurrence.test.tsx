@@ -14,12 +14,14 @@ const mockSymptomService : ISymptomService = {
     createSymptom: vi.fn().mockResolvedValue({ id: 1, name: 'Headache' }),
     searchSymptom: vi.fn().mockResolvedValue({ count: 1, results: [{ id: 1, name: 'Headache' }] }),
     createSymptomOccurrence: vi.fn().mockResolvedValue({}),
+    updateSymptomOccurrence: vi.fn().mockResolvedValue({}),
+    deleteSymptomOccurrence: vi.fn().mockResolvedValue(null)
 };
 
 const renderComponent = (onClose = vi.fn(), onInsert = vi.fn()) => {
     return render(
         <AlertContext.Provider value={{ addAlert: mockAddAlert }}>
-            <CreateSymptomOccurrence onClose={onClose} onInsert={onInsert} symptomService={mockSymptomService} />
+            <CreateSymptomOccurrence onClose={onClose} onAction={onInsert} symptomService={mockSymptomService} />
         </AlertContext.Provider>
     );
 };

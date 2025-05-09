@@ -89,6 +89,27 @@ class SymptomService implements ISymptomService{
         }
     }
 
+    async deleteSymptomOccurrence(id: number): Promise<void> {
+        try {
+            const result = await this.apiClient.deleteOccurrence(id);
+
+            if (result.success) {
+                this.addAlert('Eintrag erfolgreich gelöscht', Severity.Info);
+            } else {
+                logger.error("could not delete symptom occurrence")
+                const error = result.error;
+                logger.error(
+                    `API Error: ${error.message} ` +
+                    `(Status Code: ${error.statusCode}, Error Code: ${error.errorCode})`
+                );
+                this.addAlert(`Error: ${error.message}`, Severity.Error);
+            }
+        } catch (e) {
+            logger.error('Unexpected error in createFoodIntake:', e);
+            this.addAlert('An unexpected error occurred.', Severity.Error);
+        }
+    }
+
 
     async createSymptom(body: CreateSymptomRequest): Promise<CreateSymptomResponse | null> {
         try {

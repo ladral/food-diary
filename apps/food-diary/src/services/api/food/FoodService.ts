@@ -22,6 +22,12 @@ class FoodService implements IFoodService {
         return null;
     }
 
+    private handleUnknownExceptions(e: any, source: string): null {
+        logger.error(`Unexpected error in ${source}:`, e);
+        this.addAlert('An unexpected error occurred.', Severity.Error);
+        return null;
+    }
+
     async searchFood(foodName: string): Promise<GetFoodsResponse | null> {
         try {
             const result = await this.apiClient.getFoods(foodName);
@@ -33,9 +39,7 @@ class FoodService implements IFoodService {
                 return this.handleApiException(result.error)
             }
         } catch (e) {
-            logger.error('Unexpected error in searchFood:', e);
-            this.addAlert('An unexpected error occurred.', Severity.Error);
-            return null;
+            return this.handleUnknownExceptions(e, "searchFood")
         }
     }
 
@@ -52,9 +56,7 @@ class FoodService implements IFoodService {
                 return this.handleApiException(result.error)
             }
         } catch (e) {
-            logger.error('Unexpected error in createFoodIntake:', e);
-            this.addAlert('An unexpected error occurred.', Severity.Error);
-            return null;
+            return this.handleUnknownExceptions(e, "createFoodIntake")
         }
     }
 }

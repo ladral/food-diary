@@ -20,6 +20,12 @@ class DiaryService {
         return null;
     }
 
+    private handleUnknownExceptions(e: any, source: string): null {
+        logger.error(`Unexpected error in ${source}:`, e);
+        this.addAlert('An unexpected error occurred.', Severity.Error);
+        return null;
+    }
+
     async getDiaryList(page: number): Promise<GetDiaryListResponse | null> {
         try {
             const result = await this.apiClient.getDiary(page, this.pageSize);
@@ -32,9 +38,7 @@ class DiaryService {
                 return this.handleApiException(result.error)
             }
         } catch (e) {
-            logger.error('Unexpected error in getDiaryList:', e);
-            this.addAlert('An unexpected error occurred.', Severity.Error);
-            return null;
+            return this.handleUnknownExceptions(e, "y")
         }
     }
 }

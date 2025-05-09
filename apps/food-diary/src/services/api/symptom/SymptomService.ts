@@ -4,8 +4,11 @@ import logger from "../../logging/logger.ts";
 import GetSymptomsResponse from "./models/GetSymptomsResponse.ts";
 import CreateSymptomOccurrenceRequest from "./models/CreateSymptomOccurrenceRequest.ts";
 import CreateSymptomOccurrenceResponse from "./models/CreateSymptomOccurrenceResponse.ts";
+import CreateSymptomRequest from "./models/CreateSymptomRequest.ts";
+import CreateSymptomResponse from "./models/CreateSymptomResponse.ts";
+import ISymptomService from "./ISymptomService.ts";
 
-class SymptomService {
+class SymptomService implements ISymptomService{
     private apiClient: FoodDiaryApiClient;
     private addAlert: (message: string, severity: Severity) => void;
 
@@ -38,7 +41,7 @@ class SymptomService {
         }
     }
 
-    async createSymptomOccurence(body: CreateSymptomOccurrenceRequest): Promise<CreateSymptomOccurrenceResponse | null> {
+    async createSymptomOccurrence(body: CreateSymptomOccurrenceRequest): Promise<CreateSymptomOccurrenceResponse | null> {
         try {
             const result = await this.apiClient.createOccurrence(body);
 
@@ -57,6 +60,30 @@ class SymptomService {
             }
         } catch (e) {
             logger.error('Unexpected error in createFoodIntake:', e);
+            this.addAlert('An unexpected error occurred.', Severity.Error);
+            return null;
+        }
+    }
+
+    async createSymptom(body: CreateSymptomRequest): Promise<CreateSymptomResponse | null> {
+        try {
+            const result = await this.apiClient.createSymptom(body);
+
+            if (result.success) {
+                logger.debug(`symptom with ID ${result.data.id} successfully created`)
+                return result.data;
+            } else {
+                logger.error("could not create Symptom")
+                const error = result.error;
+                logger.error(
+                    `API Error: ${error.message} ` +
+                    `(Status Code: ${error.statusCode}, Error Code: ${error.errorCode})`
+                );
+                this.addAlert(`Error: ${error.message}`, Severity.Error);
+                return null;
+            }
+        } catch (e) {
+            logger.error('Unexpected error in createSymptom:', e);
             this.addAlert('An unexpected error occurred.', Severity.Error);
             return null;
         }

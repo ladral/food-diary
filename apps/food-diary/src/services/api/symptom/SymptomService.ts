@@ -7,6 +7,7 @@ import CreateSymptomOccurrenceResponse from "./models/CreateSymptomOccurrenceRes
 import CreateSymptomRequest from "./models/CreateSymptomRequest.ts";
 import CreateSymptomResponse from "./models/CreateSymptomResponse.ts";
 import ISymptomService from "./ISymptomService.ts";
+import { ApiException } from "../../../models/exceptions/ApiException.ts";
 
 class SymptomService implements ISymptomService{
     private apiClient: FoodDiaryApiClient;
@@ -18,6 +19,11 @@ class SymptomService implements ISymptomService{
         this.addAlert = addAlert;
     }
 
+    private handleApiException(error: ApiException): null {
+        this.addAlert(`Error: ${error.message}`, Severity.Error);
+        return null;
+    }
+
     async searchSymptom(symptomName: string): Promise<GetSymptomsResponse | null> {
         try {
             const result = await this.apiClient.getSymptoms(symptomName);
@@ -26,9 +32,7 @@ class SymptomService implements ISymptomService{
                 return result.data;
             } else {
                 logger.error("could not search symptoms")
-                const error = result.error;
-                this.addAlert(`Error: ${error.message}`, Severity.Error);
-                return null;
+                return this.handleApiException(result.error)
             }
         } catch (e) {
             logger.error('Unexpected error in searchSymptom:', e);
@@ -46,9 +50,7 @@ class SymptomService implements ISymptomService{
                 return result.data;
             } else {
                 logger.error("could not create symptomOccurrence")
-                const error = result.error;
-                this.addAlert(`Error: ${error.message}`, Severity.Error);
-                return null;
+                return this.handleApiException(result.error)
             }
         } catch (e) {
             logger.error('Unexpected error in createSymptomOccurrence:', e);
@@ -66,9 +68,7 @@ class SymptomService implements ISymptomService{
                 return result.data;
             } else {
                 logger.error("could not update symptom occurrence")
-                const error = result.error;
-                this.addAlert(`Error: ${error.message}`, Severity.Error);
-                return null;
+                return this.handleApiException(result.error)
             }
         } catch (e) {
             logger.error('Unexpected error in createFoodIntake:', e);
@@ -85,8 +85,7 @@ class SymptomService implements ISymptomService{
                 this.addAlert('Eintrag erfolgreich gelöscht', Severity.Info);
             } else {
                 logger.error("could not delete symptom occurrence")
-                const error = result.error;
-                this.addAlert(`Error: ${error.message}`, Severity.Error);
+                this.handleApiException(result.error)
             }
         } catch (e) {
             logger.error('Unexpected error in createFoodIntake:', e);
@@ -104,9 +103,7 @@ class SymptomService implements ISymptomService{
                 return result.data;
             } else {
                 logger.error("could not create Symptom")
-                const error = result.error;
-                this.addAlert(`Error: ${error.message}`, Severity.Error);
-                return null;
+                return this.handleApiException(result.error)
             }
         } catch (e) {
             logger.error('Unexpected error in createSymptom:', e);

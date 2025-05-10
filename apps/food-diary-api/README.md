@@ -19,6 +19,9 @@ The food diary API is a robust backend for the food diary client application.
 
 
 4. install all packages `pip install -r requirements.txt`
+5. start a local keycloak instance -> see README.md of keycloak app (optionally)
+   - if you just want to test the API locally, than there is no need to set up the keycloak locally. Just use the Django admin User to access the API.
+   - however, if you want to use the API together with the food diary client application locally, than the local keycloak setup is required 
 
 
 ## Start the application

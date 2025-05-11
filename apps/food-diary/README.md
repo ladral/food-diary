@@ -5,8 +5,8 @@ The Food Diary client application is a web-based tool designed to help users tra
 
 ## Installation guide
 1. Install npm (shipped with node, nvm recommended for node install)
-2. Install all dependencies: `npm install`
-
+2. Install all dependencies: `npm install` (consider using [socket cli](https://socket.dev/features/cli) for save npm installations -> `socket npm install`)
+3. Start a local keycloak instance -> see README.md of keycloak app
 
 ## Start the application
 1. Build & serve web application in development mode: `npm run dev`

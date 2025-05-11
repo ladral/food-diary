@@ -33,10 +33,10 @@ class FoodDiaryApiClient {
         this.client = instance;
     }
 
-    private createExternalApiException(error: unknown): ApiException {
+    private createApiException(error: unknown): ApiException {
         if (axios.isAxiosError(error)) {
             const axiosError = error as AxiosError;
-            return {
+            const apiException = {
                 statusCode: axiosError.response?.status || 500,
                 message: axiosError.message,
                 path: axiosError.config?.url,
@@ -44,6 +44,13 @@ class FoodDiaryApiClient {
                 details: JSON.stringify(axiosError.response?.data),
                 errorCode: axiosError.code
             };
+
+            logger.error(
+                `API Error: ${apiException.message} ` +
+                `(Status Code: ${apiException.statusCode}, Error Code: ${apiException.errorCode})`
+            );
+
+            return apiException;
         }
 
         return {
@@ -63,10 +70,10 @@ class FoodDiaryApiClient {
                 data: response.data
             };
         } catch (error) {
-            logger.error("Error fetching data:", error);
+            logger.error("error fetching data:", error);
             return {
                 success: false,
-                error: this.createExternalApiException(error)
+                error: this.createApiException(error)
             };
         }
     }
@@ -81,10 +88,46 @@ class FoodDiaryApiClient {
                 data: response.data
             };
         } catch (error) {
-            logger.error("Error creating resource:", error);
+            logger.error("error creating resource:", error);
             return {
                 success: false,
-                error: this.createExternalApiException(error)
+                error: this.createApiException(error)
+            };
+        }
+    }
+
+    private async updateResource<T>(path: string, body = {}): Promise<Result<T>> {
+        try {
+            logger.debug(`PUT ${path}`, body);
+            const response = await this.client.put<T>(path, body);
+            logger.debug("resource updated: ", response.data);
+            return {
+                success: true,
+                data: response.data
+            };
+        } catch (error) {
+            logger.error("error updating resource:", error);
+            return {
+                success: false,
+                error: this.createApiException(error)
+            };
+        }
+    }
+
+    private async deleteResource<T>(path: string): Promise<Result<null>> {
+        try {
+            logger.debug(`DELETE ${path}`);
+            await this.client.delete<T>(path);
+            logger.debug("resource deleted");
+            return {
+                success: true,
+                data: null
+            };
+        } catch (error) {
+            logger.error("error deleting resource:", error);
+            return {
+                success: false,
+                error: this.createApiException(error)
             };
         }
     }
@@ -98,11 +141,11 @@ class FoodDiaryApiClient {
     }
 
     async getFoods(foodName: string): Promise<Result<GetFoodsResponse>> {
-        return this.getResource("/api/food", { search: foodName });
+        return this.getResource("/api/food/", { search: foodName });
     }
 
     async getSymptoms(symptomName: string): Promise<Result<GetSymptomsResponse>> {
-        return this.getResource("/api/symptoms", { search: symptomName });
+        return this.getResource("/api/symptoms/", { search: symptomName });
     }
 
     async createOccurrence(body: CreateSymptomOccurrenceRequest): Promise<Result<CreateSymptomOccurrenceResponse>> {
@@ -111,6 +154,14 @@ class FoodDiaryApiClient {
 
     async createSymptom(body: CreateSymptomRequest): Promise<Result<CreateSymptomResponse>> {
         return this.createResource("/api/symptoms/", body);
+    }
+
+    async updateOccurrence(id: number, body: CreateSymptomOccurrenceRequest): Promise<Result<CreateSymptomOccurrenceResponse>> {
+        return this.updateResource(`/api/occurrence/${id}/`, body);
+    }
+
+    async deleteOccurrence(id: number): Promise<Result<null>> {
+        return this.deleteResource(`/api/occurrence/${id}/`);
     }
 }
 

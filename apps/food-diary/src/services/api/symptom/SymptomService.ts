@@ -45,6 +45,18 @@ class SymptomService implements ISymptomService{
         }
     }
 
+    async getSymptomId(symptomName: string): Promise<number | null> {
+        const symptomResponse = await this.searchSymptom(symptomName);
+        if (symptomResponse && symptomResponse.count > 0) {
+            const symptom = symptomResponse.results.find(symptom => symptom.name === symptomName);
+            if (symptom) {
+                return symptom.id
+            }
+        }
+        return null;
+    }
+
+
     async createSymptomOccurrence(body: CreateSymptomOccurrenceRequest): Promise<CreateSymptomOccurrenceResponse | null> {
         try {
             const result = await this.apiClient.createOccurrence(body);

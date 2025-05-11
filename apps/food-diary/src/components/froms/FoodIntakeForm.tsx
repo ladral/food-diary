@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./CreateIntakeForm.module.scss";
+import styles from "./FoodIntakeForm.module.scss";
 import { Autocomplete, TextField } from "@mui/material";
 import GetFoodResponse from "../../services/api/food/models/GetFoodResponse.ts";
 import IFoodService from "../../services/api/food/IFoodService.ts";
@@ -10,7 +10,7 @@ interface CreateIntakeFormProps {
     foodService: IFoodService;
 }
 
-const CreateIntakeForm: React.FC<CreateIntakeFormProps> = ({ onClose, onInsert, foodService }) => {
+const FoodIntakeForm: React.FC<CreateIntakeFormProps> = ({ onClose, onInsert, foodService }) => {
     const [foodName, setFoodName] = useState("");
     const [foodId, setFoodId] = useState(0);
     const [date, setDate] = useState("");
@@ -77,4 +77,4 @@ const CreateIntakeForm: React.FC<CreateIntakeFormProps> = ({ onClose, onInsert, 
     );
 };
 
-export default CreateIntakeForm;
+export default FoodIntakeForm;

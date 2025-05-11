@@ -1,8 +1,8 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { vi } from 'vitest';
-import CreateSymptomOccurrence from './CreateSymptomOccurrence';
+import SymptomOccurrence from './SymptomOccurrence.tsx';
 import { AlertContext } from '../../context/AlertContext.tsx';
-import styles from "./CreateSymptomOccurrence.module.scss";
+import styles from "./SymptomOccurrence.module.scss";
 import ISymptomService from "../../services/api/symptom/ISymptomService.ts";
 import DiaryEntry from "../../services/api/diary/models/DiaryEntry.ts";
 
@@ -12,11 +12,12 @@ const mockCreateSymptomOccurrence = vi.fn();
 const mockSearchSymptom = vi.fn();
 
 const mockSymptomService : ISymptomService = {
-    createSymptom: vi.fn().mockResolvedValue({ id: 1, name: 'Headache' }),
-    searchSymptom: vi.fn().mockResolvedValue({ count: 1, results: [{ id: 1, name: 'Kopfschmerzen' }] }),
+    createSymptom: vi.fn().mockResolvedValue({ id: 1, name: "Headache" }),
+    searchSymptom: vi.fn().mockResolvedValue({ count: 1, results: [{ id: 1, name: "Kopfschmerzen" }] }),
     createSymptomOccurrence: vi.fn().mockResolvedValue({}),
     updateSymptomOccurrence: vi.fn().mockResolvedValue({}),
-    deleteSymptomOccurrence: vi.fn().mockResolvedValue(null)
+    deleteSymptomOccurrence: vi.fn().mockResolvedValue(null),
+    getSymptomId: vi.fn().mockResolvedValue(null)
 };
 
 const renderComponent = (
@@ -26,7 +27,7 @@ const renderComponent = (
 ) => {
     return render(
         <AlertContext.Provider value={{ addAlert: mockAddAlert }}>
-            <CreateSymptomOccurrence
+            <SymptomOccurrence
                 onClose={onClose}
                 onAction={onInsert}
                 symptomService={mockSymptomService}
@@ -36,7 +37,7 @@ const renderComponent = (
     );
 };
 
-describe('CreateSymptomOccurrence Component', () => {
+describe('SymptomOccurrence Component', () => {
     beforeEach(() => {
         vi.clearAllMocks();
     });

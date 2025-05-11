@@ -34,16 +34,14 @@ const CreateSymptomOccurrence: React.FC<CreateSymptomOccurrenceProps> = ({
                 setDate(diaryEntry.date);
 
                 const fetchSymptomId = async () => {
-                    const symptomResponse = await symptomService.searchSymptom(diaryEntry.name);
-                    if (symptomResponse && symptomResponse.count > 0) {
-                        const symptom = symptomResponse.results.find(symptom => symptom.name === diaryEntry.name);
-                        if (symptom) {
-                            setSymptomId(symptom.id);
-                        }
+                    const symptomId = await symptomService.getSymptomId(diaryEntry.name);
+                    if (symptomId) {
+                            setSymptomId(symptomId);
                     } else {
                         setHasError(true);
                     }
                 };
+
                 fetchSymptomId();
             }
 

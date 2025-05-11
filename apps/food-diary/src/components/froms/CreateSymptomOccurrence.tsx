@@ -23,10 +23,13 @@ const CreateSymptomOccurrence: React.FC<CreateSymptomOccurrenceProps> = ({
         const [symptomId, setSymptomId] = useState(0);
         const [date, setDate] = useState("");
         const [symptoms, setSymptoms] = useState<GetSymptomResponse[]>([]);
+        const [hasError, setHasError] = useState(false);
 
 
         useEffect(() => {
-            if (diaryEntry) {
+            if (hasError) return;
+
+            if (diaryEntry &&! hasError) {
                 setSymptomName(diaryEntry.name);
                 setDate(diaryEntry.date);
 
@@ -37,6 +40,8 @@ const CreateSymptomOccurrence: React.FC<CreateSymptomOccurrenceProps> = ({
                         if (symptom) {
                             setSymptomId(symptom.id);
                         }
+                    } else {
+                        setHasError(true);
                     }
                 };
                 fetchSymptomId();
@@ -135,17 +140,17 @@ const CreateSymptomOccurrence: React.FC<CreateSymptomOccurrenceProps> = ({
                     />
                 </div>
                 <div className="is-flex is-justify-content-space-between">
-                {diaryEntry && (
-                    <button className={`${styles.form__deleteButton} fd-button fd-button--primary`}
-                            type="button"
-                            onClick={deleteEntry}>
-                        Löschen
+                    {diaryEntry && (
+                        <button className={`${styles.form__deleteButton} fd-button fd-button--primary`}
+                                type="button"
+                                onClick={deleteEntry}>
+                            Löschen
+                        </button>
+                    )}
+                    <button className={`${styles.form__submitButton} fd-button fd-button--primary`}
+                            type="submit">
+                        {diaryEntry ? "Aktualisieren" : "Hinzufügen"}
                     </button>
-                )}
-                <button className={`${styles.form__submitButton} fd-button fd-button--primary`}
-                        type="submit">
-                    {diaryEntry ? "Aktualisieren" : "Hinzufügen"}
-                </button>
                 </div>
             </form>
         );

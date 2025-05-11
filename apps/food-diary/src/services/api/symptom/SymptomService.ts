@@ -7,15 +7,27 @@ import CreateSymptomOccurrenceResponse from "./models/CreateSymptomOccurrenceRes
 import CreateSymptomRequest from "./models/CreateSymptomRequest.ts";
 import CreateSymptomResponse from "./models/CreateSymptomResponse.ts";
 import ISymptomService from "./ISymptomService.ts";
+import { ApiException } from "../../../models/exceptions/ApiException.ts";
 
 class SymptomService implements ISymptomService{
     private apiClient: FoodDiaryApiClient;
     private addAlert: (message: string, severity: Severity) => void;
 
 
-    constructor(addAlert: (messgae: string, severity: Severity) => void) {
+    constructor(addAlert: (message: string, severity: Severity) => void) {
         this.apiClient = new FoodDiaryApiClient();
         this.addAlert = addAlert;
+    }
+
+    private handleApiException(error: ApiException): null {
+        this.addAlert(`Error: ${error.message}`, Severity.Error);
+        return null;
+    }
+
+    private handleUnknownExceptions(e: any, source: string): null {
+        logger.error(`Unexpected error in ${source}:`, e);
+        this.addAlert('An unexpected error occurred.', Severity.Error);
+        return null;
     }
 
     async searchSymptom(symptomName: string): Promise<GetSymptomsResponse | null> {
@@ -26,20 +38,24 @@ class SymptomService implements ISymptomService{
                 return result.data;
             } else {
                 logger.error("could not search symptoms")
-                const error = result.error;
-                logger.error(
-                    `API Error: ${error.message} ` +
-                    `(Status Code: ${error.statusCode}, Error Code: ${error.errorCode})`
-                );
-                this.addAlert(`Error: ${error.message}`, Severity.Error);
-                return null;
+                return this.handleApiException(result.error)
             }
         } catch (e) {
-            logger.error('Unexpected error in searchSymptom:', e);
-            this.addAlert('An unexpected error occurred.', Severity.Error);
-            return null;
+            return this.handleUnknownExceptions(e, "searchSymptom")
         }
     }
+
+    async getSymptomId(symptomName: string): Promise<number | null> {
+        const symptomResponse = await this.searchSymptom(symptomName);
+        if (symptomResponse && symptomResponse.count > 0) {
+            const symptom = symptomResponse.results.find(symptom => symptom.name === symptomName);
+            if (symptom) {
+                return symptom.id
+            }
+        }
+        return null;
+    }
+
 
     async createSymptomOccurrence(body: CreateSymptomOccurrenceRequest): Promise<CreateSymptomOccurrenceResponse | null> {
         try {
@@ -49,21 +65,45 @@ class SymptomService implements ISymptomService{
                 this.addAlert('Eintrag erfolgreich hinzugefügt', Severity.Success);
                 return result.data;
             } else {
-                logger.error("could not create food intake")
-                const error = result.error;
-                logger.error(
-                    `API Error: ${error.message} ` +
-                    `(Status Code: ${error.statusCode}, Error Code: ${error.errorCode})`
-                );
-                this.addAlert(`Error: ${error.message}`, Severity.Error);
-                return null;
+                logger.error("could not create symptomOccurrence")
+                return this.handleApiException(result.error)
             }
         } catch (e) {
-            logger.error('Unexpected error in createFoodIntake:', e);
-            this.addAlert('An unexpected error occurred.', Severity.Error);
-            return null;
+            return this.handleUnknownExceptions(e, "createSymptomOccurrence")
         }
     }
+
+    async updateSymptomOccurrence(id: number, body: CreateSymptomOccurrenceRequest): Promise<CreateSymptomOccurrenceResponse | null> {
+        try {
+            const result = await this.apiClient.updateOccurrence(id, body);
+
+            if (result.success) {
+                this.addAlert('Eintrag erfolgreich aktualisiert', Severity.Success);
+                return result.data;
+            } else {
+                logger.error("could not update symptom occurrence")
+                return this.handleApiException(result.error)
+            }
+        } catch (e) {
+            return this.handleUnknownExceptions(e, "updateSymptomOccurrence")
+        }
+    }
+
+    async deleteSymptomOccurrence(id: number): Promise<void> {
+        try {
+            const result = await this.apiClient.deleteOccurrence(id);
+
+            if (result.success) {
+                this.addAlert('Eintrag erfolgreich gelöscht', Severity.Info);
+            } else {
+                logger.error("could not delete symptom occurrence")
+                this.handleApiException(result.error)
+            }
+        } catch (e) {
+            this.handleUnknownExceptions(e, "deleteSymptomOccurrence")
+        }
+    }
+
 
     async createSymptom(body: CreateSymptomRequest): Promise<CreateSymptomResponse | null> {
         try {
@@ -74,18 +114,10 @@ class SymptomService implements ISymptomService{
                 return result.data;
             } else {
                 logger.error("could not create Symptom")
-                const error = result.error;
-                logger.error(
-                    `API Error: ${error.message} ` +
-                    `(Status Code: ${error.statusCode}, Error Code: ${error.errorCode})`
-                );
-                this.addAlert(`Error: ${error.message}`, Severity.Error);
-                return null;
+                return this.handleApiException(result.error)
             }
         } catch (e) {
-            logger.error('Unexpected error in createSymptom:', e);
-            this.addAlert('An unexpected error occurred.', Severity.Error);
-            return null;
+            return this.handleUnknownExceptions(e, "createSymptom")
         }
     }
 }

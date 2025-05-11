@@ -1,5 +1,6 @@
 import styles from "./SortableTable.module.scss";
 import React, { useState } from "react";
+import DiaryEntry from "../../services/api/diary/models/DiaryEntry.ts";
 
 interface Column {
     label: string;
@@ -7,16 +8,19 @@ interface Column {
 }
 
 interface SortableTableProps {
-    className?: string
+    className?: string;
     columns: Column[];
     data: any;
-    onDelete: (id: number) => void;
-    onUpdate: (id: number) => void;
-    idProperty: string;
+    onEdit: (entry: DiaryEntry) => void;
 }
 
 
-const SortableTable: React.FC<SortableTableProps> = ({ className = styles.sortableTable, data, columns, onDelete, onUpdate, idProperty }) => {
+const SortableTable: React.FC<SortableTableProps> = ({
+                                                         className = styles.sortableTable,
+                                                         data,
+                                                         columns,
+                                                         onEdit,
+                                                     }) => {
     const [sortField, setSortField] = useState(columns[0].accessor);
     const [sortOrder, setSortOrder] = useState("desc");
 
@@ -40,11 +44,12 @@ const SortableTable: React.FC<SortableTableProps> = ({ className = styles.sortab
             <thead>
             <tr>
                 {columns.map((column) => (
-                    <th className={`${styles.field} ${styles.headerField}`} key={column.accessor} onClick={() => handleSort(column.accessor)}>
+                    <th className={`${styles.field} ${styles.headerField}`} key={column.accessor}
+                        onClick={() => handleSort(column.accessor)}>
                         {column.label}
                     </th>
                 ))}
-                <th className={`${styles.field} ${styles.headerField}`}>Actions</th>
+                <th className={`${styles.field} ${styles.headerField}`}></th>
             </tr>
             </thead>
             <tbody>
@@ -55,12 +60,9 @@ const SortableTable: React.FC<SortableTableProps> = ({ className = styles.sortab
                         return <td className={styles.field} key={column.accessor}>{value}</td>;
                     })}
                     <td className={styles.field}>
-                        <div className={`${styles.rowAction} is-flex`}>
-                        <button className={`${styles.actionButton} fd-icon-delete-bin-fill fd-button fd-button--icon`}
-                                onClick={() => onDelete(item[idProperty])}>
-                        </button>
+                        <div className={`${styles.rowAction} is-flex is-justify-content-center`}>
                             <button className={`${styles.actionButton} fd-icon-pencil-fill fd-button fd-button--icon`}
-                                    onClick={() => onUpdate(item[idProperty])}>
+                                    onClick={() => onEdit(item)}>
                             </button>
                         </div>
                     </td>

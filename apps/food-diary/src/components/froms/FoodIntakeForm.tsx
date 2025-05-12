@@ -1,26 +1,69 @@
-import React, { useState } from "react";
-import styles from "./CreateIntakeForm.module.scss";
+import React, { useEffect, useState } from "react";
+import styles from "./FoodIntakeForm.module.scss";
 import { Autocomplete, TextField } from "@mui/material";
 import GetFoodResponse from "../../services/api/food/models/GetFoodResponse.ts";
 import IFoodService from "../../services/api/food/IFoodService.ts";
+import DiaryEntry from "../../services/api/diary/models/DiaryEntry.ts";
 
 interface CreateIntakeFormProps {
     onClose: () => void;
-    onInsert: () => void;
+    onAction: () => void;
     foodService: IFoodService;
+    diaryEntry?: DiaryEntry;
 }
 
-const CreateIntakeForm: React.FC<CreateIntakeFormProps> = ({ onClose, onInsert, foodService }) => {
+const FoodIntakeForm: React.FC<CreateIntakeFormProps> = ({ onClose, onAction, foodService, diaryEntry }) => {
     const [foodName, setFoodName] = useState("");
     const [foodId, setFoodId] = useState(0);
     const [date, setDate] = useState("");
     const [foods, setFoods] = useState<GetFoodResponse[]>([]);
+    const [hasError, setHasError] = useState(false);
+
+
+    useEffect(() => {
+        if (hasError) return;
+
+        if (diaryEntry && !hasError) {
+            setFoodName(diaryEntry.name);
+            setDate(diaryEntry.date);
+
+            const fetchFoodId = async () => {
+                const foodId = await foodService.getFoodId(diaryEntry.name);
+                if (foodId) {
+                    setFoodId(foodId);
+                } else {
+                    setHasError(true);
+                }
+            };
+
+            fetchFoodId();
+        }
+
+    }, [foodService, diaryEntry]);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setFoodName("");
-        await foodService.createFoodIntake({ food_id: foodId, date });
-        onInsert();
+
+        if (diaryEntry) {
+            await foodService.updateFoodIntake(diaryEntry.id, { food_id: foodId, date });
+        } else {
+            await foodService.createFoodIntake({ food_id: foodId, date });
+        }
+
+        onAction();
+        onClose();
+    };
+
+    const deleteEntry = async (event: React.FormEvent) => {
+        event.preventDefault();
+        setFoodName("");
+
+        if (diaryEntry) {
+            await foodService.deleteFoodIntake(diaryEntry.id);
+        }
+
+        onAction();
         onClose();
     };
 
@@ -70,11 +113,21 @@ const CreateIntakeForm: React.FC<CreateIntakeFormProps> = ({ onClose, onInsert, 
                     required
                 />
             </div>
-            <button className={`${styles.form__submitButton} is-align-self-flex-end fd-button fd-button--primary`} type="submit">
-                Hinzufügen
-            </button>
+            <div className="is-flex is-justify-content-space-between">
+                {diaryEntry && (
+                    <button className={`${styles.form__deleteButton} fd-button fd-button--primary`}
+                            type="button"
+                            onClick={deleteEntry}>
+                        Löschen
+                    </button>
+                )}
+                <button className={`${styles.form__submitButton} fd-button fd-button--primary`}
+                        type="submit">
+                    {diaryEntry ? "Aktualisieren" : "Hinzufügen"}
+                </button>
+            </div>
         </form>
     );
 };
 
-export default CreateIntakeForm;
+export default FoodIntakeForm;

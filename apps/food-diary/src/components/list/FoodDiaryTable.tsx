@@ -8,9 +8,9 @@ import { useEffect, useState } from "react";
 import useKeycloak from "../../hooks/useKeycloak.ts";
 import ExpandableButton from "../buttons/ExpandableButton.tsx";
 import Modal from "../popups/Modal.tsx";
-import CreateIntakeForm from "../froms/CreateIntakeForm.tsx";
+import FoodIntakeForm from "../froms/FoodIntakeForm.tsx";
 import FormType from "../froms/FormType.ts";
-import CreateSymptomOccurrence from "../froms/CreateSymptomOccurrence.tsx";
+import SymptomOccurrence from "../froms/SymptomOccurrence.tsx";
 import { useAlert } from "../../context/AlertContext.tsx";
 import SymptomService from "../../services/api/symptom/SymptomService.ts";
 import FoodService from "../../services/api/food/FoodService.ts";
@@ -101,13 +101,13 @@ const FoodDiaryTable = () => {
     const renderForm = () => {
         switch (formType) {
             case FormType.CreateFoodIntake:
-                return <CreateIntakeForm onClose={closeModal} onInsert={onInsertEntry} foodService={foodService} />;
+                return <FoodIntakeForm onClose={closeModal} onAction={onInsertEntry} foodService={foodService} />;
             case FormType.CreateSymptomOccurrence:
-                return <CreateSymptomOccurrence onClose={closeModal} onAction={onInsertEntry} symptomService={symptomService} />;
+                return <SymptomOccurrence onClose={closeModal} onAction={onInsertEntry} symptomService={symptomService} />;
             case FormType.EditFoodIntake:
-                return;
+                return <FoodIntakeForm onClose={closeModal} onAction={onInsertEntry} foodService={foodService} diaryEntry={selectedDiaryEntry} />;
             case FormType.EditSymptomOccurrence:
-                return <CreateSymptomOccurrence onClose={closeModal} onAction={onInsertEntry} symptomService={symptomService} diaryEntry={selectedDiaryEntry}/>;
+                return <SymptomOccurrence onClose={closeModal} onAction={onInsertEntry} symptomService={symptomService} diaryEntry={selectedDiaryEntry}/>;
             default:
                 return null;
         }

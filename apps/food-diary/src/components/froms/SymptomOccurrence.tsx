@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "./CreateSymptomOccurrence.module.scss";
+import styles from "./SymptomOccurrence.module.scss";
 import GetSymptomResponse from "../../services/api/symptom/models/GetSymptomResponse.ts";
 import { Autocomplete, TextField } from "@mui/material";
 import ISymptomService from "../../services/api/symptom/ISymptomService.ts";
@@ -12,13 +12,7 @@ interface CreateSymptomOccurrenceProps {
     diaryEntry?: DiaryEntry;
 }
 
-const CreateSymptomOccurrence: React.FC<CreateSymptomOccurrenceProps> = ({
-                                                                             onClose,
-                                                                             onAction,
-                                                                             symptomService,
-                                                                             diaryEntry
-                                                                         }) => {
-
+const SymptomOccurrence: React.FC<CreateSymptomOccurrenceProps> = ({ onClose, onAction, symptomService, diaryEntry }) => {
         const [symptomName, setSymptomName] = useState("");
         const [symptomId, setSymptomId] = useState(0);
         const [date, setDate] = useState("");
@@ -155,4 +149,4 @@ const CreateSymptomOccurrence: React.FC<CreateSymptomOccurrenceProps> = ({
     }
 ;
 
-export default CreateSymptomOccurrence;
+export default SymptomOccurrence;

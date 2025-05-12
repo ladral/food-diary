@@ -12,13 +12,7 @@ interface CreateSymptomOccurrenceProps {
     diaryEntry?: DiaryEntry;
 }
 
-const SymptomOccurrence: React.FC<CreateSymptomOccurrenceProps> = ({
-                                                                             onClose,
-                                                                             onAction,
-                                                                             symptomService,
-                                                                             diaryEntry
-                                                                         }) => {
-
+const SymptomOccurrence: React.FC<CreateSymptomOccurrenceProps> = ({ onClose, onAction, symptomService, diaryEntry }) => {
         const [symptomName, setSymptomName] = useState("");
         const [symptomId, setSymptomId] = useState(0);
         const [date, setDate] = useState("");

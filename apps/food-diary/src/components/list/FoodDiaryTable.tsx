@@ -101,11 +101,11 @@ const FoodDiaryTable = () => {
     const renderForm = () => {
         switch (formType) {
             case FormType.CreateFoodIntake:
-                return <FoodIntakeForm onClose={closeModal} onInsert={onInsertEntry} foodService={foodService} />;
+                return <FoodIntakeForm onClose={closeModal} onAction={onInsertEntry} foodService={foodService} />;
             case FormType.CreateSymptomOccurrence:
                 return <SymptomOccurrence onClose={closeModal} onAction={onInsertEntry} symptomService={symptomService} />;
             case FormType.EditFoodIntake:
-                return;
+                return <FoodIntakeForm onClose={closeModal} onAction={onInsertEntry} foodService={foodService} diaryEntry={selectedDiaryEntry} />;
             case FormType.EditSymptomOccurrence:
                 return <SymptomOccurrence onClose={closeModal} onAction={onInsertEntry} symptomService={symptomService} diaryEntry={selectedDiaryEntry}/>;
             default:

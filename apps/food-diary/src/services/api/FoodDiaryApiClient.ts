@@ -140,6 +140,14 @@ class FoodDiaryApiClient {
         return this.createResource("/api/intakes/", body);
     }
 
+    async updateIntake(id: number, body: CreateFoodIntakeRequest): Promise<Result<CreateFoodIntakeResponse>> {
+        return this.updateResource(`/api/intakes/${id}/`, body);
+    }
+
+    async deleteIntake(id: number): Promise<Result<null>> {
+        return this.deleteResource(`/api/intakes/${id}/`);
+    }
+
     async getFoods(foodName: string): Promise<Result<GetFoodsResponse>> {
         return this.getResource("/api/food/", { search: foodName });
     }

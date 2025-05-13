@@ -1,10 +1,10 @@
 @use "sass:map";
 
 /* Color Defaults */
-$color-primary:  rgb(100, 108, 255) !default;
+$color-primary: rgb(100, 108, 255) !default;
 $color-secondary: rgb(100, 150, 255) !default;
-$color-text-light: rgb(229, 229, 229)!default;
-$color-text-dark: rgb(0 0 0 / 0.8)!default;
+$color-text-light: rgb(229, 229, 229) !default;
+$color-text-dark: rgb(0 0 0 / 0.8) !default;
 
 $COLOR-MAPS: (
         primary: (
@@ -36,7 +36,6 @@ $COLOR-MAPS: (
                         light: rgb(45, 45, 45),
                         on-light: $color-text-light
                 ),
-
         ),
         white: (
                 800: (
@@ -61,6 +60,12 @@ $COLOR-MAPS: (
                         light: rgb(75, 85, 99),
                         on-light: $color-text-light
                 )
+        ),
+        red: (
+                600: (
+                        light: rgb(252, 81, 95),
+                        on-light: $color-text-light
+                )
         )
 );
 
@@ -71,9 +76,8 @@ $TOKEN-MAP: (
         shadow:(
                 0 0.0625rem 1rem map.get($COLOR-MAPS, grey, 900, light)
         ),
-
         ring-shadow: 0px 0px 25px 0px,
-        transition: .8s cubic-bezier(.52,.16,.04,1),
+        transition: .8s cubic-bezier(.52, .16, .04, 1),
         transition-slow: 1s,
         transition-super-slow: ease-in-out 4s,
         transition-timing-function: ease-in-out,

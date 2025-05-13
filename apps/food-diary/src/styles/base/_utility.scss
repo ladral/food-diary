@@ -65,6 +65,10 @@
   opacity: 1;
 }
 
+.u-position-relative {
+  position: relative;
+}
+
 @supports (-webkit-line-clamp: 1) {
   .u-text-truncate-multiline {
     display: -webkit-box;

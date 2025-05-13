@@ -7,19 +7,26 @@ interface Column {
     accessor: string;
 }
 
+interface Badge {
+    columnCriteriaAccessor: string;
+    badgeCriteria: string;
+    columnPositionAccessor: string;
+}
+
 interface SortableTableProps {
     className?: string;
     columns: Column[];
     data: any;
     onEdit: (entry: DiaryEntry) => void;
+    badge?: Badge;
 }
-
 
 const SortableTable: React.FC<SortableTableProps> = ({
                                                          className = styles.sortableTable,
                                                          data,
                                                          columns,
                                                          onEdit,
+                                                         badge
                                                      }) => {
     const [sortField, setSortField] = useState(columns[0].accessor);
     const [sortOrder, setSortOrder] = useState("desc");
@@ -44,8 +51,11 @@ const SortableTable: React.FC<SortableTableProps> = ({
             <thead>
             <tr>
                 {columns.map((column) => (
-                    <th className={`${styles.field} ${styles.headerField}`} key={column.accessor}
-                        onClick={() => handleSort(column.accessor)}>
+                    <th
+                        className={`${styles.field} ${styles.headerField}`}
+                        key={column.accessor}
+                        onClick={() => handleSort(column.accessor)}
+                    >
                         {column.label}
                     </th>
                 ))}
@@ -54,16 +64,28 @@ const SortableTable: React.FC<SortableTableProps> = ({
             </thead>
             <tbody>
             {sortedData.map((item, index) => (
+
                 <tr className={styles.row} key={index}>
+
                     {columns.map((column) => {
                         const value = item[column.accessor];
-                        return <td className={styles.field} key={column.accessor}>{value}</td>;
+                        return (
+                            <td className={`${styles.field} u-position-relative`} key={column.accessor}  >
+                                {value}
+                                {badge && item[badge.columnCriteriaAccessor] === badge.badgeCriteria && column.accessor == badge.columnPositionAccessor && (
+                                    <div className="fd-badge fd-badge--alert">
+                                        <span className="fd-icon-alert"></span>
+                                    </div>
+                                )}
+                            </td>
+                        );
                     })}
                     <td className={styles.field}>
                         <div className={`${styles.rowAction} is-flex is-justify-content-center`}>
-                            <button className={`${styles.actionButton} fd-icon-pencil-fill fd-button fd-button--icon`}
-                                    onClick={() => onEdit(item)}>
-                            </button>
+                            <button
+                                className={`${styles.actionButton} fd-icon-pencil-fill fd-button fd-button--icon`}
+                                onClick={() => onEdit(item)}
+                            ></button>
                         </div>
                     </td>
                 </tr>

@@ -31,9 +31,14 @@ const FoodDiaryTable = () => {
 
     const columns = [
         { label: "Datum", accessor: "date" },
-        { label: "Name", accessor: "name" },
-        { label: "Typ", accessor: "type" }
+        { label: "Name", accessor: "name" }
     ];
+
+    const badgeCriteria = {
+        columnCriteriaAccessor: "type",
+        badgeCriteria: "symptom",
+        columnPositionAccessor: "date",
+    };
 
     const fetchDiaryEntries = async (page: number) => {
         try {
@@ -120,6 +125,7 @@ const FoodDiaryTable = () => {
                 columns={columns}
                 data={diaryEntries}
                 onEdit={onEditFoodDiaryEntry}
+                badge={badgeCriteria}
             />
             <Pagination
                 currentPage={currentPage}

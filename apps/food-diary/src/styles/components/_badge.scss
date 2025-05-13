@@ -1,0 +1,51 @@
+@use "../abstracts/functions" as fx;
+
+// ================================================================
+// food diary badge
+// ================================================================
+
+//
+// basic badge component
+//
+
+.fd-badge {
+  --_fd-badge-Display: var(--fd-badge-Display, flex);
+  --_fd-badge-Width: var(--fd_badge-Width, 20px);
+  --_fd-badge-Height: var(--fd_badge-Height, 20px);
+  --_fd-badge-BackgroundColor: var(--fd-badge-BackgroundColor, transparent);
+  --_fd-badge-Color: var(--fd-badge-Color, inherit);
+  --_fd-badge-Position: var(--fd-badge-Position, relative);
+  --_fd-badge-Top: var(--fd-badge-Top, unset);
+  --_fd-badge-Left: var(--fd-badge-Left, unset);
+  --_fd-badge-Right: var(--fd-badge-Right, unset);
+
+
+  display: var(--_fd-badge-Display);
+  width: var(--_fd-badge-Width);
+  height: var(--_fd-badge-Height);
+  background-color: var(--_fd-badge-BackgroundColor);
+  color: var(--_fd-badge-Color);
+  position: var(--_fd-badge-Position);
+  top: var(--_fd-badge-Top);
+  left: var(--_fd-badge-Left);
+  right: var(--_fd-badge-Right);
+  justify-content: center;
+  align-items: center;
+  line-height: 1.1em;
+  border-radius: 50%;
+  font-size: 16px;
+
+  & .fd-icon-alert {
+    height: 1.2em;
+  }
+}
+
+
+//
+// badge variations
+//
+
+.fd-badge--alert {
+  --fd-badge-BackgroundColor: #{fx.getColor(red, 600)};
+  --fd-badge-Color: #{fx.getOnColor(red, 600)};
+}

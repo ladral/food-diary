@@ -1,8 +1,14 @@
 @use "../../styles/abstracts/functions" as fx;
 
 .sortableTable {
+
+    // set badge position
+    --fd-badge-Position: absolute;
+    --fd-badge-Top: 7px;
+    --fd-badge-Left: 0px;
+
     --_sortableTable-MarginTop: var(--sortableTable-MarginTop, 1.25rem);
-    --_sortableTable__field-Padding: var(--sortableTable__field-Padding, 0.938rem);
+    --_sortableTable__field-Padding: var(--sortableTable__field-Padding, 1.25rem);
 
     margin-top: var(--_sortableTable-MarginTop);
     width: 100%;

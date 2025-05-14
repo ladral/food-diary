@@ -113,7 +113,7 @@ const FoodIntakeForm: React.FC<CreateIntakeFormProps> = ({ onClose, onAction, fo
                     required
                 />
             </div>
-            <div className="is-flex is-justify-content-space-between">
+            <div className={`${styles.form__actions} is-flex is-justify-content-space-between`}>
                 {diaryEntry && (
                     <button className={`${styles.form__deleteButton} fd-button fd-button--primary`}
                             type="button"

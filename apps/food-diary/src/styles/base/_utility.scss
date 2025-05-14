@@ -69,6 +69,48 @@
   position: relative;
 }
 
+
+.u-px-1 {
+  padding: 0 0.25rem;
+}
+
+.u-px-2 {
+  padding: 0 0.5rem;
+}
+
+.u-px-3 {
+  padding: 0 1rem;
+}
+
+.u-px-4 {
+  padding: 0 1.5rem;
+}
+
+.u-px-5 {
+  padding: 0 3rem;
+}
+
+.u-py-1 {
+  padding: 0 0.25rem;
+}
+
+.u-py-2 {
+  padding: 0 0.5rem;
+}
+
+.u-py-3 {
+  padding: 0 1rem;
+}
+
+.u-py-4 {
+  padding: 0 1.5rem;
+}
+
+.u-py-5 {
+  padding: 0 3rem;
+}
+
+
 @supports (-webkit-line-clamp: 1) {
   .u-text-truncate-multiline {
     display: -webkit-box;

@@ -88,6 +88,9 @@ $TOKEN-MAP: (
         outline: 2px solid map.get($COLOR-MAPS, primary, 800, light)
 );
 
+/* Sidebar */
+$sidebar-width: 11rem;
+
 /* Container */
 $container-width: 75rem !default;
 $container-padding-horizontal: 2rem !default;

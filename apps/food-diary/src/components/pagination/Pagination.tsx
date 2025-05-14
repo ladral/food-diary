@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import styles from "./Pagination.module.scss";
 
 interface PaginationProps {
     currentPage: number;
@@ -20,11 +21,13 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPage
     };
 
     return (
-        <div className="is-flex is-justify-content-space-between">
-            <button className="fd-button fd-button--icon fd-icon-arrow-left-line" onClick={handlePrevious} disabled={currentPage === 1}>
+        <div className={`${styles.paginator} is-flex is-justify-content-space-between`}>
+            <button className="fd-button fd-button--icon fd-icon-arrow-left-line" onClick={handlePrevious}
+                    disabled={currentPage === 1}>
             </button>
             <div className="is-align-content-center"> Seite {currentPage} von {totalPages} </div>
-            <button className="fd-button fd-button--icon fd-icon-arrow-right-line" onClick={handleNext} disabled={currentPage === totalPages}>
+            <button className="fd-button fd-button--icon fd-icon-arrow-right-line " onClick={handleNext}
+                    disabled={currentPage === totalPages}>
             </button>
         </div>
     );

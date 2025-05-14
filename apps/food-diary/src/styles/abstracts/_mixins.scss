@@ -17,6 +17,23 @@
 
   @include clearfix();
 
+
+  @media (max-width: $breakpoint-xl) {
+    max-width: 60rem;
+    padding: 0 1rem;
+  }
+
+  @media (max-width: $breakpoint-lg) {
+    max-width: 45rem;
+    padding: 0 1rem;
+  }
+
+  /** 992px or smaller */
+  @media (max-width: $breakpoint-md) {
+    max-width: 30rem;
+    padding: 0 1rem;
+  }
+
   @media (max-width: $breakpoint-xs) {
     max-width: 25rem;
     padding: 0 1rem;

@@ -18,6 +18,7 @@
   @include clearfix();
 
   @media (max-width: $breakpoint-xs) {
+    max-width: 25rem;
     padding: 0 1rem;
   }
 }

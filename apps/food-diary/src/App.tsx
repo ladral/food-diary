@@ -22,7 +22,7 @@ function App() {
                                 <aside className="sidebar">
                                     <Navigation></Navigation>
                                 </aside>
-                                <div className="container px-4">
+                                <div className="container px-4 u-w-100">
                                     <Routes>
                                         <Route path="/" element={<HomePage />} />
                                         <Route path="/analysis" element={<AnalysisPage />} />

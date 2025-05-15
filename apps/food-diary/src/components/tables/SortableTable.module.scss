@@ -24,7 +24,11 @@
         text-overflow: ellipsis;
 
         @media (max-width: $breakpoint-xs) {
-            max-width: 5rem;
+            max-width: 12rem;
+        }
+
+        @media (max-width: $breakpoint-xxs) {
+            max-width: 9rem;
         }
     }
 
@@ -38,7 +42,7 @@
     }
 
     .rowAction {
-        gap: 0.375rem;
+        width: 1rem;
     }
 
     .actionButton {

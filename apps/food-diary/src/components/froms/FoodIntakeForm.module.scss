@@ -1,4 +1,5 @@
 @use "../../styles/abstracts/functions" as fx;
+@use "../../styles/abstracts/size" as *;
 
 .form {
   padding: 2rem;
@@ -6,6 +7,10 @@
 
 .form__input {
   gap: 1rem;
+
+  @media (max-width: $breakpoint-xs) {
+    flex-direction: column;
+  }
 }
 
 .form__inputDate {
@@ -23,6 +28,12 @@
     & :global .MuiInputBase-root:hover .MuiOutlinedInput-notchedOutline {
       border-color: #{fx.getPrimaryColor()};
     }
+}
+
+.form__actions {
+  @media (max-width: $breakpoint-xs) {
+    flex-direction: column;
+  }
 }
 
 .form__submitButton {

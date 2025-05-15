@@ -18,11 +18,11 @@ function App() {
                     <div className="page u-h-100-vh is-flex is-flex-direction-column">
                         <Header></Header>
                         <div className="is-flex-grow-1 is-flex is-flex-direction-column u-overflow-auto">
-                            <div className="is-flex is-flex-grow-1 is-flex-direction-row">
+                            <div className="is-flex is-flex-grow-1 is-flex-direction-row u-overflow-auto">
                                 <aside className="sidebar">
                                     <Navigation></Navigation>
                                 </aside>
-                                <div className="container px-4">
+                                <div className="container px-4 u-w-100">
                                     <Routes>
                                         <Route path="/" element={<HomePage />} />
                                         <Route path="/analysis" element={<AnalysisPage />} />

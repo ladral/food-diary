@@ -1,10 +1,13 @@
 /** Breakpoints **/
+$breakpoint-xl: 86em!default;
 $breakpoint-lg: 75em!default;
 $breakpoint-md: 62em!default;
 $breakpoint-sm: 48em!default;
 $breakpoint-xs: 36em!default;
 $breakpoint-xxs: 25em!default;
 
+/** 1376px and smaller */
+@media (max-width: $breakpoint-xl) {}
 /** 1200px and smaller */
 @media (max-width: $breakpoint-lg) {}
 /** 992px or smaller */

@@ -1,5 +1,6 @@
 ﻿@use "../abstracts/size" as *;
 @use "../abstracts/functions" as fx;
+@use "../abstracts/variables" as *;
 
 .sidebar {
   background-color: #{fx.getBackgroundColor()};
@@ -7,7 +8,7 @@
 
 @media (min-width: $breakpoint-xs) {
   .sidebar {
-    width: 11rem;
+    width: $sidebar-width;
     position: sticky;
     top: 0;
   }

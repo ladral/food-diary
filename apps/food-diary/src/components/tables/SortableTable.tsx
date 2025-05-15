@@ -80,8 +80,8 @@ const SortableTable: React.FC<SortableTableProps> = ({
                             </td>
                         );
                     })}
-                    <td className={styles.field}>
-                        <div className={`${styles.rowAction} is-flex is-justify-content-center`}>
+                    <td className={`${styles.field} ${styles.rowAction}`}>
+                        <div className={`is-flex is-justify-content-center`}>
                             <button
                                 className={`${styles.actionButton} fd-icon-pencil-fill fd-button fd-button--icon`}
                                 onClick={() => onEdit(item)}

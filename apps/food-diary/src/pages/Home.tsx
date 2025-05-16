@@ -16,14 +16,6 @@ const HomePage: React.FC = () => {
     return (
         <div>
             <div className="user card is-flex is-flex-direction-column is-align-items-center">
-                <div className="user__info">
-                    {authenticated ? (
-                        <p>Hello, {keycloak?.idTokenParsed?.preferred_username}!</p>
-                    ) : (
-                        <p>Please log in to create new diary entries.</p>
-                    )}
-                </div>
-
                 {authenticated ? (
                     <button className="user__logout fd-button fd-button--secondary" color="inherit" onClick={handleLogout}>
                         Logout

@@ -1,0 +1,41 @@
+@use "../../styles/abstracts/functions" as fx;
+
+.avatar {
+  --_avatar-FlexDirection: var(--avatar-FlexDirection, row);
+
+  display: flex;
+  align-items: center;
+  flex-direction: var(--_avatar-FlexDirection);
+}
+
+.avatarIcon {
+  --_avatarIcon-BackgroundColor: var(--avatarIcon-BackgroundColor, #{fx.getOnBackgroundColor()});
+  --_avatarIcon-Margin: var(--avatarIcon-Margin, 0 1rem);
+  --_avatarIcon-Width: var(--avatarIcon-Width, 2rem);
+  --_avatarIcon-Height: var(--avatarIcon-Height, 2rem);
+
+
+  height: var(--_avatarIcon-Height);
+  width: var(--_avatarIcon-Width);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: var(--_avatarIcon-Margin);
+  background-color: var(--_avatarIcon-BackgroundColor);
+}
+
+.avatarIcon div {
+  --_avatarIcon__content-Color: var(--avatarIcon__content-Color, #{fx.getColor(grey, 800)});
+
+  font-size: 1.5rem;
+  color: var(--_avatarIcon__content-Color);
+}
+
+.avatarUsername {
+  --_avatarUsername-Color: var(--avatarUsername-Color, #{fx.getOnBackgroundColor()});
+
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--_avatarUsername-Color);
+}

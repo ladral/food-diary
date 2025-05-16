@@ -25,6 +25,9 @@ const KeycloakProvider: React.FC<KeycloakProviderProps> = ({ children }) => {
     const [keycloak, setKeycloak] = useState<Keycloak | null>(null);
     const [authenticated, setAuthenticated] = useState<boolean>(false);
 
+    const ONE_MINUTE = 60000;
+    const TOKEN_EXPIRATION_BUFFER_SECONDS = 30;
+
     useEffect(() => {
         if (isRun.current) return;
 
@@ -52,12 +55,29 @@ const KeycloakProvider: React.FC<KeycloakProviderProps> = ({ children }) => {
                 })
                 .finally(() => {
                     setKeycloak(keycloakInstance);
-                    logger.debug("successfully set keycloak instance")
+                    logger.debug("successfully set keycloak instance");
                 });
         };
 
         initKeycloak();
     }, []);
+
+    useEffect(() => {
+        const refreshToken = async () => {
+            if (keycloak) {
+                try {
+                    await keycloak.updateToken(TOKEN_EXPIRATION_BUFFER_SECONDS);
+                } catch (error) {
+                    logger.error("Failed to refresh token:", error);
+                    setAuthenticated(false);
+                }
+            }
+        };
+
+        const interval = setInterval(refreshToken, ONE_MINUTE);
+
+        return () => clearInterval(interval);
+    }, [keycloak]);
 
     return (
         <KeycloakContext.Provider value={{ keycloak, authenticated }}>

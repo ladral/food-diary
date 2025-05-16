@@ -10,7 +10,7 @@ $navbarToggler-height: 35px;
   z-index: var(--_header-ZIndex);
   padding: var(--_header-Padding);
   box-shadow: fx.getToken(shadow);
-  height: 3.5rem;
+  min-height: 3.5rem;
   position: sticky;
   top: 0;
   width: 100%;
@@ -18,8 +18,19 @@ $navbarToggler-height: 35px;
   background-color: #{fx.getBackgroundColor()};
 }
 
+.header__appName {
+  display: none;
+  font-weight: 800;
+}
+
 .header__logo {
   display: none;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+.header__avatar {
+  margin-left: 1rem;
 }
 
 .navbarToggler {
@@ -117,8 +128,21 @@ input.navbarToggler__checkbox {
     display: none;
   }
 
-  .header__logo {
+  .header__appName {
     display: block;
   }
+
+  .header__logo {
+    display: block;
+    font-size: 1.5rem;
+    margin-left: 0;
+    margin-right: 1rem;
+  }
+
+  .header__avatar {
+    margin-left: auto;
+    --avatar-FlexDirection: row-reverse
+  }
+
 }
 

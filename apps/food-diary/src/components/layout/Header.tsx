@@ -1,8 +1,12 @@
 import Navigation from "./Navigation.tsx";
 import styles from "./Header.module.scss";
 import Avatar from "../data/Avatar.tsx";
+import useKeycloak from "../../hooks/useKeycloak.ts";
 
 const Header = () => {
+
+    const { authenticated } = useKeycloak();
+
     return (
         <header className={`${styles.header} is-flex is-flex-direction-row is-align-items-center is-flex-shrink-0`}>
 
@@ -12,7 +16,7 @@ const Header = () => {
                 Food Diary
             </div>
 
-            <Avatar className={styles.header__avatar}/>
+            {authenticated && <Avatar className={styles.header__avatar} />}
 
             <div className={styles.navbarToggler}>
                 <input type="checkbox" className={styles.navbarToggler__checkbox} id="navbarToggler__checkbox" />

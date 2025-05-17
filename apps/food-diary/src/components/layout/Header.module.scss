@@ -141,7 +141,8 @@ input.navbarToggler__checkbox {
 
   .header__avatar {
     margin-left: auto;
-    --avatar-FlexDirection: row-reverse
+    --avatar-FlexDirection: row-reverse;
+    --avatar__userMenu-Left: -1.5rem;
   }
 
 }

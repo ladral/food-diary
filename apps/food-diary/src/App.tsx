@@ -1,15 +1,16 @@
 import { KeycloakProvider } from "./context/KeycloakContext";
 import { BrowserRouter, Routes, Route, Navigate, Outlet } from "react-router-dom";
 import "./App.scss";
-import DiaryPage from "./pages/diary/Diary.tsx";
 import SilentCheckSsoRedirect from "./pages/authentication/SilentCheckSsoRedirect.tsx";
-import AnalysisPage from "./pages/analysis/Analysis.tsx";
 import Navigation from "./components/layout/Navigation.tsx";
 import Header from "./components/layout/Header.tsx";
 import Footer from "./components/layout/Footer.tsx";
 import { AlertProvider } from "./context/AlertContext.tsx";
-import React, { useEffect } from "react";
+import React, { lazy, useEffect } from "react";
 import useKeycloak from "./hooks/useKeycloak.ts";
+
+const DiaryPage = lazy(() => import("./pages/diary/Diary.tsx"));
+const AnalysisPage = lazy(() => import("./pages/analysis/Analysis.tsx"));
 
 function App() {
 

@@ -1,15 +1,39 @@
 import { KeycloakProvider } from "./context/KeycloakContext";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, Outlet } from "react-router-dom";
 import "./App.scss";
-import HomePage from "./pages/Home.tsx";
-import SilentCheckSsoRedirect from "./pages/SilentCheckSsoRedirect.tsx";
-import AnalysisPage from "./pages/Analysis.tsx";
+import SilentCheckSsoRedirect from "./pages/authentication/SilentCheckSsoRedirect.tsx";
 import Navigation from "./components/layout/Navigation.tsx";
 import Header from "./components/layout/Header.tsx";
 import Footer from "./components/layout/Footer.tsx";
 import { AlertProvider } from "./context/AlertContext.tsx";
+import React, { lazy, useEffect } from "react";
+import useKeycloak from "./hooks/useKeycloak.ts";
+
+const DiaryPage = lazy(() => import("./pages/diary/Diary.tsx"));
+const AnalysisPage = lazy(() => import("./pages/analysis/Analysis.tsx"));
 
 function App() {
+
+    interface ProtectedRouteProps {
+        redirectPath?: string;
+    }
+
+    const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ redirectPath = "/" }) => {
+        const { authenticated, keycloak } = useKeycloak();
+
+        useEffect(() => {
+            if (!authenticated) {
+                keycloak?.login();
+            }
+        }, [authenticated, keycloak]);
+
+        if (!authenticated) {
+            return <Navigate to={redirectPath} replace />;
+        }
+
+        return <Outlet />;
+
+    };
 
     return (
         <KeycloakProvider>
@@ -24,8 +48,10 @@ function App() {
                                 </aside>
                                 <div className="container px-4 u-w-100">
                                     <Routes>
-                                        <Route path="/" element={<HomePage />} />
-                                        <Route path="/analysis" element={<AnalysisPage />} />
+                                        <Route element={<ProtectedRoute />}>
+                                            <Route path="/" element={<DiaryPage />} />
+                                            <Route path="/analysis" element={<AnalysisPage />} />
+                                        </Route>
                                         <Route path="/silent-check-sso" element={<SilentCheckSsoRedirect />} />
                                     </Routes>
                                 </div>

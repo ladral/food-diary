@@ -1,0 +1,66 @@
+@use "../../styles/abstracts/functions" as fx;
+
+.avatar {
+  --_avatar-FlexDirection: var(--avatar-FlexDirection, row);
+  --_avatar-Padding: var(--avatar-Padding, 0.5rem 0);
+
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: var(--_avatar-Padding);
+  flex-direction: var(--_avatar-FlexDirection);
+  cursor: pointer;
+}
+
+.avatarIcon {
+  --_avatarIcon-BackgroundColor: var(--avatarIcon-BackgroundColor, #{fx.getOnBackgroundColor()});
+  --_avatarIcon-Margin: var(--avatarIcon-Margin, 0 1rem);
+  --_avatarIcon-Width: var(--avatarIcon-Width, 2rem);
+  --_avatarIcon-Height: var(--avatarIcon-Height, 2rem);
+
+
+  height: var(--_avatarIcon-Height);
+  width: var(--_avatarIcon-Width);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: var(--_avatarIcon-Margin);
+  background-color: var(--_avatarIcon-BackgroundColor);
+}
+
+.avatarIcon div {
+  --_avatarIcon__content-Color: var(--avatarIcon__content-Color, #{fx.getColor(grey, 800)});
+
+  font-size: 1.5rem;
+  color: var(--_avatarIcon__content-Color);
+}
+
+.avatarUsername {
+  --_avatarUsername-Color: var(--avatarUsername-Color, #{fx.getOnBackgroundColor()});
+
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--_avatarUsername-Color);
+}
+
+.avatar__userMenu {
+  --_avatar__userMenu-Background: var(--avatar__userMenu-Background, #{fx.getColor(white, 800)});
+  --_avatar__userMenu-Border: var(--avatar__userMenu-Border, 1px solid #{fx.getColor(white, 800)});
+  --_avatar__userMenu-BorderRadius: var(--avatar__userMenu-BorderRadius, 8px);
+  --_avatar__userMenu-Top: var(--avatar__userMenu-Top , 3rem);
+  --_avatar__userMenu-Left: var(--avatar__userMenu-Left , 1rem);
+
+
+
+  position: absolute;
+  z-index: 1000;
+  pointer-events: auto;
+  background: var(--_avatar__userMenu-Background);
+  border: var(--_avatar__userMenu-Border);
+  border-radius: var(--_avatar__userMenu-BorderRadius);
+  top: var(--_avatar__userMenu-Top);
+  left: var(--_avatar__userMenu-Left);
+  box-shadow: #{fx.getToken(shadow)};
+}
+

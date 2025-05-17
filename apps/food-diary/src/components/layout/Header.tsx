@@ -1,13 +1,22 @@
 import Navigation from "./Navigation.tsx";
-import styles from './Header.module.scss';
+import styles from "./Header.module.scss";
+import Avatar from "../data/Avatar.tsx";
+import useKeycloak from "../../hooks/useKeycloak.ts";
 
 const Header = () => {
-    return (
-        <header className={`${styles.header} is-flex is-flex-direction-column is-justify-content-center is-flex-shrink-0`}>
 
-            <div className={styles.header__logo}>
+    const { authenticated } = useKeycloak();
+
+    return (
+        <header className={`${styles.header} is-flex is-flex-direction-row is-align-items-center is-flex-shrink-0`}>
+
+            <div className={`${styles.header__logo} fd-icon-restaurant-fill`}></div>
+
+            <div className={styles.header__appName}>
                 Food Diary
             </div>
+
+            {authenticated && <Avatar className={styles.header__avatar} />}
 
             <div className={styles.navbarToggler}>
                 <input type="checkbox" className={styles.navbarToggler__checkbox} id="navbarToggler__checkbox" />
@@ -17,7 +26,7 @@ const Header = () => {
                     <span className={styles.navbarToggler__iconLine}></span>
                 </label>
                 <aside className={`${styles.sidebar} sidebar ${styles.navbarToggler__navbar}`}>
-                    <Navigation className={styles.navbar}/>
+                    <Navigation className={styles.navbar} />
                 </aside>
             </div>
 

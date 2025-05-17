@@ -33,7 +33,7 @@ describe("SortableTable Component", () => {
 
     it("renders the table with data and columns", () => {
         // act
-        render(<SortableTable data={mockData} columns={mockColumns} idProperty="id" onDelete={() => {console.log("")}} onUpdate={() => console.log()} />);
+        render(<SortableTable data={mockData} columns={mockColumns} onEdit={() => console.log()} />);
 
         // assert
         // Check if table headers are rendered
@@ -49,7 +49,7 @@ describe("SortableTable Component", () => {
 
     it("sorts the table by column when a header is clicked", () => {
         // arrange
-        render(<SortableTable data={mockData} columns={mockColumns} idProperty="id" onDelete={() => {console.log("")}} onUpdate={() => console.log()} />);
+        render(<SortableTable data={mockData} columns={mockColumns} onEdit={() => console.log()} />);
 
         // act
         const dateHeader = screen.getByText("Datum")
@@ -69,7 +69,7 @@ describe("SortableTable Component", () => {
     });
 
     it("sorts the table by default column on initial render", () => {
-        render(<SortableTable data={mockData} columns={mockColumns} idProperty="id" onDelete={() => {console.log("")}} onUpdate={() => console.log()} />);
+        render(<SortableTable data={mockData} columns={mockColumns} onEdit={() => console.log()} />);
 
         const rows = screen.getAllByRole("row");
         expect(rows[1]).toHaveTextContent("2025-04-25");
@@ -77,7 +77,7 @@ describe("SortableTable Component", () => {
     });
 
     it("handles empty data gracefully", () => {
-        render(<SortableTable data={[]} columns={mockColumns} idProperty="id" onDelete={() => {console.log("")}} onUpdate={() => console.log()} />);
+        render(<SortableTable data={[]} columns={mockColumns} onEdit={() => console.log()} />);
 
         const rows = screen.queryAllByRole("row");
         expect(rows.length).toBe(1); // Only the header row should be present

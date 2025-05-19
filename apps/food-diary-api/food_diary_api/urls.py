@@ -18,6 +18,8 @@ Including another URLconf
 from django.urls import path, include
 from django.contrib import admin
 from rest_framework.routers import DefaultRouter
+
+from correlations.views import CorrelationView
 from diary.views import UserEntriesAPIView
 from django.conf import settings
 from django.conf.urls.static import static
@@ -36,6 +38,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
     path('api/diary/', UserEntriesAPIView.as_view(), name='Diary'),
+    path('api/correlations/', CorrelationView.as_view(), name='Correlations'),
 
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
     path('api/schema/swagger-ui/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),

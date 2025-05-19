@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'diary',
     'food',
     'symptoms',
+    'correlations',
 ]
 
 MIDDLEWARE = [

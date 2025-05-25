@@ -30,6 +30,12 @@ def find_correlations(user, days_back=1, ignored_food_ids=None):
     for food_id in unique_food_ids:
         for symptom_id in unique_symptom_ids:
             counts = [0, 0, 0, 0]
+            occurrence_counts = {
+                "no_symptom_no_food": 0,
+                "no_symptom_food": 0,
+                "symptom_no_food": 0,
+                "symptom_food": 0
+            }
 
             for date in sorted(all_dates):
                 food_taken = any(
@@ -41,18 +47,23 @@ def find_correlations(user, days_back=1, ignored_food_ids=None):
 
                 if not symptom_occurred and not food_taken:
                     counts[0] += 1
+                    occurrence_counts["no_symptom_no_food"] += 1
                 elif not symptom_occurred and food_taken:
                     counts[1] += 1
+                    occurrence_counts["no_symptom_food"] += 1
                 elif symptom_occurred and not food_taken:
                     counts[2] += 1
+                    occurrence_counts["symptom_no_food"] += 1
                 elif symptom_occurred and food_taken:
                     counts[3] += 1
+                    occurrence_counts["symptom_food"] += 1
 
             correlation_coefficient = phi(counts)
 
             correlation_map[symptom_id][food_id] = {
                 "food_name": intakes.filter(food_id=food_id).first().food_id.name,
-                "correlation_coefficient": correlation_coefficient
+                "correlation_coefficient": correlation_coefficient,
+                "occurrence_counts": occurrence_counts
             }
 
     response = {
@@ -66,11 +77,12 @@ def find_correlations(user, days_back=1, ignored_food_ids=None):
                 {
                     "food_id": food_id,
                     "food_name": food_info["food_name"],
-                    "correlation_coefficient": food_info["correlation_coefficient"]
+                    "correlation_coefficient": food_info["correlation_coefficient"],
+                    "occurrence_counts": food_info["occurrence_counts"]
                 }
                 for food_id, food_info in food_correlations.items()
             ],
-            key=lambda x: x["correlation_coefficient"],  # Sort by correlation coefficient
+            key=lambda x: x["correlation_coefficient"],
             reverse=True
         )
 

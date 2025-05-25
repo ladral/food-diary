@@ -13,8 +13,11 @@ def phi(table):
 
     return (d * a - c * b) / denominator
 
-def find_correlations(user, days_back=1):
-    intakes = Intake.objects.filter(user_id=user).select_related('food_id')
+def find_correlations(user, days_back=1, ignored_food_ids=None):
+    if ignored_food_ids is None:
+        ignored_food_ids = []
+
+    intakes = Intake.objects.filter(user_id=user).exclude(food_id__in=ignored_food_ids).select_related('food_id')
     occurrences = Occurrence.objects.filter(user_id=user).select_related('symptom_id')
 
     correlation_map = defaultdict(lambda: defaultdict(list))
@@ -67,7 +70,7 @@ def find_correlations(user, days_back=1):
                 }
                 for food_id, food_info in food_correlations.items()
             ],
-            key=lambda x: x["correlation_coefficient"],
+            key=lambda x: x["correlation_coefficient"],  # Sort by correlation coefficient
             reverse=True
         )
 

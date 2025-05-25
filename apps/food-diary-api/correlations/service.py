@@ -58,19 +58,23 @@ def find_correlations(user, days_back=1):
 
     for symptom_id, food_correlations in correlation_map.items():
         symptom_name = occurrences.filter(symptom_id=symptom_id).first().symptom_id.name
-        food_list = [
-            {
-                "food_id": food_id,
-                "food_name": food_info["food_name"],
-                "correlation_coefficient": food_info["correlation_coefficient"]
-            }
-            for food_id, food_info in food_correlations.items()
-        ]
+        sorted_food_list = sorted(
+            [
+                {
+                    "food_id": food_id,
+                    "food_name": food_info["food_name"],
+                    "correlation_coefficient": food_info["correlation_coefficient"]
+                }
+                for food_id, food_info in food_correlations.items()
+            ],
+            key=lambda x: x["correlation_coefficient"],
+            reverse=True
+        )
 
         response["correlations"].append({
             "symptom_id": symptom_id,
             "symptom_name": symptom_name,
-            "food_correlations": food_list
+            "food_correlations": sorted_food_list
         })
 
     return response

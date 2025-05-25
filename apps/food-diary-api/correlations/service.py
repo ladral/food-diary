@@ -47,8 +47,30 @@ def find_correlations(user, days_back=1):
 
             correlation_coefficient = phi(counts)
 
-            correlation_map[food_id][symptom_id].append({
+            correlation_map[symptom_id][food_id] = {
+                "food_name": intakes.filter(food_id=food_id).first().food_id.name,
                 "correlation_coefficient": correlation_coefficient
-            })
+            }
 
-    return correlation_map
+    response = {
+        "correlations": []
+    }
+
+    for symptom_id, food_correlations in correlation_map.items():
+        symptom_name = occurrences.filter(symptom_id=symptom_id).first().symptom_id.name
+        food_list = [
+            {
+                "food_id": food_id,
+                "food_name": food_info["food_name"],
+                "correlation_coefficient": food_info["correlation_coefficient"]
+            }
+            for food_id, food_info in food_correlations.items()
+        ]
+
+        response["correlations"].append({
+            "symptom_id": symptom_id,
+            "symptom_name": symptom_name,
+            "food_correlations": food_list
+        })
+
+    return response

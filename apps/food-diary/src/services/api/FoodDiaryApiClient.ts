@@ -12,6 +12,7 @@ import CreateSymptomOccurrenceRequest from "./symptom/models/CreateSymptomOccurr
 import CreateSymptomOccurrenceResponse from "./symptom/models/CreateSymptomOccurrenceResponse.ts";
 import CreateSymptomResponse from "./symptom/models/CreateSymptomResponse.ts";
 import CreateSymptomRequest from "./symptom/models/CreateSymptomRequest.ts";
+import GetCorrelationsListResponse from "./correlation/models/GetCorrelationsListResponse.ts";
 
 class FoodDiaryApiClient {
     private client: AxiosInstance;
@@ -170,6 +171,10 @@ class FoodDiaryApiClient {
 
     async deleteOccurrence(id: number): Promise<Result<null>> {
         return this.deleteResource(`/api/occurrence/${id}/`);
+    }
+
+    async getCorrelations(): Promise<Result<GetCorrelationsListResponse>> {
+        return this.getResource(`/api/correlations/`);
     }
 }
 

@@ -3,25 +3,30 @@ from food.models import Intake
 from symptoms.models import Occurrence
 from datetime import timedelta
 
-def phi(table):
-    a, b, c, d = table  # a: no symptom, no food; b: no symptom, food; c: symptom, no food; d: symptom, food
+def gather_intakes(user, ignored_food_ids=None):
+    if ignored_food_ids is None:
+        ignored_food_ids = []
+    return Intake.objects.filter(user_id=user).exclude(food_id__in=ignored_food_ids).select_related('food_id')
+
+
+def gather_occurrences(user):
+    return Occurrence.objects.filter(user_id=user).select_related('symptom_id')
+
+
+def calculate_phi(table):
+    a, b, c, d = table # a: no symptom, no food; b: no symptom, food; c: symptom, no food; d: symptom, food
+
+    if a == 0 and b == 0 and c == 0 and d == 0:
+        return 0
 
     denominator = ((c + d) * (a + b) * (b + d) * (a + c)) ** 0.5
-
     if denominator == 0:
-        return 0
+        return -1
 
     return (d * a - c * b) / denominator
 
-def find_correlations(user, days_back=1, ignored_food_ids=None):
-    if ignored_food_ids is None:
-        ignored_food_ids = []
-
-    intakes = Intake.objects.filter(user_id=user).exclude(food_id__in=ignored_food_ids).select_related('food_id')
-    occurrences = Occurrence.objects.filter(user_id=user).select_related('symptom_id')
-
+def calculate_correlations(intakes, occurrences, days_back=1):
     correlation_map = defaultdict(lambda: defaultdict(list))
-
     all_dates = set(intake.date for intake in intakes).union(occurrence.date for occurrence in occurrences)
 
     unique_food_ids = set(intake.food_id.id for intake in intakes)
@@ -58,13 +63,20 @@ def find_correlations(user, days_back=1, ignored_food_ids=None):
                     counts[3] += 1
                     occurrence_counts["symptom_food"] += 1
 
-            correlation_coefficient = phi(counts)
+            correlation_coefficient = calculate_phi(counts)
 
             correlation_map[symptom_id][food_id] = {
                 "food_name": intakes.filter(food_id=food_id).first().food_id.name,
                 "correlation_coefficient": correlation_coefficient,
                 "occurrence_counts": occurrence_counts
             }
+
+    return correlation_map
+
+def find_correlations(user, days_back=1, ignored_food_ids=None):
+    intakes = gather_intakes(user, ignored_food_ids)
+    occurrences = gather_occurrences(user)
+    correlation_map = calculate_correlations(intakes, occurrences, days_back)
 
     response = {
         "correlations": []

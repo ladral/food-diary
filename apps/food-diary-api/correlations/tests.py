@@ -67,42 +67,59 @@ class TestCorrelationsService(unittest.TestCase):
             self.assertAlmostEqual(result, expected,
                 msg=f"Failed for input {table}. Expected {expected}, got {result}")
 
-    @patch('correlations.service.Intake.objects.filter')
-    @patch('correlations.service.Occurrence.objects.filter')
-    def test_calculate_correlations(self, mock_occurrence_filter, mock_intake_filter):
+
+    def test_calculate_correlations_should_contain_all_entries(self):
         # arrange
-        mock_food_a = MagicMock(id=1, name='Food A')
-        mock_food_b = MagicMock(id=2, name='Food B')
-        mock_intake_1 = MagicMock(food_id=mock_food_a, date=date(2025, 5, 25))
-        mock_intake_2 = MagicMock(food_id=mock_food_b, date=date(2025, 5, 26))
+        food_1_id = 1
+        food_2_id = 2
 
-        mock_intake_queryset = MagicMock()
-        mock_intake_queryset.exclude.return_value = mock_intake_queryset
-        mock_intake_queryset.select_related.return_value = [mock_intake_1, mock_intake_2]
+        symptom_1_id = 101
+        symptom_2_id = 102
 
-        mock_intake_filter.return_value = mock_intake_queryset
-
-        mock_symptom_x = MagicMock(id=100, name='Symptom X')
-        mock_symptom_y = MagicMock(id=101, name='Symptom Y')
-        mock_occurrence_1 = MagicMock(symptom_id=mock_symptom_x, date=date(2025, 5, 25))
-        mock_occurrence_2 = MagicMock(symptom_id=mock_symptom_y, date=date(2025, 5, 26))
-        mock_occurrence_queryset = MagicMock()
-        mock_occurrence_queryset.exclude.return_value = mock_occurrence_queryset
-        mock_occurrence_queryset.select_related.return_value = [mock_occurrence_1, mock_occurrence_2]
-
-        mock_occurrence_filter.select_related.return_value = mock_occurrence_queryset
-
-
+        mock_intake_1 = MagicMock(food_id=MagicMock(id=food_1_id), date=date(2025, 5, 25))
+        mock_intake_2 = MagicMock(food_id=MagicMock(id=food_2_id), date=date(2025, 5, 26))
         intakes = [mock_intake_1, mock_intake_2]
+
+        mock_occurrence_1 = MagicMock(symptom_id=MagicMock(id=symptom_1_id), date=date(2025, 5, 26))
+        mock_occurrence_2 = MagicMock(symptom_id=MagicMock(id=symptom_2_id), date=date(2025, 5, 27))
         occurrences = [mock_occurrence_1, mock_occurrence_2]
 
         # act
         result = calculate_correlations(intakes, occurrences)
 
         # assert
-        self.assertIn(100, result)
-        self.assertIn(1, result[100])
-        self.assertIn(2, result[100])
+        self.assertIn(symptom_1_id, result)
+        self.assertIn(symptom_2_id, result)
+        self.assertIn(food_1_id, result[symptom_1_id])
+        self.assertIn(food_1_id, result[symptom_1_id])
+        self.assertIn(food_1_id, result[symptom_2_id])
+        self.assertIn(food_1_id, result[symptom_2_id])
+
+
+    def test_calculate_correlations_should_return_expected_correlation_coefficient(self):
+        # arrange
+        symptom_id = 101
+
+        food_1_id = 1
+        food_2_id = 2
+        expected_food_1_correlation_coefficient = 0.5
+        expected_food_2_correlation_coefficient = -1
+
+        mock_intake_1 = MagicMock(food_id=MagicMock(id=food_1_id), date=date(2025, 5, 24))
+        mock_intake_2 = MagicMock(food_id=MagicMock(id=food_1_id), date=date(2025, 5, 25))
+        mock_intake_3 = MagicMock(food_id=MagicMock(id=food_2_id), date=date(2025, 5, 26))
+        intakes = [mock_intake_1, mock_intake_2, mock_intake_3]
+
+        mock_occurrence_1 = MagicMock(symptom_id=MagicMock(id=symptom_id), date=date(2025, 5, 26))
+        occurrences = [mock_occurrence_1]
+
+        # act
+        result = calculate_correlations(intakes, occurrences)
+
+        # assert
+        self.assertEqual(expected_food_1_correlation_coefficient, result[symptom_id][food_1_id]['correlation_coefficient'])
+        self.assertEqual(expected_food_2_correlation_coefficient, result[symptom_id][food_2_id]['correlation_coefficient'])
+
 
 if __name__ == '__main__':
     unittest.main()

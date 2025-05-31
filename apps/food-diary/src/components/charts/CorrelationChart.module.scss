@@ -1,0 +1,10 @@
+@use "../../styles/abstracts/functions" as fx;
+
+.correlationChart {
+  margin-top: 1rem;
+
+  :global {
+    --_correlationChart__bar-BackgroundColor: var(--correlationChart__bar-BackgroundColor, #{fx.getPrimaryColor()});
+    --_correlationChart__bar-Color: var(--correlationChart__bar-Color, #{fx.getPrimaryColor()});
+  }
+}

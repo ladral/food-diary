@@ -1,5 +1,9 @@
 [
-    {"id": 999000, "days_ago": 1, "symptom_id": 9999},
-    {"id": 999001, "days_ago": 2, "symptom_id": 9999},
-    {"id": 999002, "days_ago": 3, "symptom_id": 9999}
+    {"id": 999000, "days_ago": 0, "symptom_id": 9999},
+    {"id": 999001, "days_ago": 4, "symptom_id": 9999},
+    {"id": 999003, "days_ago": 13, "symptom_id": 9999},
+    {"id": 999002, "days_ago": 18, "symptom_id": 9999},
+    {"id": 999005, "days_ago": 22, "symptom_id": 9999},
+    {"id": 999006, "days_ago": 25, "symptom_id": 9999},
+    {"id": 999004, "days_ago": 26, "symptom_id": 9999}
 ]

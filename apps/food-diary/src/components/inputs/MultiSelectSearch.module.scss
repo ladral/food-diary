@@ -1,0 +1,18 @@
+@use "../../styles/abstracts/functions" as fx;
+
+.select {
+  & :global .MuiButtonBase-root {
+    text-transform: none;
+    background-color: #{fx.getColor(white, 800)};
+    border-color: #{fx.getColor(gray, 900)};
+    color:  #{fx.getColor(black, 500)};
+  }
+
+  & :global .MuiInputBase-root .MuiOutlinedInput-notchedOutline {
+    border-color: #{fx.getPrimaryColor()};
+  }
+
+  & :global .MuiInputBase-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: #{fx.getPrimaryColor()};
+  }
+}

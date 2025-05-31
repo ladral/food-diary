@@ -39,7 +39,7 @@ const SymptomOccurrence: React.FC<CreateSymptomOccurrenceProps> = ({ onClose, on
                 fetchSymptomId();
             }
 
-        }, [symptomService, diaryEntry]);
+        }, [symptomService, diaryEntry, hasError]);
 
         const handleSubmit = async (e: React.FormEvent) => {
             e.preventDefault();

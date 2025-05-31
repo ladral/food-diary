@@ -25,9 +25,9 @@ class CorrelationService {
         return null;
     }
 
-    async getCorrelations(): Promise<GetCorrelationsListResponse | null> {
+    async getCorrelations(foodIdsToIgnore: number[]): Promise<GetCorrelationsListResponse | null> {
         try {
-            const result = await this.apiClient.getCorrelations();
+            const result = await this.apiClient.getCorrelations(foodIdsToIgnore);
 
             if (result.success) {
                 return result.data;

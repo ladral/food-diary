@@ -1,0 +1,22 @@
+@use "../../styles/abstracts/functions" as fx;
+@use "../../styles/abstracts/size" as *;
+
+.form {
+  margin-top: 1rem;
+}
+
+.form__input {
+  gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  @media (max-width: $breakpoint-xs) {
+    flex-direction: column;
+  }
+}
+
+
+.form__submitButton {
+  margin-top: 1rem;
+}

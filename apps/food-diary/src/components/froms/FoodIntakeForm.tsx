@@ -39,7 +39,7 @@ const FoodIntakeForm: React.FC<CreateIntakeFormProps> = ({ onClose, onAction, fo
             fetchFoodId();
         }
 
-    }, [foodService, diaryEntry]);
+    }, [foodService, diaryEntry, hasError]);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();

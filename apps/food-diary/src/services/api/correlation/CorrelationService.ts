@@ -1,17 +1,16 @@
 import FoodDiaryApiClient from "../FoodDiaryApiClient.ts";
-import logger from "../../logging/logger.ts";
-import GetDiaryListResponse from "./models/GetDiaryListResponse.ts";
 import { Severity } from "../../../models/alerts/Severity.ts";
 import { ApiException } from "../../../models/exceptions/ApiException.ts";
+import logger from "../../logging/logger.ts";
+import GetCorrelationsListResponse from "./models/GetCorrelationsListResponse.ts";
 
-class DiaryService {
+
+class CorrelationService {
     private apiClient: FoodDiaryApiClient;
-    private pageSize: number;
     private addAlert: (message: string, severity: Severity) => void;
 
     constructor(addAlert: (message: string, severity: Severity) => void) {
         this.apiClient = new FoodDiaryApiClient();
-        this.pageSize = 10;
         this.addAlert = addAlert;
     }
 
@@ -26,21 +25,20 @@ class DiaryService {
         return null;
     }
 
-    async getDiaryList(page: number): Promise<GetDiaryListResponse | null> {
+    async getCorrelations(foodIdsToIgnore: number[]): Promise<GetCorrelationsListResponse | null> {
         try {
-            const result = await this.apiClient.getDiary(page, this.pageSize);
+            const result = await this.apiClient.getCorrelations(foodIdsToIgnore);
 
             if (result.success) {
-                result.data.totalPages = Math.ceil(result.data.count / this.pageSize)
                 return result.data;
             } else {
-                logger.error("could not get diary list")
+                logger.error("could not get diary correlations")
                 return this.handleApiException(result.error)
             }
         } catch (e) {
-            return this.handleUnknownExceptions(e, "getDiaryList")
+            return this.handleUnknownExceptions(e, "getCorrelations")
         }
     }
 }
 
-export default DiaryService;
+export default CorrelationService;

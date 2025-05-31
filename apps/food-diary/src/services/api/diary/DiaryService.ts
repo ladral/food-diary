@@ -38,7 +38,7 @@ class DiaryService {
                 return this.handleApiException(result.error)
             }
         } catch (e) {
-            return this.handleUnknownExceptions(e, "y")
+            return this.handleUnknownExceptions(e, "getDiaryList")
         }
     }
 }

@@ -14,7 +14,7 @@ def gather_occurrences(user):
 
 
 def calculate_phi(table):
-    a, b, c, d = table # a: no symptom, no food; b: no symptom, food; c: symptom, no food; d: symptom, food
+    a, b, c, d = table  # a: no symptom, no food; b: no symptom, food; c: symptom, no food; d: symptom, food
 
     if a == 0 and b == 0 and c == 0 and d == 0:
         return 0
@@ -24,6 +24,7 @@ def calculate_phi(table):
         return -1
 
     return (d * a - c * b) / denominator
+
 
 def calculate_correlations(intakes, occurrences, days_back=1):
     correlation_map = defaultdict(lambda: defaultdict(list))
@@ -65,13 +66,18 @@ def calculate_correlations(intakes, occurrences, days_back=1):
 
             correlation_coefficient = calculate_phi(counts)
 
-            correlation_map[symptom_id][food_id] = {
-                "food_name": intakes.filter(food_id=food_id).first().food_id.name,
-                "correlation_coefficient": correlation_coefficient,
-                "occurrence_counts": occurrence_counts
-            }
+            filtered_intakes = [intake for intake in intakes if intake.food_id.id == food_id]
+            matching_intake = filtered_intakes[0] if filtered_intakes else None
+
+            if matching_intake:
+                correlation_map[symptom_id][food_id] = {
+                    "food_name": matching_intake.food_id.name,
+                    "correlation_coefficient": correlation_coefficient,
+                    "occurrence_counts": occurrence_counts
+                }
 
     return correlation_map
+
 
 def find_correlations(user, days_back=1, ignored_food_ids=None):
     intakes = gather_intakes(user, ignored_food_ids)

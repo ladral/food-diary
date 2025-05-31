@@ -173,8 +173,8 @@ class FoodDiaryApiClient {
         return this.deleteResource(`/api/occurrence/${id}/`);
     }
 
-    async getCorrelations(): Promise<Result<GetCorrelationsListResponse>> {
-        return this.getResource(`/api/correlations/`);
+    async getCorrelations(foodIdsToIgnore: number[]): Promise<Result<GetCorrelationsListResponse>> {
+        return this.getResource(`/api/correlations/`, { ignored_foods: foodIdsToIgnore.join(",")});
     }
 }
 

@@ -78,7 +78,7 @@ const CorrelationChart: React.FC<CorrelationChartProps> = ({ correlations }) => 
                     options={chartOptions}
                 />
             ) : (
-                <div>No data available</div>
+                <div></div>
             )}
         </div>
     );

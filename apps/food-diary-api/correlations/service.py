@@ -105,12 +105,11 @@ def find_correlations(user, days_back=1, ignored_food_ids=None):
         )
 
         top_correlations = sorted_food_list[:5]
-        lowest_correlations = sorted_food_list[-2:]
 
         response["correlations"].append({
             "symptom_id": symptom_id,
             "symptom_name": symptom_name,
-            "food_correlations": top_correlations + lowest_correlations
+            "food_correlations": top_correlations
         })
 
     return response

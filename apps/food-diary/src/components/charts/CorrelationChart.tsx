@@ -31,52 +31,54 @@ const CorrelationChart: React.FC<CorrelationChartProps> = ({ correlations }) => 
         Tooltip
     );
 
-    const chartData = {
-        labels: correlations.flatMap(correlation =>
-            correlation.food_correlations.map(food =>
-                food.food_name.length > 30 ? food.food_name.slice(0, 30) + '...' : food.food_name
-            )
-        ),
-        datasets: [
-            {
-                label: "correlation coefficient",
-                data: correlations.flatMap(correlation =>
-                    correlation.food_correlations.map(food => food.correlation_coefficient)
-                ),
-                backgroundColor: getCssVar(chartRef, '--_correlationChart__bar-BackgroundColor'),
-                borderColor: getCssVar(chartRef, '--_correlationChart__bar-Color'),
-                borderWidth: 1
-            }
-        ]
-    };
-
-    const chartOptions = {
-        responsive: true,
-        scales: {
-            y: {
-                beginAtZero: true,
-                title: {
-                    display: true,
-                    text: "correlation coefficient"
-                }
-
-            },
-            x: {
-                ticks: {
-                    maxRotation: 90,
-                    minRotation: 20
-                }
-            }
-        }
-    };
-
     return (
         <div className={styles.correlationChart} ref={chartRef}>
             {correlations.length > 0 ? (
-                <Bar
-                    data={chartData}
-                    options={chartOptions}
-                />
+                correlations.map((correlation, index) => {
+                    const chartData = {
+                        labels: correlation.food_correlations.map(food =>
+                            food.food_name.length > 30 ? food.food_name.slice(0, 30) + '...' : food.food_name
+                        ),
+                        datasets: [
+                            {
+                                label: "correlation coefficient",
+                                data: correlation.food_correlations.map(food => food.correlation_coefficient),
+                                backgroundColor: getCssVar(chartRef, '--_correlationChart__bar-BackgroundColor'),
+                                borderColor: getCssVar(chartRef, '--_correlationChart__bar-Color'),
+                                borderWidth: 1
+                            }
+                        ]
+                    };
+
+                    const chartOptions = {
+                        responsive: true,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: "correlation coefficient"
+                                }
+                            },
+                            x: {
+                                ticks: {
+                                    maxRotation: 90,
+                                    minRotation: 20
+                                }
+                            }
+                        }
+                    };
+
+                    return (
+                        <div key={index} className={styles.singleChart}>
+                            <h3>{correlation.symptom_name || `Correlation ${index + 1}`}</h3>
+                            <Bar
+                                data={chartData}
+                                options={chartOptions}
+                            />
+                        </div>
+                    );
+                })
             ) : (
                 <div></div>
             )}

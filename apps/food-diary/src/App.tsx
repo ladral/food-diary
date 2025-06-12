@@ -1,5 +1,5 @@
 import { KeycloakProvider } from "./context/KeycloakContext";
-import { BrowserRouter, Routes, Route, Navigate, Outlet } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import "./App.scss";
 import SilentCheckSsoRedirect from "./pages/authentication/SilentCheckSsoRedirect.tsx";
 import Navigation from "./components/layout/Navigation.tsx";
@@ -23,16 +23,12 @@ function App() {
 
         useEffect(() => {
             if (!authenticated) {
-                keycloak?.login();
+                const redirectUrl = `${window.location.origin}`;
+                keycloak?.login({ redirectUri: redirectUrl });
             }
-        }, [authenticated, keycloak]);
-
-        if (!authenticated) {
-            return <Navigate to={redirectPath} replace />;
-        }
+        }, [authenticated, keycloak, redirectPath]);
 
         return <Outlet />;
-
     };
 
     return (
@@ -48,7 +44,7 @@ function App() {
                                 </aside>
                                 <div className="container px-4 u-w-100">
                                     <Routes>
-                                        <Route element={<ProtectedRoute />}>
+                                        <Route element={<ProtectedRoute /> }>
                                             <Route path="/" element={<DiaryPage />} />
                                             <Route path="/analysis" element={<AnalysisPage />} />
                                         </Route>

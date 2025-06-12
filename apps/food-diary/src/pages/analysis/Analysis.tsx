@@ -1,21 +1,23 @@
 import React, { useState } from "react";
 import styles from "./Analysis.module.scss";
 import CorrelationChart from "../../components/charts/CorrelationChart.tsx";
-import logger from "../../services/logging/logger.ts";
+import logger from "../../services/logging/Logger.ts";
 import { useAlert } from "../../context/AlertContext.tsx";
 import CorrelationService from "../../services/api/correlation/CorrelationService.ts";
 import Correlation from "../../services/api/correlation/models/Correlation.ts";
 import MultiSelectSearch from "../../components/inputs/MultiSelectSearch.tsx";
 import GetFoodResponse from "../../services/api/food/models/GetFoodResponse.ts";
 import FoodService from "../../services/api/food/FoodService.ts";
+import ErrorHandler from "../../services/error/ErrorHandler.ts";
 
 const Analysis: React.FC = () => {
     const [correlations, setCorrelations] = useState<Correlation[]>([]);
     const [foodsToIgnore, setFoodsToIgnore] = useState<GetFoodResponse[]>([]);
     const [foodOptions, setFoodOptions] = useState<GetFoodResponse[]>([]);
     const { addAlert } = useAlert();
-    const correlationService = new CorrelationService(addAlert);
-    const foodService = new FoodService(addAlert);
+    const errorHandler = new ErrorHandler(addAlert)
+    const correlationService = new CorrelationService(errorHandler);
+    const foodService = new FoodService(errorHandler);
 
     const fetchCorrelations = async () => {
         try {

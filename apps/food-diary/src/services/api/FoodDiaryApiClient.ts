@@ -2,7 +2,7 @@ import { Result } from "../../models/api/Result";
 import { ApiException } from "../../models/exceptions/ApiException.ts";
 import useKeycloak from "../../hooks/useKeycloak.ts";
 import axios, { AxiosError, AxiosInstance } from "axios";
-import logger from "../logging/logger.ts";
+import logger from "../logging/Logger.ts";
 import GetDiaryListResponse from "./diary/models/GetDiaryListResponse.ts";
 import CreateFoodIntakeRequest from "./food/models/CreateFoodIntakeRequest.ts";
 import CreateFoodIntakeResponse from "./food/models/CreateFoodIntakeResponse.ts";

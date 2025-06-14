@@ -1,31 +1,20 @@
 import FoodDiaryApiClient from "../FoodDiaryApiClient.ts";
 import CreateFoodIntakeResponse from "./models/CreateFoodIntakeResponse.ts";
 import CreateFoodIntakeRequest from "./models/CreateFoodIntakeRequest.ts";
-import logger from "../../logging/logger.ts";
+import logger from "../../logging/Logger.ts";
 import { Severity } from "../../../models/alerts/Severity.ts";
 import GetFoodsResponse from "./models/GetFoodsResponse.ts";
 import IFoodService from "./IFoodService.ts";
-import { ApiException } from "../../../models/exceptions/ApiException.ts";
+import IErrorHandler from "../../error/IErrorHandler.ts";
 
 
 class FoodService implements IFoodService {
     private apiClient: FoodDiaryApiClient;
-    private addAlert: (message: string, severity: Severity) => void;
+    private errorHandler: IErrorHandler;
 
-    constructor(addAlert: (message: string, severity: Severity) => void) {
+    constructor(errorHandler: IErrorHandler) {
         this.apiClient = new FoodDiaryApiClient();
-        this.addAlert = addAlert;
-    }
-
-    private handleApiException(error: ApiException): null {
-        this.addAlert(`Error: ${error.message}`, Severity.Error);
-        return null;
-    }
-
-    private handleUnknownExceptions(e: any, source: string): null {
-        logger.error(`Unexpected error in ${source}:`, e);
-        this.addAlert('An unexpected error occurred.', Severity.Error);
-        return null;
+        this.errorHandler = errorHandler;
     }
 
     async searchFood(foodName: string): Promise<GetFoodsResponse | null> {
@@ -36,10 +25,10 @@ class FoodService implements IFoodService {
                 return result.data;
             } else {
                 logger.error("could not search food")
-                return this.handleApiException(result.error)
+                return this.errorHandler.handleApiException(result.error)
             }
         } catch (e) {
-            return this.handleUnknownExceptions(e, "searchFood")
+            return this.errorHandler.handleUnknownExceptions(e, "searchFood")
         }
     }
 
@@ -61,14 +50,14 @@ class FoodService implements IFoodService {
             const result = await this.apiClient.createIntake(body);
 
             if (result.success) {
-                this.addAlert('Eintrag erfolgreich hinzugefügt', Severity.Success);
+                this.errorHandler.alert('Eintrag erfolgreich hinzugefügt', Severity.Success);
                 return result.data;
             } else {
                 logger.error("could not create food intake")
-                return this.handleApiException(result.error)
+                return this.errorHandler.handleApiException(result.error)
             }
         } catch (e) {
-            return this.handleUnknownExceptions(e, "createFoodIntake")
+            return this.errorHandler.handleUnknownExceptions(e, "createFoodIntake")
         }
     }
 
@@ -78,14 +67,14 @@ class FoodService implements IFoodService {
             const result = await this.apiClient.updateIntake(id, body);
 
             if (result.success) {
-                this.addAlert('Eintrag erfolgreich aktualisiert', Severity.Success);
+                this.errorHandler.alert('Eintrag erfolgreich aktualisiert', Severity.Success);
                 return result.data;
             } else {
                 logger.error("could not update food intake")
-                return this.handleApiException(result.error)
+                return this.errorHandler.handleApiException(result.error)
             }
         } catch (e) {
-            return this.handleUnknownExceptions(e, "updateFoodIntake")
+            return this.errorHandler.handleUnknownExceptions(e, "updateFoodIntake")
         }
     }
 
@@ -94,13 +83,13 @@ class FoodService implements IFoodService {
             const result = await this.apiClient.deleteIntake(id);
 
             if (result.success) {
-                this.addAlert('Eintrag erfolgreich gelöscht', Severity.Info);
+                this.errorHandler.alert('Eintrag erfolgreich gelöscht', Severity.Info);
             } else {
                 logger.error("could not delete food intake")
-                this.handleApiException(result.error)
+                this.errorHandler.handleApiException(result.error)
             }
         } catch (e) {
-            this.handleUnknownExceptions(e, "deleteFoodIntake")
+            this.errorHandler.handleUnknownExceptions(e, "deleteFoodIntake")
         }
     }
 }

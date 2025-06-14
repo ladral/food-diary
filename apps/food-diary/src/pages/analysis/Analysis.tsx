@@ -1,21 +1,24 @@
 import React, { useState } from "react";
 import styles from "./Analysis.module.scss";
 import CorrelationChart from "../../components/charts/CorrelationChart.tsx";
-import logger from "../../services/logging/logger.ts";
+import logger from "../../services/logging/Logger.ts";
 import { useAlert } from "../../context/AlertContext.tsx";
 import CorrelationService from "../../services/api/correlation/CorrelationService.ts";
 import Correlation from "../../services/api/correlation/models/Correlation.ts";
 import MultiSelectSearch from "../../components/inputs/MultiSelectSearch.tsx";
 import GetFoodResponse from "../../services/api/food/models/GetFoodResponse.ts";
 import FoodService from "../../services/api/food/FoodService.ts";
+import ErrorHandler from "../../services/error/ErrorHandler.ts";
+import PageTemplate from "../../components/layout/PageTemplate.tsx";
 
 const Analysis: React.FC = () => {
     const [correlations, setCorrelations] = useState<Correlation[]>([]);
     const [foodsToIgnore, setFoodsToIgnore] = useState<GetFoodResponse[]>([]);
     const [foodOptions, setFoodOptions] = useState<GetFoodResponse[]>([]);
     const { addAlert } = useAlert();
-    const correlationService = new CorrelationService(addAlert);
-    const foodService = new FoodService(addAlert);
+    const errorHandler = new ErrorHandler(addAlert);
+    const correlationService = new CorrelationService(errorHandler);
+    const foodService = new FoodService(errorHandler);
 
     const fetchCorrelations = async () => {
         try {
@@ -61,24 +64,23 @@ const Analysis: React.FC = () => {
     };
 
     return (
-        <div>
+        <PageTemplate>
             <form className={`${styles.form} is-flex is-flex-direction-column`} onSubmit={handleSubmit}>
                 <div className={styles.form__input}>
                     <label className={styles.form__inputLabel}>Von der Analyse ausschliessen</label>
-                        <MultiSelectSearch
-                            values={foodsToIgnore.map(food => food.name)}
-                            onSearch={searchFoods}
-                            onChange={onChange}
-                            options={foodOptions.map(food => food.name)}
-                        />
+                    <MultiSelectSearch
+                        values={foodsToIgnore.map(food => food.name)}
+                        onSearch={searchFoods}
+                        onChange={onChange}
+                        options={foodOptions.map(food => food.name)}
+                    />
                 </div>
                 <button className={`${styles.form__submitButton} fd-button fd-button--primary`} type="submit">
                     Analysedaten Aktualisieren
                 </button>
             </form>
-
             <CorrelationChart correlations={correlations} />
-        </div>
+        </PageTemplate>
     );
 };
 

@@ -1,6 +1,6 @@
 import DiaryEntry from "../../services/api/diary/models/DiaryEntry.ts";
 import SortableTable from "../tables/SortableTable";
-import logger from "../../services/logging/logger";
+import logger from "../../services/logging/Logger.ts";
 import styles from "./FoodDiaryTable.module.scss";
 import Pagination from "../pagination/Pagination";
 import DiaryService from "../../services/api/diary/DiaryService";
@@ -14,6 +14,7 @@ import SymptomOccurrence from "../froms/SymptomOccurrence.tsx";
 import { useAlert } from "../../context/AlertContext.tsx";
 import SymptomService from "../../services/api/symptom/SymptomService.ts";
 import FoodService from "../../services/api/food/FoodService.ts";
+import ErrorHandler from "../../services/error/ErrorHandler.ts";
 
 
 const FoodDiaryTable = () => {
@@ -25,9 +26,10 @@ const FoodDiaryTable = () => {
     const [isModalOpen, setModalOpen] = useState(false);
     const [formType, setFormType] = useState<FormType | null>(null);
     const { addAlert } = useAlert();
-    const diaryService = new DiaryService(addAlert);
-    const symptomService = new SymptomService(addAlert);
-    const foodService = new FoodService(addAlert);
+    const errorHandler = new ErrorHandler(addAlert);
+    const diaryService = new DiaryService(errorHandler);
+    const symptomService = new SymptomService(errorHandler);
+    const foodService = new FoodService(errorHandler);
 
     const columns = [
         { label: "Datum", accessor: "date" },

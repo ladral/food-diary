@@ -5,7 +5,7 @@ import React, {
     useRef
 } from "react";
 import Keycloak from "keycloak-js";
-import logger from "../services/logging/logger.ts";
+import logger from "../services/logging/Logger.ts";
 
 interface KeycloakContextProps {
     keycloak: Keycloak | null;

@@ -39,7 +39,11 @@ const Modal: React.FC<ModalProps> = ({ children, isOpen, onClose }) => {
     return (
         <AnimatePresence>
             {isOpen && (
-                <div className={`${styles.modal} is-flex`}>
+                <motion.div
+                    className={`${styles.modal} is-flex`}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.4 }}
+                >
                     <motion.div
                         className={styles.modalContent}
                         ref={modalContentRef}
@@ -57,7 +61,7 @@ const Modal: React.FC<ModalProps> = ({ children, isOpen, onClose }) => {
                             {children}
                         </div>
                     </motion.div>
-                </div>
+                </motion.div>
             )}
         </AnimatePresence>
     );

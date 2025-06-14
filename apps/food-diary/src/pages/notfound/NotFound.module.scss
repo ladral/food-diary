@@ -1,0 +1,40 @@
+@use "../../styles/abstracts/functions" as fx;
+@use "../../styles/abstracts/size" as *;
+
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+
+.svgContainer {
+  max-width: 80vw;
+}
+
+.svg {
+  width: 400px;
+  height: 200px;
+
+  @media (max-width: $breakpoint-xs) {
+    width: 300px;
+    height: 150px;
+  }
+}
+
+.shape {
+  stroke-width: 5;
+  stroke-linecap: round;
+  fill: transparent;
+
+  &Primary {
+    stroke: #{fx.getPrimaryColor()};
+  }
+
+  &Secondary {
+    stroke: #{fx.getSecondaryColor()};
+  }
+}

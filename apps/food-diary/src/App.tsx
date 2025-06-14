@@ -5,6 +5,7 @@ import SilentCheckSsoRedirect from "./pages/authentication/SilentCheckSsoRedirec
 import { AlertProvider } from "./context/AlertContext.tsx";
 import React, { lazy, useEffect } from "react";
 import useKeycloak from "./hooks/useKeycloak.ts";
+import NotFound from "./pages/notfound/NotFound.tsx";
 
 const DiaryPage = lazy(() => import("./pages/diary/Diary.tsx"));
 const AnalysisPage = lazy(() => import("./pages/analysis/Analysis.tsx"));
@@ -38,6 +39,7 @@ function App() {
                             <Route path="/analysis" element={<AnalysisPage />} />
                         </Route>
                         <Route path="/silent-check-sso" element={<SilentCheckSsoRedirect />} />
+                        <Route path="*" element={<NotFound />} />
                     </Routes>
                 </BrowserRouter>
             </AlertProvider>

@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import styles from "./Avatar.module.scss";
 import useKeycloak from "../../hooks/useKeycloak.ts";
+import { AnimatePresence, motion } from "motion/react";
 
 interface AvatarProps {
     className?: string;
@@ -40,17 +41,23 @@ const Avatar: React.FC<AvatarProps> = ({ className = styles.avatar }) => {
                 <div className="fd-icon-user-fill"></div>
             </div>
             <span className={styles.avatarUsername}>{username}</span>
-
-            {isOpen && (
-                <div className={`${styles.avatar__userMenu} is-flex is-flex-direction-column`}>
-                    <button
-                        className={`${styles.optionItem} fd-button fd-button--primary-light`}
-                        onClick={handleLogout}
-                    >
-                        Logout
-                    </button>
-                </div>
-            )}
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        className={`${styles.avatar__userMenu} is-flex is-flex-direction-column`}
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "100%", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.12 }}>
+                        <button
+                            className={`${styles.optionItem} fd-button fd-button--primary-light`}
+                            onClick={handleLogout}
+                        >
+                            Logout
+                        </button>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </div>
     );
 };

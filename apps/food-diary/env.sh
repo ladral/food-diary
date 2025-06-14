@@ -27,5 +27,5 @@ if [ ! -s "$sed_script" ]; then
     exit 1
 fi
 
-# sed All files
+# sed all files
 find /usr/share/nginx/html -type f -exec sed -i -f "$sed_script" '{}' +

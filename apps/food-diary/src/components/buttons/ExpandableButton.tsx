@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import styles from "./ExpandableButton.module.scss";
+import { AnimatePresence, motion } from "motion/react";
+import { Variants } from "motion";
 
 interface Option {
     name: string;
@@ -10,7 +12,6 @@ interface ExpandableButtonProps {
     className?: string;
     expandOptions: Option[];
 }
-
 
 const ExpandableButton: React.FC<ExpandableButtonProps> = ({ className = styles.expandableButton, expandOptions }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -47,21 +48,48 @@ const ExpandableButton: React.FC<ExpandableButtonProps> = ({ className = styles.
                 aria-expanded={isOpen}
             >
             </button>
-            {isOpen && (
-                <div className={`${styles.options} is-flex is-flex-direction-column`}>
-                    {expandOptions.map((option, index) => (
-                        <button
-                            key={index}
-                            className={`${styles.optionItem} fd-button fd-button--primary-light`}
-                            onClick={() => handleOptionClick(option.action)}
-                        >
-                            {option.name}
-                        </button>
-                    ))}
-                </div>
-            )}
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        className={styles.options}
+                        initial="closed"
+                        animate="open"
+                        exit="closed"
+                        variants={optionsVariants}
+                    >
+                        {expandOptions.map((option, index) => (
+                            <button
+                                key={index}
+                                className={`${styles.optionItem} fd-button fd-button--primary-light`}
+                                onClick={() => handleOptionClick(option.action)}
+                            >
+                                {option.name}
+                            </button>
+                        ))}
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </div>
     );
+};
+
+const optionsVariants : Variants = {
+    open: (height = 400) => ({
+        clipPath: `circle(${height * 2 + 200}px at 105px 100px)`,
+        transition: {
+            type: "spring",
+            stiffness: 20,
+            restDelta: 2,
+        },
+    }),
+    closed: {
+        clipPath: "circle(30px at 105px 100px)",
+        transition: {
+            type: "spring",
+            stiffness: 1000,
+            damping: 55,
+        },
+    },
 };
 
 export default ExpandableButton;

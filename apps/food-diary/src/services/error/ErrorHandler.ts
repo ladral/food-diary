@@ -16,7 +16,11 @@ class ErrorHandler implements IErrorHandler {
         return null
     }
 
-    public handleUnknownExceptions(e: any, source: string): null {
+    public handleUnknownExceptions(
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        e: any,
+        source: string
+    ): null {
         logger.error(`Unexpected error in ${source}:`, e);
         this.addAlert("An unexpected error occurred.", Severity.Error);
         return null;

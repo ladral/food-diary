@@ -7,7 +7,7 @@ interface IFoodService {
     createFoodIntake(body: CreateFoodIntakeRequest): Promise<CreateFoodIntakeResponse | null>;
     getFoodId(name: string): Promise<number | null>;
     updateFoodIntake(id: number, body: CreateFoodIntakeRequest): Promise<CreateFoodIntakeResponse | null>;
-    deleteFoodIntake(id: number): any;
+    deleteFoodIntake(id: number): Promise<void>
 }
 
 export default IFoodService;

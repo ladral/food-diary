@@ -10,7 +10,7 @@ interface ISymptomService {
     getSymptomId(symptomName: string): Promise<number | null>;
     createSymptomOccurrence(body: CreateSymptomOccurrenceRequest): Promise<CreateSymptomOccurrenceResponse | null>;
     createSymptom(body: CreateSymptomRequest): Promise<CreateSymptomResponse | null>;
-    deleteSymptomOccurrence(id: number): any;
+    deleteSymptomOccurrence(id: number): Promise<void>;
 }
 
 export default ISymptomService;

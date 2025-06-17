@@ -32,7 +32,7 @@ class Logger {
         }
     }
 
-    log(level: LogLevel, message: string, optionalParams?: any[] | null): void {
+    log<T>(level: LogLevel, message: string, optionalParams?: T[] | null): void {
         const levelIndex = this.levels.indexOf(level);
         const currentLevelIndex = this.levels.indexOf(this.currentLevel);
 
@@ -41,26 +41,26 @@ class Logger {
             const logMessage = `[${level.toUpperCase()}] ${timestamp}: ${message}`;
 
             if (optionalParams && optionalParams.length > 0) {
-                (console[level](logMessage, ...optionalParams));
+                console[level](logMessage, ...optionalParams);
             } else {
-                (console[level](logMessage));
+                console[level](logMessage);
             }
         }
     }
 
-    debug(message: string, ...optionalParams: any[]): void {
+    debug<T>(message: string, ...optionalParams: T[]): void {
         this.log(LogLevel.DEBUG, message, optionalParams);
     }
 
-    info(message: string, ...optionalParams: any[]): void {
+    info<T>(message: string, ...optionalParams: T[]): void {
         this.log(LogLevel.INFO, message, optionalParams);
     }
 
-    warn(message: string, ...optionalParams: any[]): void {
+    warn<T>(message: string, ...optionalParams: T[]): void {
         this.log(LogLevel.WARN, message, optionalParams);
     }
 
-    error(message: string, ...optionalParams: any[]): void {
+    error<T>(message: string, ...optionalParams: T[]): void {
         this.log(LogLevel.ERROR, message, optionalParams);
     }
 }

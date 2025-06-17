@@ -16,6 +16,7 @@ interface Badge {
 interface SortableTableProps {
     className?: string;
     columns: Column[];
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     data: any;
     onEdit: (entry: DiaryEntry) => void;
     badge?: Badge;

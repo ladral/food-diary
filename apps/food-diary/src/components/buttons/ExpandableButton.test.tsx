@@ -1,21 +1,21 @@
-import { render, screen, fireEvent } from '@testing-library/react';
-import ExpandableButton from './ExpandableButton';
+import { render, screen, fireEvent, waitFor } from "@testing-library/react";
+import ExpandableButton from "./ExpandableButton";
 import styles from "./ExpandableButton.module.scss";
 
-describe('ExpandableButton Component', () => {
+describe("ExpandableButton Component", () => {
     const mockFoodAction = vi.fn();
     const mockSymptomAction = vi.fn();
 
     const options = [
-        { name: 'Food', action: mockFoodAction },
-        { name: 'Symptom', action: mockSymptomAction },
+        { name: "Food", action: mockFoodAction },
+        { name: "Symptom", action: mockSymptomAction }
     ];
 
     beforeEach(() => {
         render(<ExpandableButton expandOptions={options} />);
     });
 
-    test('renders correctly with options', () => {
+    test("renders correctly with options", () => {
         // arrange
         const button = document.querySelector(`.${styles.expandableButton__toggle}`) as HTMLButtonElement;
 
@@ -23,11 +23,11 @@ describe('ExpandableButton Component', () => {
 
         // assert
         expect(button).toBeInTheDocument();
-        expect(screen.queryByText('Food')).not.toBeInTheDocument();
-        expect(screen.queryByText('Symptom')).not.toBeInTheDocument();
+        expect(screen.queryByText("Food")).not.toBeInTheDocument();
+        expect(screen.queryByText("Symptom")).not.toBeInTheDocument();
     });
 
-    test('toggles options visibility when button is clicked', () => {
+    test("toggles options visibility when button is clicked", async () => {
         // arrange
         const button = document.querySelector(`.${styles.expandableButton__toggle}`) as HTMLButtonElement;
 
@@ -35,41 +35,47 @@ describe('ExpandableButton Component', () => {
         fireEvent.click(button);
 
         // assert
-        expect(screen.getByText('Food')).toBeInTheDocument();
-        expect(screen.getByText('Symptom')).toBeInTheDocument();
+        expect(screen.getByText("Food")).toBeInTheDocument();
+        expect(screen.getByText("Symptom")).toBeInTheDocument();
 
         // act -> click to collapse
         fireEvent.click(button);
 
         //assert
-        expect(screen.queryByText('Food')).not.toBeInTheDocument();
-        expect(screen.queryByText('Symptom')).not.toBeInTheDocument();
+        await waitFor(() => {
+            expect(screen.queryByText("Food")).not.toBeInTheDocument();
+            expect(screen.queryByText("Symptom")).not.toBeInTheDocument();
+        });
     });
 
-    test('executes action and collapses options when an option is clicked', () => {
+    test("executes action and collapses options when an option is clicked", async () => {
         // arrange
         const button = document.querySelector(`.${styles.expandableButton__toggle}`) as HTMLButtonElement;
         fireEvent.click(button);
 
         // act
-        fireEvent.click(screen.getByText('Food'));
+        fireEvent.click(screen.getByText("Food"));
 
         // assert
         expect(mockFoodAction).toHaveBeenCalled();
-        expect(screen.queryByText('Food')).not.toBeInTheDocument();
-        expect(screen.queryByText('Symptom')).not.toBeInTheDocument();
+        await waitFor(() => {
+            expect(screen.queryByText("Food")).not.toBeInTheDocument();
+            expect(screen.queryByText("Symptom")).not.toBeInTheDocument();
+        });
     });
 
-    test('closes options when clicking outside the component', () => {
+    test("closes options when clicking outside the component", async () => {
         // arrange
         const button = document.querySelector(`.${styles.expandableButton__toggle}`) as HTMLButtonElement;
         fireEvent.click(button);
-        expect(screen.getByText('Food')).toBeInTheDocument();
+        expect(screen.getByText("Food")).toBeInTheDocument();
 
         // act
         fireEvent.mouseDown(document);
 
         // assert
-        expect(screen.queryByText('Food')).not.toBeInTheDocument();
+        await waitFor(() => {
+            expect(screen.queryByText("Food")).not.toBeInTheDocument();
+        });
     });
 });

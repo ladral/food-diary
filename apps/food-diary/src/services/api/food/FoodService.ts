@@ -12,8 +12,8 @@ class FoodService implements IFoodService {
     private apiClient: FoodDiaryApiClient;
     private errorHandler: IErrorHandler;
 
-    constructor(errorHandler: IErrorHandler) {
-        this.apiClient = new FoodDiaryApiClient();
+    constructor(apiClient: FoodDiaryApiClient, errorHandler: IErrorHandler) {
+        this.apiClient = apiClient;
         this.errorHandler = errorHandler;
     }
 

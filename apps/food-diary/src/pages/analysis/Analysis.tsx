@@ -10,6 +10,8 @@ import GetFoodResponse from "../../services/api/food/models/GetFoodResponse.ts";
 import FoodService from "../../services/api/food/FoodService.ts";
 import ErrorHandler from "../../services/error/ErrorHandler.ts";
 import PageTemplate from "../../components/layout/PageTemplate.tsx";
+import useKeycloak from "../../hooks/useKeycloak.ts";
+import FoodDiaryApiClient from "../../services/api/FoodDiaryApiClient.ts";
 
 const Analysis: React.FC = () => {
     const [correlations, setCorrelations] = useState<Correlation[]>([]);
@@ -17,8 +19,10 @@ const Analysis: React.FC = () => {
     const [foodOptions, setFoodOptions] = useState<GetFoodResponse[]>([]);
     const { addAlert } = useAlert();
     const errorHandler = new ErrorHandler(addAlert);
-    const correlationService = new CorrelationService(errorHandler);
-    const foodService = new FoodService(errorHandler);
+    const { keycloak } = useKeycloak();
+    const apiClient = new FoodDiaryApiClient(keycloak?.token || "")
+    const correlationService = new CorrelationService(apiClient, errorHandler);
+    const foodService = new FoodService(apiClient, errorHandler);
 
     const fetchCorrelations = async () => {
         try {

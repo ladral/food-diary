@@ -15,6 +15,7 @@ import { useAlert } from "../../context/AlertContext.tsx";
 import SymptomService from "../../services/api/symptom/SymptomService.ts";
 import FoodService from "../../services/api/food/FoodService.ts";
 import ErrorHandler from "../../services/error/ErrorHandler.ts";
+import FoodDiaryApiClient from "../../services/api/FoodDiaryApiClient.ts";
 
 
 const FoodDiaryTable = () => {
@@ -27,9 +28,11 @@ const FoodDiaryTable = () => {
     const [formType, setFormType] = useState<FormType | null>(null);
     const { addAlert } = useAlert();
     const errorHandler = new ErrorHandler(addAlert);
-    const diaryService = new DiaryService(errorHandler);
-    const symptomService = new SymptomService(errorHandler);
-    const foodService = new FoodService(errorHandler);
+    const { keycloak } = useKeycloak();
+    const apiClient = new FoodDiaryApiClient(keycloak?.token || "")
+    const diaryService = new DiaryService(apiClient, errorHandler);
+    const symptomService = new SymptomService(apiClient, errorHandler);
+    const foodService = new FoodService(apiClient, errorHandler);
 
     const columns = [
         { label: "Datum", accessor: "date" },

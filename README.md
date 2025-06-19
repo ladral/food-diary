@@ -12,7 +12,8 @@ To simplify the installation process, all three components have been consolidate
 Each application can also be installed separately. please refer to the dedicated README files for detailed instructions on local development setups for each application.
 
 There are two methods to install the application: production mode and demonstration mode. Once the application is started in production mode, it cannot be switched to demonstration mode without a complete reinstallation.
-To switch between modes, you must clean the Docker Compose installation by running the command docker-compose down --rmi all. After that, you need to delete the /data folder. Please note that all user data stored in the /data folder will be lost.
+To switch between modes, you must clean the Docker Compose installation by running the command `docker-compose down --rmi all`. After that, you need to delete the `/data` folder. Please note that all user data stored in the /data folder will be lost.
+
 Before proceeding, ensure you read and fully understand the instructions. Execute the necessary steps for your preferred installation method. If you're in a hurry and just want a fast demo setup, then you can refer to the TL;DR section below.
 
 ### Docker compose deployment

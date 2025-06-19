@@ -4,7 +4,7 @@ import logger from "../../services/logging/Logger.ts";
 import styles from "./FoodDiaryTable.module.scss";
 import Pagination from "../pagination/Pagination";
 import DiaryService from "../../services/api/diary/DiaryService";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import useKeycloak from "../../hooks/useKeycloak.ts";
 import ExpandableButton from "../buttons/ExpandableButton.tsx";
 import Modal from "../popups/Modal.tsx";
@@ -27,12 +27,12 @@ const FoodDiaryTable = () => {
     const [isModalOpen, setModalOpen] = useState(false);
     const [formType, setFormType] = useState<FormType | null>(null);
     const { addAlert } = useAlert();
-    const errorHandler = new ErrorHandler(addAlert);
+    const errorHandler = useMemo(() => new ErrorHandler(addAlert), [addAlert]);
     const { keycloak } = useKeycloak();
-    const apiClient = new FoodDiaryApiClient(keycloak?.token || "")
-    const diaryService = new DiaryService(apiClient, errorHandler);
-    const symptomService = new SymptomService(apiClient, errorHandler);
-    const foodService = new FoodService(apiClient, errorHandler);
+    const apiClient = useMemo(() => new FoodDiaryApiClient(keycloak?.token || ""), [keycloak])
+    const diaryService = useMemo(() => new DiaryService(apiClient, errorHandler), [apiClient, errorHandler]);
+    const symptomService = useMemo(() => new SymptomService(apiClient, errorHandler), [apiClient, errorHandler]);
+    const foodService = useMemo(() => new FoodService(apiClient, errorHandler), [apiClient, errorHandler]);
 
     const columns = [
         { label: "Datum", accessor: "date" },
@@ -45,7 +45,7 @@ const FoodDiaryTable = () => {
         columnPositionAccessor: "date",
     };
 
-    const fetchDiaryEntries = async (page: number) => {
+    const fetchDiaryEntries = useCallback(async (page: number) => {
         try {
             const result = await diaryService.getDiaryList(page);
             if (result) {
@@ -57,13 +57,13 @@ const FoodDiaryTable = () => {
         } catch (error) {
             logger.error("Failed to fetch diary entries", error);
         }
-    };
+    }, [diaryService]);
 
     useEffect(() => {
         if (authenticated) {
             fetchDiaryEntries(currentPage);
         }
-    }, [currentPage, authenticated]);
+    }, [currentPage, authenticated, fetchDiaryEntries]);
 
     const onInsertEntry = () => {
         fetchDiaryEntries(currentPage);

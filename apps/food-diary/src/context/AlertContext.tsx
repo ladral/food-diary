@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components*/
 import React, { createContext, useContext, useState } from "react";
 import { Alert, Snackbar, Stack } from "@mui/material";
 import { Severity } from "../models/alerts/Severity.ts";

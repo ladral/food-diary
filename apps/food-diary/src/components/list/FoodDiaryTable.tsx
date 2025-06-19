@@ -27,9 +27,9 @@ const FoodDiaryTable = () => {
     const [isModalOpen, setModalOpen] = useState(false);
     const [formType, setFormType] = useState<FormType | null>(null);
     const { addAlert } = useAlert();
-    const errorHandler = useMemo(() => new ErrorHandler(addAlert), [addAlert]);
+    const errorHandler = useMemo(() => ErrorHandler.getInstance(addAlert), [addAlert]);
     const { keycloak } = useKeycloak();
-    const apiClient = useMemo(() => new FoodDiaryApiClient(keycloak?.token || ""), [keycloak])
+    const apiClient = useMemo(() => new FoodDiaryApiClient(keycloak?.token || ""), [keycloak]);
     const diaryService = useMemo(() => new DiaryService(apiClient, errorHandler), [apiClient, errorHandler]);
     const symptomService = useMemo(() => new SymptomService(apiClient, errorHandler), [apiClient, errorHandler]);
     const foodService = useMemo(() => new FoodService(apiClient, errorHandler), [apiClient, errorHandler]);
@@ -42,7 +42,7 @@ const FoodDiaryTable = () => {
     const badgeCriteria = {
         columnCriteriaAccessor: "type",
         badgeCriteria: "symptom",
-        columnPositionAccessor: "date",
+        columnPositionAccessor: "date"
     };
 
     const fetchDiaryEntries = useCallback(async (page: number) => {
@@ -117,7 +117,7 @@ const FoodDiaryTable = () => {
             case FormType.EditFoodIntake:
                 return <FoodIntakeForm onClose={closeModal} onAction={onInsertEntry} foodService={foodService} diaryEntry={selectedDiaryEntry} />;
             case FormType.EditSymptomOccurrence:
-                return <SymptomOccurrence onClose={closeModal} onAction={onInsertEntry} symptomService={symptomService} diaryEntry={selectedDiaryEntry}/>;
+                return <SymptomOccurrence onClose={closeModal} onAction={onInsertEntry} symptomService={symptomService} diaryEntry={selectedDiaryEntry} />;
             default:
                 return null;
         }

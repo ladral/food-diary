@@ -18,9 +18,9 @@ const Analysis: React.FC = () => {
     const [foodsToIgnore, setFoodsToIgnore] = useState<GetFoodResponse[]>([]);
     const [foodOptions, setFoodOptions] = useState<GetFoodResponse[]>([]);
     const { addAlert } = useAlert();
-    const errorHandler = new ErrorHandler(addAlert);
+    const errorHandler = ErrorHandler.getInstance(addAlert);
     const { keycloak } = useKeycloak();
-    const apiClient = new FoodDiaryApiClient(keycloak?.token || "")
+    const apiClient = new FoodDiaryApiClient(keycloak)
     const correlationService = new CorrelationService(apiClient, errorHandler);
     const foodService = new FoodService(apiClient, errorHandler);
 

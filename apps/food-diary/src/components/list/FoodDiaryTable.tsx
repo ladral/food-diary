@@ -29,7 +29,7 @@ const FoodDiaryTable = () => {
     const { addAlert } = useAlert();
     const errorHandler = useMemo(() => ErrorHandler.getInstance(addAlert), [addAlert]);
     const { keycloak } = useKeycloak();
-    const apiClient = useMemo(() => new FoodDiaryApiClient(keycloak?.token || ""), [keycloak]);
+    const apiClient = useMemo(() => new FoodDiaryApiClient(keycloak), [keycloak]);
     const diaryService = useMemo(() => new DiaryService(apiClient, errorHandler), [apiClient, errorHandler]);
     const symptomService = useMemo(() => new SymptomService(apiClient, errorHandler), [apiClient, errorHandler]);
     const foodService = useMemo(() => new FoodService(apiClient, errorHandler), [apiClient, errorHandler]);

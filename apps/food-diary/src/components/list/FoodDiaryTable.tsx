@@ -11,11 +11,11 @@ import Modal from "../popups/Modal.tsx";
 import FoodIntakeForm from "../froms/FoodIntakeForm.tsx";
 import FormType from "../froms/FormType.ts";
 import SymptomOccurrence from "../froms/SymptomOccurrence.tsx";
-import { useAlert } from "../../context/AlertContext.tsx";
 import SymptomService from "../../services/api/symptom/SymptomService.ts";
 import FoodService from "../../services/api/food/FoodService.ts";
 import ErrorHandler from "../../services/error/ErrorHandler.ts";
 import FoodDiaryApiClient from "../../services/api/FoodDiaryApiClient.ts";
+import useAlert from "../../hooks/useAlert.ts";
 
 
 const FoodDiaryTable = () => {

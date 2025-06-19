@@ -4,17 +4,18 @@ import logger from "../../services/logging/Logger.ts";
 import styles from "./FoodDiaryTable.module.scss";
 import Pagination from "../pagination/Pagination";
 import DiaryService from "../../services/api/diary/DiaryService";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import useKeycloak from "../../hooks/useKeycloak.ts";
 import ExpandableButton from "../buttons/ExpandableButton.tsx";
 import Modal from "../popups/Modal.tsx";
 import FoodIntakeForm from "../froms/FoodIntakeForm.tsx";
 import FormType from "../froms/FormType.ts";
 import SymptomOccurrence from "../froms/SymptomOccurrence.tsx";
-import { useAlert } from "../../context/AlertContext.tsx";
 import SymptomService from "../../services/api/symptom/SymptomService.ts";
 import FoodService from "../../services/api/food/FoodService.ts";
 import ErrorHandler from "../../services/error/ErrorHandler.ts";
+import FoodDiaryApiClient from "../../services/api/FoodDiaryApiClient.ts";
+import useAlert from "../../hooks/useAlert.ts";
 
 
 const FoodDiaryTable = () => {
@@ -26,10 +27,12 @@ const FoodDiaryTable = () => {
     const [isModalOpen, setModalOpen] = useState(false);
     const [formType, setFormType] = useState<FormType | null>(null);
     const { addAlert } = useAlert();
-    const errorHandler = new ErrorHandler(addAlert);
-    const diaryService = new DiaryService(errorHandler);
-    const symptomService = new SymptomService(errorHandler);
-    const foodService = new FoodService(errorHandler);
+    const errorHandler = useMemo(() => ErrorHandler.getInstance(addAlert), [addAlert]);
+    const { keycloak } = useKeycloak();
+    const apiClient = useMemo(() => new FoodDiaryApiClient(keycloak), [keycloak]);
+    const diaryService = useMemo(() => new DiaryService(apiClient, errorHandler), [apiClient, errorHandler]);
+    const symptomService = useMemo(() => new SymptomService(apiClient, errorHandler), [apiClient, errorHandler]);
+    const foodService = useMemo(() => new FoodService(apiClient, errorHandler), [apiClient, errorHandler]);
 
     const columns = [
         { label: "Datum", accessor: "date" },
@@ -39,10 +42,10 @@ const FoodDiaryTable = () => {
     const badgeCriteria = {
         columnCriteriaAccessor: "type",
         badgeCriteria: "symptom",
-        columnPositionAccessor: "date",
+        columnPositionAccessor: "date"
     };
 
-    const fetchDiaryEntries = async (page: number) => {
+    const fetchDiaryEntries = useCallback(async (page: number) => {
         try {
             const result = await diaryService.getDiaryList(page);
             if (result) {
@@ -54,13 +57,13 @@ const FoodDiaryTable = () => {
         } catch (error) {
             logger.error("Failed to fetch diary entries", error);
         }
-    };
+    }, [diaryService]);
 
     useEffect(() => {
         if (authenticated) {
             fetchDiaryEntries(currentPage);
         }
-    }, [currentPage, authenticated]);
+    }, [currentPage, authenticated, fetchDiaryEntries]);
 
     const onInsertEntry = () => {
         fetchDiaryEntries(currentPage);
@@ -114,7 +117,7 @@ const FoodDiaryTable = () => {
             case FormType.EditFoodIntake:
                 return <FoodIntakeForm onClose={closeModal} onAction={onInsertEntry} foodService={foodService} diaryEntry={selectedDiaryEntry} />;
             case FormType.EditSymptomOccurrence:
-                return <SymptomOccurrence onClose={closeModal} onAction={onInsertEntry} symptomService={symptomService} diaryEntry={selectedDiaryEntry}/>;
+                return <SymptomOccurrence onClose={closeModal} onAction={onInsertEntry} symptomService={symptomService} diaryEntry={selectedDiaryEntry} />;
             default:
                 return null;
         }

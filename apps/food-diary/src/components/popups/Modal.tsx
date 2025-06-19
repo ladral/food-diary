@@ -1,5 +1,5 @@
 import styles from "./Modal.module.scss";
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "motion/react";
 
 interface ModalProps {
@@ -11,7 +11,7 @@ interface ModalProps {
 const Modal: React.FC<ModalProps> = ({ children, isOpen, onClose }) => {
     const modalContentRef = useRef<HTMLDivElement | null>(null);
 
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = useCallback((event: MouseEvent) => {
         const isInsideModal = modalContentRef.current && modalContentRef.current.contains(event.target as Node);
 
         // hack of the day - prevent children of type MuiAutocomplente to close the modal
@@ -22,7 +22,7 @@ const Modal: React.FC<ModalProps> = ({ children, isOpen, onClose }) => {
         if (!isInsideModal && !isAutocomplete) {
             onClose();
         }
-    };
+    }, [onClose]);
 
     useEffect(() => {
         if (isOpen) {
@@ -34,7 +34,7 @@ const Modal: React.FC<ModalProps> = ({ children, isOpen, onClose }) => {
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
         };
-    }, [isOpen]);
+    }, [isOpen, handleClickOutside]);
 
     return (
         <AnimatePresence>

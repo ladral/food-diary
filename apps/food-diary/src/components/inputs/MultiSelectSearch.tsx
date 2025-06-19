@@ -23,7 +23,7 @@ const MultiSelectSearch: React.FC<MultiSelectSearchProps> = ({
                                                                  options = [],
                                                                  onChange,
                                                                  onSearch
-                                                             }: any) => {
+                                                             }) => {
     const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
     const [searchValue, setSearchValue] = useState("");
     const inputRef = useRef<HTMLDivElement>(null);
@@ -33,7 +33,11 @@ const MultiSelectSearch: React.FC<MultiSelectSearchProps> = ({
         setTimeout(() => inputRef.current?.focus(), 0);
     };
 
-    const closeMenu = (_: any, reason: "backdropClick" | "escapeKeyDown") => {
+    const closeMenu = (
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        _: any,
+        reason: "backdropClick" | "escapeKeyDown"
+    ) => {
         if (reason === "backdropClick" || reason === "escapeKeyDown")
             setAnchorEl(null);
     };
@@ -106,7 +110,7 @@ const MultiSelectSearch: React.FC<MultiSelectSearchProps> = ({
                                         setAnchorEl(null);
                                         return params.inputProps.onBlur;
                                     }}
-                                    onKeyDown={(event: any) => {
+                                    onKeyDown={(event: React.KeyboardEvent<HTMLInputElement>) => {
                                         // As the autocomplete uses tags by default, backspace removes selection 1 by 1 if
                                         // no text is present in the search bar. To remove that behavior we prevent propagating the
                                         // event

@@ -78,7 +78,7 @@ const NotFound: React.FC = () => {
                     <motion.path
                         d="M 480 142 L 480 65 L 520 142 L 520 65"
                         variants={draw}
-                        custom={1}
+                        custom={2}
                         className={`${styles.shape} ${styles.shapeSecondary}`}
                     />
                     {/* Letter D */}

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styles from "./Analysis.module.scss";
 import CorrelationChart from "../../components/charts/CorrelationChart.tsx";
 import logger from "../../services/logging/Logger.ts";
-import { useAlert } from "../../context/AlertContext.tsx";
 import CorrelationService from "../../services/api/correlation/CorrelationService.ts";
 import Correlation from "../../services/api/correlation/models/Correlation.ts";
 import MultiSelectSearch from "../../components/inputs/MultiSelectSearch.tsx";
@@ -10,15 +9,20 @@ import GetFoodResponse from "../../services/api/food/models/GetFoodResponse.ts";
 import FoodService from "../../services/api/food/FoodService.ts";
 import ErrorHandler from "../../services/error/ErrorHandler.ts";
 import PageTemplate from "../../components/layout/PageTemplate.tsx";
+import useKeycloak from "../../hooks/useKeycloak.ts";
+import FoodDiaryApiClient from "../../services/api/FoodDiaryApiClient.ts";
+import useAlert from "../../hooks/useAlert.ts";
 
 const Analysis: React.FC = () => {
     const [correlations, setCorrelations] = useState<Correlation[]>([]);
     const [foodsToIgnore, setFoodsToIgnore] = useState<GetFoodResponse[]>([]);
     const [foodOptions, setFoodOptions] = useState<GetFoodResponse[]>([]);
     const { addAlert } = useAlert();
-    const errorHandler = new ErrorHandler(addAlert);
-    const correlationService = new CorrelationService(errorHandler);
-    const foodService = new FoodService(errorHandler);
+    const errorHandler = ErrorHandler.getInstance(addAlert);
+    const { keycloak } = useKeycloak();
+    const apiClient = new FoodDiaryApiClient(keycloak)
+    const correlationService = new CorrelationService(apiClient, errorHandler);
+    const foodService = new FoodService(apiClient, errorHandler);
 
     const fetchCorrelations = async () => {
         try {

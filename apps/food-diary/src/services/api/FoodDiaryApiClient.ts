@@ -1,6 +1,5 @@
 import { Result } from "../../models/api/Result";
 import { ApiException } from "../../models/exceptions/ApiException.ts";
-import useKeycloak from "../../hooks/useKeycloak.ts";
 import axios, { AxiosError, AxiosInstance } from "axios";
 import logger from "../logging/Logger.ts";
 import GetDiaryListResponse from "./diary/models/GetDiaryListResponse.ts";
@@ -13,19 +12,19 @@ import CreateSymptomOccurrenceResponse from "./symptom/models/CreateSymptomOccur
 import CreateSymptomResponse from "./symptom/models/CreateSymptomResponse.ts";
 import CreateSymptomRequest from "./symptom/models/CreateSymptomRequest.ts";
 import GetCorrelationsListResponse from "./correlation/models/GetCorrelationsListResponse.ts";
+import Keycloak from "keycloak-js";
 
 class FoodDiaryApiClient {
     private client: AxiosInstance;
 
-    constructor() {
-        const { keycloak } = useKeycloak();
+    constructor(keycloak: Keycloak | null) {
 
         const instance = axios.create({
             baseURL: import.meta.env.VITE_API_BASE_URL as string
         });
 
         instance.interceptors.request.use((config) => {
-            if (keycloak?.token) {
+            if (keycloak) {
                 config.headers.Authorization = `Bearer ${keycloak.token}`;
             }
             return config;

@@ -9,8 +9,8 @@ class DiaryService implements IDiaryService {
     private pageSize: number;
     private errorHandler: IErrorHandler;
 
-    constructor(errorHandler: IErrorHandler) {
-        this.apiClient = new FoodDiaryApiClient();
+    constructor(apiClient: FoodDiaryApiClient, errorHandler: IErrorHandler) {
+        this.apiClient = apiClient;
         this.pageSize = 10;
         this.errorHandler = errorHandler;
     }

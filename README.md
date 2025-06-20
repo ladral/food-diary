@@ -84,7 +84,7 @@ To work around this issue, the line endings can be corrected using the CLI tool 
     - follow the quickstart section on the [scoop website](https://scoop.sh/)
     - run `scoop install main/dos2unix`
 3. open git bash and navigate to the root directory of the application
-4. run teh following command `find . -name '*.sh' -print0 |xargs -0 dos2unix`
+4. run teh following command `find . \( -name '*.sh' -o -name '*.env' \) -print0 | xargs -0 dos2unix`
 5. clean the docker compose deployment `docker-compose down --rmi all`
 6. remove the folder `./data`
 7. run the following command to start the application: `docker compose -f docker-compose.yml -f docker-compose-demo-seed.yml up -d`

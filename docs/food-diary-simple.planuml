@@ -1,0 +1,36 @@
+@startuml
+!define RECTANGLE class
+
+RECTANGLE Postgres {
+    + Image: postgres:17
+    + Networks: food-diary-net
+    + Ports: "5432:5432"
+}
+
+RECTANGLE Keycloak {
+    + Image: quay.io/keycloak/keycloak:${KEYCLOAK_VERSION}
+    + Ports: "8080:8080"
+}
+
+RECTANGLE FoodDiaryClient {
+    + Image: Dockerfile
+    + Ports: "3000:3000"
+}
+
+RECTANGLE FoodDiaryAPI {
+    + Image: Dockerfile
+    + Ports: "8000:8000"
+}
+
+RECTANGLE Nginx {
+    + Image: nginx:stable-alpine
+    + Ports: "8000"
+}
+
+Postgres --|> Keycloak : depends_on
+Postgres --|> FoodDiaryAPI : depends_on
+Keycloak --|> FoodDiaryClient : depends_on
+Keycloak --|> Nginx : depends_on
+FoodDiaryClient --|> Nginx : serves
+FoodDiaryAPI --|> Nginx : serves
+@enduml

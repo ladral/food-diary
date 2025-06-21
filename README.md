@@ -15,7 +15,7 @@ There are two methods to install the application: production mode and demonstrat
 To switch between modes, you must clean the Docker Compose installation by running the command `docker-compose down --rmi all`. After that, you need to delete the `/data` folder. Please note that all user data stored in the `/data` folder will be lost.
 
 Before proceeding, ensure you read and fully understand the instructions. Execute the necessary steps for your preferred installation method. 
-If any issues occur on windows, please refer the troubleshooting section below.
+If any issues occur on windows, please refer the troubleshooting section below. This step can also be done in advanced to avoid any issues to even occure.
 
 If you're in a hurry and just want a fast demo setup, then you can refer to the **TL;DR** section below.
 
@@ -72,20 +72,22 @@ If you're in a hurry and just want a fast demo setup, then you can refer to the 
 ![plantuml](./docs/plantuml.png)
 
 ## Troubleshooting
-As we all know, there are some key differences between DOS and UNIX systems. Under certain circumstances, the line endings when checking out a repository may not be correct. This can cause the bash files to be unrecognized by the Docker daemon, resulting in a failed deployment.
+### Windows
+As we all know, there are some key differences between DOS and UNIX systems. Under certain circumstances, the line endings when checking out a repository may not be correct. This can cause the bash and .env files to be unrecognized by the docker daemon file parser, resulting in a failed deployment.
 If not all containers are up and running, it is likely that you are encountering this issue.
 To avoid such problems, it's essential to ensure that your Git configuration is set up to handle line endings appropriately.
 
 To work around this issue, the line endings can be corrected using the CLI tool dos2unix.
 
-1. ensure you have [git bash for windows](https://gitforwindows.org/) installed
-2. install dos2unix (https://dos2unix.sourceforge.io/)
+1. To ensure that the `.env` file has the correct line endings, it is essential that steps 4 and 5 of the Docker compose deployment process have already been completed.
+2. ensure you have [git bash for windows](https://gitforwindows.org/) installed
+3. install dos2unix (https://dos2unix.sourceforge.io/)
   - recommended way to for installation is scoop
     - follow the quickstart section on the [scoop website](https://scoop.sh/)
     - run `scoop install main/dos2unix`
-3. open git bash and navigate to the root directory of the application
-4. run teh following command `find . \( -name '*.sh' -o -name '*.env' \) -print0 | xargs -0 dos2unix`
-5. clean the docker compose deployment `docker-compose down --rmi all`
-6. remove the folder `./data`
-7. run the following command to start the application: `docker compose -f docker-compose.yml -f docker-compose-demo-seed.yml up -d`
-8. **(optional)** - buy a UNIX system ;-)
+4. open git bash and navigate to the root directory of the application
+5. run teh following command `find . \( -name '*.sh' -o -name '*.env' \) -print0 | xargs -0 dos2unix`
+6. clean the docker compose deployment `docker-compose down --rmi all`
+7. remove the folder `./data`
+8. run the following command to start the application: `docker compose -f docker-compose.yml -f docker-compose-demo-seed.yml up -d`
+9. **(optional)** - buy a UNIX system ;-)

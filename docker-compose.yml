@@ -10,6 +10,11 @@ services:
       - ./data/postgres_data:/var/lib/postgresql/data
       - ./init/init-db.sh:/docker-entrypoint-initdb.d/init-db.sh
       - ./.env:/docker-entrypoint-initdb.d/.env
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U ${POSTGRESQL_USER}" ]
+      interval: 10s
+      timeout: 5s
+      retries: 20
 
   keycloak:
     image: quay.io/keycloak/keycloak:${KEYCLOAK_VERSION}
@@ -24,12 +29,19 @@ services:
       KC_DB_PASSWORD: ${KEYCLOAK_DB_PASS}
       KC_HOSTNAME: ${KEYCLOAK_HOSTNAME}
       KC_HTTP_RELATIVE_PATH: /auth
+      KC_HEALTH_ENABLED: true
     volumes:
       - ./apps/keycloak/realms:/opt/keycloak/data/import
       - ./apps/keycloak/theme/dist_keycloak:/opt/keycloak/providers/
     command: start-dev --import-realm
+    healthcheck:
+      test: ["CMD-SHELL", "exec 3<>/dev/tcp/127.0.0.1/9000;echo -e 'GET /health/ready HTTP/1.1\r\nhost: http://localhost\r\nConnection: close\r\n\r\n' >&3;if [ $? -eq 0 ]; then echo 'Healthcheck Successful';exit 0;else echo 'Healthcheck Failed';exit 1;fi;"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
     depends_on:
-      - postgres
+      postgres:
+        condition: service_healthy
 
   food-diary-client:
     build:
@@ -73,8 +85,14 @@ services:
       - food-diary-net
     volumes:
       - static_volume:/home/app/api/staticfiles
+    healthcheck:
+      test: [ "CMD", "curl", "--fail", "http://localhost:8000/api/health/" ]
+      interval: 10s
+      timeout: 5s
+      retries: 20
     depends_on:
-      - postgres
+      postgres:
+        condition: service_healthy
 
   nginx:
     image: nginx:stable-alpine
@@ -86,9 +104,12 @@ services:
       - ./nginx.conf:/etc/nginx/nginx.conf
       - static_volume:/home/app/web/staticfiles
     depends_on:
-      - food-diary-client
-      - food-diary-api
-      - keycloak
+      food-diary-client:
+        condition: service_started
+      food-diary-api:
+        condition: service_healthy
+      keycloak:
+        condition: service_healthy
 
 volumes:
   postgres_data:

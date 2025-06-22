@@ -36,14 +36,14 @@ If you're in a hurry and just want a fast demo setup, then you can refer to the 
    - **production mode:** `docker-compose up -d`
    - **demo mode:** `docker compose -f docker-compose.yml -f docker-compose-demo-seed.yml up -d` (starts the application in demo mode with demo data seed)
 7. remove unused build images `docker image prune`
-8. application is now available at the specified port 8000 -> `localhost:8000`
+8. application is now available at the specified port 8000 -> `http://localhost:8000`
    - if started in demo mode then the following demo user already exists:
       - **user:** alice 
       - **password:** wonderland 
-9. the keycloak admin site is available at `localhost:8000/auth` (credentials defined in the .env file)
-10. the django admin site is available at `localhost:8000/admin` (credentials defined in the .env file)
+9. the keycloak admin site is available at `http://localhost:8000/auth/` (credentials defined in the .env file)
+10. the django admin site is available at `http://localhost:8000/admin` (credentials defined in the .env file)
 11. update the OIDC client secret for enhanced security (**obsolete for local setup but recommend for production**)
-    - open the keycloak admin site in the browser: `localhost:8000/auth`
+    - open the keycloak admin site in the browser: `http://localhost:8000/auth/`
     - login with your admin credentials
     - select the food-diary realm on the realm drop down
     - select `Clients` form the sidebar navigation
@@ -63,7 +63,7 @@ If you're in a hurry and just want a fast demo setup, then you can refer to the 
 ### TL;TR - docker compose deployment for demonstration purpose
 1. copy the dev.env file and save it as .env: `cp dev.env .env`
 2. `docker compose -f docker-compose.yml -f docker-compose-demo-seed.yml up -d`
-3. browser -> `localhost:8000`
+3. browser -> `http://localhost:8000`
 4. login
    - **user:** alice
    - **password:** wonderland
@@ -79,15 +79,15 @@ To avoid such problems, it's essential to ensure that your Git configuration is 
 
 To work around this issue, the line endings can be corrected using the CLI tool dos2unix.
 
-1. To ensure that the `.env` file has the correct line endings, it is essential that steps 4 and 5 of the Docker compose deployment process have already been completed.
+1. To ensure that the `.env` file has the correct line endings, it is essential that steps 4 and 5 of the Docker Compose deployment process have already been completed.
 2. ensure you have [git bash for windows](https://gitforwindows.org/) installed
 3. install dos2unix (https://dos2unix.sourceforge.io/)
-  - recommended way to for installation is scoop
-    - follow the quickstart section on the [scoop website](https://scoop.sh/)
-    - run `scoop install main/dos2unix`
+   - recommended way for installation is to use scoop
+     - follow the quickstart section on the [scoop website](https://scoop.sh/)
+     - run `scoop install main/dos2unix`
 4. open git bash and navigate to the root directory of the application
-5. run teh following command `find . \( -name '*.sh' -o -name '*.env' \) -print0 | xargs -0 dos2unix`
-6. clean the docker compose deployment `docker-compose down --rmi all`
+5. run the following command `find . \( -name '*.sh' -o -name '*.env' \) -print0 | xargs -0 dos2unix`
+6. clean the Docker Compose deployment `docker-compose down --rmi all`
 7. remove the folder `./data`
 8. run the following command to start the application: `docker compose -f docker-compose.yml -f docker-compose-demo-seed.yml up -d`
 9. **(optional)** - buy a UNIX system ;-)

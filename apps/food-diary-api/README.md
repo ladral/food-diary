@@ -38,8 +38,11 @@ The food diary API is a robust backend for the food diary client application.
 7. serve web application in development mode (the env file will be loaded automatically): `python manage.py runserver` 
 8. terminate the application: `ctrl + c`
 
-## Docker
+## Update dependencies
+1. upgrade all packages: `pip-review --auto`
+2. regenerate the requirements.txt with the latest versions: `pip freeze > requirements.txt`
 
+## Docker
 1. install docker on your host
     - ubuntu server installation using snap: `sudo snap install docker`
 2. start docker
